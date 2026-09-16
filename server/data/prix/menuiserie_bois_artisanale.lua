@@ -21502,7 +21502,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Plus value vitrage isolant supplémentaire spécial chauffage électrique\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 2140.31,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 }
                                                                             }
                                                                         }
@@ -26080,7 +26080,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Plus value pour vitrage isolant supplémentaire\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 2140.31,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 }
                                                                             }
                                                                         }
@@ -32871,7 +32871,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 730x2040 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 38.05,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_830x2040_mm_u",
@@ -32906,7 +32906,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 730x2040 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 58.92,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_830x2040_mm_u",
@@ -32941,7 +32941,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 730x2040 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 42.43,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_830x2040_mm_u",
@@ -33564,7 +33564,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "largeur 600 mm, épaisseur 35 mm\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 284.33,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "largeur_600_mm_epaisseur_50_mm_m",
@@ -33613,7 +33613,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "largeur 600 mm, épaisseur 35 mm\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 287.66,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "largeur_600_mm_epaisseur_50_mm_m",
@@ -33662,7 +33662,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "largeur 600 mm, épaisseur 35 mm\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 293.79,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "largeur_600_mm_epaisseur_50_mm_m",
@@ -34208,7 +34208,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "pose seule à coupe perdue, largeur 70 mm, épaisseur 14 mm\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 232.56,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "pose_seule_a_coupe_perdue_largeur_90_mm_epaisseur_14_mm_m",
@@ -34236,14 +34236,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "Ponçage de parquet neuf\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 210.02,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "poncage_de_parquet_ancien_m",
                                                                                                                     nom = "Ponçage de parquet ancien\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 215.91,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "vitrification_de_parquets_dans_le_neuf_m",
@@ -34404,28 +34404,28 @@ M.STRUCTURE = {
                                                                                                                     nom = "plinthe en pin à peindre, dimensions 100x10 mm\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 11.44,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "plinthe_en_sipo_a_vernir_dimensions_70x10_mm_m",
                                                                                                                     nom = "plinthe en sipo à vernir, dimensions 70x10 mm\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 12.45,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "plinthe_en_sipo_a_vernir_dimensions_100x10_mm_m",
                                                                                                                     nom = "plinthe en sipo à vernir, dimensions 100x10 mm\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 14.32,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "plinthe_cremaillere_en_sipo_epaisseur_13_mm_m",
                                                                                                                     nom = "plinthe crémaillère en sipo, épaisseur 13 mm\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 197.23,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -34467,7 +34467,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "plus value par mètre supplémentaire pour cadre gaine technique\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 135.9,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "plus_value_pour_porte_1_vantail_u",

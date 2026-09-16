@@ -903,7 +903,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "largeur 500 mm, hauteur 600 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 308.26,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "largeur_600_mm_hauteur_750_mm_u",
@@ -945,7 +945,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "largeur 1000 mm, hauteur 950 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 496.96,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "largeur_1000_mm_hauteur_1050_mm_u",
@@ -1057,7 +1057,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "largeur 1800 mm, hauteur 1150 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 844.07,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "largeur_1800_mm_hauteur_1350_mm_u",
@@ -1827,7 +1827,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1000x1950 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 504.38,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1000x2050_mm_u",
@@ -1925,7 +1925,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1800x1950 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 782.68,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1800x2050_mm_u",
@@ -1995,7 +1995,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 2400x2250 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 2242.84,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_2400x2150_mm_u",
@@ -2016,7 +2016,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 900x2150 mm, volet roulant électrique\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 771.83,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_800x2150_mm_volet_roulant_electrique_u",
@@ -2051,7 +2051,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "largeur 1400 mm, hauteur 2150 mm, volet roulant électrique\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 943.6,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "largeur_1200_mm_hauteur_2150_mm_volet_roulant_electrique_u",
@@ -2100,7 +2100,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "largeur 2400 mm, hauteur 2150 mm, volet roulant électrique\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1665.09,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "largeur_2100_mm_hauteur_2150_mm_volet_roulant_electrique_u",
@@ -2149,7 +2149,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 800x1950 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 807.47,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_800x2050_mm_u",
@@ -2205,7 +2205,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1000x1950 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 870.95,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1000x2050_mm_u",
@@ -2310,7 +2310,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1800x1950 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1173.48,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1800x2050_mm_u",
@@ -2401,7 +2401,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 2400x2250 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 2434.96,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_2400x2150_mm_u",
@@ -2422,7 +2422,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "largeur 1800 mm, hauteur 2150 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1224.75,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "largeur_2100_mm_hauteur_2150_mm_u",

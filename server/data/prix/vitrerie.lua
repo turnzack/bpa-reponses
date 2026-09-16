@@ -782,7 +782,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "épaisseur 3+6+3 mm\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 2136.05,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "epaisseur_4_6_4_mm_m",
@@ -845,7 +845,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "de 0,11 à 0,25/m2\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 35.05,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 }
                                                                             }
                                                                         }
@@ -2094,7 +2094,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 800x2200 mm, poignées rouges, quincaillerie en laiton poli\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1234.04,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_900x2100_mm_poignees_rouges_quincaillerie_en_laiton_poli_u",
@@ -2269,7 +2269,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 800x2100 mm, poignées rouges, quincaillerie en laiton poli\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1425.86,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_800x2200_mm_poignees_rouges_quincaillerie_en_laiton_poli_u",
@@ -2493,7 +2493,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 900x2100 mm, poignées rouges, quincaillerie en laiton poli\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1520.68,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_900x2200_mm_poignees_rouges_quincaillerie_en_laiton_poli_u",
@@ -2584,7 +2584,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 900x2100 mm, poignées rouges, quincaillerie en laiton poli\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1317.95,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_900x2200_mm_poignees_rouges_quincaillerie_en_laiton_poli_u",
@@ -3662,7 +3662,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 800x2100 mm, poignées rouges, quincaillerie en laiton poli\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 2149.37,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_800x2200_mm_poignees_rouges_quincaillerie_en_laiton_poli_u",
@@ -3837,7 +3837,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 800x2100 mm, poignées rouges, quincaillerie en laiton poli\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 2352.11,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_800x2200_mm_poignees_rouges_quincaillerie_en_laiton_poli_u",
@@ -4061,7 +4061,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 900x2100 mm, poignées rouges, quincaillerie en laiton poli\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 2339.03,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_900x2200_mm_poignees_rouges_quincaillerie_en_laiton_poli_u",
@@ -4152,7 +4152,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 900x2100 mm, poignées rouges, quincaillerie en laiton poli\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 2541.77,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_900x2200_mm_poignees_rouges_quincaillerie_en_laiton_poli_u",
@@ -5174,7 +5174,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 800x2100 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1115.1,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_900x2100_mm_u",
@@ -5209,7 +5209,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 800x2100 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 2024,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_900x2100_mm_u",
@@ -5244,7 +5244,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 800x2100 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 2177.87,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_900x2100_mm_u",
@@ -5377,7 +5377,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "grand vitrage à remplacer\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 216.21,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "petit_bois_non_conserve_m",
@@ -5391,14 +5391,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "Dépose et repose de grillage de protection\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 214.65,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "nettoyage_de_souillures_sur_vitrage_m",
                                                                                                                     nom = "Nettoyage de souillures sur vitrage\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 24.95,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "reargenture_glaces_m",

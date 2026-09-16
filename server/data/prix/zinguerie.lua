@@ -511,7 +511,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "angle extérieur 90° pour gouttiere 300 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 24.21,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -889,21 +889,21 @@ M.STRUCTURE = {
                                                                                                                     nom = "mâle/Femelle, pour tuyau descente EP 73x100 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 18.16,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "male_femelle_pour_tuyau_descente_ep_56x90_mm_u",
                                                                                                                     nom = "mâle/Femelle, pour tuyau descente EP 56x90 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 13.99,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "male_femelle_pour_tuyau_descente_ep_76x105_mm_u",
                                                                                                                     nom = "mâle/Femelle, pour tuyau descente EP 76x105 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 20.74,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -1207,14 +1207,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "pour tuyau de descente EP Ovation 56x90 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 33.18,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "pour_tuyau_de_descente_ep_ovation_76x105_mm_u",
                                                                                                                     nom = "pour tuyau de descente EP Ovation 76x105 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 36.3,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -1522,21 +1522,21 @@ M.STRUCTURE = {
                                                                                                                     nom = "mâle-femelle pour tuyau EP section 55x55 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 17.4,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "male_femelle_pour_tuyau_ep_section_73x100_mm_u",
                                                                                                                     nom = "mâle-femelle pour tuyau EP section 73x100 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 24.82,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "male_femelle_pour_tuyau_ep_section_56x90_mm_u",
                                                                                                                     nom = "mâle-femelle pour tuyau EP section 56x90 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 45.84,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -1970,7 +1970,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "zinc 0,65 mm, travée 500 mm, système à agrafures\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 2168.19,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "zinc_0_65_mm_travee_650_mm_systeme_a_agrafures_m",
@@ -2390,7 +2390,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "zinc 0,65 mm, travée 500 mm, système à ressauts\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 2179.67,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "zinc_0_65_mm_travee_650_mm_systeme_a_ressauts_m",
@@ -2425,7 +2425,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "zinc 0,65 mm, jusqu'à 3 m, travée 500 mm\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 2151.3,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "zinc_0_70_mm_jusqu_a_3_m_travee_500_mm_m",
@@ -2488,7 +2488,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "zinc 0,65 mm, travée 500 mm, longueur maxi 6 m\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 2108.16,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "zinc_0_70_mm_travee_500_mm_longueur_maxi10_m_m",
@@ -2523,7 +2523,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "zinc 0,65 mm, travée 650 mm\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 2178.98,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "zinc_0_80_mm_travee_650_mm_m",

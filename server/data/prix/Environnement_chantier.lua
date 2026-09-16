@@ -22,14 +22,14 @@ M.STRUCTURE = {
                             id = "barriere_pleine",
                             nom = "Barrière pleine\tm lin",
                             type = "ARTICLE",
-                            prix = 15.00,
+                            prix = 15,
                             unite = "M",
                         },
                         {
                             id = "plot_cone",
                             nom = "Plot / Cône\t pièce",
                             type = "ARTICLE",
-                            prix = 5.00,
+                            prix = 5,
                             unite = "U",
                         }
                     }
@@ -50,14 +50,14 @@ M.STRUCTURE = {
                             id = "benne_3m3",
                             nom = "Benne 3m3\tjour",
                             type = "ARTICLE",
-                            prix = 25.00,
+                            prix = 25,
                             unite = "U",
                         },
                         {
                             id = "benne_6m3",
                             nom = "Benne 6m3\tjour",
                             type = "ARTICLE",
-                            prix = 35.00,
+                            prix = 35,
                             unite = "U",
                         }
                     }
@@ -78,14 +78,14 @@ M.STRUCTURE = {
                             id = "bache_protection",
                             nom = "Bâche de protection\tm²",
                             type = "ARTICLE",
-                            prix = 2.50,
+                            prix = 2.5,
                             unite = "M2",
                         },
                         {
                             id = "filet_protection",
                             nom = "Filet de protection\tm²",
                             type = "ARTICLE",
-                            prix = 3.00,
+                            prix = 3,
                             unite = "M2",
                         }
                     }

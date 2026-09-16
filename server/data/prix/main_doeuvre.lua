@@ -27,21 +27,21 @@ M.STRUCTURE = {
                                     id = "ouvrier_batiment_ouvrier",
                                     nom = "Ouvrier bâtiment (ouvrier)\tm",
                                     type = "ARTICLE",
-                                    prix = 45.00,
-                                    unite = "H",
+                                    prix = 45,
+                                    unite = "h",
                                 },
                                 {
                                     id = "maitre_ouvrier",
                                     nom = "Maître ouvrier\tm",
                                     type = "ARTICLE",
-                                    prix = 55.00,
+                                    prix = 55,
                                     unite = "H",
                                 },
                                 {
                                     id = "chef_equipe",
                                     nom = "Chef d'équipe\tm",
                                     type = "ARTICLE",
-                                    prix = 60.00,
+                                    prix = 60,
                                     unite = "H",
                                 }
                             }
@@ -55,21 +55,21 @@ M.STRUCTURE = {
                                     id = "ouvrier_qualifie",
                                     nom = "Ouvrier qualifié\tm",
                                     type = "ARTICLE",
-                                    prix = 40.00,
-                                    unite = "H",
+                                    prix = 40,
+                                    unite = "h",
                                 },
                                 {
                                     id = "ouvrier_non_qualifie",
                                     nom = "Ouvrier non qualifié\tm",
                                     type = "ARTICLE",
-                                    prix = 30.00,
+                                    prix = 30,
                                     unite = "H",
                                 },
                                 {
                                     id = "technicien",
                                     nom = "Technicien\tm",
                                     type = "ARTICLE",
-                                    prix = 50.00,
+                                    prix = 50,
                                     unite = "H",
                                 }
                             }
@@ -83,14 +83,14 @@ M.STRUCTURE = {
                                     id = "deplacement_km",
                                     nom = "Déplacement (par km)\tm",
                                     type = "ARTICLE",
-                                    prix = 0.50,
+                                    prix = 0.5,
                                     unite = "U",
                                 },
                                 {
                                     id = "frais_deplacement_heure_sup",
                                     nom = "Frais de déplacement (heures sup)\tm",
                                     type = "ARTICLE",
-                                    prix = 1.20,
+                                    prix = 1.2,
                                     unite = "H",
                                 },
                                 {

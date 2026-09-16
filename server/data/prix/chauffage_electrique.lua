@@ -154,21 +154,21 @@ M.STRUCTURE = {
                                                                                                                     nom = "type F 18-Plinthe, 6 ordres, puissance 500 W\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 204.84,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "type_f_18_plinthe_6_ordres_puissance_1000_w_u",
                                                                                                                     nom = "type F 18-Plinthe, 6 ordres, puissance 1000 W\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 216.39,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "type_f_18_plinthe_6_ordres_puissance_1250_w_u",
                                                                                                                     nom = "type F 18-Plinthe, 6 ordres, puissance 1250 W\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 232.48,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "type_borneo_horizontal_6_ordres_puissance_750_w_u",
@@ -2079,7 +2079,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "épaisseur 50 mm, en mousse de polystyrène expansé\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 4.54,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -2128,7 +2128,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "comprenant câble chauffant et isolant de bordure\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 240.3,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -2142,7 +2142,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "autonivelante ou autolissante, épaisseur 50 mm\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 231.45,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 }
                                                                             }
                                                                         },

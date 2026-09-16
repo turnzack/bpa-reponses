@@ -287,7 +287,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 500x750 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 301.18,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_600x750_mm_u",
@@ -532,7 +532,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 500x750 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 315.27,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_600x750_mm_u",
@@ -784,7 +784,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 500x2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 333.75,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_600x2050_mm_u",
@@ -896,7 +896,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 500x2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 519.61,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_600x2050_mm_u",
@@ -1008,7 +1008,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 500x2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 550.07,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_600x2050_mm_u",
@@ -1120,7 +1120,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 500x750 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 337.62,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_500x950_mm_u",
@@ -1477,7 +1477,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 500x750 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 386.49,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_500x950_mm_u",
@@ -1834,7 +1834,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 500x750 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 398.26,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_500x950_mm_u",
@@ -2191,7 +2191,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 600x1050+300 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 517.9,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_600x1050_300_mm_u",
@@ -2352,7 +2352,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 600x1050+300 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 625.99,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_600x1150_300_mm_u",
@@ -2492,7 +2492,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 600x1150+300 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 658.25,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_600x1250_300_mm_u",
@@ -2632,7 +2632,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "largeur 500 mm, hauteur 450 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 316.47,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "largeur_500_mm_hauteur_550_mm_u",
@@ -2961,7 +2961,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "largeur 500 mm, hauteur 450 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 357.63,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "largeur_500_mm_hauteur_550_mm_u",
@@ -3262,7 +3262,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "largeur 500 mm, hauteur 450 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 366.76,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "largeur_500_mm_hauteur_550_mm_u",
@@ -3577,7 +3577,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "largeur 500 mm, hauteur 750 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 399.78,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "largeur_600_mm_hauteur_750_mm_u",
@@ -3920,7 +3920,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "largeur 500 mm, hauteur 750 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 448.5,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "largeur_600_mm_hauteur_750_mm_u",
@@ -4263,7 +4263,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "largeur 500 mm, hauteur 750 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 459.45,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "largeur_600_mm_hauteur_750_mm_u",
@@ -4606,7 +4606,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 500x750 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 356.64,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_500x950_mm_u",
@@ -4795,7 +4795,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 500x750 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 398.56,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_500x950_mm_u",
@@ -4970,7 +4970,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 500x750 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 400.78,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_500x950_mm_u",
@@ -5362,7 +5362,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 500x950 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 454.6,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_500x1050_mm_u",
@@ -5544,7 +5544,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 500x950 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 462.24,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_500x1050_mm_u",
@@ -5726,7 +5726,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1000x750 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 577.31,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1000x950_mm_u",
@@ -6083,7 +6083,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1000x750 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 682.58,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1000x950_mm_u",
@@ -6440,7 +6440,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1000x750 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 702.16,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1000x950_mm_u",
@@ -6797,7 +6797,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1800x750 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 796.45,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1800x950_mm_u",
@@ -7154,7 +7154,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1800x750 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 971.65,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1800x950_mm_u",
@@ -7511,7 +7511,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1800x750 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1002.83,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1800x950_mm_u",
@@ -7861,7 +7861,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 2400x750 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 921.56,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_2400x750_mm_u",
@@ -8218,7 +8218,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 2400x750 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1155.15,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_2400x950_mm_u",
@@ -8575,7 +8575,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 2400x750 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1195.44,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_2400x950_mm_u",
@@ -8932,7 +8932,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1000x1050+300 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 796.85,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1000x1150_300_mm_u",
@@ -9142,7 +9142,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1000x1050+300 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 976.9,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1000x1150_300_mm_u",
@@ -9338,7 +9338,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1000x1050+300 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1007.45,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1000x1150_300_mm_u",
@@ -9541,7 +9541,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "largeur 1600 mm, hauteur 2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1399.23,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "largeur_1600_mm_hauteur_2150_mm_u",
@@ -9891,7 +9891,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "largeur 1600 mm, hauteur 2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1620.1,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "largeur_1600_mm_hauteur_2150_mm_u",
@@ -10234,7 +10234,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "largeur 1600 mm, hauteur 2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1792.11,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "largeur_1600_mm_hauteur_2150_mm_u",
@@ -10570,7 +10570,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1000x950 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 677.48,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1000x1050_mm_u",
@@ -10752,7 +10752,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1000x950 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 798.16,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1000x1050_mm_u",
@@ -10934,7 +10934,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1000x950 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 813.43,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1000x1050_mm_u",
@@ -11116,7 +11116,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1000x1050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 674.39,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1000x1150_mm_u",
@@ -11291,7 +11291,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1000x1050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 784.42,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1000x1150_mm_u",
@@ -11466,7 +11466,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1000x1050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 797.71,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1000x1150_mm_u",
@@ -11816,7 +11816,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 500x2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 603.34,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_500x2150_mm_u",
@@ -11991,7 +11991,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 500x2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 625.87,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_500x2150_mm_u",
@@ -12166,7 +12166,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1000x2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 863.77,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1000x2150_mm_u",
@@ -12341,7 +12341,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1000x2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1044.51,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1000x2150_mm_u",
@@ -12516,7 +12516,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1000x2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1081.79,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1000x2150_mm_u",
@@ -12691,7 +12691,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1800x2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1176.35,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1800x2150_mm_u",
@@ -12866,7 +12866,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1800x2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1501.74,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1800x2150_mm_u",
@@ -13041,7 +13041,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1800x2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1568.94,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1800x2150_mm_u",
@@ -13216,7 +13216,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 2400x2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1457.16,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_2400x2150_mm_u",
@@ -13370,7 +13370,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 2400x2150 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1928.14,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_2400x2250_mm_u",
@@ -13503,7 +13503,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 2400x2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1975.93,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_2400x2150_mm_u",
@@ -13650,7 +13650,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 500x2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 526.34,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_500x2150_mm_u",
@@ -13762,7 +13762,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 500x2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 616.73,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_500x2150_mm_u",
@@ -13874,7 +13874,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 500x2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 631.46,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_500x2150_mm_u",
@@ -13986,7 +13986,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1000x2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 851.86,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1000x2150_mm_u",
@@ -14126,7 +14126,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1000x2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1052.96,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1000x2150_mm_u",
@@ -14252,7 +14252,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1000x2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1086.56,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1000x2150_mm_u",
@@ -14385,7 +14385,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1800x2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1215.9,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1800x2150_mm_u",
@@ -14497,7 +14497,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1800x2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1541.29,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1800x2150_mm_u",
@@ -14616,7 +14616,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 1800x2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1596.79,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1800x2150_mm_u",
@@ -15064,7 +15064,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "largeur 1600 mm, hauteur 2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 2010.74,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "largeur_1600_mm_hauteur_2150_mm_u",
@@ -15421,7 +15421,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "largeur 1600 mm, hauteur 2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 2231.62,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "hauteur_1600_mm_hauteur_2150_mm_u",
@@ -15778,7 +15778,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "largeur 1600 mm, hauteur 2050 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 2403.62,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "largeur_1600_mm_hauteur_2150_mm_u",
