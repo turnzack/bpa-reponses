@@ -14,7 +14,7 @@ M.STRUCTURE = {
                                                                                                                     id = "en_terre_argileuse_et_tuf_m",
                                                                                                                     nom = "en terre argileuse et tuf\tm",
                                                                                     type = "ARTICLE",
-                                                                                    prix = 34.35,
+                                                                                    prix = 4.35,
                                                                                     unite = "U",
                                                                                                                 },
                                                                                 {
@@ -141,7 +141,7 @@ M.STRUCTURE = {
                                                                                                                     id = "de_terre_glaise_m",
                                                                                                                     nom = "de terre glaise\tm",
                                                                                     type = "ARTICLE",
-                                                                                    prix = 30.22,
+                                                                                    prix = 0.22,
                                                                                     unite = "U",
                                                                                                                 }
                                                                             }
@@ -164,7 +164,7 @@ M.STRUCTURE = {
                                                                                                                     id = "de_terre_glaise_m",
                                                                                                                     nom = "de terre glaise\tm",
                                                                                     type = "ARTICLE",
-                                                                                    prix = 31.6,
+                                                                                    prix = 1.6,
                                                                                     unite = "U",
                                                                                                                 }
                                                                             }
@@ -187,7 +187,7 @@ M.STRUCTURE = {
                                                                                                                     id = "de_terre_glaise_m",
                                                                                                                     nom = "de terre glaise\tm",
                                                                                     type = "ARTICLE",
-                                                                                    prix = 38.47,
+                                                                                    prix = 8.47,
                                                                                     unite = "U",
                                                                                                                 }
                                                                             }
@@ -196,7 +196,7 @@ M.STRUCTURE = {
                                                                             id = "chargement_en_sac",
                                                                             nom = "Chargement en sac",
                                                                                     type = "ARTICLE",
-                                                                                    prix = 37.09,
+                                                                                    prix = 7.09,
                                                                                     unite = "m3",
                                                                                                                 },
                                                                                 {
@@ -311,7 +311,7 @@ M.STRUCTURE = {
                                                                             id = "descente_de_terre",
                                                                             nom = "Descente de terre",
                                                                                     type = "ARTICLE",
-                                                                                    prix = 34.35,
+                                                                                    prix = 4.35,
                                                                                     unite = "m3",
                                                                                                                 },
                                                                                 {
@@ -325,7 +325,7 @@ M.STRUCTURE = {
                                                                                                                     id = "de_terre_glaise_m",
                                                                                                                     nom = "de terre glaise\tm",
                                                                                     type = "ARTICLE",
-                                                                                    prix = 38.47,
+                                                                                    prix = 8.47,
                                                                                     unite = "U",
                                                                                                                 }
                                                                             }
@@ -426,7 +426,7 @@ M.STRUCTURE = {
                                                                                                                     id = "de_terre_vegetale_ou_terreau_m",
                                                                                                                     nom = "de terre végétale ou terreau\tm",
                                                                                     type = "ARTICLE",
-                                                                                    prix = 32.97,
+                                                                                    prix = 2.97,
                                                                                     unite = "U",
                                                                                                                 }
                                                                             }
@@ -639,56 +639,56 @@ M.STRUCTURE = {
                                                                                                                     nom = "d'ardoise, dimensions 1000x300x750 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 95.86,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "d_ardoise_dimensions_1000x500x500_mm_u",
                                                                                                                     nom = "d'ardoise, dimensions 1000x500x500 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 100.08,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "d_ardoise_dimensions_1000x500x1000_mm_u",
                                                                                                                     nom = "d'ardoise, dimensions 1000x500x1000 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 138.34,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "d_ardoise_dimensions_2000x300x750_mm_u",
                                                                                                                     nom = "d'ardoise, dimensions 2000x300x750 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 145.39,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "d_ardoise_dimensions_2000x500x500_mm_u",
                                                                                                                     nom = "d'ardoise, dimensions 2000x500x500 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 153.82,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "d_ardoise_dimensions_2000x500x1000_mm_u",
                                                                                                                     nom = "d'ardoise, dimensions 2000x500x1000 mm\tU",
                                                                                     type = "ARTICLE",
-                                                                                    prix = 38.18,
-                                                                                    unite = "U",
+                                                                                    prix = 8.18,
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "d_ardoise_dimensions_2000x750x750_mm_u",
                                                                                                                     nom = "d'ardoise, dimensions 2000x750x750 mm\tU",
                                                                                     type = "ARTICLE",
-                                                                                    prix = 33.63,
-                                                                                    unite = "U",
+                                                                                    prix = 3.63,
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "d_ardoise_dimensions_2000x1000x1000_mm_u",
                                                                                                                     nom = "d'ardoise, dimensions 2000x1000x1000 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 539.08,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_galet_dimensions_500x500x500_mm_u",
@@ -862,7 +862,7 @@ M.STRUCTURE = {
                                                                                                                     id = "de_porphyre_dimensions_2000x500x1000_mm_u",
                                                                                                                     nom = "de porphyre, dimensions 2000x500x1000 mm\tU",
                                                                                     type = "ARTICLE",
-                                                                                    prix = 38.18,
+                                                                                    prix = 8.18,
                                                                                     unite = "U",
                                                                                                                 },
                                                                                 {
@@ -925,7 +925,7 @@ M.STRUCTURE = {
                                                                                                                     id = "de_roches_calcaires_dimensions_2000x500x1000_mm_u",
                                                                                                                     nom = "de roches calcaires, dimensions 2000x500x1000 mm\tU",
                                                                                     type = "ARTICLE",
-                                                                                    prix = 38.18,
+                                                                                    prix = 8.18,
                                                                                     unite = "U",
                                                                                                                 },
                                                                                 {
@@ -1147,7 +1147,7 @@ M.STRUCTURE = {
                                                                                                                     id = "dimension_1000x400x140_mm_la_1_ere_marche_u",
                                                                                                                     nom = "dimension 1000x400x140 mm, la 1 ere marche\tU",
                                                                                     type = "ARTICLE",
-                                                                                    prix = 32.32,
+                                                                                    prix = 2.32,
                                                                                     unite = "U",
                                                                                                                 },
                                                                                 {
@@ -1175,7 +1175,7 @@ M.STRUCTURE = {
                                                                                                                     id = "dimension_1500x400x140_mm_la_1_ere_marche_u",
                                                                                                                     nom = "dimension 1500x400x140 mm, la 1 ere marche\tU",
                                                                                     type = "ARTICLE",
-                                                                                    prix = 33.9,
+                                                                                    prix = 3.9,
                                                                                     unite = "U",
                                                                                                                 }
                                                                             }
@@ -1544,7 +1544,7 @@ M.STRUCTURE = {
                                                                             id = "regalement",
                                                                             nom = "Régalement",
                                                                                     type = "ARTICLE",
-                                                                                    prix = 3.3,
+                                                                                    prix = 0.3,
                                                                                     unite = "U",
                                                                                                                 },
                                                                                 {
@@ -1558,7 +1558,7 @@ M.STRUCTURE = {
                                                                                                                     id = "de_bordures_m",
                                                                                                                     nom = "de bordures\tm",
                                                                                     type = "ARTICLE",
-                                                                                    prix = 3.13,
+                                                                                    prix = 0.13,
                                                                                     unite = "ml",
                                                                                                                 }
                                                                             }
@@ -1603,7 +1603,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Ratissage\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 2.2,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 }
                                                                             }
                                                                         }
@@ -1646,7 +1646,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "à bras d'homme, supérieures à 1000 m2\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 0.82,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "mecaniquement_m",
@@ -1699,21 +1699,21 @@ M.STRUCTURE = {
                                                                                                                     nom = "de 100 à 250 m2\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 1.38,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_251_a_500_m2_m",
                                                                                                                     nom = "de 251 à 500 m2\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 1.09,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "superieur_a_500_m2_m",
                                                                                                                     nom = "supérieur à 500 m2\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 0.82,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "bordures_inferieures_a_1_00_m_m",
@@ -1736,14 +1736,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "de 251 à 500 m2\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 0.82,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "superieur_a_500_m2_m",
                                                                                                                     nom = "supérieur à 500 m2\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 0.55,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -1824,14 +1824,14 @@ M.STRUCTURE = {
                                                                                                                     id = "circonference_110_a_180_mm_u",
                                                                                                                     nom = "circonférence 110 à 180 mm\tU",
                                                                                     type = "ARTICLE",
-                                                                                    prix = 3.29,
+                                                                                    prix = 0.29,
                                                                                     unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "circonference_190_a_250_mm_u",
                                                                                                                     nom = "circonférence 190 à 250 mm\tU",
                                                                                     type = "ARTICLE",
-                                                                                    prix = 3.3,
+                                                                                    prix = 0.3,
                                                                                     unite = "U",
                                                                                                                 },
                                                                                 {
@@ -1912,7 +1912,7 @@ M.STRUCTURE = {
                                                                                                                     id = "de_2_51_a_3_00_m_de_hauteur_u",
                                                                                                                     nom = "de 2,51 à 3,00 m de hauteur\tU",
                                                                                     type = "ARTICLE",
-                                                                                    prix = 3.3,
+                                                                                    prix = 0.3,
                                                                                     unite = "U",
                                                                                                                 },
                                                                                 {
@@ -1988,7 +1988,7 @@ M.STRUCTURE = {
                                                                                                                     id = "largeur_0_50_cm_m",
                                                                                                                     nom = "largeur 0,50 cm\tm",
                                                                                     type = "ARTICLE",
-                                                                                    prix = 3.29,
+                                                                                    prix = 0.29,
                                                                                     unite = "U",
                                                                                                                 },
                                                                                 {
@@ -2025,7 +2025,7 @@ M.STRUCTURE = {
                                                                                                                     id = "de_1_51_a_2_25_m_de_hauteur_u",
                                                                                                                     nom = "de 1,51 à 2,25 m de hauteur\tU",
                                                                                     type = "ARTICLE",
-                                                                                    prix = 3.3,
+                                                                                    prix = 0.3,
                                                                                     unite = "U",
                                                                                                                 },
                                                                                 {
@@ -2138,77 +2138,77 @@ M.STRUCTURE = {
                                                                                                                     nom = "fourniture et pose scellée au mortier de pose <prix d'achat 10 ¤ HT/m>\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 40.63,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "fourniture_et_pose_scellee_au_mortier_de_pose_prix_d_achat_15_ht_m_m",
                                                                                                                     nom = "fourniture et pose scellée au mortier de pose <prix d'achat 15 ¤ HT/m>\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 48.13,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "fourniture_et_pose_scellee_au_mortier_de_pose_prix_d_achat_20_ht_m_m",
                                                                                                                     nom = "fourniture et pose scellée au mortier de pose <prix d'achat 20 ¤ HT/m>\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 55.63,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "fourniture_et_pose_scellee_au_mortier_de_pose_prix_d_achat_25_ht_m_m",
                                                                                                                     nom = "fourniture et pose scellée au mortier de pose <prix d'achat 25 ¤ HT/m>\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 63.13,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "fourniture_et_pose_scellee_au_mortier_de_pose_prix_d_achat_30_ht_m_m",
                                                                                                                     nom = "fourniture et pose scellée au mortier de pose <prix d'achat 30 ¤ HT/m>\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 70.63,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "fourniture_et_pose_scellee_au_mortier_de_pose_prix_d_achat_35_ht_m_m",
                                                                                                                     nom = "fourniture et pose scellée au mortier de pose <prix d'achat 35 ¤ HT/m>\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 78.13,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "fourniture_et_pose_scellee_au_mortier_de_pose_prix_d_achat_40_ht_m_m",
                                                                                                                     nom = "fourniture et pose scellée au mortier de pose <prix d'achat 40 ¤ HT/m>\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 85.63,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "fourniture_et_pose_scellee_au_mortier_de_pose_prix_d_achat_45_ht_m_m",
                                                                                                                     nom = "fourniture et pose scellée au mortier de pose <prix d'achat 45 ¤ HT/m>\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 93.13,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "fourniture_et_pose_scellee_au_mortier_de_pose_prix_d_achat_50_ht_m_m",
                                                                                                                     nom = "fourniture et pose scellée au mortier de pose <prix d'achat 50 ¤ HT/m>\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 100.63,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "fourniture_et_pose_scellee_au_mortier_de_pose_prix_d_achat_55_ht_m_m",
                                                                                                                     nom = "fourniture et pose scellée au mortier de pose <prix d'achat 55 ¤ HT/m>\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 108.13,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "fourniture_et_pose_scellee_au_mortier_de_pose_prix_d_achat_60_ht_m_m",
                                                                                                                     nom = "fourniture et pose scellée au mortier de pose <prix d'achat 60 ¤ HT/m>\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 123.13,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -2303,84 +2303,84 @@ M.STRUCTURE = {
                                                                             nom = "Margelle scellée au mortier de pose, dimensions 600x370 mm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 6.25,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "fourniture_et_pose_scellee_au_mortier_de_pose_prix_d_achat_10_ht_m_m",
                                                                                                                     nom = "fourniture et pose scellée au mortier de pose <prix d'achat 10 ¤ HT/m>\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 41.25,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "fourniture_et_pose_scellee_au_mortier_de_pose_prix_d_achat_15_ht_m_m",
                                                                                                                     nom = "fourniture et pose scellée au mortier de pose <prix d'achat 15 ¤ HT/m>\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 48.75,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "fourniture_et_pose_scellee_au_mortier_de_pose_prix_d_achat_20_ht_m_m",
                                                                                                                     nom = "fourniture et pose scellée au mortier de pose <prix d'achat 20 ¤ HT/m>\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 56.25,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "fourniture_et_pose_scellee_au_mortier_de_pose_prix_d_achat_25_ht_m_m",
                                                                                                                     nom = "fourniture et pose scellée au mortier de pose <prix d'achat 25 ¤ HT/m>\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 63.75,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "fourniture_et_pose_scellee_au_mortier_de_pose_prix_d_achat_30_ht_m_m",
                                                                                                                     nom = "fourniture et pose scellée au mortier de pose <prix d'achat 30 ¤ HT/m>\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 71.25,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "fourniture_et_pose_scellee_au_mortier_de_pose_prix_d_achat_35_ht_m_m",
                                                                                                                     nom = "fourniture et pose scellée au mortier de pose <prix d'achat 35 ¤ HT/m>\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 78.75,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "fourniture_et_pose_scellee_au_mortier_de_pose_prix_d_achat_40_ht_m_m",
                                                                                                                     nom = "fourniture et pose scellée au mortier de pose <prix d'achat 40 ¤ HT/m>\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 86.25,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "fourniture_et_pose_scellee_au_mortier_de_pose_prix_d_achat_45_ht_m_m",
                                                                                                                     nom = "fourniture et pose scellée au mortier de pose <prix d'achat 45 ¤ HT/m>\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 93.75,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "fourniture_et_pose_scellee_au_mortier_de_pose_prix_d_achat_50_ht_m_m",
                                                                                                                     nom = "fourniture et pose scellée au mortier de pose <prix d'achat 50 ¤ HT/m>\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 101.25,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "fourniture_et_pose_scellee_au_mortier_de_pose_prix_d_achat_55_ht_m_m",
                                                                                                                     nom = "fourniture et pose scellée au mortier de pose <prix d'achat 55 ¤ HT/m>\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 108.75,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "fourniture_et_pose_scellee_au_mortier_de_pose_prix_d_achat_60_ht_m_m",
                                                                                                                     nom = "fourniture et pose scellée au mortier de pose <prix d'achat 60 ¤ HT/m>\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 121.65,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -3284,7 +3284,7 @@ M.STRUCTURE = {
                                                                             id = "set_de_tirage_pour_jardin_comprenant",
                                                                             nom = "Set de tirage pour jardin comprenant :",
                                                                                     type = "ARTICLE",
-                                                                                    prix = 34.66,
+                                                                                    prix = 4.66,
                                                                                     unite = "U",
                                                                                                                 }
                                                                             }
@@ -3301,7 +3301,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "tuyau de tirage spécial, dn 1''\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 57.72,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         }
@@ -3418,35 +3418,35 @@ M.STRUCTURE = {
                                                                                                                     nom = "réservoir 50 litres, débit=2 m3/h, HM=30mCE\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 941.29,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "reservoir_50_litres_debit_3_m3_h_hm_30mce_u",
                                                                                                                     nom = "réservoir 50 litres, débit=3 m3/h, HM=30mCE\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 961.79,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "reservoir_100_litres_debit_2_m3_h_hm_30mce_u",
                                                                                                                     nom = "réservoir 100 litres, débit=2 m3/h, HM=30mCE\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 1087.4,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "reservoir_100_litres_debit_3_m3_h_hm_30mce_u",
                                                                                                                     nom = "réservoir 100 litres, débit=3 m3/h, HM=30mCE\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 1107.74,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "reservoir_100_litres_debit_6_m3_h_hm_30mce_u",
                                                                                                                     nom = "réservoir 100 litres, débit=6 m3/h, HM=30mCE\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 1163.93,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -3491,7 +3491,7 @@ M.STRUCTURE = {
                                                                                                                     id = "modele_vertical_capacite_100_litres_u",
                                                                                                                     nom = "modèle vertical, capacité 100 litres\tU",
                                                                                     type = "ARTICLE",
-                                                                                    prix = 36.28,
+                                                                                    prix = 6.28,
                                                                                     unite = "U",
                                                                                                                 },
                                                                                 {
@@ -3536,21 +3536,21 @@ M.STRUCTURE = {
                                                                                                                     nom = "débit= 4 m3/h, HM= 80 mCE\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 1758.46,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "debit_6_m3_h_hm_80_mce_u",
                                                                                                                     nom = "débit= 6 m3/h, HM= 80 mCE\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 1911.46,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "debit_8_m3_h_hm_60_mce_u",
                                                                                                                     nom = "débit= 8 m3/h, HM= 60 mCE\tU",
                                                                                     type = "ARTICLE",
-                                                                                    prix = 383.88,
-                                                                                    unite = "U",
+                                                                                    prix = 83.88,
+                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -3630,7 +3630,7 @@ M.STRUCTURE = {
                                                                             nom = "Pompes immergées pour puits",
                                                                                     type = "ARTICLE",
                                                                                     prix = 860.2,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "debit_3m3_h_hm_35_mce_u",
@@ -3855,7 +3855,7 @@ M.STRUCTURE = {
                                                                                                                     id = "dn_20_27_mm_en_bronze_u",
                                                                                                                     nom = "dn 20/27 mm, en bronze\tU",
                                                                                     type = "ARTICLE",
-                                                                                    prix = 37.87,
+                                                                                    prix = 7.87,
                                                                                     unite = "U",
                                                                                                                 },
                                                                                 {
@@ -3928,7 +3928,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "tuyau flexible en polyéthylène, dn intérieur 12,5 mm\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = .94,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -4350,7 +4350,7 @@ M.STRUCTURE = {
                                                                             nom = "Arrosage goutte à goutte pur tube micro-irrigation",
                                                                                     type = "ARTICLE",
                                                                                     prix = 4.35,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dn_ext_16_mm_espacement_entre_goutteurs_40_cm_m",
@@ -4470,7 +4470,7 @@ M.STRUCTURE = {
                     nom = "Dalle de sol alvéolaire en PE-HD",
                                                                                     type = "ARTICLE",
                                                                                     prix = 48.09,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dalle_gazon_pour_traffic_lourd_hauteur_300_mm_m",
@@ -4514,14 +4514,14 @@ M.STRUCTURE = {
                                                                             nom = "Dalle gravier en PEHD",
                                                                                     type = "ARTICLE",
                                                                                     prix = 49.33,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dalle_stabilisatrice_gravier_pour_traffic_lourd_m",
                                                                                                                     nom = "Dalle stabilisatrice gravier pour traffic lourd\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 53.2,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 }
                                                                             }
                                                                         }

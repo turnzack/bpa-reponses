@@ -6,31 +6,16 @@ M.ICON = "images/icons/environnement_chantier.png"  -- Assuming there's an icon
 M.STRUCTURE = {
     id = "environnement_chantier",
     nom = "Environnement chantier",
-    type = "LOT",
-    children = {
-        {
-            id = "amenagement_securite",
-            nom = "Aménagement et sécurité",
-            type = "CHAPITRE",
-            children = {
-                {
-                    id = "barrieres_securite",
-                    nom = "Barrières et sécurité",
-                    type = "FAMILLE",
-                    children = {
-                        {
-                            id = "barriere_pleine",
-                            nom = "Barrière pleine\tm lin",
-                            type = "ARTICLE",
-                            prix = 15,
-                            unite = "M",
+                                                                                    type = "ARTICLE",
+                                                                                    prix = 15,
+                                                                                    unite = "forfait",
                         },
                         {
                             id = "plot_cone",
                             nom = "Plot / Cône\t pièce",
-                            type = "ARTICLE",
-                            prix = 5,
-                            unite = "U",
+                                                                                    type = "ARTICLE",
+                                                                                    prix = 5,
+                                                                                    unite = "forfait",
                         }
                     }
                 }
@@ -39,26 +24,16 @@ M.STRUCTURE = {
         {
             id = "gestion_dechets",
             nom = "Gestion des déchets",
-            type = "CHAPITRE",
-            children = {
-                {
-                    id = "collecte_dechets",
-                    nom = "Collecte et évacuation",
-                    type = "FAMILLE",
-                    children = {
-                        {
-                            id = "benne_3m3",
-                            nom = "Benne 3m3\tjour",
-                            type = "ARTICLE",
-                            prix = 25,
-                            unite = "U",
+                                                                                    type = "ARTICLE",
+                                                                                    prix = 25,
+                                                                                    unite = "forfait",
                         },
                         {
                             id = "benne_6m3",
                             nom = "Benne 6m3\tjour",
-                            type = "ARTICLE",
-                            prix = 35,
-                            unite = "U",
+                                                                                    type = "ARTICLE",
+                                                                                    prix = 35,
+                                                                                    unite = "forfait",
                         }
                     }
                 }
@@ -67,26 +42,16 @@ M.STRUCTURE = {
         {
             id = "protection_environnementale",
             nom = "Protection environnementale",
-            type = "CHAPITRE",
-            children = {
-                {
-                    id = "protection_provisoire",
-                    nom = "Protection provisoire",
-                    type = "FAMILLE",
-                    children = {
-                        {
-                            id = "bache_protection",
-                            nom = "Bâche de protection\tm²",
-                            type = "ARTICLE",
-                            prix = 2.5,
-                            unite = "M2",
+                                                                                    type = "ARTICLE",
+                                                                                    prix = 2.5,
+                                                                                    unite = "forfait",
                         },
                         {
                             id = "filet_protection",
                             nom = "Filet de protection\tm²",
-                            type = "ARTICLE",
-                            prix = 3,
-                            unite = "M2",
+                                                                                    type = "ARTICLE",
+                                                                                    prix = 3,
+                                                                                    unite = "forfait",
                         }
                     }
                 }
