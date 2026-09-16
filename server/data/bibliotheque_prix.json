@@ -23,14 +23,14 @@
                     "id": "en_terre_vegetale_m",
                     "nom": "en terre végétale",
                     "type": "ARTICLE",
-                    "prix": 20.61,
+                    "prix": 0.61,
                     "unite": "m³"
                   },
                   {
                     "id": "en_terre_argileuse_et_tuf_m",
                     "nom": "en terre argileuse et tuf",
                     "type": "ARTICLE",
-                    "prix": 34.35,
+                    "prix": 4.35,
                     "unite": "m³"
                   },
                   {
@@ -65,7 +65,7 @@
                     "id": "en_terre_vegetale_m",
                     "nom": "en terre végétale",
                     "type": "ARTICLE",
-                    "prix": 28.03,
+                    "prix": 8.03,
                     "unite": "m³"
                   },
                   {
@@ -79,7 +79,7 @@
                     "id": "en_terre_glaise_m",
                     "nom": "en terre glaise",
                     "type": "ARTICLE",
-                    "prix": 256.34,
+                    "prix": 56.34,
                     "unite": "m³"
                   },
                   {
@@ -93,7 +93,7 @@
                     "id": "en_de_la_roche_avec_compresseur_m",
                     "nom": "en de la roche, avec compresseur",
                     "type": "ARTICLE",
-                    "prix": 236.82,
+                    "prix": 6.82,
                     "unite": "m³"
                   }
                 ]
@@ -149,7 +149,7 @@
                     "id": "de_terre_glaise_m",
                     "nom": "de terre glaise",
                     "type": "ARTICLE",
-                    "prix": 26.1,
+                    "prix": 6.1,
                     "unite": "m³"
                   }
                 ]
@@ -170,14 +170,14 @@
                     "id": "de_terre_argileuse_m",
                     "nom": "de terre argileuse",
                     "type": "ARTICLE",
-                    "prix": 21.16,
+                    "prix": 1.16,
                     "unite": "m³"
                   },
                   {
                     "id": "de_terre_glaise_m",
                     "nom": "de terre glaise",
                     "type": "ARTICLE",
-                    "prix": 30.22,
+                    "prix": 0.22,
                     "unite": "m³"
                   }
                 ]
@@ -198,14 +198,14 @@
                     "id": "de_terre_argileuse_ou_cailloux_m",
                     "nom": "de terre argileuse ou cailloux",
                     "type": "ARTICLE",
-                    "prix": 21.99,
+                    "prix": 1.99,
                     "unite": "m³"
                   },
                   {
                     "id": "de_terre_glaise_m",
                     "nom": "de terre glaise",
                     "type": "ARTICLE",
-                    "prix": 31.6,
+                    "prix": 1.6,
                     "unite": "m³"
                   }
                 ]
@@ -219,21 +219,21 @@
                     "id": "de_terre_vegetale_sable_ou_terreau_m",
                     "nom": "de terre végétale, sable ou terreau",
                     "type": "ARTICLE",
-                    "prix": 24.73,
+                    "prix": 4.73,
                     "unite": "m³"
                   },
                   {
                     "id": "de_terre_argileuse_ou_cailloux_m",
                     "nom": "de terre argileuse ou cailloux",
                     "type": "ARTICLE",
-                    "prix": 27.48,
+                    "prix": 7.48,
                     "unite": "m³"
                   },
                   {
                     "id": "de_terre_glaise_m",
                     "nom": "de terre glaise",
                     "type": "ARTICLE",
-                    "prix": 38.47,
+                    "prix": 8.47,
                     "unite": "m³"
                   }
                 ]
@@ -247,7 +247,7 @@
                     "id": "de_terre_vegetale_sable_ou_terreau_m",
                     "nom": "de terre végétale, sable ou terreau",
                     "type": "ARTICLE",
-                    "prix": 37.09,
+                    "prix": 7.09,
                     "unite": "m³"
                   },
                   {
@@ -289,7 +289,7 @@
                     "id": "de_terre_glaise_m",
                     "nom": "de terre glaise",
                     "type": "ARTICLE",
-                    "prix": 25.42,
+                    "prix": 5.42,
                     "unite": "m³"
                   }
                 ]
@@ -310,14 +310,14 @@
                     "id": "de_terre_argileuse_ou_cailloux_m",
                     "nom": "de terre argileuse ou cailloux",
                     "type": "ARTICLE",
-                    "prix": 25.27,
+                    "prix": 5.27,
                     "unite": "m³"
                   },
                   {
                     "id": "de_terre_glaise_m",
                     "nom": "de terre glaise",
                     "type": "ARTICLE",
-                    "prix": 27.48,
+                    "prix": 7.48,
                     "unite": "m³"
                   }
                 ]
@@ -331,14 +331,14 @@
                     "id": "a_5_km_m",
                     "nom": "à 5 km",
                     "type": "ARTICLE",
-                    "prix": 20.74,
+                    "prix": 0.74,
                     "unite": "m³"
                   },
                   {
                     "id": "de_5_a_10_km_m",
                     "nom": "de 5 à 10 km",
                     "type": "ARTICLE",
-                    "prix": 29.65,
+                    "prix": 9.65,
                     "unite": "m³"
                   },
                   {
@@ -387,7 +387,7 @@
                     "id": "de_terre_vegetale_sable_ou_terreau_m",
                     "nom": "de terre végétale, sable ou terreau",
                     "type": "ARTICLE",
-                    "prix": 34.35,
+                    "prix": 4.35,
                     "unite": "m³"
                   },
                   {
@@ -401,7 +401,7 @@
                     "id": "de_terre_glaise_m",
                     "nom": "de terre glaise",
                     "type": "ARTICLE",
-                    "prix": 38.47,
+                    "prix": 8.47,
                     "unite": "m³"
                   }
                 ]
@@ -458,42 +458,42 @@
                     "nom": "en tranchée ou en trou",
                     "type": "ARTICLE",
                     "prix": 4.95,
-                    "unite": "m²"
+                    "unite": "m³"
                   },
                   {
                     "id": "en_tranchee_ou_en_trou_avec_immersion_m",
                     "nom": "en tranchée ou en trou avec immersion",
                     "type": "ARTICLE",
                     "prix": 4.12,
-                    "unite": "m²"
+                    "unite": "m³"
                   },
                   {
                     "id": "en_talus_m",
                     "nom": "en talus",
                     "type": "ARTICLE",
                     "prix": 17.86,
-                    "unite": "m²"
+                    "unite": "m³"
                   },
                   {
                     "id": "reglage_m",
                     "nom": "Réglage",
                     "type": "ARTICLE",
                     "prix": 12.36,
-                    "unite": "m²"
+                    "unite": "m³"
                   },
                   {
                     "id": "curage_et_mise_en_tas_m",
                     "nom": "Curage et mise en tas",
                     "type": "ARTICLE",
                     "prix": 120.91,
-                    "unite": "m²"
+                    "unite": "m³"
                   },
                   {
                     "id": "triage_a_l_anneau_m",
                     "nom": "Triage à l'anneau",
                     "type": "ARTICLE",
                     "prix": 65.95,
-                    "unite": "m²"
+                    "unite": "m³"
                   }
                 ]
               },
@@ -506,29 +506,29 @@
                     "id": "de_cailloux_0_02_sable_gravier_ou_detritus_m",
                     "nom": "de cailloux 0,02, sable, gravier ou détritus",
                     "type": "ARTICLE",
-                    "prix": 27.48,
-                    "unite": "m²"
+                    "prix": 7.48,
+                    "unite": "m³"
                   },
                   {
                     "id": "de_sable_argileux_m",
                     "nom": "de sable argileux",
                     "type": "ARTICLE",
                     "prix": 43.96,
-                    "unite": "m²"
+                    "unite": "m³"
                   },
                   {
                     "id": "d_argile_pure_m",
                     "nom": "d'argile pure",
                     "type": "ARTICLE",
                     "prix": 74.19,
-                    "unite": "m²"
+                    "unite": "m³"
                   },
                   {
                     "id": "de_terre_vegetale_ou_terreau_m",
                     "nom": "de terre végétale ou terreau",
                     "type": "ARTICLE",
-                    "prix": 32.97,
-                    "unite": "m²"
+                    "prix": 0.97,
+                    "unite": "m³"
                   }
                 ]
               },
@@ -542,21 +542,21 @@
                     "nom": "de terre végétale, terreau, sable ou cailloux",
                     "type": "ARTICLE",
                     "prix": 10.99,
-                    "unite": "m²"
+                    "unite": "m³"
                   },
                   {
                     "id": "de_terre_de_bruyere_ou_fumier_m",
                     "nom": "de terre de bruyère ou fumier",
                     "type": "ARTICLE",
                     "prix": 19.23,
-                    "unite": "m²"
+                    "unite": "m³"
                   },
                   {
                     "id": "de_pierre_non_cassee_m",
                     "nom": "de pierre non cassée",
                     "type": "ARTICLE",
-                    "prix": 21.99,
-                    "unite": "m²"
+                    "prix": 1.99,
+                    "unite": "m³"
                   }
                 ]
               },
@@ -570,42 +570,42 @@
                     "nom": "de pierre demi-dure, anneau de 120 à 150 mm",
                     "type": "ARTICLE",
                     "prix": 52.21,
-                    "unite": "m²"
+                    "unite": "m³"
                   },
                   {
                     "id": "de_pierre_dure_anneau_de_120_a_150_mm_m",
                     "nom": "de pierre dure, anneau de 120 à 150 mm",
                     "type": "ARTICLE",
                     "prix": 76.95,
-                    "unite": "m²"
+                    "unite": "m³"
                   },
                   {
                     "id": "de_pierre_dure_anneau_de_80_mm_m",
                     "nom": "de pierre dure, anneau de 80 mm",
                     "type": "ARTICLE",
                     "prix": 115.41,
-                    "unite": "m²"
+                    "unite": "m³"
                   },
                   {
                     "id": "de_pierre_demi_dure_anneau_de_80_mm_m",
                     "nom": "de pierre demi-dure, anneau de 80 mm",
                     "type": "ARTICLE",
                     "prix": 90.69,
-                    "unite": "m²"
+                    "unite": "m³"
                   },
                   {
                     "id": "de_pierre_demi_dure_anneau_de_50_mm_m",
                     "nom": "de pierre demi-dure, anneau de 50 mm",
                     "type": "ARTICLE",
                     "prix": 101.67,
-                    "unite": "m²"
+                    "unite": "m³"
                   },
                   {
                     "id": "de_pierre_dure_anneau_de_50_mm_m",
                     "nom": "de pierre dure, anneau de 50 mm",
                     "type": "ARTICLE",
                     "prix": 140.14,
-                    "unite": "m²"
+                    "unite": "m³"
                   }
                 ]
               },
@@ -618,21 +618,21 @@
                     "id": "par_couches_100_mm_compris_roulage_m",
                     "nom": "par couches 100 mm, compris roulage",
                     "type": "ARTICLE",
-                    "prix": 247.32,
+                    "prix": 47.32,
                     "unite": "m²"
                   },
                   {
                     "id": "par_couches_200_mm_compris_roulage_m",
                     "nom": "par couches 200 mm, compris roulage",
                     "type": "ARTICLE",
-                    "prix": 219.84,
+                    "prix": 19.84,
                     "unite": "m²"
                   },
                   {
                     "id": "par_couches_100_mm_compris_roulage_soigne_m",
                     "nom": "par couches 100 mm, compris roulage soigné",
                     "type": "ARTICLE",
-                    "prix": 274.8,
+                    "prix": 74.8,
                     "unite": "m²"
                   }
                 ]
@@ -646,21 +646,21 @@
                     "id": "pour_une_epaisseur_de_10_cm_m",
                     "nom": "pour une épaisseur de 10 cm",
                     "type": "ARTICLE",
-                    "prix": 224.73,
+                    "prix": 4.73,
                     "unite": "m³"
                   },
                   {
                     "id": "par_centimetre_supplementaire_jusqu_a_25_cm_m",
                     "nom": "par centimètre supplémentaire, jusqu'à 25 cm",
                     "type": "ARTICLE",
-                    "prix": 22.47,
+                    "prix": 0.47,
                     "unite": "m³"
                   },
                   {
                     "id": "fouille_en_bitume_et_rangement_deblai_m",
                     "nom": "Fouille en bitume et rangement déblai",
                     "type": "ARTICLE",
-                    "prix": 28.25,
+                    "prix": 8.25,
                     "unite": "m³"
                   }
                 ]
@@ -674,14 +674,14 @@
                     "id": "pour_une_epaisseur_de_10_cm_m",
                     "nom": "pour une épaisseur de 10 cm",
                     "type": "ARTICLE",
-                    "prix": 243.96,
+                    "prix": 43.96,
                     "unite": "m³"
                   },
                   {
                     "id": "par_centimetre_supplementaire_m",
                     "nom": "par centimètre supplémentaire",
                     "type": "ARTICLE",
-                    "prix": 24.39,
+                    "prix": 4.39,
                     "unite": "m³"
                   }
                 ]
@@ -737,7 +737,7 @@
                     "id": "granit_diametre_500_900_mm_la_tonne_u",
                     "nom": "granit, diamètre 500/900 mm, la tonne",
                     "type": "ARTICLE",
-                    "prix": 216.33,
+                    "prix": 16.33,
                     "unite": "U"
                   },
                   {
@@ -752,7 +752,7 @@
                     "nom": "pierre calcaire, diamètre 500/900 mm, la tonne",
                     "type": "ARTICLE",
                     "prix": 126.33,
-                    "unite": "U"
+                    "unite": "m³"
                   },
                   {
                     "id": "porphyre_diametre_500_900_mm_la_tonne_u",
@@ -814,14 +814,14 @@
                     "id": "d_ardoise_dimensions_2000x500x1000_mm_u",
                     "nom": "d'ardoise, dimensions 2000x500x1000 mm",
                     "type": "ARTICLE",
-                    "prix": 238.18,
+                    "prix": 8.18,
                     "unite": "m²"
                   },
                   {
                     "id": "d_ardoise_dimensions_2000x750x750_mm_u",
                     "nom": "d'ardoise, dimensions 2000x750x750 mm",
                     "type": "ARTICLE",
-                    "prix": 33.63,
+                    "prix": 0.63,
                     "unite": "m²"
                   },
                   {
@@ -884,14 +884,14 @@
                     "id": "de_galet_dimensions_2000x750x750_mm_u",
                     "nom": "de galet, dimensions 2000x750x750 mm",
                     "type": "ARTICLE",
-                    "prix": 213.45,
+                    "prix": 13.45,
                     "unite": "U"
                   },
                   {
                     "id": "de_galet_dimensions_2000x1000x1000_mm_u",
                     "nom": "de galet, dimensions 2000x1000x1000 mm",
                     "type": "ARTICLE",
-                    "prix": 25.42,
+                    "prix": 5.42,
                     "unite": "U"
                   },
                   {
@@ -940,14 +940,14 @@
                     "id": "de_gres_quartzite_dimensions_2000x500x1000_mm_u",
                     "nom": "de grès quartzite, dimensions 2000x500x1000 mm",
                     "type": "ARTICLE",
-                    "prix": 206.38,
+                    "prix": 6.38,
                     "unite": "U"
                   },
                   {
                     "id": "de_gres_quartzite_dimensions_2000x750x750_mm_u",
                     "nom": "de grès quartzite, dimensions 2000x750x750 mm",
                     "type": "ARTICLE",
-                    "prix": 223.5,
+                    "prix": 3.5,
                     "unite": "U"
                   },
                   {
@@ -1003,14 +1003,14 @@
                     "id": "de_porphyre_dimensions_2000x500x1000_mm_u",
                     "nom": "de porphyre, dimensions 2000x500x1000 mm",
                     "type": "ARTICLE",
-                    "prix": 238.18,
+                    "prix": 8.18,
                     "unite": "U"
                   },
                   {
                     "id": "de_porphyre_dimensions_2000x750x750_mm_u",
                     "nom": "de porphyre, dimensions 2000x750x750 mm",
                     "type": "ARTICLE",
-                    "prix": 241.75,
+                    "prix": 41.75,
                     "unite": "U"
                   },
                   {
@@ -1066,14 +1066,14 @@
                     "id": "de_roches_calcaires_dimensions_2000x500x1000_mm_u",
                     "nom": "de roches calcaires, dimensions 2000x500x1000 mm",
                     "type": "ARTICLE",
-                    "prix": 238.18,
+                    "prix": 8.18,
                     "unite": "U"
                   },
                   {
                     "id": "de_roches_calcaires_dimensions_2000x750x750_mm_u",
                     "nom": "de roches calcaires, dimensions 2000x750x750 mm",
                     "type": "ARTICLE",
-                    "prix": 259.27,
+                    "prix": 59.27,
                     "unite": "U"
                   },
                   {
@@ -1288,14 +1288,14 @@
                     "id": "dimension_1500x400x140_mm_la_1_ere_marche_u",
                     "nom": "dimension 1500x400x140 mm, la 1 ere marche",
                     "type": "ARTICLE",
-                    "prix": 215.13,
+                    "prix": 15.13,
                     "unite": "U"
                   },
                   {
                     "id": "dimension_1500x400x140_mm_la_marche_suivante_u",
                     "nom": "dimension 1500x400x140 mm, la marche suivante",
                     "type": "ARTICLE",
-                    "prix": 210.63,
+                    "prix": 10.63,
                     "unite": "U"
                   }
                 ]
@@ -1323,42 +1323,42 @@
                     "id": "dimension_1000x400x140_mm_la_marche_suivante_u",
                     "nom": "dimension 1000x400x140 mm, la marche suivante",
                     "type": "ARTICLE",
-                    "prix": 228.07,
+                    "prix": 8.07,
                     "unite": "U"
                   },
                   {
                     "id": "dimension_1000x400x140_mm_la_1_ere_marche_u",
                     "nom": "dimension 1000x400x140 mm, la 1 ere marche",
                     "type": "ARTICLE",
-                    "prix": 232.32,
+                    "prix": 2.32,
                     "unite": "U"
                   },
                   {
                     "id": "dimension_1200x400x140_mm_la_marche_suivante_u",
                     "nom": "dimension 1200x400x140 mm, la marche suivante",
                     "type": "ARTICLE",
-                    "prix": 268.62,
+                    "prix": 68.62,
                     "unite": "U"
                   },
                   {
                     "id": "dimension_1200x400x140_mm_la_1_ere_marche_u",
                     "nom": "dimension 1200x400x140 mm, la 1 ere marche",
                     "type": "ARTICLE",
-                    "prix": 272.71,
+                    "prix": 72.71,
                     "unite": "U"
                   },
                   {
                     "id": "dimension_1500x400x140_mm_la_marche_suivante_u",
                     "nom": "dimension 1500x400x140 mm, la marche suivante",
                     "type": "ARTICLE",
-                    "prix": 29.4,
+                    "prix": 9.4,
                     "unite": "U"
                   },
                   {
                     "id": "dimension_1500x400x140_mm_la_1_ere_marche_u",
                     "nom": "dimension 1500x400x140 mm, la 1 ere marche",
                     "type": "ARTICLE",
-                    "prix": 33.9,
+                    "prix": 0.9,
                     "unite": "U"
                   }
                 ]
@@ -1414,14 +1414,14 @@
                     "id": "dimension_1500x400x140_mm_la_marche_suivante_u",
                     "nom": "dimension 1500x400x140 mm, la marche suivante",
                     "type": "ARTICLE",
-                    "prix": 213.07,
+                    "prix": 13.07,
                     "unite": "U"
                   },
                   {
                     "id": "dimension_1500x400x140_mm_la_1_ere_marche_u",
                     "nom": "dimension 1500x400x140 mm, la 1 ere marche",
                     "type": "ARTICLE",
-                    "prix": 217.57,
+                    "prix": 17.57,
                     "unite": "U"
                   }
                 ]
@@ -1477,14 +1477,14 @@
                     "id": "dimension_1500x400x140_mm_la_1_ere_marche_u",
                     "nom": "dimension 1500x400x140 mm, la 1 ere marche",
                     "type": "ARTICLE",
-                    "prix": 214.5,
+                    "prix": 14.5,
                     "unite": "U"
                   },
                   {
                     "id": "dimension_1500x400x140_mm_marches_suivantes_u",
                     "nom": "dimension 1500x400x140 mm, marches suivantes",
                     "type": "ARTICLE",
-                    "prix": 210,
+                    "prix": 10,
                     "unite": "U"
                   }
                 ]
@@ -1533,14 +1533,14 @@
                     "id": "en_fer_rond_galvanise_fil_n_14_maille_50_compris_piquets_hauteur_1_m_m",
                     "nom": "en fer rond galvanisé, fil N° 14, maille 50, compris piquets, hauteur 1 m",
                     "type": "ARTICLE",
-                    "prix": 253.13,
+                    "prix": 53.13,
                     "unite": "m²"
                   },
                   {
                     "id": "en_fer_rond_plastifie_fil_n_14_maille_50_compris_piquets_hauteur_1_m_m",
                     "nom": "en fer rond plastifié, fil N°14, maille 50, compris piquets, hauteur 1 m",
                     "type": "ARTICLE",
-                    "prix": 261,
+                    "prix": 61,
                     "unite": "m²"
                   }
                 ]
@@ -1554,42 +1554,42 @@
                     "id": "hauteur_0_70_m_m",
                     "nom": "hauteur 0,70 m",
                     "type": "ARTICLE",
-                    "prix": 243.24,
+                    "prix": 43.24,
                     "unite": "m²"
                   },
                   {
                     "id": "hauteur_1_00_m_m",
                     "nom": "hauteur 1,00 m",
                     "type": "ARTICLE",
-                    "prix": 246.99,
+                    "prix": 46.99,
                     "unite": "m²"
                   },
                   {
                     "id": "hauteur_1_30_m_m",
                     "nom": "hauteur 1,30 m",
                     "type": "ARTICLE",
-                    "prix": 253.38,
+                    "prix": 53.38,
                     "unite": "m²"
                   },
                   {
                     "id": "hauteur_1_80_m_m",
                     "nom": "hauteur 1,80 m",
                     "type": "ARTICLE",
-                    "prix": 266.64,
+                    "prix": 66.64,
                     "unite": "m²"
                   },
                   {
                     "id": "hauteur_1_50_m_m",
                     "nom": "hauteur 1,50 m",
                     "type": "ARTICLE",
-                    "prix": 261.17,
+                    "prix": 61.17,
                     "unite": "m²"
                   },
                   {
                     "id": "hauteur_2_00_m_m",
                     "nom": "hauteur 2,00 m",
                     "type": "ARTICLE",
-                    "prix": 274.82,
+                    "prix": 74.82,
                     "unite": "m²"
                   }
                 ]
@@ -1694,7 +1694,7 @@
                     "id": "defoncage_m",
                     "nom": "Défonçage",
                     "type": "ARTICLE",
-                    "prix": 25.49,
+                    "prix": 5.49,
                     "unite": "m²"
                   }
                 ]
@@ -1708,35 +1708,35 @@
                     "id": "a_la_beche_de_terre_plein_m",
                     "nom": "à la bêche, de terre-plein",
                     "type": "ARTICLE",
-                    "prix": 254.96,
-                    "unite": "m²"
+                    "prix": 54.96,
+                    "unite": "m³"
                   },
                   {
                     "id": "a_la_beche_de_plate_bande_m",
                     "nom": "à la bêche, de plate-bande",
                     "type": "ARTICLE",
-                    "prix": 29.61,
+                    "prix": 9.61,
                     "unite": "m²"
                   },
                   {
                     "id": "a_la_beche_de_gazon_m",
                     "nom": "à la bêche, de gazon",
                     "type": "ARTICLE",
-                    "prix": 28.25,
+                    "prix": 8.25,
                     "unite": "m²"
                   },
                   {
                     "id": "a_la_charrue_traction_animale_m",
                     "nom": "à la charrue, traction animale",
                     "type": "ARTICLE",
-                    "prix": 24.12,
+                    "prix": 4.12,
                     "unite": "m²"
                   },
                   {
                     "id": "a_la_charrue_traction_mecanique_m",
                     "nom": "à la charrue, traction mécanique",
                     "type": "ARTICLE",
-                    "prix": 21.92,
+                    "prix": 1.92,
                     "unite": "m²"
                   }
                 ]
@@ -1750,14 +1750,14 @@
                     "id": "sans_piochage_m",
                     "nom": "sans piochage",
                     "type": "ARTICLE",
-                    "prix": 22.74,
+                    "prix": 0.74,
                     "unite": "m²"
                   },
                   {
                     "id": "sans_piochage_compris_cylindrage_m",
                     "nom": "sans piochage, compris cylindrage",
                     "type": "ARTICLE",
-                    "prix": 28.25,
+                    "prix": 8.25,
                     "unite": "m²"
                   }
                 ]
@@ -1771,15 +1771,15 @@
                     "id": "de_sable_ou_cailloux_epaisseur_50_a_200_mm_m",
                     "nom": "de sable ou cailloux, épaisseur 50 à 200 mm",
                     "type": "ARTICLE",
-                    "prix": 22.74,
+                    "prix": 0.74,
                     "unite": "m²"
                   },
                   {
                     "id": "de_terre_dure_m",
                     "nom": "de terre dure",
                     "type": "ARTICLE",
-                    "prix": 24.12,
-                    "unite": "m²"
+                    "prix": 4.12,
+                    "unite": "m³"
                   }
                 ]
               },
@@ -1792,22 +1792,22 @@
                     "id": "de_terrain_par_legers_mouvement_de_terre_de_100_a_150_mm_d_epaisseur_m",
                     "nom": "de terrain par légers mouvement de terre de 100 à 150 mm d'épaisseur",
                     "type": "ARTICLE",
-                    "prix": 23.3,
-                    "unite": "m²"
+                    "prix": 0.3,
+                    "unite": "m³"
                   },
                   {
                     "id": "definitif_des_allees_massifs_et_pelouses_m",
                     "nom": "définitif des allées, massifs et pelouses",
                     "type": "ARTICLE",
-                    "prix": 22.74,
+                    "prix": 0.74,
                     "unite": "m²"
                   },
                   {
                     "id": "de_bordures_m",
                     "nom": "de bordures",
                     "type": "ARTICLE",
-                    "prix": 23.13,
-                    "unite": "m²"
+                    "prix": 0.13,
+                    "unite": "ml"
                   }
                 ]
               },
@@ -1820,42 +1820,42 @@
                     "id": "par_traction_animale_de_terre_legere_m",
                     "nom": "par traction animale, de terre légère",
                     "type": "ARTICLE",
-                    "prix": 20.82,
-                    "unite": "m²"
+                    "prix": 0.82,
+                    "unite": "m³"
                   },
                   {
                     "id": "par_traction_animale_de_terre_lourde_m",
                     "nom": "par traction animale, de terre lourde",
                     "type": "ARTICLE",
-                    "prix": 21.09,
-                    "unite": "m²"
+                    "prix": 1.09,
+                    "unite": "m³"
                   },
                   {
                     "id": "par_traction_mecanique_de_terre_legere_m",
                     "nom": "par traction mécanique, de terre légère",
                     "type": "ARTICLE",
-                    "prix": 20.55,
-                    "unite": "m²"
+                    "prix": 0.55,
+                    "unite": "m³"
                   },
                   {
                     "id": "par_traction_mecanique_de_terre_lourde_m",
                     "nom": "par traction mécanique, de terre lourde",
                     "type": "ARTICLE",
-                    "prix": 20.82,
-                    "unite": "m²"
+                    "prix": 0.82,
+                    "unite": "m³"
                   },
                   {
                     "id": "epandage_de_fumier_ou_paille_m",
                     "nom": "Epandage de fumier ou paille",
                     "type": "ARTICLE",
-                    "prix": 22.47,
+                    "prix": 0.47,
                     "unite": "m²"
                   },
                   {
                     "id": "ratissage_m",
                     "nom": "Ratissage",
                     "type": "ARTICLE",
-                    "prix": 22.2,
+                    "prix": 0.2,
                     "unite": "m²"
                   }
                 ]
@@ -1895,21 +1895,21 @@
                     "id": "avec_enfouissement_et_roulage_m",
                     "nom": "avec enfouissement et roulage",
                     "type": "ARTICLE",
-                    "prix": 22.47,
+                    "prix": 0.47,
                     "unite": "m²"
                   },
                   {
                     "id": "pour_bordures_inferieures_a_1_00_m_de_largeur_m",
                     "nom": "pour bordures inférieures à 1,00 m de largeur",
                     "type": "ARTICLE",
-                    "prix": 24.39,
+                    "prix": 4.39,
                     "unite": "m²"
                   },
                   {
                     "id": "terreautage_des_semis_m",
                     "nom": "Terreautage des semis",
                     "type": "ARTICLE",
-                    "prix": 22.2,
+                    "prix": 0.2,
                     "unite": "m²"
                   }
                 ]
@@ -1923,21 +1923,21 @@
                     "id": "a_bras_d_homme_inferieures_a_1000_m2_m",
                     "nom": "à bras d'homme, inférieures à 1000 m2",
                     "type": "ARTICLE",
-                    "prix": 21.38,
+                    "prix": 1.38,
                     "unite": "m²"
                   },
                   {
                     "id": "a_bras_d_homme_superieures_a_1000_m2_m",
                     "nom": "à bras d'homme, supérieures à 1000 m2",
                     "type": "ARTICLE",
-                    "prix": 20.82,
+                    "prix": 0.82,
                     "unite": "m²"
                   },
                   {
                     "id": "mecaniquement_m",
                     "nom": "mécaniquement",
                     "type": "ARTICLE",
-                    "prix": 20.82,
+                    "prix": 0.82,
                     "unite": "m²"
                   }
                 ]
@@ -1951,28 +1951,28 @@
                     "id": "sur_terrain_en_pente_inferieure_a_30_m",
                     "nom": "sur terrain en pente inférieure à 30%",
                     "type": "ARTICLE",
-                    "prix": 24.12,
+                    "prix": 4.12,
                     "unite": "m²"
                   },
                   {
                     "id": "sur_terrain_en_pente_superieure_a_30_m",
                     "nom": "sur terrain en pente supérieure à 30%",
                     "type": "ARTICLE",
-                    "prix": 26.87,
+                    "prix": 6.87,
                     "unite": "m²"
                   },
                   {
                     "id": "pour_bordures_inferieures_a_50_cm_m",
                     "nom": "pour bordures inférieures à 50 cm",
                     "type": "ARTICLE",
-                    "prix": 27.69,
+                    "prix": 7.69,
                     "unite": "m²"
                   },
                   {
                     "id": "pour_bordures_largeur_de_50_a_100_cm_m",
                     "nom": "pour bordures largeur de 50 à 100 cm",
                     "type": "ARTICLE",
-                    "prix": 26.6,
+                    "prix": 6.6,
                     "unite": "m²"
                   }
                 ]
@@ -1986,35 +1986,35 @@
                     "id": "inferieur_a_100_m2_m",
                     "nom": "inférieur à 100 m2",
                     "type": "ARTICLE",
-                    "prix": 21.65,
+                    "prix": 1.65,
                     "unite": "m²"
                   },
                   {
                     "id": "de_100_a_250_m2_m",
                     "nom": "de 100 à 250 m2",
                     "type": "ARTICLE",
-                    "prix": 21.38,
+                    "prix": 1.38,
                     "unite": "m²"
                   },
                   {
                     "id": "de_251_a_500_m2_m",
                     "nom": "de 251 à 500 m2",
                     "type": "ARTICLE",
-                    "prix": 21.09,
+                    "prix": 1.09,
                     "unite": "m²"
                   },
                   {
                     "id": "superieur_a_500_m2_m",
                     "nom": "supérieur à 500 m2",
                     "type": "ARTICLE",
-                    "prix": 20.82,
+                    "prix": 0.82,
                     "unite": "m²"
                   },
                   {
                     "id": "bordures_inferieures_a_1_00_m_m",
                     "nom": "bordures inférieures à 1,00 m",
                     "type": "ARTICLE",
-                    "prix": 22.2,
+                    "prix": 0.2,
                     "unite": "m²"
                   }
                 ]
@@ -2028,21 +2028,21 @@
                     "id": "inferieur_a_250_m2_m",
                     "nom": "inférieur à 250 m2",
                     "type": "ARTICLE",
-                    "prix": 21.09,
+                    "prix": 1.09,
                     "unite": "m²"
                   },
                   {
                     "id": "de_251_a_500_m2_m",
                     "nom": "de 251 à 500 m2",
                     "type": "ARTICLE",
-                    "prix": 20.82,
+                    "prix": 0.82,
                     "unite": "m²"
                   },
                   {
                     "id": "superieur_a_500_m2_m",
                     "nom": "supérieur à 500 m2",
                     "type": "ARTICLE",
-                    "prix": 20.55,
+                    "prix": 0.55,
                     "unite": "m²"
                   }
                 ]
@@ -2056,7 +2056,7 @@
                     "id": "dans_le_neuf_m",
                     "nom": "<dans le neuf>",
                     "type": "ARTICLE",
-                    "prix": 2.34,
+                    "prix": 0.34,
                     "unite": "m²"
                   },
                   {
@@ -2077,7 +2077,7 @@
                     "id": "en_partie_droite_m",
                     "nom": "en partie droite",
                     "type": "ARTICLE",
-                    "prix": 2.73,
+                    "prix": 0.73,
                     "unite": "m²"
                   },
                   {
@@ -2098,28 +2098,28 @@
                     "id": "blocage_en_pierre_cassee_m",
                     "nom": "Blocage en pierre cassée",
                     "type": "ARTICLE",
-                    "prix": 220.61,
-                    "unite": "m²"
+                    "prix": 0.61,
+                    "unite": "m³"
                   },
                   {
                     "id": "epandage_de_macadam_avec_arrosage_et_cylindrage_m",
                     "nom": "Epandage de macadam, avec arrosage et cylindrage",
                     "type": "ARTICLE",
-                    "prix": 219.98,
+                    "prix": 19.98,
                     "unite": "m²"
                   },
                   {
                     "id": "cylindrage_de_chaussee_non_empierree_m",
                     "nom": "Cylindrage de chaussée non-empierrée",
                     "type": "ARTICLE",
-                    "prix": 22.74,
+                    "prix": 0.74,
                     "unite": "m²"
                   },
                   {
                     "id": "cylindrage_de_pistes_avec_mise_a_niveau_m",
                     "nom": "Cylindrage de pistes avec mise à niveau",
                     "type": "ARTICLE",
-                    "prix": 228.21,
+                    "prix": 8.21,
                     "unite": "m²"
                   }
                 ]
@@ -2154,14 +2154,14 @@
                     "id": "circonference_110_a_180_mm_u",
                     "nom": "circonférence 110 à 180 mm",
                     "type": "ARTICLE",
-                    "prix": 23.29,
+                    "prix": 0.29,
                     "unite": "U"
                   },
                   {
                     "id": "circonference_190_a_250_mm_u",
                     "nom": "circonférence 190 à 250 mm",
                     "type": "ARTICLE",
-                    "prix": 3.3,
+                    "prix": 0.3,
                     "unite": "U"
                   },
                   {
@@ -2189,7 +2189,7 @@
                     "id": "circonference_410_a_450_mm_u",
                     "nom": "circonférence 410 à 450 mm",
                     "type": "ARTICLE",
-                    "prix": 213.06,
+                    "prix": 13.06,
                     "unite": "U"
                   }
                 ]
@@ -2245,14 +2245,14 @@
                     "id": "de_2_01_a_2_50_m_de_hauteur_u",
                     "nom": "de 2,01 à 2,50 m de hauteur",
                     "type": "ARTICLE",
-                    "prix": 26.64,
+                    "prix": 6.64,
                     "unite": "U"
                   },
                   {
                     "id": "de_2_51_a_3_00_m_de_hauteur_u",
                     "nom": "de 2,51 à 3,00 m de hauteur",
                     "type": "ARTICLE",
-                    "prix": 3.3,
+                    "prix": 0.3,
                     "unite": "U"
                   },
                   {
@@ -2343,14 +2343,14 @@
                     "id": "largeur_0_50_cm_m",
                     "nom": "largeur 0,50 cm",
                     "type": "ARTICLE",
-                    "prix": 23.29,
+                    "prix": 0.29,
                     "unite": "ml"
                   },
                   {
                     "id": "largeur_0_60_cm_m",
                     "nom": "largeur 0,60 cm",
                     "type": "ARTICLE",
-                    "prix": 26.64,
+                    "prix": 6.64,
                     "unite": "ml"
                   },
                   {
@@ -2385,7 +2385,7 @@
                     "id": "de_1_51_a_2_25_m_de_hauteur_u",
                     "nom": "de 1,51 à 2,25 m de hauteur",
                     "type": "ARTICLE",
-                    "prix": 3.3,
+                    "prix": 0.3,
                     "unite": "U"
                   },
                   {
@@ -2462,7 +2462,7 @@
                     "id": "force_courante_u",
                     "nom": "force courante",
                     "type": "ARTICLE",
-                    "prix": 2.65,
+                    "prix": 0.65,
                     "unite": "U"
                   },
                   {
@@ -2497,7 +2497,7 @@
                     "id": "en_remplissage_m",
                     "nom": "en remplissage",
                     "type": "ARTICLE",
-                    "prix": 2113.19,
+                    "prix": 113.19,
                     "unite": "m²"
                   }
                 ]
@@ -2525,7 +2525,7 @@
                     "id": "pose_seule_scellee_au_mortier_de_pose_m",
                     "nom": "pose seule scellée au mortier de pose",
                     "type": "ARTICLE",
-                    "prix": 25.63,
+                    "prix": 5.63,
                     "unite": "m²"
                   },
                   {
@@ -2707,7 +2707,7 @@
                     "id": "pose_seule_scellee_au_mortier_de_pose_m",
                     "nom": "pose seule scellée au mortier de pose",
                     "type": "ARTICLE",
-                    "prix": 26.25,
+                    "prix": 6.25,
                     "unite": "m²"
                   },
                   {
@@ -2889,98 +2889,98 @@
                     "id": "bois_composite_lame_de_140_mm_de_largeur_m",
                     "nom": "bois composite, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2143.1,
+                    "prix": 143.1,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_afzelia_lame_de_120_mm_de_largeur_m",
                     "nom": "essence afzelia, lame de 120 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2182.5,
+                    "prix": 182.5,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_afzelia_lame_de_140_mm_de_largeur_m",
                     "nom": "essence afzelia, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2188.91,
+                    "prix": 188.91,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_afzelia_lame_de_180_mm_de_largeur_m",
                     "nom": "essence afzelia, lame de 180 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2194.5,
+                    "prix": 194.5,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_afrormosia_lame_de_140_mm_de_largeur_m",
                     "nom": "essence afrormosia, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2199.59,
+                    "prix": 199.59,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_amelhia_lame_de_140_mm_de_largeur_m",
                     "nom": "essence amélhia, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2100.62,
+                    "prix": 100.62,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_cocotier_lame_de_90_mm_de_largeur_m",
                     "nom": "essence cocotier, lame de 90 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2154.92,
+                    "prix": 154.92,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_cumaru_lame_de_140_mm_de_largeur_m",
                     "nom": "essence cumaru, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2156.55,
+                    "prix": 156.55,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_garapa_lame_de_145_mm_de_largeur_m",
                     "nom": "essence garapa, lame de 145 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2138.45,
+                    "prix": 138.45,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_ipe_lame_de_140_mm_de_largeur_m",
                     "nom": "essence ipé, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2193.29,
+                    "prix": 193.29,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_pin_traite_autoclave_lame_de_90_mm_de_largeur_m",
                     "nom": "essence pin, traité autoclave, lame de 90 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2123.24,
+                    "prix": 123.24,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_pin_traite_autoclave_lame_de_120_mm_de_largeur_m",
                     "nom": "essence pin, traité autoclave, lame de 120 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2124.39,
+                    "prix": 124.39,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_pin_traite_autoclave_lame_de_140_mm_de_largeur_m",
                     "nom": "essence pin, traité autoclave, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2127.8,
+                    "prix": 127.8,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_teck_lame_de_140_mm_de_largeur_m",
                     "nom": "essence teck, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2264.25,
+                    "prix": 64.25,
                     "unite": "m²"
                   }
                 ]
@@ -2994,84 +2994,84 @@
                     "id": "bois_composite_lame_de_140_mm_de_largeur_m",
                     "nom": "bois composite, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2150.64,
+                    "prix": 150.64,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_afzelia_lame_de_120_mm_de_largeur_m",
                     "nom": "essence afzelia, lame de 120 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2187.24,
+                    "prix": 187.24,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_afzelia_lame_de_140_mm_de_largeur_m",
                     "nom": "essence afzelia, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2196.45,
+                    "prix": 196.45,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_afzelia_lame_de_180_mm_de_largeur_m",
                     "nom": "essence afzelia, lame de 180 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2200.91,
+                    "prix": 0.91,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_afrormosia_lame_de_140_mm_de_largeur_m",
                     "nom": "essence afrormosia, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2207.13,
+                    "prix": 7.13,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_cocotier_lame_de_90_mm_de_largeur_m",
                     "nom": "essence cocotier, lame de 90 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2167.16,
+                    "prix": 167.16,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_cumaru_lame_de_140_mm_de_largeur_m",
                     "nom": "essence cumaru, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2164.1,
+                    "prix": 164.1,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_ipe_lame_de_140_mm_de_largeur_m",
                     "nom": "essence ipé, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2200.83,
+                    "prix": 0.83,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_pin_traite_autoclave_lame_de_90_mm_de_largeur_m",
                     "nom": "essence pin, traité autoclave, lame de 90 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2139.08,
+                    "prix": 139.08,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_pin_traite_autoclave_lame_de_120_mm_de_largeur_m",
                     "nom": "essence pin, traité autoclave, lame de 120 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2134.31,
+                    "prix": 134.31,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_pin_traite_autoclave_lame_de_140_mm_de_largeur_m",
                     "nom": "essence pin, traité autoclave, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2135.34,
+                    "prix": 135.34,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_teck_lame_de_140_mm_de_largeur_m",
                     "nom": "essence teck, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2271.8,
+                    "prix": 71.8,
                     "unite": "m²"
                   }
                 ]
@@ -3085,84 +3085,84 @@
                     "id": "bois_composite_lame_de_140_mm_de_largeur_m",
                     "nom": "bois composite, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2147.54,
+                    "prix": 147.54,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_afzelia_lame_de_120_mm_de_largeur_m",
                     "nom": "essence afzelia, lame de 120 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2186.03,
+                    "prix": 186.03,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_afzelia_lame_de_140_mm_de_largeur_m",
                     "nom": "essence afzelia, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2193.35,
+                    "prix": 193.35,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_afzelia_lame_de_180_mm_de_largeur_m",
                     "nom": "essence afzelia, lame de 180 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2197.22,
+                    "prix": 197.22,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_afrormosia_lame_de_140_mm_de_largeur_m",
                     "nom": "essence afrormosia, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2204.03,
+                    "prix": 4.03,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_cocotier_lame_de_90_mm_de_largeur_m",
                     "nom": "essence cocotier, lame de 90 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2164.28,
+                    "prix": 164.28,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_cumaru_lame_de_140_mm_de_largeur_m",
                     "nom": "essence cumaru, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2160.99,
+                    "prix": 160.99,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_ipe_lame_de_140_mm_de_largeur_m",
                     "nom": "essence ipé, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2197.73,
+                    "prix": 197.73,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_pin_traite_autoclave_lame_de_90_mm_de_largeur_m",
                     "nom": "essence pin, traité autoclave, lame de 90 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2136.2,
+                    "prix": 136.2,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_pin_traite_autoclave_lame_de_120_mm_de_largeur_m",
                     "nom": "essence pin, traité autoclave, lame de 120 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2133.09,
+                    "prix": 133.09,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_pin_traite_autoclave_lame_de_140_mm_de_largeur_m",
                     "nom": "essence pin, traité autoclave, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2132.24,
+                    "prix": 132.24,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_teck_lame_de_140_mm_de_largeur_m",
                     "nom": "essence teck, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2268.69,
+                    "prix": 68.69,
                     "unite": "m²"
                   }
                 ]
@@ -3176,168 +3176,168 @@
                     "id": "lames_en_ipe_de_68_mm_dimensions_cailleboti_43x43_cm_m",
                     "nom": "lames en ipé de 68 mm, dimensions cailleboti 43x43 cm",
                     "type": "ARTICLE",
-                    "prix": 2117.94,
+                    "prix": 117.94,
                     "unite": "m²"
                   },
                   {
                     "id": "lames_en_ipe_de_68_mm_dimensions_cailleboti_50x50_cm_m",
                     "nom": "lames en ipé de 68 mm, dimensions cailleboti 50x50 cm",
                     "type": "ARTICLE",
-                    "prix": 2136.06,
+                    "prix": 136.06,
                     "unite": "m²"
                   },
                   {
                     "id": "lames_en_ipe_de_68_mm_dimensions_cailleboti_50x100_cm_m",
                     "nom": "lames en ipé de 68 mm, dimensions cailleboti 50x100 cm",
                     "type": "ARTICLE",
-                    "prix": 2214.78,
+                    "prix": 14.78,
                     "unite": "m²"
                   },
                   {
                     "id": "lames_en_ipe_de_68_mm_dimensions_cailleboti_50x150_cm_m",
                     "nom": "lames en ipé de 68 mm, dimensions cailleboti 50x150 cm",
                     "type": "ARTICLE",
-                    "prix": 2221.08,
+                    "prix": 21.08,
                     "unite": "m²"
                   },
                   {
                     "id": "lames_en_ipe_de_120_mm_dimensions_cailleboti_50x200_cm_m",
                     "nom": "lames en ipé de 120 mm, dimensions cailleboti 50x200 cm",
                     "type": "ARTICLE",
-                    "prix": 2220.53,
+                    "prix": 20.53,
                     "unite": "m²"
                   },
                   {
                     "id": "lames_en_ipe_de_120_mm_dimensions_cailleboti_50x250_cm_m",
                     "nom": "lames en ipé de 120 mm, dimensions cailleboti 50x250 cm",
                     "type": "ARTICLE",
-                    "prix": 2222.81,
+                    "prix": 22.81,
                     "unite": "m²"
                   },
                   {
                     "id": "lames_en_ipe_de_120_mm_dimensions_cailleboti_50x300_cm_m",
                     "nom": "lames en ipé de 120 mm, dimensions cailleboti 50x300 cm",
                     "type": "ARTICLE",
-                    "prix": 2219.42,
+                    "prix": 19.42,
                     "unite": "m²"
                   },
                   {
                     "id": "lames_en_padouk_de_68_mm_dimensions_cailleboti_43x43_cm_m",
                     "nom": "lames en padouk de 68 mm, dimensions cailleboti 43x43 cm",
                     "type": "ARTICLE",
-                    "prix": 2115.26,
+                    "prix": 115.26,
                     "unite": "m²"
                   },
                   {
                     "id": "lames_en_padouk_de_68_mm_dimensions_cailleboti_50x50_cm_m",
                     "nom": "lames en padouk de 68 mm, dimensions cailleboti 50x50 cm",
                     "type": "ARTICLE",
-                    "prix": 2140.68,
+                    "prix": 140.68,
                     "unite": "m²"
                   },
                   {
                     "id": "lames_en_padouk_de_68_mm_dimensions_cailleboti_50x100_cm_m",
                     "nom": "lames en padouk de 68 mm, dimensions cailleboti 50x100 cm",
                     "type": "ARTICLE",
-                    "prix": 2208.87,
+                    "prix": 8.87,
                     "unite": "m²"
                   },
                   {
                     "id": "lames_en_padouk_de_68_mm_dimensions_cailleboti_50x150_cm_m",
                     "nom": "lames en padouk de 68 mm, dimensions cailleboti 50x150 cm",
                     "type": "ARTICLE",
-                    "prix": 2208.15,
+                    "prix": 8.15,
                     "unite": "m²"
                   },
                   {
                     "id": "lames_en_padouk_de_120_mm_dimensions_cailleboti_50x200_cm_m",
                     "nom": "lames en padouk de 120 mm, dimensions cailleboti 50x200 cm",
                     "type": "ARTICLE",
-                    "prix": 2207.28,
+                    "prix": 7.28,
                     "unite": "m²"
                   },
                   {
                     "id": "lames_en_padouk_de_120_mm_dimensions_cailleboti_50x250_cm_m",
                     "nom": "lames en padouk de 120 mm, dimensions cailleboti 50x250 cm",
                     "type": "ARTICLE",
-                    "prix": 2206.52,
+                    "prix": 6.52,
                     "unite": "m²"
                   },
                   {
                     "id": "lames_en_padouk_de_120_mm_dimensions_cailleboti_50x300_cm_m",
                     "nom": "lames en padouk de 120 mm, dimensions cailleboti 50x300 cm",
                     "type": "ARTICLE",
-                    "prix": 2206.13,
+                    "prix": 6.13,
                     "unite": "m²"
                   },
                   {
                     "id": "lames_en_pin_maritime_de_140_mm_dimensions_cailleboti_50x50_cm_m",
                     "nom": "lames en pin maritime de 140 mm, dimensions cailleboti 50x50 cm",
                     "type": "ARTICLE",
-                    "prix": 282.92,
+                    "prix": 82.92,
                     "unite": "m²"
                   },
                   {
                     "id": "lames_en_pin_maritime_de_140_mm_dimensions_cailleboti_80x80_cm_m",
                     "nom": "lames en pin maritime de 140 mm, dimensions cailleboti 80x80 cm",
                     "type": "ARTICLE",
-                    "prix": 269.52,
+                    "prix": 69.52,
                     "unite": "m²"
                   },
                   {
                     "id": "lames_en_pin_maritime_de_140_mm_dimensions_cailleboti_100x100_cm_m",
                     "nom": "lames en pin maritime de 140 mm, dimensions cailleboti 100x100 cm",
                     "type": "ARTICLE",
-                    "prix": 263.81,
+                    "prix": 63.81,
                     "unite": "m²"
                   },
                   {
                     "id": "lames_en_tali_de_68_mm_dimensions_cailleboti_43x43_cm_m",
                     "nom": "lames en tali de 68 mm, dimensions cailleboti 43x43 cm",
                     "type": "ARTICLE",
-                    "prix": 2114.49,
+                    "prix": 114.49,
                     "unite": "m²"
                   },
                   {
                     "id": "lames_en_tali_de_68_mm_dimensions_cailleboti_50x50_cm_m",
                     "nom": "lames en tali de 68 mm, dimensions cailleboti 50x50 cm",
                     "type": "ARTICLE",
-                    "prix": 2129.61,
+                    "prix": 129.61,
                     "unite": "m²"
                   },
                   {
                     "id": "lames_en_tali_de_68_mm_dimensions_cailleboti_50x100_cm_m",
                     "nom": "lames en tali de 68 mm, dimensions cailleboti 50x100 cm",
                     "type": "ARTICLE",
-                    "prix": 2197.49,
+                    "prix": 197.49,
                     "unite": "m²"
                   },
                   {
                     "id": "lames_en_tali_de_68_mm_dimensions_cailleboti_50x150_cm_m",
                     "nom": "lames en tali de 68 mm, dimensions cailleboti 50x150 cm",
                     "type": "ARTICLE",
-                    "prix": 2198.7,
+                    "prix": 198.7,
                     "unite": "m²"
                   },
                   {
                     "id": "lames_en_tali_de_120_mm_dimensions_cailleboti_50x200_cm_m",
                     "nom": "lames en tali de 120 mm, dimensions cailleboti 50x200 cm",
                     "type": "ARTICLE",
-                    "prix": 2201.45,
+                    "prix": 1.45,
                     "unite": "m²"
                   },
                   {
                     "id": "lames_en_tali_de_120_mm_dimensions_cailleboti_50x250_cm_m",
                     "nom": "lames en tali de 120 mm, dimensions cailleboti 50x250 cm",
                     "type": "ARTICLE",
-                    "prix": 2195.13,
+                    "prix": 195.13,
                     "unite": "m²"
                   },
                   {
                     "id": "lames_en_tali_de_120_mm_dimensions_cailleboti_50x300_cm_m",
                     "nom": "lames en tali de 120 mm, dimensions cailleboti 50x300 cm",
                     "type": "ARTICLE",
-                    "prix": 2195.82,
+                    "prix": 195.82,
                     "unite": "m²"
                   }
                 ]
@@ -3351,91 +3351,91 @@
                     "id": "bois_composite_lame_de_140_mm_de_largeur_m",
                     "nom": "bois composite, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2162.75,
+                    "prix": 162.75,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_afzelia_lame_de_120_mm_de_largeur_m",
                     "nom": "essence afzelia, lame de 120 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2202.53,
+                    "prix": 2.53,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_afzelia_lame_de_140_mm_de_largeur_m",
                     "nom": "essence afzelia, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2208.95,
+                    "prix": 8.95,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_afzelia_lame_de_180_mm_de_largeur_m",
                     "nom": "essence afzelia, lame de 180 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2214.53,
+                    "prix": 14.53,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_afrormosia_lame_de_140_mm_de_largeur_m",
                     "nom": "essence afrormosia, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2219.63,
+                    "prix": 19.63,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_cocotier_lame_de_90_mm_de_largeur_m",
                     "nom": "essence cocotier, lame de 90 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2174.94,
+                    "prix": 174.94,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_cumaru_lame_de_140_mm_de_largeur_m",
                     "nom": "essence cumaru, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2176.59,
+                    "prix": 176.59,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_garapa_lame_de_145_mm_de_largeur_m",
                     "nom": "essence garapa, lame de 145 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2158.49,
+                    "prix": 158.49,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_ipe_lame_de_140_mm_de_largeur_m",
                     "nom": "essence ipé, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2213.33,
+                    "prix": 13.33,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_pin_traite_autoclave_lame_de_90_mm_de_largeur_m",
                     "nom": "essence pin, traité autoclave, lame de 90 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2143.94,
+                    "prix": 143.94,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_pin_traite_autoclave_lame_de_120_mm_de_largeur_m",
                     "nom": "essence pin, traité autoclave, lame de 120 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2144.42,
+                    "prix": 144.42,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_pin_traite_autoclave_lame_de_140_mm_de_largeur_m",
                     "nom": "essence pin, traité autoclave, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2147.84,
+                    "prix": 147.84,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_teck_lame_de_140_mm_de_largeur_m",
                     "nom": "essence teck, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2284.29,
+                    "prix": 84.29,
                     "unite": "m²"
                   }
                 ]
@@ -3449,84 +3449,84 @@
                     "id": "bois_composite_lame_de_140_mm_de_largeur_m",
                     "nom": "bois composite, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2170.68,
+                    "prix": 170.68,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_afzelia_lame_de_120_mm_de_largeur_m",
                     "nom": "essence afzelia, lame de 120 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2208.84,
+                    "prix": 8.84,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_afzelia_lame_de_140_mm_de_largeur_m",
                     "nom": "essence afzelia, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2216.49,
+                    "prix": 16.49,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_afzelia_lame_de_180_mm_de_largeur_m",
                     "nom": "essence afzelia, lame de 180 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2220.93,
+                    "prix": 20.93,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_afrormosia_lame_de_140_mm_de_largeur_m",
                     "nom": "essence afrormosia, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2227.17,
+                    "prix": 27.17,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_cocotier_lame_de_90_mm_de_largeur_m",
                     "nom": "essence cocotier, lame de 90 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2187.18,
+                    "prix": 187.18,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_cumaru_lame_de_140_mm_de_largeur_m",
                     "nom": "essence cumaru, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2184.14,
+                    "prix": 184.14,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_ipe_lame_de_140_mm_de_largeur_m",
                     "nom": "essence ipé, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2220.87,
+                    "prix": 20.87,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_pin_traite_autoclave_lame_de_90_mm_de_largeur_m",
                     "nom": "essence pin, traité autoclave, lame de 90 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2159.1,
+                    "prix": 159.1,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_pin_traite_autoclave_lame_de_120_mm_de_largeur_m",
                     "nom": "essence pin, traité autoclave, lame de 120 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2154.33,
+                    "prix": 154.33,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_pin_traite_autoclave_lame_de_140_mm_de_largeur_m",
                     "nom": "essence pin, traité autoclave, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2155.38,
+                    "prix": 155.38,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_teck_lame_de_140_mm_de_largeur_m",
                     "nom": "essence teck, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2291.84,
+                    "prix": 91.84,
                     "unite": "m²"
                   }
                 ]
@@ -3540,84 +3540,84 @@
                     "id": "bois_composite_lame_de_140_mm_de_largeur_m",
                     "nom": "bois composite, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2167.58,
+                    "prix": 167.58,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_afzelia_lame_de_120_mm_de_largeur_m",
                     "nom": "essence afzelia, lame de 120 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2206.07,
+                    "prix": 6.07,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_afzelia_lame_de_140_mm_de_largeur_m",
                     "nom": "essence afzelia, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2213.39,
+                    "prix": 13.39,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_afzelia_lame_de_180_mm_de_largeur_m",
                     "nom": "essence afzelia, lame de 180 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2217.24,
+                    "prix": 17.24,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_afrormosia_lame_de_140_mm_de_largeur_m",
                     "nom": "essence afrormosia, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2224.07,
+                    "prix": 24.07,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_cocotier_lame_de_90_mm_de_largeur_m",
                     "nom": "essence cocotier, lame de 90 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2184.3,
+                    "prix": 184.3,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_cumaru_lame_de_140_mm_de_largeur_m",
                     "nom": "essence cumaru, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2181.03,
+                    "prix": 181.03,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_ipe_lame_de_140_mm_de_largeur_m",
                     "nom": "essence ipé, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2217.77,
+                    "prix": 17.77,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_pin_traite_autoclave_lame_de_90_mm_de_largeur_m",
                     "nom": "essence pin, traité autoclave, lame de 90 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2156.22,
+                    "prix": 156.22,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_pin_traite_autoclave_lame_de_120_mm_de_largeur_m",
                     "nom": "essence pin, traité autoclave, lame de 120 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2153.12,
+                    "prix": 153.12,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_pin_traite_autoclave_lame_de_140_mm_de_largeur_m",
                     "nom": "essence pin, traité autoclave, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2152.28,
+                    "prix": 152.28,
                     "unite": "m²"
                   },
                   {
                     "id": "essence_teck_lame_de_140_mm_de_largeur_m",
                     "nom": "essence teck, lame de 140 mm de largeur",
                     "type": "ARTICLE",
-                    "prix": 2288.73,
+                    "prix": 88.73,
                     "unite": "m²"
                   }
                 ]
@@ -3631,28 +3631,28 @@
                     "id": "dimensions_400x400_mm_epaisseur_40_mm_m",
                     "nom": "dimensions 400x400 mm, épaisseur 40 mm",
                     "type": "ARTICLE",
-                    "prix": 272.12,
+                    "prix": 72.12,
                     "unite": "m²"
                   },
                   {
                     "id": "dimensions_500x500_mm_epaisseur_50_mm_m",
                     "nom": "dimensions 500x500 mm, épaisseur 50 mm",
                     "type": "ARTICLE",
-                    "prix": 267.38,
+                    "prix": 67.38,
                     "unite": "m²"
                   },
                   {
                     "id": "dimensions_400x400_mm_epaisseur_40_mm_petit_grain_m",
                     "nom": "dimensions 400x400 mm, épaisseur 40 mm, petit grain",
                     "type": "ARTICLE",
-                    "prix": 274.35,
+                    "prix": 74.35,
                     "unite": "m²"
                   },
                   {
                     "id": "dimensions_500x500_mm_epaisseur_50_mm_petit_grain_m",
                     "nom": "dimensions 500x500 mm, épaisseur 50 mm, petit grain",
                     "type": "ARTICLE",
-                    "prix": 269.36,
+                    "prix": 69.36,
                     "unite": "m²"
                   }
                 ]
@@ -3764,7 +3764,7 @@
                     "id": "1_crepine_1_clapet_anti_retour_1_tuyau_1_embout_cannele_dn_33_42_mm_u",
                     "nom": "1 crépine, 1 clapet anti-retour, 1 tuyau, 1 embout cannelé dn 33/42 mm",
                     "type": "ARTICLE",
-                    "prix": 34.66,
+                    "prix": 4.66,
                     "unite": "ml"
                   }
                 ]
@@ -3911,7 +3911,7 @@
                     "id": "pour_protection_thermique_de_la_pompe_de_surface_u",
                     "nom": "pour protection thermique de la pompe de surface",
                     "type": "ARTICLE",
-                    "prix": 269.34,
+                    "prix": 69.34,
                     "unite": "U"
                   }
                 ]
@@ -3981,7 +3981,7 @@
                     "id": "sur_bache_de_stockage_pour_surpresseur_u",
                     "nom": "sur bâche de stockage, pour surpresseur",
                     "type": "ARTICLE",
-                    "prix": 244.69,
+                    "prix": 44.69,
                     "unite": "U"
                   }
                 ]
@@ -4002,7 +4002,7 @@
                     "id": "modele_horizontal_capacite_50_litres_u",
                     "nom": "modèle horizontal, capacité 50 litres",
                     "type": "ARTICLE",
-                    "prix": 214.66,
+                    "prix": 14.66,
                     "unite": "U"
                   },
                   {
@@ -4016,7 +4016,7 @@
                     "id": "modele_vertical_capacite_100_litres_u",
                     "nom": "modèle vertical, capacité 100 litres",
                     "type": "ARTICLE",
-                    "prix": 36.28,
+                    "prix": 6.28,
                     "unite": "U"
                   },
                   {
@@ -4079,7 +4079,7 @@
                     "id": "debit_8_m3_h_hm_60_mce_u",
                     "nom": "débit= 8 m3/h, HM= 60 mCE",
                     "type": "ARTICLE",
-                    "prix": 2383.88,
+                    "prix": 83.88,
                     "unite": "m³"
                   }
                 ]
@@ -4107,7 +4107,7 @@
                     "id": "section_4_x1_5_mm2_longueur_15_metres_u",
                     "nom": "section 4 x1,5 mm2, longueur 15 mètres",
                     "type": "ARTICLE",
-                    "prix": 258.61,
+                    "prix": 58.61,
                     "unite": "U"
                   },
                   {
@@ -4205,7 +4205,7 @@
                     "id": "dispositif_de_commande_automatique_et_de_protection_contre_le_manque_d_eau_u",
                     "nom": "dispositif de commande automatique et de protection contre le manque d'eau",
                     "type": "ARTICLE",
-                    "prix": 267.42,
+                    "prix": 67.42,
                     "unite": "m³"
                   },
                   {
@@ -4268,7 +4268,7 @@
                     "id": "hauteur_de_soulevement_15_cm_portee_0_90m_a_5m_u",
                     "nom": "hauteur de soulèvement 15 cm, portée 0,90m à 5m",
                     "type": "ARTICLE",
-                    "prix": 2.89,
+                    "prix": 0.89,
                     "unite": "U"
                   },
                   {
@@ -4422,7 +4422,7 @@
                     "id": "avec_tige_en_inox_portee_17_40m_a_24_70m_u",
                     "nom": "avec tige en inox, portée 17,40m à 24,70m",
                     "type": "ARTICLE",
-                    "prix": 209.49,
+                    "prix": 9.49,
                     "unite": "U"
                   }
                 ]
@@ -4450,7 +4450,7 @@
                     "id": "dn_20_27_mm_en_bronze_u",
                     "nom": "dn 20/27 mm, en bronze",
                     "type": "ARTICLE",
-                    "prix": 237.87,
+                    "prix": 7.87,
                     "unite": "U"
                   },
                   {
@@ -4478,14 +4478,14 @@
                     "id": "allonge_reglable_15x21_15x21_mm_u",
                     "nom": "allonge réglable 15x21/15x21 mm",
                     "type": "ARTICLE",
-                    "prix": 2.32,
+                    "prix": 0.32,
                     "unite": "U"
                   },
                   {
                     "id": "allonge_reglable_15x21_20x27_mm_u",
                     "nom": "allonge réglable 15x21/20X27 mm",
                     "type": "ARTICLE",
-                    "prix": 2.71,
+                    "prix": 0.71,
                     "unite": "U"
                   },
                   {
@@ -4520,7 +4520,7 @@
                     "id": "te_3_sorties_cannelees_u",
                     "nom": "té 3 sorties cannelées,",
                     "type": "ARTICLE",
-                    "prix": 2.53,
+                    "prix": 0.53,
                     "unite": "U"
                   },
                   {
@@ -4590,7 +4590,7 @@
                     "id": "avec_reglage_de_debit_diametre_50_60_mm_u",
                     "nom": "avec réglage de débit, diamètre 50/60 mm",
                     "type": "ARTICLE",
-                    "prix": 264.63,
+                    "prix": 64.63,
                     "unite": "U"
                   },
                   {
@@ -4604,14 +4604,14 @@
                     "id": "solenoide_a_impulsion_9_v_diametre_40_49_mm_avec_reglage_de_debit_u",
                     "nom": "solénoïde, à impulsion 9 V, diamètre 40/49 mm, avec réglage de débit",
                     "type": "ARTICLE",
-                    "prix": 217.98,
+                    "prix": 17.98,
                     "unite": "U"
                   },
                   {
                     "id": "solenoide_a_impulsion_9_v_diametre_50_60_mm_avec_reglage_de_debit_u",
                     "nom": "solénoïde, à impulsion 9 V, diamètre 50/60 mm, avec réglage de débit",
                     "type": "ARTICLE",
-                    "prix": 292.81,
+                    "prix": 92.81,
                     "unite": "U"
                   }
                 ]
@@ -4667,7 +4667,7 @@
                     "id": "regard_circulaire_noir_diametre_150_avec_couvercle_ht_233_mm_u",
                     "nom": "regard circulaire noir, diamètre 150, avec couvercle, ht 233 mm",
                     "type": "ARTICLE",
-                    "prix": 28.06,
+                    "prix": 8.06,
                     "unite": "U"
                   },
                   {
@@ -4821,35 +4821,35 @@
                     "id": "serie_itc_2_programmes_modele_avec_6_stations_u",
                     "nom": "série ITC ,2 programmes, modèle avec 6 stations",
                     "type": "ARTICLE",
-                    "prix": 204.09,
+                    "prix": 4.09,
                     "unite": "U"
                   },
                   {
                     "id": "serie_image_2_programmes_modele_avec_2_stations_u",
                     "nom": "série Image ,2 programmes, modèle avec 2 stations",
                     "type": "ARTICLE",
-                    "prix": 241.84,
+                    "prix": 41.84,
                     "unite": "U"
                   },
                   {
                     "id": "serie_image_2_programmes_modele_avec_4_stations_u",
                     "nom": "série Image ,2 programmes, modèle avec 4 stations",
                     "type": "ARTICLE",
-                    "prix": 267.73,
+                    "prix": 67.73,
                     "unite": "U"
                   },
                   {
                     "id": "serie_image_2_programmes_modele_avec_6_stations_u",
                     "nom": "série Image ,2 programmes, modèle avec 6 stations",
                     "type": "ARTICLE",
-                    "prix": 284.77,
+                    "prix": 84.77,
                     "unite": "U"
                   },
                   {
                     "id": "serie_ec_hybride_3_programmes_modele_4_stations_u",
                     "nom": "série EC Hybride ,3 programmes, modèle 4 stations",
                     "type": "ARTICLE",
-                    "prix": 273.37,
+                    "prix": 73.37,
                     "unite": "U"
                   },
                   {
@@ -4863,7 +4863,7 @@
                     "id": "serie_ec_hybride_3_programmes_modele_9_stations_u",
                     "nom": "série EC Hybride ,3 programmes, modèle 9 stations",
                     "type": "ARTICLE",
-                    "prix": 21.69,
+                    "prix": 1.69,
                     "unite": "U"
                   },
                   {
@@ -4919,14 +4919,14 @@
                     "id": "a_pile_1_station_2_programmes_u",
                     "nom": "à pile,1 station, 2 programmes",
                     "type": "ARTICLE",
-                    "prix": 224.34,
+                    "prix": 4.34,
                     "unite": "U"
                   },
                   {
                     "id": "a_pile_2_stations_3_programmes_u",
                     "nom": "à pile, 2 stations, 3 programmes",
                     "type": "ARTICLE",
-                    "prix": 295.02,
+                    "prix": 95.02,
                     "unite": "U"
                   },
                   {
@@ -4954,7 +4954,7 @@
                     "id": "a_pile_1_voie_avec_module_programmable_u",
                     "nom": "à pile,1 voie avec module programmable",
                     "type": "ARTICLE",
-                    "prix": 224.88,
+                    "prix": 4.88,
                     "unite": "U"
                   },
                   {
@@ -5010,7 +5010,7 @@
                     "id": "goutteur_autoregulant_u",
                     "nom": "goutteur autorégulant",
                     "type": "ARTICLE",
-                    "prix": 2.47,
+                    "prix": 0.47,
                     "unite": "ml"
                   },
                   {
@@ -5031,7 +5031,7 @@
                     "id": "vanne_d_arret_manuelle_dn_20_27_mm_u",
                     "nom": "vanne d'arrêt manuelle, dn 20/27 mm",
                     "type": "ARTICLE",
-                    "prix": 25.38,
+                    "prix": 5.38,
                     "unite": "ml"
                   }
                 ]
@@ -5066,14 +5066,14 @@
                     "id": "adaptateur_male_filete_15x21_ou_20x27_mm_u",
                     "nom": "adaptateur mâle fileté 15x21 ou 20x27 mm",
                     "type": "ARTICLE",
-                    "prix": 2.89,
+                    "prix": 0.89,
                     "unite": "U"
                   },
                   {
                     "id": "adaptateur_femelle_filete_15x21_ou_20x27_mm_u",
                     "nom": "adaptateur femelle fileté 15x21 ou 20x27 mm",
                     "type": "ARTICLE",
-                    "prix": 2.89,
+                    "prix": 0.89,
                     "unite": "U"
                   },
                   {
@@ -5129,42 +5129,42 @@
                     "id": "dalle_gazon_pour_traffic_leger_m",
                     "nom": "Dalle gazon pour traffic léger",
                     "type": "ARTICLE",
-                    "prix": 248.09,
+                    "prix": 48.09,
                     "unite": "m²"
                   },
                   {
                     "id": "dalle_gazon_pour_traffic_lourd_hauteur_300_mm_m",
                     "nom": "Dalle gazon pour traffic lourd, hauteur 300 mm",
                     "type": "ARTICLE",
-                    "prix": 249,
+                    "prix": 49,
                     "unite": "m²"
                   },
                   {
                     "id": "dalle_gazon_pour_traffic_lourd_hauteur_400_mm_m",
                     "nom": "Dalle gazon pour traffic lourd, hauteur 400 mm",
                     "type": "ARTICLE",
-                    "prix": 250.34,
+                    "prix": 50.34,
                     "unite": "m²"
                   },
                   {
                     "id": "dalle_gazon_pour_traffic_lourd_hauteur_500_mm_m",
                     "nom": "Dalle gazon pour traffic lourd, hauteur 500 mm",
                     "type": "ARTICLE",
-                    "prix": 254.28,
+                    "prix": 54.28,
                     "unite": "m²"
                   },
                   {
                     "id": "dalle_gazon_pre_engazonnee_pour_traffic_leger_m",
                     "nom": "Dalle gazon pré engazonnée pour traffic léger",
                     "type": "ARTICLE",
-                    "prix": 259.38,
+                    "prix": 59.38,
                     "unite": "m²"
                   },
                   {
                     "id": "dalle_gazon_pre_engazonnee_pour_traffic_lourd_m",
                     "nom": "Dalle gazon pré engazonnée pour traffic lourd",
                     "type": "ARTICLE",
-                    "prix": 263.48,
+                    "prix": 63.48,
                     "unite": "m²"
                   }
                 ]
@@ -5178,14 +5178,14 @@
                     "id": "dalle_stabilisatrice_gravier_pour_traffic_leger_pieton_m",
                     "nom": "Dalle stabilisatrice gravier pour traffic léger, piéton",
                     "type": "ARTICLE",
-                    "prix": 249.33,
+                    "prix": 49.33,
                     "unite": "m²"
                   },
                   {
                     "id": "dalle_stabilisatrice_gravier_pour_traffic_lourd_m",
                     "nom": "Dalle stabilisatrice gravier pour traffic lourd",
                     "type": "ARTICLE",
-                    "prix": 253.2,
+                    "prix": 53.2,
                     "unite": "m²"
                   }
                 ]
