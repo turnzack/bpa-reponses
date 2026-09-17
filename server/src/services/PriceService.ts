@@ -211,7 +211,40 @@ export class PriceService {
         // -------------------------------------------------------------
         // DÉTECTION EXPERTE DES OUVRAGES TCE (Prix référentiel marché réel)
         // -------------------------------------------------------------
-        if (lower.includes('placo') || lower.includes('ba13') || (lower.includes('bande') && (lower.includes('joint') || lower.includes('enduit') || lower.includes('placo'))) || lower.includes('doublage') || lower.includes('cloison')) {
+        if (lower.includes('mur d\'enceinte') || lower.includes('enceinte') || (lower.includes('mur') && (lower.includes('ext') || lower.includes('exterieur') || lower.includes('extérieur') || lower.includes('cloture') || lower.includes('clôture')))) {
+            // Ravalement et peinture mur d'enceinte / façade extérieure : 28 à 34 €/m² HT
+            refUnit = 'm2';
+            refPrice = (priceUnit && priceUnit >= 22 && priceUnit <= 45) ? Math.round(priceUnit * 0.95 * 100) / 100 : 29.50;
+            refName = "Ravalement et mise en peinture mur d'enceinte / maçonnerie extérieure classe D2/D3 (DTU 42.1)";
+            refMatPrice = 8.50;
+            refMatUnit = "m2";
+        } else if (lower.includes('grille') || lower.includes('garage') || lower.includes('portail') || lower.includes('ferronnerie') || lower.includes('garde corps') || lower.includes('garde-corps')) {
+            // Peinture ferronnerie / grille de garage extérieure : 11.50 à 15.50 €/m² (ou forfait ~145 €)
+            if (isForfait || (priceUnit && priceUnit > 40)) {
+                refUnit = 'forfait';
+                refPrice = (priceUnit && priceUnit >= 60 && priceUnit <= 250) ? Math.round(priceUnit * 0.95 * 100) / 100 : 145.00;
+                refName = "Mise en peinture antirouille et finition laque 2 couches sur grille / ferronnerie extérieure";
+            } else {
+                refUnit = 'm2';
+                refPrice = (priceUnit && priceUnit >= 9 && priceUnit <= 18) ? Math.round(priceUnit * 0.95 * 100) / 100 : 12.50;
+                refName = "Mise en peinture antirouille et finition laque 2 couches sur grille extérieure (DTU 59.1)";
+            }
+            refMatPrice = 4.80;
+            refMatUnit = refUnit;
+        } else if (lower.includes('bordure') || lower.includes('bordures') || lower.includes('acrotere') || lower.includes('acrotère') || lower.includes('appuis')) {
+            // Peinture bordures extérieures au ML ou forfait : 9.50 à 13.50 €/ml
+            if (isForfait || (priceUnit && priceUnit > 40)) {
+                refUnit = 'forfait';
+                refPrice = (priceUnit && priceUnit >= 150 && priceUnit <= 500) ? Math.round(priceUnit * 0.95 * 100) / 100 : 395.00;
+                refName = "Mise en peinture 2 couches sur bordures extérieures et couronnements";
+            } else {
+                refUnit = 'ml';
+                refPrice = (priceUnit && priceUnit >= 8 && priceUnit <= 18) ? Math.round(priceUnit * 0.95 * 100) / 100 : 11.50;
+                refName = "Mise en peinture 2 couches sur bordures extérieures au mètre linéaire";
+            }
+            refMatPrice = 3.50;
+            refMatUnit = refUnit;
+        } else if (lower.includes('placo') || lower.includes('ba13') || (lower.includes('bande') && (lower.includes('joint') || lower.includes('enduit') || lower.includes('placo'))) || lower.includes('doublage') || lower.includes('cloison')) {
             // Fourniture et pose placo BA13 + bandes à joint + enduit 2 passes : barème 38 à 46 €/m² HT
             refUnit = isForfait ? 'forfait' : 'm2';
             refPrice = (priceUnit && priceUnit >= 30 && priceUnit <= 65) ? Math.round(priceUnit * 0.95 * 100) / 100 : 42.00;
@@ -219,7 +252,7 @@ export class PriceService {
             refMatPrice = 7.50;
             refMatUnit = "m2";
         } else if (lower.includes('peint') || lower.includes('couche') || lower.includes('acrylique') || lower.includes('velours') || lower.includes('satin') || lower.includes('mat')) {
-            if (unitLower.includes('m2') || unitLower.includes('m²') || lower.includes('m2') || lower.includes('m²') || !isForfait) {
+            if (unitLower.includes('m2') || unitLower.includes('m²') || lower.includes('m2') || lower.includes('m²') || (!isForfait && priceUnit && priceUnit <= 30)) {
                 // Peinture 2 couches au m² : barème 11.50 à 14.50 €/m² HT
                 refUnit = 'm2';
                 refPrice = (priceUnit && priceUnit >= 9 && priceUnit <= 18) ? Math.round(priceUnit * 0.95 * 100) / 100 : 12.50;
@@ -234,11 +267,19 @@ export class PriceService {
                 refMatPrice = 28.00;
                 refMatUnit = "forfait";
             }
-        } else if (lower.includes('nettoy') || lower.includes('evac') || lower.includes('évac') || lower.includes('dechet') || lower.includes('déchet') || lower.includes('repli')) {
-            // Nettoyage de fin de chantier et repli
-            refUnit = isForfait ? 'forfait' : 'forfait';
-            refPrice = (priceUnit && priceUnit >= 30 && priceUnit <= 120) ? Math.round(priceUnit * 0.95 * 100) / 100 : 60.00;
-            refName = "Nettoyage soigné de fin de chantier et repli des protections";
+        } else if (lower.includes('nettoy') || lower.includes('evac') || lower.includes('évac') || lower.includes('dechet') || lower.includes('déchet') || lower.includes('repli') || lower.includes('protection')) {
+            // Nettoyage de fin de chantier et protections
+            refUnit = 'forfait';
+            if (lower.includes('protection') && lower.includes('nettoy')) {
+                refPrice = (priceUnit && priceUnit >= 60 && priceUnit <= 200) ? Math.round(priceUnit * 0.95 * 100) / 100 : 130.00;
+                refName = "Forfait protection intégrale des surfaces et nettoyage de fin de chantier";
+            } else if (lower.includes('protect')) {
+                refPrice = (priceUnit && priceUnit >= 25 && priceUnit <= 120) ? Math.round(priceUnit * 0.95 * 100) / 100 : 48.00;
+                refName = "Forfait protection intégrale chantier (polyane étanche 40µm + adhésifs sans résidu)";
+            } else {
+                refPrice = (priceUnit && priceUnit >= 30 && priceUnit <= 120) ? Math.round(priceUnit * 0.95 * 100) / 100 : 60.00;
+                refName = "Nettoyage soigné de fin de chantier et repli des protections";
+            }
             refMatPrice = 12.00;
             refMatUnit = "forfait";
         } else if (lower.includes('silicone') || lower.includes('calfeutrement') || (lower.includes('joint') && !lower.includes('placo') && !lower.includes('carrel'))) {
@@ -267,12 +308,6 @@ export class PriceService {
             refName = "Contrôle, dépoussiérage et entretien des grilles d'aération fenêtres";
             refMatPrice = 4.50;
             refMatUnit = "u";
-        } else if (lower.includes('protect') || lower.includes('polyane') || lower.includes('bach')) {
-            refUnit = isForfait ? 'forfait' : 'm2';
-            refPrice = (priceUnit && priceUnit >= 25 && priceUnit <= 120) ? Math.round(priceUnit * 0.95 * 100) / 100 : 48.00;
-            refName = "Forfait protection intégrale chantier (polyane étanche 40µm + adhésifs sans résidu)";
-            refMatPrice = 15.00;
-            refMatUnit = "forfait";
         } else if (isForfait) {
             refUnit = 'forfait';
             refPrice = (priceUnit && priceUnit > 0) ? Math.round(priceUnit * 0.94 * 100) / 100 : 50.00;

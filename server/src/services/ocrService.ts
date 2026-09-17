@@ -440,10 +440,37 @@ export function extractArticlesFromText(text: string): any[] {
 
     const parsePrice = (str: string): number => {
         if (!str) return 0;
-        // Supprimer les espaces insécables et espaces de milliers
-        const cleaned = str.replace(/[\s\u00A0\u202F]+/g, '').replace('€', '').replace(',', '.');
+        let cleaned = str.trim().replace(/[\s\u00A0\u202F€]+/g, '');
+        // Si format français standard avec point de millier et virgule décimale : "2.923,20" -> "2923.20"
+        if (/^\d{1,3}(\.\d{3})+,\d{2}$/.test(cleaned)) {
+            cleaned = cleaned.replace(/\./g, '').replace(',', '.');
+        } else if (/^\d{1,3}(,\d{3})+\.\d{2}$/.test(cleaned)) {
+            cleaned = cleaned.replace(/,/g, '');
+        } else if (cleaned.includes(',') && cleaned.includes('.')) {
+            if (cleaned.lastIndexOf(',') > cleaned.lastIndexOf('.')) {
+                cleaned = cleaned.replace(/\./g, '').replace(',', '.');
+            } else {
+                cleaned = cleaned.replace(/,/g, '');
+            }
+        } else if (cleaned.includes(',')) {
+            cleaned = cleaned.replace(',', '.');
+        }
         const val = parseFloat(cleaned);
-        return isNaN(val) ? 0 : val;
+        return isNaN(val) ? 0 : Math.round(val * 100) / 100;
+    };
+
+    const extractEmbeddedDimensions = (desig: string): { surface?: number; unit?: string } => {
+        // Ex: (2,35X5,15)M2 ou 2.35 x 5.15 m2
+        const dimMatch = desig.match(/(?:\(?\s*(\d+(?:[.,]\d+)?)\s*[xX*]\s*(\d+(?:[.,]\d+)?)\s*\)?\s*(m²|m2|ml|m)?)/i);
+        if (dimMatch && dimMatch[1] && dimMatch[2]) {
+            const dim1 = parsePrice(dimMatch[1]);
+            const dim2 = parsePrice(dimMatch[2]);
+            if (dim1 > 0 && dim2 > 0) {
+                const surface = Math.round(dim1 * dim2 * 100) / 100;
+                return { surface, unit: (dimMatch[3] || 'm2').toLowerCase() };
+            }
+        }
+        return {};
     };
 
     const cleanArticleName = (raw: string): string => {
@@ -496,10 +523,32 @@ export function extractArticlesFromText(text: string): any[] {
         const p1 = cleanLine.match(/^(.+?)\s+(\d+(?:[.,]\d+)?)\s*(m²|m2|ml|m3|m|u|unite|unités|forfait|fft|ens|ensemble|kg|l|h|heures?|j|jours?|pce|lots?)\s+(\d{1,4}(?:[\s\u00A0.]\d{3})*(?:[.,]\d{2})?)\s*€?(?:\s+(\d{1,5}(?:[\s\u00A0.]\d{3})*(?:[.,]\d{2})?)\s*€?)?$/i);
         if (p1) {
             const designation = cleanArticleName((pendingDescription ? `${pendingDescription} - ` : '') + p1[1]);
-            const quantity = parsePrice(p1[2]) || 1;
-            const unit = p1[3].toLowerCase();
-            const priceUnit = parsePrice(p1[4]);
-            const priceTotal = p1[5] ? parsePrice(p1[5]) : Math.round(priceUnit * quantity * 100) / 100;
+            let quantity = parsePrice(p1[2]) || 1;
+            let unit = p1[3].toLowerCase();
+            let priceUnit = parsePrice(p1[4]);
+            let priceTotal = p1[5] ? parsePrice(p1[5]) : Math.round(priceUnit * quantity * 100) / 100;
+
+            // Réconciliation intelligente surface et quantité si dimensions présentes dans la désignation
+            const embedded = extractEmbeddedDimensions(designation);
+            if (embedded.surface && embedded.surface > 0) {
+                quantity = embedded.surface;
+                unit = embedded.unit || 'm2';
+                if (priceTotal > 0 && quantity > 0) {
+                    priceUnit = Math.round((priceTotal / quantity) * 100) / 100;
+                }
+            } else if (priceTotal > 0 && priceUnit > 0 && Math.abs(priceTotal - (quantity * priceUnit)) > 5) {
+                // Si la quantité était erronée (ex: 3.4m hauteur au lieu de 100m² pour total 2923.20€)
+                const realQty = Math.round((priceTotal / priceUnit) * 10) / 10;
+                if (realQty > 0 && Math.abs(priceTotal - (realQty * priceUnit)) <= 2) {
+                    quantity = realQty;
+                }
+            }
+
+            if (designation.toLowerCase().includes('- m2') || designation.toLowerCase().includes('- m²')) {
+                unit = 'm2';
+            } else if (designation.toLowerCase().includes('- ml')) {
+                unit = 'ml';
+            }
 
             if (designation.length >= 3 && priceUnit > 0 && !isLocationHeader(designation)) {
                 articles.push({
@@ -518,9 +567,17 @@ export function extractArticlesFromText(text: string): any[] {
         const p2 = cleanLine.match(/^(.+?)\s+(m²|m2|ml|m3|m|u|forfait|fft|ens|kg|l|h)\s+(\d+(?:[.,]\d+)?)\s+(\d{1,4}(?:[\s\u00A0.]\d{3})*(?:[.,]\d{2})?)/i);
         if (p2) {
             const designation = cleanArticleName((pendingDescription ? `${pendingDescription} - ` : '') + p2[1]);
-            const unit = p2[2].toLowerCase();
-            const quantity = parsePrice(p2[3]) || 1;
-            const priceUnit = parsePrice(p2[4]);
+            let unit = p2[2].toLowerCase();
+            let quantity = parsePrice(p2[3]) || 1;
+            let priceUnit = parsePrice(p2[4]);
+            let priceTotal = Math.round(priceUnit * quantity * 100) / 100;
+
+            const embedded = extractEmbeddedDimensions(designation);
+            if (embedded.surface && embedded.surface > 0) {
+                quantity = embedded.surface;
+                unit = embedded.unit || 'm2';
+                priceUnit = Math.round((priceTotal / quantity) * 100) / 100;
+            }
 
             if (designation.length >= 3 && priceUnit > 0 && !isLocationHeader(designation)) {
                 articles.push({
@@ -528,14 +585,14 @@ export function extractArticlesFromText(text: string): any[] {
                     quantity,
                     unite: unit,
                     prix_unitaire_ht: priceUnit,
-                    prix_total_ht: Math.round(priceUnit * quantity * 100) / 100
+                    prix_total_ht: priceTotal
                 });
                 pendingDescription = '';
                 continue;
             }
         }
 
-        // Pattern 3 : Ligne terminée par deux prix ou prix total (ex: Peinture salon ... 450,00 €)
+        // Pattern 3 : Ligne terminée par un prix (ex: Peinture salon ... 450,00 €)
         const p3 = cleanLine.match(/^([a-zA-ZÀ-ÿ0-9\s'()_/,+.-]{4,120}?)\s+(\d{1,4}(?:[\s\u00A0.]\d{3})*(?:[.,]\d{2}))\s*€?\s*$/i);
         if (p3) {
             const designation = cleanArticleName((pendingDescription ? `${pendingDescription} - ` : '') + p3[1]);
@@ -547,11 +604,27 @@ export function extractArticlesFromText(text: string): any[] {
                 !lower.includes('siret') && !lower.includes('iban') && !lower.includes('bic') &&
                 !lower.includes('assurance') && !lower.includes('net à payer') &&
                 !isLocationHeader(designation)) {
+
+                let quantity = 1;
+                let unit = 'forfait';
+                let priceUnit = price;
+
+                const embedded = extractEmbeddedDimensions(designation);
+                if (embedded.surface && embedded.surface > 0) {
+                    quantity = embedded.surface;
+                    unit = embedded.unit || 'm2';
+                    priceUnit = Math.round((price / quantity) * 100) / 100;
+                } else if (lower.includes('- m2') || lower.includes('- m²')) {
+                    unit = 'm2';
+                } else if (lower.includes('- ml')) {
+                    unit = 'ml';
+                }
+
                 articles.push({
                     designation,
-                    quantity: 1,
-                    unite: 'forfait',
-                    prix_unitaire_ht: price,
+                    quantity,
+                    unite: unit,
+                    prix_unitaire_ht: priceUnit,
                     prix_total_ht: price
                 });
                 pendingDescription = '';
