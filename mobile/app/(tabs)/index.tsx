@@ -68,6 +68,11 @@ function extractArticlesFromAnyInput(str: any): any[] {
                     pRef = parseFloat(cells[3].replace(/[^0-9.,]/g, '').replace(',', '.')) || (pDevis > 0 ? Math.round(pDevis * 0.9 * 100) / 100 : 0);
                 }
                 if (des && des.length > 2) {
+                    const cleanDes = des.toLowerCase().trim();
+                    // Filtrer les lignes d'en-têtes et de totaux parasites
+                    if (/^(total|sous-total|tva|verdict|main d['’]œuvre|articles analysés|résumé|score|indice|écart global|potentiel|conseil|phase)/i.test(cleanDes)) {
+                        continue;
+                    }
                     articles.push({
                         numero: articles.length + 1,
                         designation: des,
@@ -87,12 +92,15 @@ function extractArticlesFromAnyInput(str: any): any[] {
         const lines = str.split('\n');
         for (const line of lines) {
             const clean = line.replace(/<[^>]+>/g, '').trim();
+            if (/^(total|tva|verdict|main d['’]œuvre|articles analysés|résumé|score|indice|écart global|potentiel)/i.test(clean)) {
+                continue;
+            }
             const match = clean.match(/(.+?)\s*[:\-–]\s*(\d+(?:[.,]\d+)?)\s*(?:€|euros?)\s*(?:\/\s*(\w+|m²|m2|ml|u))?/i);
             if (match) {
                 const des = match[1].replace(/^[-*•\d.\s]+/, '').trim();
                 const pDevis = parseFloat(match[2].replace(',', '.')) || 0;
                 const unite = match[3] || 'U';
-                if (des.length > 3 && pDevis > 0) {
+                if (des.length > 3 && pDevis > 0 && !/^(total|tva|verdict|main d['’]œuvre)/i.test(des)) {
                     articles.push({
                         numero: articles.length + 1,
                         designation: des,
@@ -276,24 +284,8 @@ function generateAnalyseHtml(analyseData: any) {
 
     let html = '<div class="audit-devis">';
     
-    // Résumé Exécutif
+    // Avis expert en introduction
     const resumeText = typeof a?.resume === 'string' ? a.resume : (a?.resume?.synthese?.[0] || a?.resume_text || a?.resume?.recommandation || '');
-    const vertCount = articles.filter((art: any) => art.statut === 'vert' || (art.ecart_pourcent !== null && art.ecart_pourcent <= 10)).length;
-    const jauneCount = articles.filter((art: any) => art.statut === 'jaune' || (art.ecart_pourcent > 10 && art.ecart_pourcent <= 20)).length;
-    const orangeCount = articles.filter((art: any) => art.statut === 'orange' || (art.ecart_pourcent > 20 && art.ecart_pourcent <= 30)).length;
-    const rougeCount = articles.filter((art: any) => art.statut === 'rouge' || (art.ecart_pourcent > 30)).length;
-
-    html += '<h2>📊 Résumé Exécutif & Conformité Globale</h2>';
-    html += '<div class="table-responsive"><table class="table-resume"><tbody>';
-    html += `<tr><td class="label">Articles analysés</td><td class="value"><strong>${articles.length}</strong> poste(s) technique(s)</td></tr>`;
-    html += `<tr><td class="label">🟢 Prix cohérents marché (&le; +10%)</td><td class="value"><span class="badge ecart-vert">${vertCount} poste(s)</span></td></tr>`;
-    if (jauneCount > 0) html += `<tr><td class="label">🟡 À vérifier (+10% à +20%)</td><td class="value"><span class="badge ecart-jaune">${jauneCount} poste(s)</span></td></tr>`;
-    if (orangeCount > 0) html += `<tr><td class="label">🟠 Prix élevés (+20% à +30%)</td><td class="value"><span class="badge ecart-orange">${orangeCount} poste(s)</span></td></tr>`;
-    if (rougeCount > 0) html += `<tr><td class="label">🔴 Surcoûts excessifs (&gt; +30%)</td><td class="value"><span class="badge ecart-rouge">${rougeCount} poste(s)</span></td></tr>`;
-    html += `<tr><td class="label">Écart global marché</td><td class="value"><span class="badge ${ecartGlobal > 10 ? 'ecart-rouge' : 'ecart-vert'}">${ecartGlobal >= 0 ? '+' : ''}${ecartGlobal.toFixed(1)}% (${diffEuros >= 0 ? '+' : ''}${diffEuros.toFixed(2)} €)</span></td></tr>`;
-    html += `<tr><td class="label">Score de conformité</td><td class="value" style="font-weight:bold; font-size: 16px; color:#58a6ff;">${score}/100</td></tr>`;
-    html += '</tbody></table></div>';
-
     if (resumeText) {
         html += `<div class="synthese" style="background:#161b22; border:1px solid #30363d; border-radius:8px; padding:14px; margin-bottom:18px;">
             <h3 style="color:#58a6ff; margin-bottom:8px;">📌 Avis de l'Expert BTP & Assurance (BPA)</h3>
@@ -504,8 +496,8 @@ function generateAnalyseHtml(analyseData: any) {
 // Helper pour générer la page HTML complète de l'audit responsive
 function getFullHtml(bodyHtml: string, msgId?: number): string {
     let processedHtml = bodyHtml;
-    // Si le corps HTML ne contient pas encore les 3 sections, le générer automatiquement
-    if (!processedHtml || typeof processedHtml !== 'string' || !processedHtml.includes('1. Récapitulatif Financier') || !processedHtml.includes('Tableau Détaillé des Matériaux')) {
+    // Si le corps HTML ne contient pas les 6 chapitres complets ou contient l'ancien format, le générer automatiquement
+    if (!processedHtml || typeof processedHtml !== 'string' || !processedHtml.includes('1. Récapitulatif Financier') || !processedHtml.includes('3. Tableau Détaillé des Matériaux') || !processedHtml.includes('6. Audit Réglementaire') || processedHtml.includes('Synthèse financière TCE') || processedHtml.includes('table-resume')) {
         processedHtml = generateAnalyseHtml(bodyHtml);
     }
 
