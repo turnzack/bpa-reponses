@@ -230,10 +230,20 @@ router.post('/chat', authenticateUser, upload.single('file'), async (req: any, r
                     : 70;
 
                 const ecartGlobal = totalRef > 0 ? Math.round(((totalHt - totalRef) / totalRef) * 1000) / 10 : 0;
+                const allDesigs = articles.map((a: any) => (a.designation || '').toLowerCase()).join(' ');
+                let dtuFocus = 'DTU 59.1 Peinture & 25.41 Plâtre';
+                if (allDesigs.includes('douche') || allDesigs.includes('paroi') || allDesigs.includes('plomb') || allDesigs.includes('sanitaire') || allDesigs.includes('receveur') || allDesigs.includes('mitigeur')) {
+                    dtuFocus = 'DTU 60.1 Plomberie/Sanitaire & NF EN 14428';
+                } else if (allDesigs.includes('sol') || allDesigs.includes('ragréage') || allDesigs.includes('ragreage') || allDesigs.includes('vinyle') || allDesigs.includes('carrel')) {
+                    dtuFocus = 'DTU 53.2 Revêtements de sol & DTU 52.2';
+                } else if (allDesigs.includes('placo') || allDesigs.includes('ba13') || allDesigs.includes('cloison') || allDesigs.includes('doublage')) {
+                    dtuFocus = 'DTU 25.41 Plâtrerie & Cloisons';
+                }
+
                 let resumeFinal = `Expertise TCE BPA : Audit détaillé de ${articles.length} poste(s) technique(s). Total devis : ${totalHt.toFixed(2)} € HT (référence marché : ${totalRef.toFixed(2)} € HT, écart : ${ecartGlobal >= 0 ? '+' : ''}${ecartGlobal}%). ` +
                     (scoreConformite >= 85
-                        ? `Ce devis de remise en état est conforme aux barèmes d'indemnisation assurance (convention IRSI) et respecte scrupuleusement les règles de l'art (DTU 59.1 Peinture). Les phases techniques indispensables (protection, assainissement, ratissage plâtre, impression isolante hydrofuge et finition 2 couches) sont intégralement décomposées et validées.`
-                        : `Ce devis présente un score de conformité de ${scoreConformite}%. Certains postes méritent clarification : exigez la confirmation écrite de l'application d'une sous-couche isolante anti-auréoles pour éviter toute réapparition de taches jaunâtres d'humidité.`);
+                        ? `Ce devis de travaux est conforme aux barèmes du marché BTP et respecte scrupuleusement les règles de l'art (${dtuFocus}). Les fournitures techniques, matériaux normés et temps de main d'œuvre sont intégralement décomposés et validés.`
+                        : `Ce devis présente un score de conformité de ${scoreConformite}%. Certains postes méritent clarification : exigez le détail des fournitures et renégociez les écarts constatés avant signature.`);
 
                 // Synthèse d'expertise via Cloudflare Workers AI si disponible
                 try {
