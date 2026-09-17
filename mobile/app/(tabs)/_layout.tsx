@@ -28,7 +28,7 @@ export default function TabLayout() {
         <Tabs.Screen
           name="index"
           options={{
-            title: 'Assistant',
+            title: 'Assistant BPA',
             tabBarIcon: ({ color, focused }) => (
                 <Ionicons name={focused ? "chatbubble-ellipses" : "chatbubble-ellipses-outline"} size={24} color={color} />
             ),
@@ -37,19 +37,13 @@ export default function TabLayout() {
         <Tabs.Screen
           name="history"
           options={{
-            title: 'Clients',
-            tabBarIcon: ({ color, focused }) => (
-                <Ionicons name={focused ? "people" : "people-outline"} size={24} color={color} />
-            ),
+            href: null, // Masqué temporairement selon la demande utilisateur
           }}
         />
         <Tabs.Screen
           name="scan"
           options={{
-            title: 'Bibliothèque',
-            tabBarIcon: ({ color, focused }) => (
-                <Ionicons name={focused ? "library" : "library-outline"} size={24} color={color} />
-            ),
+            href: null, // Masqué temporairement selon la demande utilisateur
           }}
         />
         <Tabs.Screen

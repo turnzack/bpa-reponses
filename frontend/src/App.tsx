@@ -516,7 +516,6 @@ export default function App({ user, onLogout }: AppProps) {
   const tabs = [
     { id: "dashboard" as TabId, label: "Tableau de bord", icon: "🏠" },
     { id: "scan" as TabId, label: "Scanner un devis", icon: "📄" },
-    { id: "clients" as TabId, label: "Clients", icon: "👥" },
     { id: "history" as TabId, label: "Historique", icon: "📋" },
     { id: "settings" as TabId, label: "Paramètres", icon: "⚙️" },
   ];
