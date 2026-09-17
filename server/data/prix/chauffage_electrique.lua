@@ -134,21 +134,21 @@ M.STRUCTURE = {
                                                                                                                     nom = "type F 18-Plinthe, 6 ordres, puissance 500 W\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 204.84,
-                                                                                    unite = "ml",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "type_f_18_plinthe_6_ordres_puissance_1000_w_u",
                                                                                                                     nom = "type F 18-Plinthe, 6 ordres, puissance 1000 W\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 216.39,
-                                                                                    unite = "ml",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "type_f_18_plinthe_6_ordres_puissance_1250_w_u",
                                                                                                                     nom = "type F 18-Plinthe, 6 ordres, puissance 1250 W\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 232.48,
-                                                                                    unite = "ml",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "type_borneo_horizontal_6_ordres_puissance_750_w_u",
@@ -930,28 +930,28 @@ M.STRUCTURE = {
                                                                                                                     nom = "puissance 1500 W, série super étroite\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 1495.31,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "puissance_2000_w_serie_super_etroite_u",
                                                                                                                     nom = "puissance 2000 W, série super étroite\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 1715.56,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "puissance_2500_w_serie_super_etroite_u",
                                                                                                                     nom = "puissance 2500 W, série super étroite\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 1883.34,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "puissance_3000_w_serie_super_etroite_u",
                                                                                                                     nom = "puissance 3000 W, série super étroite\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 2028.71,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "regulateur_de_charge_avec_sonde_exterieure_u",
@@ -1839,7 +1839,7 @@ M.STRUCTURE = {
                                                                             nom = "Isolant de bordure",
                                                                                     type = "ARTICLE",
                                                                                     prix = 4.54,
-                                                                                    unite = "ml",
+                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -1878,7 +1878,7 @@ M.STRUCTURE = {
                                                                             nom = "Plancher chauffant électrique au m2",
                                                                                     type = "ARTICLE",
                                                                                     prix = 240.3,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -1887,7 +1887,7 @@ M.STRUCTURE = {
                                                                             nom = "Chape pour plancher chauffant",
                                                                                     type = "ARTICLE",
                                                                                     prix = 231.45,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },

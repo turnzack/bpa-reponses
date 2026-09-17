@@ -8,7 +8,7 @@ M.STRUCTURE = {
     nom = "Plomberie",
                                                                                     type = "ARTICLE",
                                                                                     prix = 22.8,
-                                                                                    unite = "m3",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_terrain_meuble_et_sec_dans_l_embarras_d_etais_par_engin_mecanique_m",
@@ -164,7 +164,7 @@ M.STRUCTURE = {
                                                                             nom = "Fouille en tranchée en sous-oeuvre",
                                                                                     type = "ARTICLE",
                                                                                     prix = 120.91,
-                                                                                    unite = "m3",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_terrain_meuble_et_sec_dans_l_embarras_d_etais_m",
@@ -250,7 +250,7 @@ M.STRUCTURE = {
                                                                             nom = "Remblai de fouilles",
                                                                                     type = "ARTICLE",
                                                                                     prix = 13.62,
-                                                                                    unite = "m3",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_terrain_meuble_manuellement_m",
@@ -312,7 +312,7 @@ M.STRUCTURE = {
                                                                             nom = "Grillage avertisseur",
                                                                                     type = "ARTICLE",
                                                                                     prix = 1.12,
-                                                                                    unite = "ml",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "largeur_30_cm_non_detectable",
@@ -574,7 +574,7 @@ M.STRUCTURE = {
                     nom = "Percements",
                                                                                     type = "ARTICLE",
                                                                                     prix = 8.7,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_150x100_mm_blocs_creux_epaisseur_250_mm_u",
@@ -658,42 +658,42 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 100x100 mm, mur en pierres, épaisseur 300 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 21.06,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_150x100_mm_mur_en_pierres_epaisseur_300_mm_u",
                                                                                                                     nom = "dimensions 150x100 mm, mur en pierres, épaisseur 300 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 24.1,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_200x100_mm_mur_en_pierres_epaisseur_300_mm_u",
                                                                                                                     nom = "dimensions 200x100 mm, mur en pierres, épaisseur 300 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 25.63,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_200x200_mm_mur_en_pierres_epaisseur_300_mm_u",
                                                                                                                     nom = "dimensions 200x200 mm, mur en pierres, épaisseur 300 mm.\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 27.9,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_250x250_mm_mur_en_pierres_epaisseur_300_mm_u",
                                                                                                                     nom = "dimensions 250x250 mm, mur en pierres, épaisseur 300 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 0.31,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_300x300_mm_mur_en_pierres_epaisseur_300_mm_u",
                                                                                                                     nom = "dimensions 300x300 mm, mur en pierres, épaisseur 300 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 5.64,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_100x100_mm_en_beton_banche_epaisseur_200_mm_u",
@@ -744,21 +744,21 @@ M.STRUCTURE = {
                                                                             nom = "Percements de planchers",
                                                                                     type = "ARTICLE",
                                                                                     prix = 24.78,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_150x150_mm_dalle_pleine_epaisseur_200_mm_u",
                                                                                                                     nom = "dimensions 150x150 mm, dalle pleine, épaisseur 200 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 27.67,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_150x150_mm_dalle_pleine_epaisseur_300_mm_u",
                                                                                                                     nom = "dimensions 150x150 mm, dalle pleine, épaisseur 300 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 2.37,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_150x150_mm_plancher_hourdis_epaisseur_160_mm_u",
@@ -786,21 +786,21 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 200x200 mm, dalle pleine, épaisseur 150 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 28.38,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_200x200_mm_dalle_pleine_epaisseur_200_mm_u",
                                                                                                                     nom = "dimensions 200x200 mm, dalle pleine, épaisseur 200 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 0.88,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_200x200_mm_dalle_pleine_epaisseur_300_mm_u",
                                                                                                                     nom = "dimensions 200x200 mm, dalle pleine, épaisseur 300 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 5.88,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_200x200_mm_plancher_hourdis_epaisseur_160_mm_u",
@@ -828,21 +828,21 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 250x250 mm, dalle pleine, épaisseur 150 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 1.86,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_250x250_mm_dalle_pleine_epaisseur_200_mm_u",
                                                                                                                     nom = "dimensions 250x250 mm, dalle pleine, épaisseur 200 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 4.38,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_250x250_mm_dalle_pleine_epaisseur_300_mm_u",
                                                                                                                     nom = "dimensions 250x250 mm, dalle pleine, épaisseur 300 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 9.93,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_250x250_mm_plancher_hourdis_epaisseur_160_mm_u",
@@ -870,21 +870,21 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 300x300 mm, dalle pleine, épaisseur 150 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 5.62,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_300x300_mm_dalle_pleine_epaisseur_200_mm_u",
                                                                                                                     nom = "dimensions 300x300 mm, dalle pleine, épaisseur 200 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 8.41,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_300x300_mm_dalle_pleine_epaisseur_300_mm_u",
                                                                                                                     nom = "dimensions 300x300 mm, dalle pleine, épaisseur 300 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 44.16,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_300x300_mm_plancher_hourdis_epaisseur_160_mm_u",
@@ -1227,7 +1227,7 @@ M.STRUCTURE = {
                     nom = "Dépose de tuyauteries",
                                                                                     type = "ARTICLE",
                                                                                     prix = 18.37,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_de_100_a_150_mm_m",
@@ -1333,7 +1333,7 @@ M.STRUCTURE = {
                                                                             nom = "Dépose de tuyauterie en plomb",
                                                                                     type = "ARTICLE",
                                                                                     prix = 10.17,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_exterieur_de_30_a_58_mm_m",
@@ -1818,7 +1818,7 @@ M.STRUCTURE = {
                     nom = "Canalisations-tuyauteries",
                                                                                     type = "ARTICLE",
                                                                                     prix = 61.86,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_75_mm_m",
@@ -2715,7 +2715,7 @@ M.STRUCTURE = {
                     nom = "Canalisation en fonte SMU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 50.37,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_75_mm_m",
@@ -4437,7 +4437,7 @@ M.STRUCTURE = {
                     nom = "Canalisation PVC Bâtiment",
                                                                                     type = "ARTICLE",
                                                                                     prix = 16.74,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametres_34_40_mm_m",
@@ -4620,7 +4620,7 @@ M.STRUCTURE = {
                                                                             nom = "Flexible d'évacuation annelé en PVC",
                                                                                     type = "ARTICLE",
                                                                                     prix = 10.09,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_40_mm_sans_raccord_m",
@@ -4634,42 +4634,42 @@ M.STRUCTURE = {
                                                                                                                     nom = "raccord en PVC, écrou tournant, dn 33/42 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 8.88,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "raccord_en_pvc_ecrou_tournant_dn_40_49_mm_u",
                                                                                                                     nom = "raccord en PVC, écrou tournant, dn 40/49 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 9.76,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "raccord_en_pvc_manchon_femelle_dn_33_42_mm_u",
                                                                                                                     nom = "raccord en PVC, manchon femelle, dn 33/42 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 5.19,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "raccord_en_pvc_manchon_femelle_dn_40_49_mm_u",
                                                                                                                     nom = "raccord en PVC, manchon femelle, dn 40/49 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 5.44,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "raccord_en_pvc_embout_male_dn_33_42_mm_u",
                                                                                                                     nom = "raccord en PVC, embout mâle, dn 33/42 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 4.95,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "raccord_en_pvc_embout_male_dn_40_49_mm_u",
                                                                                                                     nom = "raccord en PVC, embout mâle, dn 40/49 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 5.2,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -4678,7 +4678,7 @@ M.STRUCTURE = {
                                                                             nom = "Aérateur à membrane en PVC",
                                                                                     type = "ARTICLE",
                                                                                     prix = 29.59,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_40_mm_u",
@@ -4736,7 +4736,7 @@ M.STRUCTURE = {
                                                                             nom = "Coude simple FF en PVC",
                                                                                     type = "ARTICLE",
                                                                                     prix = 4.89,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "angle_20_ou_22_30_diametre_40_mm_u",
@@ -4913,7 +4913,7 @@ M.STRUCTURE = {
                                                                             nom = "Coude simple FF à 87°30 en PVC avec bouchon",
                                                                                     type = "ARTICLE",
                                                                                     prix = 9.58,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_40_mm_u",
@@ -5006,7 +5006,7 @@ M.STRUCTURE = {
                                                                             nom = "Coude double parallèle FF à 87°30 7 en PVC",
                                                                                     type = "ARTICLE",
                                                                                     prix = 13.14,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_40_mm_u",
@@ -5099,7 +5099,7 @@ M.STRUCTURE = {
                                                                             nom = "Coude double d'équerre FF à 87°30 en PVC",
                                                                                     type = "ARTICLE",
                                                                                     prix = 18.93,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_40_mm_u",
@@ -5192,7 +5192,7 @@ M.STRUCTURE = {
                                                                             nom = "Té pied de biche MF à 87°30 en PVC",
                                                                                     type = "ARTICLE",
                                                                                     prix = 7.14,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_40_mm_u",
@@ -5215,7 +5215,7 @@ M.STRUCTURE = {
                                                                             nom = "Té pied de biche MF à 87°30 en PVC avec bouchon",
                                                                                     type = "ARTICLE",
                                                                                     prix = 8.31,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_40_mm_u",
@@ -5238,7 +5238,7 @@ M.STRUCTURE = {
                                                                             nom = "Chapeau de ventilation simple en PVC",
                                                                                     type = "ARTICLE",
                                                                                     prix = 15.27,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_40_mm_u",
@@ -5331,7 +5331,7 @@ M.STRUCTURE = {
                                                                             nom = "Croix pied de biche FF en PVC",
                                                                                     type = "ARTICLE",
                                                                                     prix = 17.07,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_40_mm_u",
@@ -5354,7 +5354,7 @@ M.STRUCTURE = {
                                                                             nom = "Culotte simple FF à 67°30 en PVC",
                                                                                     type = "ARTICLE",
                                                                                     prix = 13.74,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_75_mm_u",
@@ -5426,7 +5426,7 @@ M.STRUCTURE = {
                                                                             nom = "Culotte double parallèle FF à 67°30 en PVC",
                                                                                     type = "ARTICLE",
                                                                                     prix = 18.15,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_75_mm_u",
@@ -5477,7 +5477,7 @@ M.STRUCTURE = {
                                                                             nom = "Culotte double d'équerre FF à 67°30 en PVC",
                                                                                     type = "ARTICLE",
                                                                                     prix = 28.3,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_75_mm_u",
@@ -5528,7 +5528,7 @@ M.STRUCTURE = {
                                                                             nom = "Culotte simple MF à 67°30 en PVC avec joint de dilatation",
                                                                                     type = "ARTICLE",
                                                                                     prix = 18.03,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_75_mm_u",
@@ -5579,7 +5579,7 @@ M.STRUCTURE = {
                                                                             nom = "Culotte double parallèle MF à 67°30 en PVC avec joint de dilatation",
                                                                                     type = "ARTICLE",
                                                                                     prix = 20.04,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_75_mm_u",
@@ -5630,7 +5630,7 @@ M.STRUCTURE = {
                                                                             nom = "Culotte en PVC pour Chutunic",
                                                                                     type = "ARTICLE",
                                                                                     prix = 65.14,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "double_parallele_diametre_100_mm_u",
@@ -5702,7 +5702,7 @@ M.STRUCTURE = {
                                                                             nom = "Clapet anti-retour PVC",
                                                                                     type = "ARTICLE",
                                                                                     prix = 0.42,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_40_mm_u",
@@ -5769,7 +5769,7 @@ M.STRUCTURE = {
                                                                             nom = "Manchette MF en PVC",
                                                                                     type = "ARTICLE",
                                                                                     prix = 4.56,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_40_mm_u",
@@ -5862,7 +5862,7 @@ M.STRUCTURE = {
                                                                             nom = "Manchon de dilatation vertical MF en PVC",
                                                                                     type = "ARTICLE",
                                                                                     prix = 8.74,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_40_mm_u",
@@ -5955,7 +5955,7 @@ M.STRUCTURE = {
                                                                             nom = "Manchon FF en PVC",
                                                                                     type = "ARTICLE",
                                                                                     prix = 0.13,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_40_mm_u",
@@ -6166,7 +6166,7 @@ M.STRUCTURE = {
                                                                             nom = "Té de visite FF en PVC",
                                                                                     type = "ARTICLE",
                                                                                     prix = 21.49,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_75_mm_u",
@@ -6238,7 +6238,7 @@ M.STRUCTURE = {
                                                                             nom = "Regard de branchement pour EP en PVC polypropylène",
                                                                                     type = "ARTICLE",
                                                                                     prix = 42.25,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_300x300x300_mm_u",
@@ -6261,7 +6261,7 @@ M.STRUCTURE = {
                                                                             nom = "Réhausse clipsable en PVC pour regard EP",
                                                                                     type = "ARTICLE",
                                                                                     prix = 18.75,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "pour_regard_300x300x300_mm_hauteur_150_mm_u",
@@ -6284,7 +6284,7 @@ M.STRUCTURE = {
                                                                             nom = "Couvercle à clipser en PVC pour regard EP",
                                                                                     type = "ARTICLE",
                                                                                     prix = 12.09,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "pour_regard_300x300x300_mm_u",
@@ -6300,7 +6300,7 @@ M.STRUCTURE = {
                                                                             nom = "Grille en PVC pour regard EP",
                                                                                     type = "ARTICLE",
                                                                                     prix = 0.36,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "pour_regard_ep_300x300x300_mm_sans_cadre_u",
@@ -6330,7 +6330,7 @@ M.STRUCTURE = {
                                                                             nom = "Tampon en PVC",
                                                                                     type = "ARTICLE",
                                                                                     prix = 47.71,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "renforce_pour_regard_400x400x400_mm_u",
@@ -6378,7 +6378,7 @@ M.STRUCTURE = {
                                                                             nom = "Selle en PVC",
                                                                                     type = "ARTICLE",
                                                                                     prix = 15.61,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_125_40_mm_u",
@@ -6471,7 +6471,7 @@ M.STRUCTURE = {
                                                                             nom = "Siphon de cour en PVC",
                                                                                     type = "ARTICLE",
                                                                                     prix = 27.48,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "a_sortie_verticale_avec_platine_dimensions_200x200_mm_diametre_75_mm_u",
@@ -6522,7 +6522,7 @@ M.STRUCTURE = {
                                                                             nom = "Siphon de cour avec garde d'eau en PVC",
                                                                                     type = "ARTICLE",
                                                                                     prix = 2.35,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "a_sortie_verticale_dimensions_200x200_mm_diametre_75_mm_u",
@@ -6545,7 +6545,7 @@ M.STRUCTURE = {
                                                                             nom = "Siphon de balcon en PVC",
                                                                                     type = "ARTICLE",
                                                                                     prix = 59.31,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_100_mm_u",
@@ -6561,7 +6561,7 @@ M.STRUCTURE = {
                                                                             nom = "Avaloir de balcon en PVC",
                                                                                     type = "ARTICLE",
                                                                                     prix = 40.83,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "avaloir_de_depart_diametre_100_mm_u",
@@ -6577,7 +6577,7 @@ M.STRUCTURE = {
                                                                             nom = "Siphon de cour à panier en PVC",
                                                                                     type = "ARTICLE",
                                                                                     prix = 95.77,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -6586,7 +6586,7 @@ M.STRUCTURE = {
                                                                             nom = "Siphonnette en PVC à sortie verticale avec platine",
                                                                                     type = "ARTICLE",
                                                                                     prix = 26.67,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_100x100_mm_diametre_40_mm_u",
@@ -6637,7 +6637,7 @@ M.STRUCTURE = {
                                                                             nom = "Siphon pour machine à laver en PVC C",
                                                                                     type = "ARTICLE",
                                                                                     prix = 27.6,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "simple_a_sortie_horizontale_orientable_diametre_40_mm_u",
@@ -6704,7 +6704,7 @@ M.STRUCTURE = {
                                                                             nom = "Siphon série assainissement en PVC avec un tampon de visite",
                                                                                     type = "ARTICLE",
                                                                                     prix = 68.82,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_110_mm_avec_un_tampon_de_visite_u",
@@ -6748,7 +6748,7 @@ M.STRUCTURE = {
                                                                             nom = "Siphon série assainissement en PVC avec deux tampons de visite",
                                                                                     type = "ARTICLE",
                                                                                     prix = 80.68,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_110_mm_u",
@@ -6792,7 +6792,7 @@ M.STRUCTURE = {
                                                                             nom = "Siphon disconnecteur série assainissement en PVC avec deux tampons de visite",
                                                                                     type = "ARTICLE",
                                                                                     prix = 100.5,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_110_mm_u",
@@ -6836,7 +6836,7 @@ M.STRUCTURE = {
                                                                             nom = "Tabouret disconnecteur en PVC, diamètre 250 mm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 115.41,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "type_modulable_diametre_125_mm_u",
@@ -6887,7 +6887,7 @@ M.STRUCTURE = {
                                                                             nom = "Clapet anti retour en PVC, série assainissement",
                                                                                     type = "ARTICLE",
                                                                                     prix = 290.64,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_110_mm_u",
@@ -6928,7 +6928,7 @@ M.STRUCTURE = {
                     nom = "Canalisation PVC Isophonique",
                                                                                     type = "ARTICLE",
                                                                                     prix = 40.12,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_70_78_mm_m",
@@ -6988,7 +6988,7 @@ M.STRUCTURE = {
                                                                             nom = "Bouchon PVC pour réseau isophonique",
                                                                                     type = "ARTICLE",
                                                                                     prix = 29.1,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "long_diametre_70_mm_u",
@@ -7004,7 +7004,7 @@ M.STRUCTURE = {
                                                                             nom = "Collier pour réseau PVC isophonique",
                                                                                     type = "ARTICLE",
                                                                                     prix = 28.95,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "clipsable_diametre_100_mm_u",
@@ -7078,7 +7078,7 @@ M.STRUCTURE = {
                                                                             nom = "Manchon double en PVC pour réseau isophonique",
                                                                                     type = "ARTICLE",
                                                                                     prix = 16.45,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_70_mm_u",
@@ -7115,7 +7115,7 @@ M.STRUCTURE = {
                                                                             nom = "Coude simple MF en PVC pour réseau isophonique",
                                                                                     type = "ARTICLE",
                                                                                     prix = 24.03,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "angle_15_diametre_70_mm_u",
@@ -7264,7 +7264,7 @@ M.STRUCTURE = {
                                                                             nom = "Culotte simple MF en PVC pour réseau isophonique",
                                                                                     type = "ARTICLE",
                                                                                     prix = 5.92,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "a_45_diametre_70_mm_u",
@@ -7343,7 +7343,7 @@ M.STRUCTURE = {
                                                                             nom = "Embranchement simple MF en PVC pour réseau isophonique",
                                                                                     type = "ARTICLE",
                                                                                     prix = 49.69,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "a_45_diametre_100_50_mm_u",
@@ -7429,7 +7429,7 @@ M.STRUCTURE = {
                                                                             nom = "Culotte double en PVC pour réseau isophonique",
                                                                                     type = "ARTICLE",
                                                                                     prix = 165,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "double_parrallele_a_87_30_diametre_100_mm_u",
@@ -7452,7 +7452,7 @@ M.STRUCTURE = {
                                                                             nom = "Té de visite en PVC pour réseau isophonique",
                                                                                     type = "ARTICLE",
                                                                                     prix = 158.7,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "a_87_diametre_50_mm_u",
@@ -7577,7 +7577,7 @@ M.STRUCTURE = {
                                                                             nom = "Pied de chute PVC pour réseau isophonique",
                                                                                     type = "ARTICLE",
                                                                                     prix = 135.19,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "court_diametre_100_mm_u",
@@ -7593,7 +7593,7 @@ M.STRUCTURE = {
                                                                             nom = "Joint de transition PVC/Isophonique",
                                                                                     type = "ARTICLE",
                                                                                     prix = 19.66,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_75_70_mm_u",
@@ -7616,7 +7616,7 @@ M.STRUCTURE = {
                                                                             nom = "Adaptation PVC Isophonique/Fonte",
                                                                                     type = "ARTICLE",
                                                                                     prix = 54.54,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_125_135_mm_u",
@@ -7639,7 +7639,7 @@ M.STRUCTURE = {
                                                                             nom = "Adaptation PVC Isophonique/PVC",
                                                                                     type = "ARTICLE",
                                                                                     prix = 88.06,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_70_75_mm_u",
@@ -7671,7 +7671,7 @@ M.STRUCTURE = {
                                                                             nom = "Culotte en PVC pour Chutunic",
                                                                                     type = "ARTICLE",
                                                                                     prix = 65.14,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "double_parallele_diametre_100_mm_u",
@@ -7747,7 +7747,7 @@ M.STRUCTURE = {
                     nom = "Canalisation PVC Pression",
                                                                                     type = "ARTICLE",
                                                                                     prix = 12.45,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_15_4_20_mm_m",
@@ -7847,7 +7847,7 @@ M.STRUCTURE = {
                                                                             nom = "Coude PVC Pression à 90° FF",
                                                                                     type = "ARTICLE",
                                                                                     prix = 4.3,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametres_15_4_20_mm_u",
@@ -7947,7 +7947,7 @@ M.STRUCTURE = {
                                                                             nom = "Coude PVC Pression à 45° FF",
                                                                                     type = "ARTICLE",
                                                                                     prix = 4.54,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametres_15_4_20_mm_u",
@@ -8047,7 +8047,7 @@ M.STRUCTURE = {
                                                                             nom = "Courbe PVC Pression à 90° FF",
                                                                                     type = "ARTICLE",
                                                                                     prix = 5.1,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametres_15_4_20_mm_u",
@@ -8147,7 +8147,7 @@ M.STRUCTURE = {
                                                                             nom = "Courbe PVC Pression à 45° FF",
                                                                                     type = "ARTICLE",
                                                                                     prix = 5.1,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametres_15_4_20_mm_u",
@@ -8247,7 +8247,7 @@ M.STRUCTURE = {
                                                                             nom = "Té égal PVC Pression à 90° FF",
                                                                                     type = "ARTICLE",
                                                                                     prix = 6.04,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_15_4_x20_mm_u",
@@ -8347,7 +8347,7 @@ M.STRUCTURE = {
                                                                             nom = "Té égal PVC Pression à 45° FF",
                                                                                     type = "ARTICLE",
                                                                                     prix = 15.82,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_34_40_mm_u",
@@ -8398,7 +8398,7 @@ M.STRUCTURE = {
                                                                             nom = "Manchon PVC Pression",
                                                                                     type = "ARTICLE",
                                                                                     prix = 0.57,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_15_4_20_mm_u",
@@ -8498,7 +8498,7 @@ M.STRUCTURE = {
                                                                             nom = "Réduction PVC Pression",
                                                                                     type = "ARTICLE",
                                                                                     prix = 5.58,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametres_20_12_mm_u",
@@ -9081,7 +9081,7 @@ M.STRUCTURE = {
                                                                             nom = "Bouchon PVC Pression",
                                                                                     type = "ARTICLE",
                                                                                     prix = 2.68,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_20_mm_u",
@@ -9167,7 +9167,7 @@ M.STRUCTURE = {
                                                                             nom = "Union 3 pièces PVC Pression",
                                                                                     type = "ARTICLE",
                                                                                     prix = 7.03,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_20_mm_u",
@@ -9239,7 +9239,7 @@ M.STRUCTURE = {
                                                                             nom = "Robinet à bille en PVC à coller",
                                                                                     type = "ARTICLE",
                                                                                     prix = 23.11,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_25_mm_u",
@@ -9301,7 +9301,7 @@ M.STRUCTURE = {
                     nom = "Canalisation en CPVC-Chaleur",
                                                                                     type = "ARTICLE",
                                                                                     prix = 17.46,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_15_4_20_m",
@@ -9417,7 +9417,7 @@ M.STRUCTURE = {
                                                                             nom = "Coude FF à 90° en CPVC-Chaleur",
                                                                                     type = "ARTICLE",
                                                                                     prix = 6.22,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_exterieur_20_u",
@@ -9482,7 +9482,7 @@ M.STRUCTURE = {
                                                                             nom = "Coude FF à 45° en CPVC-Chaleur",
                                                                                     type = "ARTICLE",
                                                                                     prix = 6.58,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_exterieur_20_u",
@@ -9547,7 +9547,7 @@ M.STRUCTURE = {
                                                                             nom = "Courbe FF à 90° en CPVC-Chaleur",
                                                                                     type = "ARTICLE",
                                                                                     prix = 7.41,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_exterieur_25_u",
@@ -9591,7 +9591,7 @@ M.STRUCTURE = {
                                                                             nom = "Té égal à 90° en CPVC-Chaleur",
                                                                                     type = "ARTICLE",
                                                                                     prix = 8.59,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_exterieur_20_u",
@@ -9656,7 +9656,7 @@ M.STRUCTURE = {
                                                                             nom = "Manchon FF en CPVC-Chaleur",
                                                                                     type = "ARTICLE",
                                                                                     prix = 4.29,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_exterieur_20_u",
@@ -9721,7 +9721,7 @@ M.STRUCTURE = {
                                                                             nom = "Bouchon en CPVC-Chaleur",
                                                                                     type = "ARTICLE",
                                                                                     prix = 0.3,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_exterieur_20_u",
@@ -9786,7 +9786,7 @@ M.STRUCTURE = {
                                                                             nom = "Union 3 pièces FF en CPVC-Chaleur",
                                                                                     type = "ARTICLE",
                                                                                     prix = 10.59,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_exterieur_20_u",
@@ -9888,7 +9888,7 @@ M.STRUCTURE = {
                                                                             nom = "Clapet anti retour en CPVC-Chaleur",
                                                                                     type = "ARTICLE",
                                                                                     prix = 48.39,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_exterieur_25_u",
@@ -9918,7 +9918,7 @@ M.STRUCTURE = {
                                                                             nom = "Vanne à bille en CPVC-Chaleur",
                                                                                     type = "ARTICLE",
                                                                                     prix = 75.79,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_exterieur_20_u",
@@ -10050,7 +10050,7 @@ M.STRUCTURE = {
                                                                             nom = "Coude taraudé en CPVC-Chaleur",
                                                                                     type = "ARTICLE",
                                                                                     prix = 14.71,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_20mm_x1_2_u",
@@ -10073,7 +10073,7 @@ M.STRUCTURE = {
                                                                             nom = "Té taraudé à 90° en CPVC-Chaleur",
                                                                                     type = "ARTICLE",
                                                                                     prix = 15.73,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_20mm_x1_2_u",
@@ -16654,7 +16654,7 @@ M.STRUCTURE = {
                                                                             nom = "Peinture antirouille au minium de plomb",
                                                                                     type = "ARTICLE",
                                                                                     prix = 1.08,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "sur_tube_fer_diametre_15_21_mm_ml",
@@ -21288,7 +21288,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "bouchon PVC pour patère, diamètre 15/21 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 0.66,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -21297,7 +21297,7 @@ M.STRUCTURE = {
                                                                             nom = "Boite encastrable en PVC",
                                                                                     type = "ARTICLE",
                                                                                     prix = 13.38,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "pour_patere_de_derivation_diametre_15_21_mm_u",
@@ -21324,7 +21324,7 @@ M.STRUCTURE = {
                     nom = "Dépose de canalisations",
                                                                                     type = "ARTICLE",
                                                                                     prix = 17.59,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_de_100_a_150_mm_m",
@@ -21347,7 +21347,7 @@ M.STRUCTURE = {
                                                                             nom = "Dépose de canalisation en acier inoxydable",
                                                                                     type = "ARTICLE",
                                                                                     prix = 17.59,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_de_28_a_35_mm_m",
@@ -21370,7 +21370,7 @@ M.STRUCTURE = {
                                                                             nom = "Dépose de canalisation en PVC",
                                                                                     type = "ARTICLE",
                                                                                     prix = 8.2,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_de_63_a_90_mm_m",
@@ -21400,7 +21400,7 @@ M.STRUCTURE = {
                                                                             nom = "Dépose de canalisation en Polyéthylène PEHD",
                                                                                     type = "ARTICLE",
                                                                                     prix = 8.61,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_de_63_a_90_mm_m",
@@ -21453,7 +21453,7 @@ M.STRUCTURE = {
                                                                             nom = "Dépose de canalisation en fer",
                                                                                     type = "ARTICLE",
                                                                                     prix = 9.39,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_de_26_34_a_40_49_mm_m",
@@ -21483,7 +21483,7 @@ M.STRUCTURE = {
                                                                             nom = "Dépose de canalisation en plomb",
                                                                                     type = "ARTICLE",
                                                                                     prix = 10.17,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_exterieur_de_30_a_58_mm_m",
@@ -21517,7 +21517,7 @@ M.STRUCTURE = {
                     nom = "Calorifugeage",
                                                                                     type = "ARTICLE",
                                                                                     prix = 15.99,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "sur_tube_en_fer_noir_diametre_15_21_mm_m",
@@ -22502,7 +22502,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Peinture pour isolant extérieur\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 223.62,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -22745,42 +22745,42 @@ M.STRUCTURE = {
                                                                                                                     nom = "avec coffre en fonte, diamètre 15/21 mm, avec contre bride PVC 20\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 105.73,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "avec_coffre_en_fonte_diametre_20_27_mm_avec_contre_bride_pvc_25_u",
                                                                                                                     nom = "avec coffre en fonte, diamètre 20/27 mm, avec contre bride PVC 25\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 113.82,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "avec_coffre_en_fonte_diametre_26_34_mm_avec_contre_bride_pvc_32_u",
                                                                                                                     nom = "avec coffre en fonte, diamètre 26/34 mm, avec contre bride PVC 32\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 137.61,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "avec_coffre_en_fonte_incongelable_diametre_15_mm_avec_contre_bride_pvc_20_u",
                                                                                                                     nom = "avec coffre en fonte, incongelable, diamètre 15 mm, avec contre bride PVC 20\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 73.95,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "avec_coffre_en_fonte_incongelable_diametre_20_mm_avec_contre_bride_pvc_25_u",
                                                                                                                     nom = "avec coffre en fonte, incongelable, diamètre 20 mm, avec contre bride PVC 25\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 88.95,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "avec_coffre_en_fonte_incongelable_diametre_27_mm_avec_contre_bride_pvc_32_u",
                                                                                                                     nom = "avec coffre en fonte, incongelable, diamètre 27 mm, avec contre bride PVC 32\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 446.01,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -23112,28 +23112,28 @@ M.STRUCTURE = {
                                                                                                                     nom = "calibre 20, diamètre 26/34 mm, dédit 2,5 m3/h\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 2.46,
-                                                                                    unite = "m3",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "calibre_25_diametre_33_42mm_dedit_3_5_m3_h_u",
                                                                                                                     nom = "calibre 25, diamètre 33/42mm, dédit 3,5 m3/h\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 477.01,
-                                                                                    unite = "m3",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "calibre_32_diametre_40_49_mm_dedit_5_m3_h_u",
                                                                                                                     nom = "calibre 32, diamètre 40/49 mm, dédit 5 m3/h\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 548.26,
-                                                                                    unite = "m3",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "calibre_40_diametre_50_60_mm_dedit_10_m3_h_u",
                                                                                                                     nom = "calibre 40, diamètre 50/60 mm, dédit 10 m3/h\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 753.64,
-                                                                                    unite = "m3",
+                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -23149,28 +23149,28 @@ M.STRUCTURE = {
                                                                                                                     nom = "calibre 20, diamètre 26/34 mm, débit 2,5 m3/h\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 184.9,
-                                                                                    unite = "m3",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "calibre_25_diametre_33_42_mm_debit_3_5_m3_h_u",
                                                                                                                     nom = "calibre 25, diamètre 33/42 mm, débit 3,5 m3/h\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 30.67,
-                                                                                    unite = "m3",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "calibre_32_diametre_40_49_mm_debit_5_m3_h_u",
                                                                                                                     nom = "calibre 32, diamètre 40/49 mm, débit 5 m3/h\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 427.38,
-                                                                                    unite = "m3",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "calibre_40_diametre_50_60_mm_debit_10_m3_h_u",
                                                                                                                     nom = "calibre 40, diamètre 50/60 mm, débit 10 m3/h\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 697.28,
-                                                                                    unite = "m3",
+                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -24057,7 +24057,7 @@ M.STRUCTURE = {
                                                                             nom = "Coffret GRDF à équiper",
                                                                                     type = "ARTICLE",
                                                                                     prix = 141.09,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "type_s22_haut_u",
@@ -24999,21 +24999,21 @@ M.STRUCTURE = {
                                                                             nom = "Protection mécanique pour tuyauterie gaz passant en façade",
                                                                                     type = "ARTICLE",
                                                                                     prix = 7.06,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "par_goulotte_en_aluminium_section_70x70_mm_compris_fixations_m",
                                                                                                                     nom = "par goulotte en aluminium, section 70x70 mm, compris fixations\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 46.9,
-                                                                                    unite = "ml",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "par_goulotte_en_aluminium_section_90_x90_mm_compris_fixations_m",
                                                                                                                     nom = "par goulotte en aluminium, section 90,x90 mm, compris fixations\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 54.55,
-                                                                                    unite = "ml",
+                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         }
@@ -25195,7 +25195,7 @@ M.STRUCTURE = {
                     nom = "Canalisation PLT en acier inoxydable gaz",
                                                                                     type = "ARTICLE",
                                                                                     prix = 4.33,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_dn_20_m",
@@ -25691,7 +25691,7 @@ M.STRUCTURE = {
                                                                             nom = "Raccords d'alimentation en bronze pour colonne sèche avec bouchon et chainette",
                                                                                     type = "ARTICLE",
                                                                                     prix = 210.13,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "douille_filetee_male_diametre_100_mm_u",

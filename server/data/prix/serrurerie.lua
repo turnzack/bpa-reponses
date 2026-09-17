@@ -303,42 +303,42 @@ M.STRUCTURE = {
                                                                                                                     nom = "hauteur 600 mm, tube carré 30x30 mm\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 161.59,
-                                                                                    unite = "ml",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "hauteur_600_mm_tube_carre_35x35_mm_m",
                                                                                                                     nom = "hauteur 600 mm, tube carré 35x35 mm\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 172.74,
-                                                                                    unite = "ml",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "hauteur_700_mm_tube_carre_35x35_mm_m",
                                                                                                                     nom = "hauteur 700 mm, tube carré 35x35 mm\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 180.25,
-                                                                                    unite = "ml",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "hauteur_800_mm_tube_carre_35x35_mm_m",
                                                                                                                     nom = "hauteur 800 mm, tube carré 35x35 mm\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 187.75,
-                                                                                    unite = "ml",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "hauteur_900_mm_tube_carre_35x35_mm_m",
                                                                                                                     nom = "hauteur 900 mm, tube carré 35x35 mm\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 195.25,
-                                                                                    unite = "ml",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "hauteur_1000_mm_tube_carre_35x35_mm_m",
                                                                                                                     nom = "hauteur 1000 mm, tube carré 35x35 mm\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 202.41,
-                                                                                    unite = "ml",
+                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -347,7 +347,7 @@ M.STRUCTURE = {
                                                                             nom = "Plus value pour grillage classe C",
                                                                                     type = "ARTICLE",
                                                                                     prix = 1.81,
-                                                                                    unite = "ml",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "hauteur_3500_mm_m",
@@ -5771,14 +5771,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "Bloc-porte technique EI 60, 2 vantaux, dimensions 2100x1900, coupe-feu 1 heure\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 1401.62,
-                                                                                    unite = "h",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "bloc_porte_technique_ei_60_2_vantaux_dimensions_2100x1500_coupe_feu_1_heure_u",
                                                                                                                     nom = "Bloc-porte technique EI 60, 2 vantaux, dimensions 2100x1500, coupe-feu 1 heure\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 1389.48,
-                                                                                    unite = "h",
+                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -14586,7 +14586,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Main courante tube acier diamètre 40 mm\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 88.53,
-                                                                                    unite = "ml",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "main_courante_type_niangon_60x60_mm_a_vernir_m",
@@ -14668,7 +14668,7 @@ M.STRUCTURE = {
                     nom = "Bardages",
                                                                                     type = "ARTICLE",
                                                                                     prix = 248.06,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "epaisseur_63_100_tole_laquee_m",

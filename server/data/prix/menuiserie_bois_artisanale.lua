@@ -31403,7 +31403,7 @@ M.STRUCTURE = {
                                                                             nom = "Plus value pour épaisseur de cloison de 100 mm pour bois du nord",
                                                                                     type = "ARTICLE",
                                                                                     prix = 38.05,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_830x2040_mm_u",
@@ -31433,7 +31433,7 @@ M.STRUCTURE = {
                                                                             nom = "Plus value pour épaisseur de cloison de 100 mm pour chêne",
                                                                                     type = "ARTICLE",
                                                                                     prix = 58.92,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_830x2040_mm_u",
@@ -31463,7 +31463,7 @@ M.STRUCTURE = {
                                                                             nom = "Plus value pour épaisseur de cloison de 100 mm pour sipo",
                                                                                     type = "ARTICLE",
                                                                                     prix = 42.43,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_830x2040_mm_u",
@@ -31991,7 +31991,7 @@ M.STRUCTURE = {
                                                                             nom = "Cloison hydrofuge",
                                                                                     type = "ARTICLE",
                                                                                     prix = 284.33,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "largeur_600_mm_epaisseur_50_mm_m",
@@ -32035,7 +32035,7 @@ M.STRUCTURE = {
                                                                             nom = "Cloison porteuse CTBH",
                                                                                     type = "ARTICLE",
                                                                                     prix = 287.66,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "largeur_600_mm_epaisseur_50_mm_m",
@@ -32079,7 +32079,7 @@ M.STRUCTURE = {
                                                                             nom = "Cloison sécurité M1",
                                                                                     type = "ARTICLE",
                                                                                     prix = 293.79,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "largeur_600_mm_epaisseur_50_mm_m",
@@ -32555,7 +32555,7 @@ M.STRUCTURE = {
                                                                             nom = "Parquet brut collé sur chape",
                                                                                     type = "ARTICLE",
                                                                                     prix = 232.56,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "pose_seule_a_coupe_perdue_largeur_90_mm_epaisseur_14_mm_m",
@@ -32583,14 +32583,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "Ponçage de parquet neuf\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 210.02,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "poncage_de_parquet_ancien_m",
                                                                                                                     nom = "Ponçage de parquet ancien\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 215.91,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "vitrification_de_parquets_dans_le_neuf_m",
@@ -32714,7 +32714,7 @@ M.STRUCTURE = {
                                                                             nom = "Plinthes",
                                                                                     type = "ARTICLE",
                                                                                     prix = 9.94,
-                                                                                    unite = "U",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "plinthe_en_pin_a_peindre_dimensions_100x10_mm_m",
@@ -32774,7 +32774,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "plus value par mètre supplémentaire pour cadre gaine technique\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 135.9,
-                                                                                    unite = "ml",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "plus_value_pour_porte_1_vantail_u",

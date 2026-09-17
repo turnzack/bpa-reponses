@@ -8685,7 +8685,7 @@ M.STRUCTURE = {
                                                                             nom = "Peinture de tuyau de descente peints isolément",
                                                                                     type = "ARTICLE",
                                                                                     prix = 4.77,
-                                                                                    unite = "ml",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "au_dessus_de_3_metres_de_hauteur_m",
@@ -8998,7 +8998,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Peinture de tuyau isolé\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 0.5,
-                                                                                    unite = "ml",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "peinture_laquee_sur_elements_isoles_pentures_u",
@@ -9126,7 +9126,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Peinture gouttelette par projection au pistolet, couche de finition sur enduit lisse\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 10.39,
-                                                                                    unite = "ml",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "faserit_en_2_couches_2_tons_m",

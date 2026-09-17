@@ -71,7 +71,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Consolidation de mur en pierre compris renformis\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 295.73,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -80,7 +80,7 @@ M.STRUCTURE = {
                                                                             nom = "Consolidation de toiture par IPN",
                                                                                     type = "ARTICLE",
                                                                                     prix = 177.22,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "260_mm_m",
@@ -117,7 +117,7 @@ M.STRUCTURE = {
                                                                             nom = "Démolition de bardage",
                                                                                     type = "ARTICLE",
                                                                                     prix = 220.64,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "metallique_simple_peau_m",
@@ -221,14 +221,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "en dalle vide\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 295.56,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_dalle_precontrainte_m",
                                                                                                                     nom = "en dalle précontrainte\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 14.2,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -244,35 +244,35 @@ M.STRUCTURE = {
                                                                                                                     nom = "en PVC, double vitrage\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 15.24,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_bois_simple_vitrage_m",
                                                                                                                     nom = "en bois, simple vitrage\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 12.84,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_bois_double_vitrage_m",
                                                                                                                     nom = "en bois, double vitrage\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 18.36,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_aluminium_simple_vitrage_m",
                                                                                                                     nom = "en aluminium, simple vitrage\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 25.32,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_aluminium_double_vitrage_m",
                                                                                                                     nom = "en aluminium, double vitrage\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 32.28,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_porte_comprise_serrure_m",
@@ -293,14 +293,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "de volet simple vitrage\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 11.4,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_volet_double_vitrage_m",
                                                                                                                     nom = "de volet double vitrage\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 14.52,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_volet_roulant_m",
@@ -367,7 +367,7 @@ M.STRUCTURE = {
                                                                             nom = "Doublage intérieur de mur",
                                                                                     type = "ARTICLE",
                                                                                     prix = 212.33,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "y_compris_finition_2_faces_m",
@@ -498,7 +498,7 @@ M.STRUCTURE = {
                                                                             nom = "Excavation sous mur ou dalle",
                                                                                     type = "ARTICLE",
                                                                                     prix = 32.28,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "par_terre_vegetale_m",
@@ -710,7 +710,7 @@ M.STRUCTURE = {
                                                                             nom = "Injection sous mur",
                                                                                     type = "ARTICLE",
                                                                                     prix = 250.44,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -842,7 +842,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "tuile mécanique\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 236.63,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -872,7 +872,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "forfait d'usure disque diamanté au millimètre\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 105.82,
-                                                                                    unite = "forfait",
+                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -888,7 +888,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "10 m3\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 405.67,
-                                                                                    unite = "m3",
+                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -897,14 +897,14 @@ M.STRUCTURE = {
                                                                             nom = "Terrassement en sous-oeuvre pour consolidation",
                                                                                     type = "ARTICLE",
                                                                                     prix = 141.52,
-                                                                                    unite = "m3",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_puits_sous_mur_m",
                                                                                                                     nom = "en puits sous mur\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 160.75,
-                                                                                    unite = "m3",
+                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -920,21 +920,21 @@ M.STRUCTURE = {
                                                                                                                     nom = "épaisseur mur 200 mm\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 25.99,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "epaisseur_mur_300_mm_m",
                                                                                                                     nom = "épaisseur mur 300 mm\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 3.51,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "epaisseur_mur_400_mm_m",
                                                                                                                     nom = "épaisseur mur 400 mm\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 44.56,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -950,7 +950,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Obturation d'infiltrations murales par mortier à prise ultra-rapide (100 cm3)\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 10.81,
-                                                                                    unite = "m3",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "impermeabilisation_des_murs_enterres_m",

@@ -634,7 +634,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "couche intermédiaire, sur porte isoplane\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 11.4,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "couche_intermediaire_sur_chassis_m",
@@ -655,7 +655,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "couche intermédiaire, sur porte moulurée\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 12.73,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "couche_intermediaire_sur_persienne_m",
@@ -704,14 +704,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "couche de finition, sur porte isoplane\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 11.88,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "couche_de_finition_sur_porte_mouluree_m",
                                                                                                                     nom = "couche de finition, sur porte moulurée\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 13.24,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "couche_de_finition_sur_persienne_m",
@@ -748,14 +748,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "couche intermédiaire, sur porte isoplane\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 11.35,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "couche_intermediaire_sur_porte_mouluree_m",
                                                                                                                     nom = "couche intermédiaire, sur porte moulurée\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 12.69,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "couche_de_finition_en_plafonds_m",
@@ -776,14 +776,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "couche de finition, sur porte isoplane\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 11.83,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "couche_de_finition_sur_porte_mouluree_m",
                                                                                                                     nom = "couche de finition, sur porte moulurée\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 13.2,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -806,14 +806,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "couche intermédiaire, sur porte isoplane\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 12.69,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "couche_intermediaire_sur_porte_mouluree_m",
                                                                                                                     nom = "couche intermédiaire, sur porte moulurée\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 14.02,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "couche_de_finition_sur_murs_m",
@@ -834,14 +834,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "couche de finition, sur porte isoplane\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 13.17,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "couche_de_finition_sur_porte_mouluree_m",
                                                                                                                     nom = "couche de finition, sur porte moulurée\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 14.53,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 }
                                                                             }
                                                                         },

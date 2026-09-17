@@ -255,7 +255,7 @@ M.STRUCTURE = {
                                                                             nom = "Tuiles de rives",
                                                                                     type = "ARTICLE",
                                                                                     prix = 69.72,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "teinte_vieux_mas_m",
@@ -303,21 +303,21 @@ M.STRUCTURE = {
                                                                             nom = "Plaques de chassis",
                                                                                     type = "ARTICLE",
                                                                                     prix = 193.26,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "plaque_de_chassis_de_1_65_m_de_long_ouverture_0_46x0_46_m_u",
                                                                                                                     nom = "plaque de chassis de 1,65 m de long, ouverture 0,46x0,46 m\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 251.98,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "chassis_de_toiture_dimensions_0_545x0_245_m_u",
                                                                                                                     nom = "chassis de toiture, dimensions 0,545x0,245 m\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 167.82,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         }
@@ -455,14 +455,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "sous-faitière rive droite\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 107.32,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "sous_faitiere_rive_droite_3_4_pureau_m",
                                                                                                                     nom = "sous-faitière rive droite 3/4 pureau\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 107.44,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -471,28 +471,28 @@ M.STRUCTURE = {
                                                                             nom = "Tuiles de rives, type DCL",
                                                                                     type = "ARTICLE",
                                                                                     prix = 29.92,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_a_rabat_droite_m",
                                                                                                                     nom = "rive à rabat droite\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 29.92,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_ronde_gauche_m",
                                                                                                                     nom = "rive ronde gauche\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 24.9,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_ronde_droite_m",
                                                                                                                     nom = "rive ronde droite\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 24.9,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -558,7 +558,7 @@ M.STRUCTURE = {
                                                                             nom = "Plaques de chassis, type DCL",
                                                                                     type = "ARTICLE",
                                                                                     prix = 354.87,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -722,7 +722,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "sous-faitière rive droite à pureau variable\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 115.14,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "sous_faitiere_a_pureau_variable_m",
@@ -736,14 +736,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "sous-faitière rive à rabat gauche à pureau variable\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 115.14,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "sous_faitiere_rive_a_rabat_droite_a_pureau_variable_m",
                                                                                                                     nom = "sous-faitière rive à rabat droite à pureau variable\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 115.14,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -752,49 +752,49 @@ M.STRUCTURE = {
                                                                             nom = "Tuiles de rives, type DC 10 Guiraud",
                                                                                     type = "ARTICLE",
                                                                                     prix = 28.15,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_a_rabat_droite_m",
                                                                                                                     nom = "rive à rabat droite\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 28.15,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_ronde_gauche_m",
                                                                                                                     nom = "rive ronde gauche\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 23.7,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_ronde_droite_m",
                                                                                                                     nom = "rive ronde droite\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 23.7,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_sans_rabat_droite_m",
                                                                                                                     nom = "rive sans rabat droite\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 27.19,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_a_rabat_trois_quart_pureau_gauche_m",
                                                                                                                     nom = "rive à rabat trois quart pureau gauche\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 92.25,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_a_rabat_trois_quart_pureau_droite_m",
                                                                                                                     nom = "rive à rabat trois quart pureau droite\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 92.25,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -920,7 +920,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "tuyau de rallonge, hauteur 40 cm, diamètre 150 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 27.97,
-                                                                                    unite = "ml",
+                                                                                    unite = "m2",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -929,7 +929,7 @@ M.STRUCTURE = {
                                                                             nom = "Plaques de chassis, type DC 10 Guiraud",
                                                                                     type = "ARTICLE",
                                                                                     prix = 354.87,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -947,7 +947,7 @@ M.STRUCTURE = {
                                                                             nom = "Tuiles de faîtage et arêtier type 14 Huguenot, scellés au mortier",
                                                                                     type = "ARTICLE",
                                                                                     prix = 53.79,
-                                                                                    unite = "m3",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "tuile_faitiere_a_emboitement_type_14_huguenot_m",
@@ -1021,35 +1021,35 @@ M.STRUCTURE = {
                                                                             nom = "Tuiles de rives, type 14 Huguenot",
                                                                                     type = "ARTICLE",
                                                                                     prix = 39,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_a_rabat_gauche_a_recouvrement_m",
                                                                                                                     nom = "rive à rabat gauche à recouvrement\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 39,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_individuelle_gauche_a_recouvrement_m",
                                                                                                                     nom = "rive individuelle gauche à recouvrement\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 34.71,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_individuelle_droite_a_emboitement_m",
                                                                                                                     nom = "rive individuelle droite à emboîtement\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 34.71,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "about_de_rive_universelle_u",
                                                                                                                     nom = "about de rive universelle\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 32.46,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -1117,7 +1117,7 @@ M.STRUCTURE = {
                                                                             nom = "Tuiles pour faîtage et arêtier type 10 Huguenot, pose scellée au mortier",
                                                                                     type = "ARTICLE",
                                                                                     prix = 49.05,
-                                                                                    unite = "m3",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "tuile_aretiere_a_emboitement_type_10_huguenot_m",
@@ -1205,42 +1205,42 @@ M.STRUCTURE = {
                                                                             nom = "Tuiles pour rives, type 10 Huguenot",
                                                                                     type = "ARTICLE",
                                                                                     prix = 39,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "about_de_rive_universelle_u",
                                                                                                                     nom = "about de rive universelle\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 32.46,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_individuelle_droite_a_emboitement_m",
                                                                                                                     nom = "rive individuelle droite à emboîtement\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 34.71,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_individuelle_gauche_a_recouvrement_m",
                                                                                                                     nom = "rive individuelle gauche à recouvrement\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 34.71,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_a_rabat_gauche_a_recouvrement_m",
                                                                                                                     nom = "rive à rabat gauche à recouvrement\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 39,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_a_rabat_droite_a_emboitement_m",
                                                                                                                     nom = "rive à rabat droite à emboîtement\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 39,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -1305,7 +1305,7 @@ M.STRUCTURE = {
                     nom = "Tuiles de faîtage et arêtier type Marseille, scellés au mortier",
                                                                                     type = "ARTICLE",
                                                                                     prix = 32.67,
-                                                                                    unite = "m3",
+                                                                                    unite = "m2",
                                                                                                                 }
                                                                             }
                                                                         }
@@ -1385,7 +1385,7 @@ M.STRUCTURE = {
                                                                             nom = "Tuiles pour faîtage type Volnay, pose scellée au mortier",
                                                                                     type = "ARTICLE",
                                                                                     prix = 52.38,
-                                                                                    unite = "m3",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "faitiere_angulaire_emboitement_m",
@@ -1503,42 +1503,42 @@ M.STRUCTURE = {
                                                                             nom = "Tuiles pour rives, type Volnay",
                                                                                     type = "ARTICLE",
                                                                                     prix = 30.93,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_droite_m",
                                                                                                                     nom = "rive droite\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 30.93,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_universel_a_emboitement_m",
                                                                                                                     nom = "rive universel à emboîtement\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 35.14,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "about_de_rive_universel_droit_u",
                                                                                                                     nom = "about de rive universel droit\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 34.68,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "about_de_rive_universel_gauche_u",
                                                                                                                     nom = "about de rive universel gauche\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 34.68,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "fronton_uni_pour_rive_universel_u",
                                                                                                                     nom = "fronton uni pour rive universel\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 28.77,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -1606,7 +1606,7 @@ M.STRUCTURE = {
                                                                             nom = "Tuiles pour faîtage et arêtier type Côtes de Nuits PV, pose scellée au mortier",
                                                                                     type = "ARTICLE",
                                                                                     prix = 52.38,
-                                                                                    unite = "m3",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "faitiere_unie_a_emboitement_m",
@@ -1680,42 +1680,42 @@ M.STRUCTURE = {
                                                                             nom = "Tuiles pour rives, type Côte de Nuits PV",
                                                                                     type = "ARTICLE",
                                                                                     prix = 28.77,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "about_de_rive_universel_gauche_u",
                                                                                                                     nom = "about de rive universel gauche\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 34.68,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "about_de_rive_universel_droit_u",
                                                                                                                     nom = "about de rive universel droit\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 34.68,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_universel_a_emboitement_m",
                                                                                                                     nom = "rive universel à emboîtement\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 35.14,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_a_rabat_droite_m",
                                                                                                                     nom = "rive à rabat droite\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 37.12,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_a_rabat_gauche_m",
                                                                                                                     nom = "rive à rabat gauche\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 37.12,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -1857,14 +1857,14 @@ M.STRUCTURE = {
                                                                             nom = "Tuiles pour rives, type Jura 10",
                                                                                     type = "ARTICLE",
                                                                                     prix = 34.05,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_a_droite_m",
                                                                                                                     nom = "rive à droite\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 34.05,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -1962,7 +1962,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "about d'arêtier lisse\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 22.8,
-                                                                                    unite = "ml",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "about_d_aretier_conique_u",
@@ -2027,7 +2027,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "about d'arêtier lisse\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 22.8,
-                                                                                    unite = "ml",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "tuiles_aretieres_a_emboitement_scellee_m",
@@ -2050,14 +2050,14 @@ M.STRUCTURE = {
                                                                             nom = "Tuiles pour rives, type Oméga 10 Ste Foy",
                                                                                     type = "ARTICLE",
                                                                                     prix = 32.88,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_a_gauche_a_emboitement_m",
                                                                                                                     nom = "rive à gauche à emboîtement\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 32.88,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -2199,7 +2199,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Tuiles de rives type Giverny\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 54.64,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -2343,21 +2343,21 @@ M.STRUCTURE = {
                                                                             nom = "Tuiles de rives type Résidence",
                                                                                     type = "ARTICLE",
                                                                                     prix = 45.31,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_gauche_a_recouvrement_m",
                                                                                                                     nom = "rive gauche à recouvrement\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 46.51,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_gauche_ou_droite_a_emboitement_m",
                                                                                                                     nom = "rive gauche ou droite à emboîtement\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 58.09,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -2561,28 +2561,28 @@ M.STRUCTURE = {
                                                                             nom = "Tuiles de rives type Monopole H 1",
                                                                                     type = "ARTICLE",
                                                                                     prix = 38.16,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "about_de_rive_a_recouvrement_m",
                                                                                                                     nom = "about de rive à recouvrement\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 38.16,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_individuelle_gauche_a_recouvrement_m",
                                                                                                                     nom = "rive individuelle gauche, à recouvrement\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 45.06,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_individuelle_droite_a_emboitement_m",
                                                                                                                     nom = "rive individuelle droite, à emboîtement\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 45.06,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -2828,28 +2828,28 @@ M.STRUCTURE = {
                                                                             nom = "Tuiles de rives type Beauvoise",
                                                                                     type = "ARTICLE",
                                                                                     prix = 9.54,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "demi_tuile_de_rive_a_rabat_droite_a_emboitement_m",
                                                                                                                     nom = "demi-tuile de rive à rabat, droite à emboîtement\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 9.54,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_individuelle_droite_a_emboitement_m",
                                                                                                                     nom = "rive individuelle droite, à emboîtement\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 44.26,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_individuelle_gauche_a_recouvrement_m",
                                                                                                                     nom = "rive individuelle gauche, à recouvrement\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 44.26,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -2947,7 +2947,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "about d'arêtier lisse\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 22.8,
-                                                                                    unite = "ml",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "about_d_aretier_conique_u",
@@ -3019,7 +3019,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "about d'arêtier lisse\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 22.8,
-                                                                                    unite = "ml",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "fronton_de_faitiere_petit_modele_u",
@@ -3042,21 +3042,21 @@ M.STRUCTURE = {
                                                                             nom = "Tuiles de rives type Arboise écaille",
                                                                                     type = "ARTICLE",
                                                                                     prix = 32.46,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_universelle_a_emboitement_m",
                                                                                                                     nom = "rive universelle à emboîtement\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 32.11,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_individuelle_a_emboitement_m",
                                                                                                                     nom = "rive individuelle à emboîtement\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 42.37,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -3218,7 +3218,7 @@ M.STRUCTURE = {
                                                                             nom = "Tuiles de rive type Romane",
                                                                                     type = "ARTICLE",
                                                                                     prix = 42.99,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "a_rabat_teinte_paille_m",
@@ -3328,7 +3328,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Tuiles de rive type tuile Romane Tegusol\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 35.28,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "tuiles_d_egout_avec_herse_pvc_type_tuile_romane_tegusol_m",
@@ -3439,7 +3439,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Tuiles de rive\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 55.84,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "tuiles_chatieres_u",
@@ -3553,7 +3553,7 @@ M.STRUCTURE = {
                                                                             nom = "Tuiles de rive type Huguenot",
                                                                                     type = "ARTICLE",
                                                                                     prix = 48.75,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -3683,7 +3683,7 @@ M.STRUCTURE = {
                                                                             nom = "Tuiles de rive type Phalempin",
                                                                                     type = "ARTICLE",
                                                                                     prix = 48.75,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -3897,21 +3897,21 @@ M.STRUCTURE = {
                                                                             nom = "Tuiles de rive type plate écaille",
                                                                                     type = "ARTICLE",
                                                                                     prix = 62.44,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "tuile_de_rive_individuelle_droite_ou_gauche_m",
                                                                                                                     nom = "tuile de rive individuelle droite ou gauche\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 59.56,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "about_de_rive_universelle_u",
                                                                                                                     nom = "about de rive universelle\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 32.46,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -4132,21 +4132,21 @@ M.STRUCTURE = {
                                                                             nom = "Tuiles de rive type plate écaille",
                                                                                     type = "ARTICLE",
                                                                                     prix = 62.44,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "tuile_de_rive_individuelle_droite_ou_gauche_m",
                                                                                                                     nom = "tuile de rive individuelle droite ou gauche\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 59.56,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "about_de_rive_universelle_u",
                                                                                                                     nom = "about de rive universelle\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 32.46,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -4281,7 +4281,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Tuiles de rive type plate Vieux Paris\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 61.18,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -4497,14 +4497,14 @@ M.STRUCTURE = {
                                                                             nom = "Tuile de rive type plate Grand Cru",
                                                                                     type = "ARTICLE",
                                                                                     prix = 74.1,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "tuile_de_rive_droite_m",
                                                                                                                     nom = "tuile de rive droite\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 74.1,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -4716,14 +4716,14 @@ M.STRUCTURE = {
                                                                             nom = "Tuiles de rive type plate Eminence",
                                                                                     type = "ARTICLE",
                                                                                     prix = 74.1,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "tuile_de_rive_droite_m",
                                                                                                                     nom = "tuile de rive droite\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 74.1,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -4739,7 +4739,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "tuile à douille avec chapeau 150 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 47.29,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -4764,7 +4764,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "chapeau de ventilation pour diamètre 100 mm\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 22.21,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -4801,7 +4801,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Noue fermée type plate Eminence\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 88.8,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         }
@@ -4878,7 +4878,7 @@ M.STRUCTURE = {
                                                                             nom = "Tuiles de rive type tuile béton Redland",
                                                                                     type = "ARTICLE",
                                                                                     prix = 36.43,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "teinte_superval_m",
@@ -5042,21 +5042,21 @@ M.STRUCTURE = {
                                                                             nom = "Tuiles métalliques de rive pour toiture type Gerard",
                                                                                     type = "ARTICLE",
                                                                                     prix = 41.17,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "bande_de_rive_m",
                                                                                                                     nom = "bande de rive\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 35.44,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "noues_metalliques_pour_toiture_type_gerard_m",
                                                                                                                     nom = "Noues métalliques pour toiture type Gerard\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 39.69,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "egouts_et_pieds_de_versants_metalliques_pour_toiture_type_gerard_m",
@@ -5070,7 +5070,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Solin pour toiture type Gerard\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 28.89,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "tuiles_metalliques_chatieres_pour_toiture_type_gerard_u",
@@ -5964,7 +5964,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Remaniage d'ardoises sans descente, prix moyen pour tous type d'ardoise\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 263.34,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -5989,7 +5989,7 @@ M.STRUCTURE = {
                                                                             nom = "Noue ouverte en zinc",
                                                                                     type = "ARTICLE",
                                                                                     prix = 134.73,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "developpement_50_cm_zinc_0_80_mm_m",
@@ -6005,7 +6005,7 @@ M.STRUCTURE = {
                                                                             nom = "Noue fermée",
                                                                                     type = "ARTICLE",
                                                                                     prix = 154.81,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -6014,7 +6014,7 @@ M.STRUCTURE = {
                                                                             nom = "Faitage sans recouvrement métallique",
                                                                                     type = "ARTICLE",
                                                                                     prix = 65.8,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -6023,7 +6023,7 @@ M.STRUCTURE = {
                                                                             nom = "Bande de faitage en zinc 12",
                                                                                     type = "ARTICLE",
                                                                                     prix = 41.73,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "epaisseur_0_65_mm_dev_330_mm_a_pince_ou_a_ourlet_m",
@@ -6110,14 +6110,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "Noue déversée\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 94.75,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "noue_croisee_m",
                                                                                                                     nom = "Noue croisée\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 137.95,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -6259,7 +6259,7 @@ M.STRUCTURE = {
                                                                             nom = "Couverture industrielle en profilés nervurées type Inco 30.5, pose simple.",
                                                                                     type = "ARTICLE",
                                                                                     prix = 233.9,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "tole_en_acier_galvanise_d_epaisseur_0_6_mm_m",
@@ -6331,7 +6331,7 @@ M.STRUCTURE = {
                                                                             nom = "Couverture industrielle en profilés nervurées type Inco 30.4, pose simple.",
                                                                                     type = "ARTICLE",
                                                                                     prix = 233.37,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "tole_en_acier_galvanise_d_epaisseur_0_6_mm_m",
@@ -6431,7 +6431,7 @@ M.STRUCTURE = {
                                                                             nom = "Couverture industrielle en profilés nervurées type Inco 44.6 ondulé, pose simple.",
                                                                                     type = "ARTICLE",
                                                                                     prix = 235.37,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "tole_en_acier_galvanise_d_epaisseur_0_6_mm_m",
@@ -6503,7 +6503,7 @@ M.STRUCTURE = {
                                                                             nom = "Couverture industrielle en profilés nervurées type Inco 44.4 pose simple.",
                                                                                     type = "ARTICLE",
                                                                                     prix = 234.72,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "tole_en_acier_galvanise_d_epaisseur_0_6_mm_m",
@@ -6561,7 +6561,7 @@ M.STRUCTURE = {
                                                                             nom = "Couverture industrielle en profilés nervurées type Inco 70.4, pose simple.",
                                                                                     type = "ARTICLE",
                                                                                     prix = 236.75,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "tole_en_acier_galvanise_d_epaisseur_0_6_mm_m",
@@ -6661,7 +6661,7 @@ M.STRUCTURE = {
                                                                             nom = "Couverture industrielle en profilés nervurées type Inco 44.4 pose sandwich.",
                                                                                     type = "ARTICLE",
                                                                                     prix = 279.98,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "tole_en_acier_galvanise_d_epaisseur_0_6_mm_isolant_80_mm_m",
@@ -6740,7 +6740,7 @@ M.STRUCTURE = {
                                                                             nom = "Couverture industrielle en profilés nervurées type Inco 70.4 pose sandwich.",
                                                                                     type = "ARTICLE",
                                                                                     prix = 284.64,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "tole_en_acier_galvanise_d_epaisseur_0_6_mm_isolant_80_mm_m",
@@ -6991,7 +6991,7 @@ M.STRUCTURE = {
                                                                             nom = "Plaque à chassis type soutuile 230 FR",
                                                                                     type = "ARTICLE",
                                                                                     prix = 2154.23,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "ouverture_460x460_mm_pose_a_2_tuiles_m",
@@ -7222,7 +7222,7 @@ M.STRUCTURE = {
                                                                             nom = "Bande de rive",
                                                                                     type = "ARTICLE",
                                                                                     prix = 44.43,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "couleur_m",
@@ -7243,7 +7243,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "rive frontale 80°\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 60.1,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -7338,7 +7338,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "faîtière à chapeau, 6 ondes, type Coloronde\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 75.57,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "faitiere_d_aeration_type_soutuile_230_fr_m",
@@ -7467,7 +7467,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "faîtière à chapeau\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 80.67,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -7494,7 +7494,7 @@ M.STRUCTURE = {
                                                                             nom = "Plaque à chassis type Verdura",
                                                                                     type = "ARTICLE",
                                                                                     prix = 2152.86,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -7503,7 +7503,7 @@ M.STRUCTURE = {
                                                                             nom = "Chapeau rectangulaire à buse type Verdura",
                                                                                     type = "ARTICLE",
                                                                                     prix = 99.22,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "diametre_utile_de_passage_345_mm_u",
@@ -7612,140 +7612,140 @@ M.STRUCTURE = {
                                                                                                                     nom = "longueur 1,10 m, profil pour type Soutuile 230 FR\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 32.68,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "longueur_1_65_m_profil_pour_type_soutuile_230_fr_u",
                                                                                                                     nom = "longueur 1,65 m, profil pour type Soutuile 230 FR\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 40.86,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "longueur_2_20_m_profil_pour_type_soutuile_230_fr_u",
                                                                                                                     nom = "longueur 2,20 m, profil pour type Soutuile 230 FR\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 49.6,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "longueur_1_25_m_profil_po_6_classe_3_u",
                                                                                                                     nom = "longueur 1,25 m, profil PO 6, classe 3\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 37.95,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "longueur_1_58_m_profil_po_6_classe_3_u",
                                                                                                                     nom = "longueur 1,58 m, profil PO 6, classe 3\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 44.01,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "longueur_1_75_m_profil_po_6_classe_3_u",
                                                                                                                     nom = "longueur 1,75 m, profil PO 6, classe 3\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 46.93,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "longueur_2_00_m_profil_po_6_classe_3_u",
                                                                                                                     nom = "longueur 2,00 m, profil PO 6, classe 3\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 51.45,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "longueur_1_25_m_profil_po_6_classe_4_u",
                                                                                                                     nom = "longueur 1,25 m, profil PO 6, classe 4\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 43.47,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "longueur_1_58_m_profil_po_6_classe_4_u",
                                                                                                                     nom = "longueur 1,58 m, profil PO 6, classe 4\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 51.01,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "longueur_1_75_m_profil_po_6_classe_4_u",
                                                                                                                     nom = "longueur 1,75 m, profil PO 6, classe 4\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 54.72,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "longueur_1_25_m_profil_po_5_classe_3_u",
                                                                                                                     nom = "longueur 1,25 m, profil PO 5, classe 3\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 34.2,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "longueur_1_52_m_profil_po_5_classe_3_u",
                                                                                                                     nom = "longueur 1,52 m, profil PO 5, classe 3\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 38.31,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "longueur_1_58_m_profil_po_5_classe_3_u",
                                                                                                                     nom = "longueur 1,58 m, profil PO 5, classe 3\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 39.28,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "longueur_1_75_m_profil_po_5_classe_3_u",
                                                                                                                     nom = "longueur 1,75 m, profil PO 5, classe 3\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 41.77,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "longueur_2_00_m_profil_po_5_classe_3_u",
                                                                                                                     nom = "longueur 2,00 m, profil PO 5, classe 3\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 45.54,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "longueur_2_50_m_profil_po_5_classe_3_u",
                                                                                                                     nom = "longueur 2,50 m, profil PO 5, classe 3\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 53.07,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "longueur_1_25_m_profil_po_5_classe_4_u",
                                                                                                                     nom = "longueur 1,25 m, profil PO 5, classe 4\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 38.89,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "longueur_1_52_m_profil_po_5_classe_4_u",
                                                                                                                     nom = "longueur 1,52 m, profil PO 5, classe 4\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 43.96,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "longueur_1_58_m_profil_po_5_classe_4_u",
                                                                                                                     nom = "longueur 1,58 m, profil PO 5, classe 4\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 45.16,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "longueur_1_75_m_profil_po_5_classe_4_u",
                                                                                                                     nom = "longueur 1,75 m, profil PO 5, classe 4\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 48.25,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 }
                                                                             }
                                                                         }
@@ -10599,14 +10599,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "noue en zinc\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 6.25,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "chassis_fenetre_de_versant_u",
                                                                                                                     nom = "chassis, fenêtre de versant\tU",
                                                                                     type = "ARTICLE",
                                                                                     prix = 23.46,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -10643,14 +10643,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "arêtiers faitages à simple bande\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 5.86,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "aretiers_faitages_a_double_bandes_m",
                                                                                                                     nom = "arêtiers faitages à double bandes\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 9.78,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -10689,7 +10689,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "faitage angulaire ou frontal\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 5.47,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "pieces_diverses_m",
@@ -10719,28 +10719,28 @@ M.STRUCTURE = {
                                                                                                                     nom = "arêtiers, faitages en terre cuite\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 7.81,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "ruellees_rives_m",
                                                                                                                     nom = "ruellées, rives\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 6.64,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "solin_m",
                                                                                                                     nom = "solin\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 5.08,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "noue_ouverte_m",
                                                                                                                     nom = "noue ouverte\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 7.03,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -10915,7 +10915,7 @@ M.STRUCTURE = {
                                                                             nom = "Corniche génoise",
                                                                                     type = "ARTICLE",
                                                                                     prix = 108.55,
-                                                                                    unite = "U",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "2_rangs_a_3_filets_m",
@@ -10994,7 +10994,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "plus value pour descente, par hauteur de 3,00 m\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 24.69,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -11045,7 +11045,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Engravure pour solin\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 8.61,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -11054,14 +11054,14 @@ M.STRUCTURE = {
                                                                             nom = "Réfection de toiture avec mortier allégé type Flexim",
                                                                                     type = "ARTICLE",
                                                                                     prix = 110.91,
-                                                                                    unite = "m3",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "rive_m",
                                                                                                                     nom = "rive\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 116.97,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },

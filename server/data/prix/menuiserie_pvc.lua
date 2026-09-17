@@ -10699,7 +10699,7 @@ M.STRUCTURE = {
                                                                             nom = "Fenêtre en PVC 2 vantaux avec doublage de 80 mm, vitre 4-16-4",
                                                                                     type = "ARTICLE",
                                                                                     prix = 813.43,
-                                                                                    unite = "m2",
+                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_1000x1050_mm_u",

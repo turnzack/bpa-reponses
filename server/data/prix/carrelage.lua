@@ -20773,7 +20773,7 @@ M.STRUCTURE = {
                     nom = "Plinthes",
                                                                                     type = "ARTICLE",
                                                                                     prix = 7.36,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "section_100x11_mm_fourniture_et_pose_m",
@@ -20869,21 +20869,21 @@ M.STRUCTURE = {
                     nom = "Profilé d'angle carrelage",
                                                                                     type = "ARTICLE",
                                                                                     prix = 18.07,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "profile_9_mm_m",
                                                                                                                     nom = "profilé 9 mm\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 19.83,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "profile_12_mm_m",
                                                                                                                     nom = "profilé 12 mm\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 1.64,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -20892,21 +20892,21 @@ M.STRUCTURE = {
                                                                             nom = "Baguette d'angle aluminium",
                                                                                     type = "ARTICLE",
                                                                                     prix = 11.04,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "profile_9_mm_m",
                                                                                                                     nom = "profilé 9 mm\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 11.52,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "profile_12_mm_m",
                                                                                                                     nom = "profilé 12 mm\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 11.92,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -20915,21 +20915,21 @@ M.STRUCTURE = {
                                                                             nom = "Baguette d'angle PVC",
                                                                                     type = "ARTICLE",
                                                                                     prix = 6.13,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "profile_9_mm_m",
                                                                                                                     nom = "profilé 9 mm\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 6.01,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "profile_6_mm_m",
                                                                                                                     nom = "profilé 6 mm\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 5.83,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         }
@@ -20942,7 +20942,7 @@ M.STRUCTURE = {
                     nom = "Profilé de fractionnement",
                                                                                     type = "ARTICLE",
                                                                                     prix = 14.44,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "hauteur_80_mm_m",
@@ -20965,7 +20965,7 @@ M.STRUCTURE = {
                                                                             nom = "Profilé de fractionnement pose scellée type Dilex-EMP",
                                                                                     type = "ARTICLE",
                                                                                     prix = 42.03,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_acier_inoxydable_hauteur_50_mm_m",
@@ -20988,7 +20988,7 @@ M.STRUCTURE = {
                                                                             nom = "Profilé de fractionnement pose scellée type Dilex-EP",
                                                                                     type = "ARTICLE",
                                                                                     prix = 14.2,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "hauteur_40_mm_m",
@@ -21011,7 +21011,7 @@ M.STRUCTURE = {
                                                                             nom = "Profilé de fractionnement pose scellée type Dilex-EZ",
                                                                                     type = "ARTICLE",
                                                                                     prix = 16.26,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_pvc_lisere_gris_m",
@@ -21034,7 +21034,7 @@ M.STRUCTURE = {
                                                                             nom = "Profilé de fractionnement pose scellée type Dilex-MOP",
                                                                                     type = "ARTICLE",
                                                                                     prix = 7.14,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_pvc_hauteur_50_mm_m",
@@ -21057,7 +21057,7 @@ M.STRUCTURE = {
                                                                             nom = "Profilé de fractionnement à ailette métallique pose collée type Dilex-KS",
                                                                                     type = "ARTICLE",
                                                                                     prix = 36.75,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_acier_inoxydable_v2a_hauteur_10_mm_m",
@@ -21206,7 +21206,7 @@ M.STRUCTURE = {
                                                                             nom = "Profilé de fractionnement à ailette synthétique pose collée type Dilex-BWB (10 mm)",
                                                                                     type = "ARTICLE",
                                                                                     prix = 9.15,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "hauteur_8_mm_m",
@@ -21257,7 +21257,7 @@ M.STRUCTURE = {
                                                                             nom = "Profilé de fractionnement à ailette synthétique pose collée type Dilex-BWS (5 mm)",
                                                                                     type = "ARTICLE",
                                                                                     prix = 8.65,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "hauteur_6_mm_m",
@@ -21308,7 +21308,7 @@ M.STRUCTURE = {
                                                                             nom = "Profilé de décoration type Dilex",
                                                                                     type = "ARTICLE",
                                                                                     prix = 10.15,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_pvc_hauteur_6_mm_m",
@@ -21328,7 +21328,7 @@ M.STRUCTURE = {
                     nom = "Profilé de dilatation",
                                                                                     type = "ARTICLE",
                                                                                     prix = 47.73,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "type_a_en_aluminium_hauteur_10_mm_m",
@@ -21516,7 +21516,7 @@ M.STRUCTURE = {
                                                                             nom = "Profilé anti-fluage type Dilex-HVD",
                                                                                     type = "ARTICLE",
                                                                                     prix = 5.59,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         }
@@ -21529,7 +21529,7 @@ M.STRUCTURE = {
                     nom = "Profilé périphérique",
                                                                                     type = "ARTICLE",
                                                                                     prix = 11.14,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "hauteur_10_mm_m",
@@ -21559,7 +21559,7 @@ M.STRUCTURE = {
                                                                             nom = "Profilé de liaison sol/mur et mur/mur en PVC/CPE type Dilex-EKE",
                                                                                     type = "ARTICLE",
                                                                                     prix = 12.81,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "hauteur_8_mm_m",
@@ -21596,7 +21596,7 @@ M.STRUCTURE = {
                                                                             nom = "Profilé de liaison sol/mur et mur/mur, à gorge en PVC type Dilex-HKW",
                                                                                     type = "ARTICLE",
                                                                                     prix = 15.1,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "hauteur_9_mm_m",
@@ -21640,7 +21640,7 @@ M.STRUCTURE = {
                                                                             nom = "Profilé de liaison mur/mur et plan de travail, à gorge en aluminium type Dilex-AHK",
                                                                                     type = "ARTICLE",
                                                                                     prix = 7.72,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "hauteur_8_mm_brillant_m",
@@ -21747,7 +21747,7 @@ M.STRUCTURE = {
                                                                             nom = "Profilé de liaison sol/mur, à rainure et languette type Dilex-EK",
                                                                                     type = "ARTICLE",
                                                                                     prix = 17.64,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "hauteur_11_mm_m",
@@ -21770,7 +21770,7 @@ M.STRUCTURE = {
                                                                             nom = "Profilé de liaison sol/mur, à rainure et languette type Dilex-RF",
                                                                                     type = "ARTICLE",
                                                                                     prix = 17.52,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "hauteur_10_mm_m",
@@ -21807,7 +21807,7 @@ M.STRUCTURE = {
                                                                             nom = "Profilé de liaison sol/élément fixe, à rainure et languette type Dilex-AS",
                                                                                     type = "ARTICLE",
                                                                                     prix = 15.36,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "set_capuchons_de_fermeture_u",
@@ -21830,7 +21830,7 @@ M.STRUCTURE = {
                                                                             nom = "Profilé de liaison sol/mur, à gorge, spécial hygiène type Dilex-HK",
                                                                                     type = "ARTICLE",
                                                                                     prix = 18.55,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "angle_rentrant_90_u",
@@ -21867,7 +21867,7 @@ M.STRUCTURE = {
                                                                             nom = "Profilé de liaison sol/mur et mur/mur en acier inoxydable spécial hygiène type Dilex-EHK",
                                                                                     type = "ARTICLE",
                                                                                     prix = 30.79,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "hauteur_7_mm_acier_inox_v4a_m",
@@ -22009,7 +22009,7 @@ M.STRUCTURE = {
                                                                             nom = "Profilé de liaison revêtement existant ou huisserie type Dilex-BWA",
                                                                                     type = "ARTICLE",
                                                                                     prix = 13.41,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "hauteur_10_mm_m",

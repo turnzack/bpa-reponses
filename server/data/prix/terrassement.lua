@@ -1559,7 +1559,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "de bordures\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 23.13,
-                                                                                    unite = "m3",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -1623,7 +1623,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "pour bordures inférieures à 1,00 m de largeur\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 24.39,
-                                                                                    unite = "m3",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "terreautage_des_semis_m",
@@ -1646,7 +1646,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "à bras d'homme, supérieures à 1000 m2\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 20.82,
-                                                                                    unite = "m2",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "mecaniquement_m",
@@ -1676,14 +1676,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "pour bordures inférieures à 50 cm\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 27.69,
-                                                                                    unite = "m3",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "pour_bordures_largeur_de_50_a_100_cm_m",
                                                                                                                     nom = "pour bordures largeur de 50 à 100 cm\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 26.6,
-                                                                                    unite = "m3",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -1699,28 +1699,28 @@ M.STRUCTURE = {
                                                                                                                     nom = "de 100 à 250 m2\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 21.38,
-                                                                                    unite = "m2",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_251_a_500_m2_m",
                                                                                                                     nom = "de 251 à 500 m2\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 21.09,
-                                                                                    unite = "m2",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "superieur_a_500_m2_m",
                                                                                                                     nom = "supérieur à 500 m2\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 20.82,
-                                                                                    unite = "m2",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "bordures_inferieures_a_1_00_m_m",
                                                                                                                     nom = "bordures inférieures à 1,00 m\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 22.2,
-                                                                                    unite = "m3",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -1736,14 +1736,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "de 251 à 500 m2\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 20.82,
-                                                                                    unite = "m2",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "superieur_a_500_m2_m",
                                                                                                                     nom = "supérieur à 500 m2\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 20.55,
-                                                                                    unite = "m2",
+                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -1752,7 +1752,7 @@ M.STRUCTURE = {
                                                                             nom = "Découpage de bordures gazon",
                                                                                     type = "ARTICLE",
                                                                                     prix = 2.34,
-                                                                                    unite = "m3",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dans_l_ancien_m",
@@ -1975,7 +1975,7 @@ M.STRUCTURE = {
                                                                             nom = "Bordure de lierre",
                                                                                     type = "ARTICLE",
                                                                                     prix = 16.65,
-                                                                                    unite = "m3",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "largeur_0_40_cm_m",
@@ -3182,7 +3182,7 @@ M.STRUCTURE = {
                                                                             nom = "Terrasse en dalle de gravillons lavés sur plots",
                                                                                     type = "ARTICLE",
                                                                                     prix = 272.12,
-                                                                                    unite = "m2",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_500x500_mm_epaisseur_50_mm_m",
@@ -3386,7 +3386,7 @@ M.STRUCTURE = {
                                                                             nom = "Kit d'aspiration pour pompe de surface",
                                                                                     type = "ARTICLE",
                                                                                     prix = 53.58,
-                                                                                    unite = "U",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "kit_d_aspiration_diametre_33_42_mm_u",
@@ -4470,42 +4470,42 @@ M.STRUCTURE = {
                     nom = "Dalle de sol alvéolaire en PE-HD",
                                                                                     type = "ARTICLE",
                                                                                     prix = 248.09,
-                                                                                    unite = "m2",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dalle_gazon_pour_traffic_lourd_hauteur_300_mm_m",
                                                                                                                     nom = "Dalle gazon pour traffic lourd, hauteur 300 mm\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 249,
-                                                                                    unite = "m2",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dalle_gazon_pour_traffic_lourd_hauteur_400_mm_m",
                                                                                                                     nom = "Dalle gazon pour traffic lourd, hauteur 400 mm\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 250.34,
-                                                                                    unite = "m2",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dalle_gazon_pour_traffic_lourd_hauteur_500_mm_m",
                                                                                                                     nom = "Dalle gazon pour traffic lourd, hauteur 500 mm\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 254.28,
-                                                                                    unite = "m2",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dalle_gazon_pre_engazonnee_pour_traffic_leger_m",
                                                                                                                     nom = "Dalle gazon pré engazonnée pour traffic léger\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 259.38,
-                                                                                    unite = "m2",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dalle_gazon_pre_engazonnee_pour_traffic_lourd_m",
                                                                                                                     nom = "Dalle gazon pré engazonnée pour traffic lourd\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 263.48,
-                                                                                    unite = "m2",
+                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -4514,14 +4514,14 @@ M.STRUCTURE = {
                                                                             nom = "Dalle gravier en PEHD",
                                                                                     type = "ARTICLE",
                                                                                     prix = 249.33,
-                                                                                    unite = "m2",
+                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dalle_stabilisatrice_gravier_pour_traffic_lourd_m",
                                                                                                                     nom = "Dalle stabilisatrice gravier pour traffic lourd\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 253.2,
-                                                                                    unite = "m2",
+                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         }

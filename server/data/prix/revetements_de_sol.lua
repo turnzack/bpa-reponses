@@ -233,7 +233,7 @@ M.STRUCTURE = {
                                                                             nom = "Mortier de ragréage autolissant type Soldur",
                                                                                     type = "ARTICLE",
                                                                                     prix = 16.48,
-                                                                                    unite = "m3",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "epaisseur_10_mm_m",
@@ -249,7 +249,7 @@ M.STRUCTURE = {
                                                                             nom = "Mortier de ragréage autolissant type Solflex",
                                                                                     type = "ARTICLE",
                                                                                     prix = 5.05,
-                                                                                    unite = "m3",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "epaisseur_10_mm_m",
@@ -502,21 +502,21 @@ M.STRUCTURE = {
                                                                                                                     nom = "épaisseur 5 mm, densité 250 kg/m3\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 4.25,
-                                                                                    unite = "m3",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "epaisseur_10_mm_densite_250_kg_m3_m",
                                                                                                                     nom = "épaisseur 10 mm, densité 250 kg/m3\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 30.85,
-                                                                                    unite = "m3",
+                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "epaisseur_20_mm_densite_250_kg_m3_m",
                                                                                                                     nom = "épaisseur 20 mm, densité 250 kg/m3\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 41.13,
-                                                                                    unite = "m3",
+                                                                                    unite = "m2",
                                                                                                                 }
                                                                             }
                                                                         }
@@ -2364,7 +2364,7 @@ M.STRUCTURE = {
                                                                             nom = "Baguette 1/4 rond",
                                                                                     type = "ARTICLE",
                                                                                     prix = 6.18,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "peinte_m",

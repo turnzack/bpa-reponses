@@ -1286,7 +1286,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Cornière à 90° type Profila en PVC classé M1, 50 mm\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 0.1,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "corniere_a_angle_variable_de_70_a_135_type_protecta_2_en_pvc_classe_m1_60_mm_m",
@@ -1435,14 +1435,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "Profilé de jonction en aluminium\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 14.8,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "profile_de_finition_en_aluminium_m",
                                                                                                                     nom = "Profilé de finition en aluminium\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 10.74,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },

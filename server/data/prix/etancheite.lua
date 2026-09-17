@@ -552,7 +552,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Protection mortier pour terrasse accessible\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 53.7,
-                                                                                    unite = "m3",
+                                                                                    unite = "m2",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -1156,7 +1156,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "pavés autobloquant en béton, pleine masse, épaisseur 60 mm\tm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 67.62,
-                                                                                    unite = "m3",
+                                                                                    unite = "m2",
                                                                                                                 }
                                                                             }
                                                                         },

@@ -104,7 +104,7 @@ M.STRUCTURE = {
                                                                             nom = "Verre type Profilit armé, épaisseur 6 mm",
                                                                                     type = "ARTICLE",
                                                                                     prix = 70.26,
-                                                                                    unite = "m2",
+                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "pose_m",
