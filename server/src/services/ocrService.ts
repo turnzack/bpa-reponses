@@ -336,15 +336,22 @@ function extractTVADetails(taxes: any[]): any {
 // Détection des en-têtes de localisation (appartement, étage, pièce, etc.)
 export function isLocationHeader(line: string): boolean {
     const cleaned = line.trim().toUpperCase();
+    if (!cleaned || cleaned.length < 3 || cleaned.length > 50) return false;
+
+    // Si la ligne contient des prix, pourcentages, dimensions ou quantités, ce n'est PAS un simple en-tête
+    if (/[€]|\d+\s*%\s*\d|\d+[.,]\d{2}|\(\s*\d+[.,]?\d*\s*[xX*]\s*\d+/.test(cleaned)) return false;
+
+    // Si la ligne contient des termes d'action BTP ou matériaux, ce n'est PAS un simple en-tête
+    const isWorkOrMaterial = /découpe|decoupe|fourniture|pose|dépose|depose|reprise|ragréage|ragreage|vinyle|dalle|trappe|porte|placo|ba13|cloison|peinture|enduit|lessivage|ratissage|impression|plâtre|platre|détalonnage|detalonnage|nettoyage|déchèterie|decheterie|disjoncteur|kitchenette|cuisine\s*\(|bureau\s*\(/i.test(cleaned);
+    if (isWorkOrMaterial) return false;
+
     const locationKeywords = [
         'APPARTEMENT', 'ETAGE', 'DUPLEX', 'RDC', 'REZ DE CHAUSSEE', 'REZ-DE-CHAUSSEE',
         'SOUS-SOL', 'CHAMBRE', 'SALLE DE BAIN', 'SDB', 'SALON', 'SEJOUR', 'CUISINE',
         'ENTREE', 'COULOIR', 'PALIER', 'DEGAGEMENT', 'ESCALIER', 'TERRASSE', 'BALCON',
         'LOT N°', 'LOCAL TECHNIQUE', 'CELLIER', 'CAVE'
     ];
-    const isLoc = locationKeywords.some(kw => cleaned.startsWith(kw) || cleaned.includes(kw));
-    const isWork = /peinture|enduit|lessivage|pose|dépose|refection|réfection|ratissage|impression|plâtre|platre/i.test(cleaned);
-    return isLoc && !isWork;
+    return locationKeywords.some(kw => cleaned === kw || cleaned.startsWith(kw + ' ') || cleaned.startsWith('PIECE : ' + kw) || cleaned.startsWith('ZONE : ' + kw));
 }
 
 // Décomposition normée d'un devis dégât des eaux / remise en état TCE point par point
