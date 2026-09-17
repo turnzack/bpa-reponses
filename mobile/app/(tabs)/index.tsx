@@ -458,7 +458,28 @@ function generateAnalyseHtml(analyseData: any) {
         html += '</tbody></table></div>';
     }
 
-    // 6. Verdict & Recommandations
+    // 6. ⚖️ Audit Réglementaire, Assurances & Normes BTP
+    html += '<h2>⚖️ 6. Audit Réglementaire, Assurances & Normes BTP</h2>';
+    html += `<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-bottom: 16px;">
+        <div style="background:#161b22; border:1px solid #30363d; border-radius:8px; padding:10px;">
+            <div style="font-weight:700; color:#3fb950; font-size:12px;">🛡️ Assurance Décennale & RC Pro</div>
+            <div style="font-size:11px; color:#8b949e; margin-top:4px;">Attestation obligatoire couvrant le lot travaux avant tout versement d'acompte (art. L. 241-1 C. assur.).</div>
+        </div>
+        <div style="background:#161b22; border:1px solid #30363d; border-radius:8px; padding:10px;">
+            <div style="font-weight:700; color:#58a6ff; font-size:12px;">📜 Conformité Règles de l'Art (DTU)</div>
+            <div style="font-size:11px; color:#8b949e; margin-top:4px;">Respect des DTU (59.1 Peinture, 25.41 Plâtre, 60.1 Plomberie) et sous-couches isolantes.</div>
+        </div>
+        <div style="background:#161b22; border:1px solid #30363d; border-radius:8px; padding:10px;">
+            <div style="font-weight:700; color:#d2a8ff; font-size:12px;">💶 Taux de TVA Applicable (10%)</div>
+            <div style="font-size:11px; color:#8b949e; margin-top:4px;">TVA rénovation 10% sur logements > 2 ans (attestation Cerfa n°13948*05 obligatoire).</div>
+        </div>
+        <div style="background:#161b22; border:1px solid #30363d; border-radius:8px; padding:10px;">
+            <div style="font-weight:700; color:#e3b341; font-size:12px;">📑 Convention IRSI (Assurances)</div>
+            <div style="font-size:11px; color:#8b949e; margin-top:4px;">Prise en charge sans recours pour dégât des eaux < 1 600 € HT selon barèmes réguliers.</div>
+        </div>
+    </div>`;
+
+    // 7. Verdict & Recommandations
     const v = a?.verdict || {
         global: score >= 80 ? 'FAVORABLE - DEVIS CONFORME' : score >= 60 ? 'VIGILANCE - NÉGOCIATION RECOMMANDÉE' : 'DÉFAVORABLE - SURCOÛTS IMPORTANTS',
         confiance: 95,

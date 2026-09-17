@@ -272,8 +272,12 @@ Rédige un avis expert BTP clair et synthétique (3 phrases maximum) pour le cli
                     resume: resumeFinal
                 };
 
+                const completeHtml = priceService.buildCompleteHtmlAudit(completeAnalyse);
+
                 return res.json({
-                    response: JSON.stringify({ analyse: completeAnalyse }),
+                    response: completeHtml,
+                    reply: completeHtml,
+                    html: completeHtml,
                     analyse: completeAnalyse,
                     raw_text: ocrResult.fullText || ''
                 });

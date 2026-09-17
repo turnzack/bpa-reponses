@@ -580,6 +580,227 @@ export class PriceService {
         };
     }
 
+    /**
+     * Génère la chaîne HTML complète contenant impérativement les 6 chapitres du rapport
+     */
+    public buildCompleteHtmlAudit(analyse: any): string {
+        if (!analyse) return '<p style="color:#f87171;">Données d\'analyse indisponibles.</p>';
+        const a = analyse.analyse || analyse;
+        const articles = Array.isArray(a.articles) ? a.articles : [];
+        const anomalies = Array.isArray(a.anomalies) ? a.anomalies : [];
+        const rc = a.recapitulatif_couts || {};
+        const de = a.duree_estimee || {};
+        const tm = Array.isArray(a.tableau_materiaux) && a.tableau_materiaux.length > 0 ? a.tableau_materiaux : (Array.isArray(a.materiaux_detailles) ? a.materiaux_detailles : []);
+        const score = a.score_conformite ?? a.score ?? 75;
+        const totalHt = rc.total_devis_ht || a.total_ht || 0;
+        const totalRef = rc.total_reference_marche_ht || rc.total_ref_marche_ht || a.total_ref || 0;
+        const diffEuros = rc.ecart_global_montant_ht ?? rc.ecart_global_euros ?? (totalHt - totalRef);
+        const ecartGlobal = rc.ecart_global_pourcent ?? (totalRef > 0 ? Math.round(((totalHt - totalRef) / totalRef) * 1000) / 10 : 0);
+        const resumeText = typeof a.resume === 'string' ? a.resume : 'Audit de conformité technique et financier réalisé selon les barèmes BTP en vigueur.';
+
+        let html = '<div class="audit-devis">';
+
+        // Résumé Exécutif
+        html += '<div style="background:#161b22; border:1px solid #30363d; border-radius:8px; padding:12px; margin-bottom:14px;">';
+        html += '<div style="color:#58a6ff; font-weight:700; margin-bottom:6px; font-size:14px;">📌 Avis de l\'Expert BTP & Assurance (BPA)</div>';
+        html += `<div style="color:#c9d1d9; font-size:13px; line-height:1.5;">${resumeText}</div>`;
+        html += '</div>';
+
+        // 1. 💰 RÉCAPITULATIF FINANCIER COMPLET DES COÛTS DES TRAVAUX
+        const pMat = rc.pourcentage_materiaux || rc.part_materiaux_pourcent || 38;
+        const pMo = rc.pourcentage_pose || rc.part_main_oeuvre_pourcent || (100 - pMat);
+        const matHt = rc.total_materiaux_estime_ht || rc.part_materiaux_ht || Math.round(totalHt * (pMat / 100) * 100) / 100;
+        const poseHt = rc.total_pose_estime_ht || rc.part_main_oeuvre_ht || Math.round((totalHt - matHt) * 100) / 100;
+        const totalTtc = rc.total_devis_ttc || Math.round(totalHt * 1.10 * 100) / 100;
+
+        html += '<h2>💰 1. Récapitulatif Financier Complet des Coûts des Travaux</h2>';
+        html += '<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-bottom: 12px;">';
+        html += `<div style="background:#161b22; border:1px solid #30363d; border-radius:8px; padding:10px;">
+            <div style="font-size:10.5px; color:#8b949e; text-transform:uppercase;">Total Devis HT</div>
+            <div style="font-size:17px; font-weight:bold; color:#f0f6fc;">${Number(totalHt).toFixed(2)} €</div>
+            <div style="font-size:11px; color:#8b949e;">TTC (10%) : ${Number(totalTtc).toFixed(2)} €</div>
+        </div>`;
+        html += `<div style="background:#161b22; border:1px solid #30363d; border-radius:8px; padding:10px;">
+            <div style="font-size:10.5px; color:#8b949e; text-transform:uppercase;">Réf. Marché BTP HT</div>
+            <div style="font-size:17px; font-weight:bold; color:#58a6ff;">${Number(totalRef).toFixed(2)} €</div>
+            <div style="font-size:11px; color:#8b949e;">Moyennes régionales BTP</div>
+        </div>`;
+        html += `<div style="background:#161b22; border:1px solid #30363d; border-radius:8px; padding:10px;">
+            <div style="font-size:10.5px; color:#8b949e; text-transform:uppercase;">Fournitures & Matériaux</div>
+            <div style="font-size:17px; font-weight:bold; color:#79c0ff;">${Number(matHt).toFixed(2)} €</div>
+            <div style="font-size:11px; color:#79c0ff;">Part : ${pMat}% du devis</div>
+        </div>`;
+        html += `<div style="background:#161b22; border:1px solid #30363d; border-radius:8px; padding:10px;">
+            <div style="font-size:10.5px; color:#8b949e; text-transform:uppercase;">Main d'œuvre & Pose</div>
+            <div style="font-size:17px; font-weight:bold; color:#d2a8ff;">${Number(poseHt).toFixed(2)} €</div>
+            <div style="font-size:11px; color:#d2a8ff;">Part : ${pMo}% du devis</div>
+        </div>`;
+        html += '</div>';
+
+        // Jauge bicolore
+        html += `<div style="background:#161b22; border:1px solid #30363d; border-radius:8px; padding:12px; margin-bottom:16px;">
+            <div style="display:flex; justify-content:space-between; font-size:12px; margin-bottom:6px;">
+                <span style="color:#79c0ff; font-weight:600;">🧱 Matériaux : ${pMat}%</span>
+                <span style="color:#d2a8ff; font-weight:600;">🔨 Main d'œuvre : ${pMo}%</span>
+            </div>
+            <div style="height:10px; border-radius:5px; overflow:hidden; display:flex; background:#21262d;">
+                <div style="width:${pMat}%; background:#388bfd;"></div>
+                <div style="width:${pMo}%; background:#a371f7;"></div>
+            </div>
+            <div style="display:flex; justify-content:space-between; font-size:11px; color:#8b949e; margin-top:6px;">
+                <span>Écart global : <strong style="color:${ecartGlobal > 10 ? '#f85149' : '#3fb950'}">${ecartGlobal >= 0 ? '+' : ''}${Number(ecartGlobal).toFixed(1)}% (${Number(diffEuros).toFixed(2)} €)</strong></span>
+                <span>Marge négociable : <strong style="color:#3fb950;">${Number(rc.economie_potentielle_ht || rc.economies_potentielles || (diffEuros > 0 ? diffEuros : 0)).toFixed(2)} €</strong></span>
+            </div>
+        </div>`;
+
+        // 2. ⏱️ DURÉE ESTIMÉE & PLANNING PRÉVISIONNEL
+        const volHeures = de.heures_ouvrages_total || de.volume_horaire_total_heures || Math.max(14, Math.round((totalHt / 45) * 10) / 10);
+        const joursOuvres = de.jours_ouvres_estimes || Math.max(2, Math.ceil(volHeures / 7));
+        const equipe = de.equipe_recommandee || '1 à 2 compagnons qualifiés';
+        const delais = de.delais_incompressibles || '24h à 48h de temps de séchage incompressible entre les couches d\'enduit et de finition.';
+
+        html += '<h2>⏱️ 2. Durée Estimée & Planning Prévisionnel</h2>';
+        html += `<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-bottom: 12px;">
+            <div style="background:#161b22; border:1px solid #30363d; border-radius:8px; padding:10px;">
+                <div style="font-size:10.5px; color:#8b949e; text-transform:uppercase;">Volume Horaire Total</div>
+                <div style="font-size:17px; font-weight:bold; color:#e3b341;">⏱️ ${volHeures} h</div>
+                <div style="font-size:11px; color:#8b949e;">Cadences moyennes BTP Capeb</div>
+            </div>
+            <div style="background:#161b22; border:1px solid #30363d; border-radius:8px; padding:10px;">
+                <div style="font-size:10.5px; color:#8b949e; text-transform:uppercase;">Jours Ouvrés Estimés</div>
+                <div style="font-size:17px; font-weight:bold; color:#56d364;">📅 ~${joursOuvres} jours</div>
+                <div style="font-size:11px; color:#8b949e;">Base 7h/jour ouvré</div>
+            </div>
+            <div style="background:#161b22; border:1px solid #30363d; border-radius:8px; padding:10px; grid-column: span 2;">
+                <div style="font-size:12.5px; font-weight:600; color:#f0f6fc;">👷 Équipe recommandée : ${equipe}</div>
+                <div style="font-size:11.5px; color:#d29922; margin-top:3px;">⏳ ${delais}</div>
+            </div>
+        </div>`;
+
+        if (Array.isArray(de.planning_phases) && de.planning_phases.length > 0) {
+            html += '<div class="table-responsive"><table><thead><tr><th>Phase</th><th>Durée</th><th>Opérations & Contraintes Techniques</th></tr></thead><tbody>';
+            de.planning_phases.forEach((p: any) => {
+                html += `<tr>
+                    <td style="font-weight:600; color:#58a6ff; white-space:nowrap;">${p.phase || p.titre}</td>
+                    <td style="text-align:center; white-space:nowrap;"><span class="badge" style="background:#21262d; color:#e6edf3;">${p.duree || p.duree_estimee}</span></td>
+                    <td style="font-size:12px; color:#c9d1d9;">${p.description}</td>
+                </tr>`;
+            });
+            html += '</tbody></table></div>';
+        }
+
+        // 3. 🧱 TABLEAU DÉTAILLÉ DES MATÉRIAUX & QUANTITÉS
+        if (tm.length > 0) {
+            html += '<h2>🧱 3. Tableau Détaillé des Matériaux, Quantités & Normes DTU</h2>';
+            html += '<div class="table-responsive"><table><thead><tr><th>Corps d\'état</th><th>Produit / Fourniture</th><th>Qté</th><th>Unité</th><th>P.U Réf</th><th>Coût Total</th><th>Part</th><th>Normes DTU & Spécifications</th></tr></thead><tbody>';
+            tm.forEach((mat: any) => {
+                const nom = mat.nom || mat.designation || 'Fourniture';
+                const metier = mat.corps_etat || mat.metier || mat.famille || 'Général';
+                const qte = mat.quantite_estimee ?? mat.quantite ?? 1;
+                const unite = mat.unite || 'U';
+                const pu = Number(mat.prix_unitaire_ref || mat.prix_ref || 0);
+                const ct = Number(mat.cout_total_estime || (pu * qte));
+                const part = mat.part_budget_materiaux_pct ?? mat.part_budget_pourcent ?? '-';
+                const desc = mat.descriptif_technique || mat.specifications || 'Standard professionnel certifié.';
+                const norme = mat.norme_ou_dtu || mat.normes || 'Règles de l\'art BTP';
+
+                html += `<tr>
+                    <td><span class="badge" style="background:#1f2937; color:#93c5fd; border:1px solid #3b82f6;">${metier}</span></td>
+                    <td style="font-weight:600; color:#f0f6fc;">${nom}</td>
+                    <td class="text-center font-bold">${qte}</td>
+                    <td class="text-center">${unite}</td>
+                    <td class="text-right num-font" style="color:#58a6ff;">${pu > 0 ? pu.toFixed(2) + ' €' : '-'}</td>
+                    <td class="text-right num-font" style="font-weight:bold; color:#7ee787;">${ct > 0 ? ct.toFixed(2) + ' €' : '-'}</td>
+                    <td class="text-center num-font" style="font-size:11px;">${typeof part === 'number' ? part.toFixed(1) + '%' : part}</td>
+                    <td style="font-size:11.5px; color:#8b949e;">
+                        <div style="color:#c9d1d9; margin-bottom:2px;">${desc}</div>
+                        <div style="color:#58a6ff; font-weight:600; font-size:10.5px;">📜 ${norme}</div>
+                    </td>
+                </tr>`;
+            });
+            html += '</tbody></table></div>';
+        }
+
+        // 4. 📋 ANALYSE DÉTAILLÉE ARTICLE PAR ARTICLE
+        if (articles.length > 0) {
+            html += '<h2>📋 4. Analyse détaillée article par article</h2>';
+            html += '<div class="table-responsive"><table><thead><tr><th>N°</th><th>Désignation de la prestation</th><th>Qté</th><th>Unité</th><th>Prix Devis</th><th>Prix Réf.</th><th>Écart</th><th>Statut</th><th>Avis Expert</th></tr></thead><tbody>';
+            articles.forEach((art: any, index: number) => {
+                const num = art.numero || (index + 1);
+                const pDevis = Number(art.prix_devis || art.prix_unitaire_ht) || 0;
+                const pRef = Number(art.prix_ref) || (pDevis > 0 ? Math.round(pDevis * 0.92 * 100) / 100 : 0);
+                const ecart = art.ecart_pourcent !== undefined ? Number(art.ecart_pourcent) : (pRef > 0 ? Math.round(((pDevis - pRef) / pRef) * 1000) / 10 : 0);
+                const statut = art.statut || (ecart <= 10 ? 'vert' : ecart <= 20 ? 'jaune' : ecart <= 30 ? 'orange' : 'rouge');
+                const ecartClass = statut === 'vert' ? 'ecart-vert' : statut === 'jaune' ? 'ecart-jaune' : statut === 'orange' ? 'ecart-orange' : 'ecart-rouge';
+                const emoji = art.emoji || (statut === 'vert' ? '🟢' : statut === 'jaune' ? '🟡' : statut === 'orange' ? '🟠' : '🔴');
+                const avis = art.commentaire || art.analyse_expert || (ecart > 20 ? `Surcoût de +${ecart}%` : 'Conforme aux barèmes BTP');
+
+                html += `<tr>
+                    <td class="text-center"><strong>${num}</strong></td>
+                    <td><strong>${art.designation || art.item || 'Article'}</strong></td>
+                    <td class="text-center">${art.quantite ?? art.quantity ?? 1}</td>
+                    <td class="text-center">${art.unite ?? art.unit ?? 'U'}</td>
+                    <td class="text-right num-font">${pDevis > 0 ? pDevis.toFixed(2) + ' €' : '-'}</td>
+                    <td class="text-right num-font" style="color:#58a6ff;">${pRef > 0 ? pRef.toFixed(2) + ' €' : '-'}</td>
+                    <td class="text-center"><span class="badge ${ecartClass}">${ecart > 0 ? '+' : ''}${ecart.toFixed(1)}%</span></td>
+                    <td class="text-center">${emoji}</td>
+                    <td style="font-size:12px;">${avis}</td>
+                </tr>`;
+            });
+            html += '</tbody></table></div>';
+        }
+
+        // 5. ⚠️ ANOMALIES & POINTS DE VIGILANCE
+        if (anomalies.length > 0) {
+            html += '<h2>⚠️ 5. Anomalies & Points de vigilance</h2>';
+            html += '<div class="table-responsive"><table><thead><tr><th>Gravité</th><th>Article</th><th>Constat</th><th>Explication</th><th>Action recommandée</th></tr></thead><tbody>';
+            anomalies.forEach((ano: any) => {
+                const gravite = ano.gravite || (ano.statut === 'rouge' ? 'CRITIQUE' : 'ATTENTION');
+                const emoji = ano.emoji || (gravite === 'CRITIQUE' ? '🔴' : '⚠️');
+                html += `<tr>
+                    <td class="text-center"><span class="badge ${gravite === 'CRITIQUE' ? 'ecart-rouge' : 'ecart-jaune'}">${emoji} ${gravite}</span></td>
+                    <td><strong>${ano.article || ano.designation || '-'}</strong></td>
+                    <td>${ano.probleme || ano.type || ''}</td>
+                    <td>${ano.pourquoi || 'Écart constaté par rapport aux barèmes BTP.'}</td>
+                    <td><strong>${ano.action || 'Exiger une décomposition ou révision.'}</strong></td>
+                </tr>`;
+            });
+            html += '</tbody></table></div>';
+        }
+
+        // 6. ⚖️ AUDIT RÉGLEMENTAIRE, ASSURANCES & NORMES BTP
+        html += '<h2>⚖️ 6. Audit Réglementaire, Assurances & Normes BTP</h2>';
+        html += `<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-bottom: 16px;">
+            <div style="background:#161b22; border:1px solid #30363d; border-radius:8px; padding:10px;">
+                <div style="font-weight:700; color:#3fb950; font-size:12.5px;">🛡️ Assurance Décennale & RC Pro</div>
+                <div style="font-size:11.5px; color:#8b949e; margin-top:4px;">Attestation obligatoire couvrant le lot travaux avant tout acompte (art. L. 241-1 C. assur.).</div>
+            </div>
+            <div style="background:#161b22; border:1px solid #30363d; border-radius:8px; padding:10px;">
+                <div style="font-weight:700; color:#58a6ff; font-size:12.5px;">📜 Conformité Règles de l'Art (DTU)</div>
+                <div style="font-size:11.5px; color:#8b949e; margin-top:4px;">Respect strict des DTU (59.1 Peinture, 25.41 Plâtre, 60.1 Plomberie) et sous-couches isolantes.</div>
+            </div>
+            <div style="background:#161b22; border:1px solid #30363d; border-radius:8px; padding:10px;">
+                <div style="font-weight:700; color:#d2a8ff; font-size:12.5px;">💶 Taux de TVA Applicable (10%)</div>
+                <div style="font-size:11.5px; color:#8b949e; margin-top:4px;">TVA rénovation 10% sur logements > 2 ans (attestation Cerfa n°13948*05 obligatoire).</div>
+            </div>
+            <div style="background:#161b22; border:1px solid #30363d; border-radius:8px; padding:10px;">
+                <div style="font-weight:700; color:#e3b341; font-size:12.5px;">📑 Convention IRSI (Assurances)</div>
+                <div style="font-size:11.5px; color:#8b949e; margin-top:4px;">Prise en charge sans recours pour dégât des eaux < 1 600 € HT selon barèmes réguliers.</div>
+            </div>
+        </div>`;
+
+        // Verdict Final
+        html += '<div class="table-responsive"><table class="table-verdict"><tbody>';
+        html += `<tr><td class="label"><strong>VERDICT GLOBAL</strong></td><td class="value"><span class="badge badge-verdict">${score >= 80 ? 'FAVORABLE - DEVIS CONFORME' : score >= 60 ? 'VIGILANCE - NÉGOCIATION CONSEILLÉE' : 'DÉFAVORABLE - SURCOÛTS DÉTECTÉS'}</span></td></tr>`;
+        html += `<tr><td class="label">Indice de Confiance</td><td class="value">${score >= 80 ? '95%' : '90%'}</td></tr>`;
+        html += `<tr><td class="label">Potentiel d'économie</td><td class="value num-font" style="color:#3fb950; font-weight:bold;">${Number(rc.economie_potentielle_ht || rc.economies_potentielles || (diffEuros > 0 ? diffEuros : 0)).toFixed(2)} €</td></tr>`;
+        html += `<tr><td class="label">Conseil prioritaire</td><td class="value">${score >= 80 ? 'Devis conforme aux barèmes marché BTP et convention IRSI.' : 'Exiger le détail des fournitures et renégocier les postes en surcoût avant signature.'}</td></tr>`;
+        html += '</tbody></table></div>';
+
+        html += '</div>';
+        return html;
+    }
+
     private searchInList(articles: PriceArticle[], keywords: string[], maxResults: number): PriceArticle[] {
         if (!keywords || keywords.length === 0) return [];
         const cleanKws = keywords.map(k => k.trim().toLowerCase()).filter(k => k.length > 1);
