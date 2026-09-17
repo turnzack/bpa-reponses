@@ -121,13 +121,24 @@ export class PriceService {
         }
     }
 
-    public findPricesForTrade(tradeId: string): PriceArticle | null {
-        return this.library[tradeId] || null;
+    public getStats() {
+        const tradeMap: Record<string, { id: string; nom: string; count: number }> = {};
+        this.flatWorksArticles.forEach(a => {
+            const id = a.lotId || 'TCE';
+            const nom = a.lotNom || id;
+            if (!tradeMap[id]) tradeMap[id] = { id, nom, count: 0 };
+            tradeMap[id].count++;
+        });
+
+        return {
+            tradesCount: Object.keys(this.library).length || Object.keys(tradeMap).length,
+            worksArticlesCount: this.flatWorksArticles.length,
+            materialsLotsCount: Object.keys(this.materialsLibrary).length,
+            materialsArticlesCount: this.flatMaterialsArticles.length,
+            trades: Object.values(tradeMap)
+        };
     }
 
-    public findMaterialsForTrade(tradeId: string): PriceArticle | null {
-        return this.materialsLibrary[tradeId] || null;
-    }
 
     /**
      * Recherche ciblée dans un corps d'état spécifique (fourniture + pose)

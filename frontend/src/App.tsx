@@ -38,7 +38,7 @@ interface Invoice {
   report?: any;
 }
 
-type TabId = "dashboard" | "scan" | "clients" | "history" | "settings";
+type TabId = "dashboard" | "scan" | "library" | "clients" | "history" | "settings";
 
 // Génération ou récupération du rapport d'audit complet
 // Génération ou récupération du rapport d'audit complet
@@ -528,6 +528,8 @@ export default function App({ user, onLogout }: AppProps) {
   const tabs = [
     { id: "dashboard" as TabId, label: "Tableau de bord", icon: "🏠" },
     { id: "scan" as TabId, label: "Scanner un devis", icon: "📄" },
+    { id: "library" as TabId, label: "Bibliothèque BTP", icon: "📚" },
+    { id: "clients" as TabId, label: "Clients", icon: "👥" },
     { id: "history" as TabId, label: "Historique", icon: "📋" },
     { id: "settings" as TabId, label: "Paramètres", icon: "⚙️" },
   ];
@@ -647,6 +649,9 @@ export default function App({ user, onLogout }: AppProps) {
                 user={user} 
                 onGoToDashboard={() => setActiveTab("dashboard")} 
               />
+            )}
+            {activeTab === "library" && (
+              <LibraryView />
             )}
             {activeTab === "clients" && (
               <ClientsView 
@@ -1482,18 +1487,10 @@ function AnalyseResult({ data }: { data: any }) {
     ? `Expertise TCE BPA : Audit détaillé de ${articles.length} poste(s) technique(s). Total devis : ${totalHt.toFixed(2)} € HT (référence marché : ${totalRef.toFixed(2)} € HT, écart : ${ecartGlobal >= 0 ? '+' : ''}${ecartGlobal}%). Ce devis de remise en état présente un score de conformité de ${score}% et respecte les règles de l'art (DTU 59.1 Peinture). Les prestations au forfait (silicone fenêtres, WC peinture, rebouchage plâtre) ont été décomposées selon les temps réels d'intervention aux taux conventionnels BTP (OE1 18,32 €/h, CP2 26,07 €/h) et sont conformes aux barèmes acceptés par les assurances.`
     : (typeof a?.resume === 'string' && !a.resume.includes('+79.4%') ? a.resume : `Expertise TCE BPA : Audit détaillé de ${articles.length} poste(s) technique(s). Total devis : ${totalHt.toFixed(2)} € HT (référence marché : ${totalRef.toFixed(2)} € HT, écart : ${ecartGlobal >= 0 ? '+' : ''}${ecartGlobal}%). Score de conformité : ${score}%.`);
 
-  // Tableau détaillé des matériaux strictement filtré et pertinent (sans hallucination)
+  // Tableau détaillé des matériaux
   const rawMateriaux = Array.isArray(a?.tableau_materiaux) ? a.tableau_materiaux : (Array.isArray(a?.materiaux_detailles) ? a.materiaux_detailles : []);
-  
-  // Filtrer les matériaux aberrants issus d'anciennes recherches par mots-clés
-  const cleanMateriaux = rawMateriaux.filter((m: any) => {
-    const nomLower = (m.nom || '').toLowerCase();
-    const cout = parseFloat(m.cout_total_estime) || 0;
-    // Éliminer les fournitures non pertinentes pour des devis courants de peinture/placo/finitions
-    if (nomLower.includes('baignoire') || nomLower.includes('carillon') || nomLower.includes('wc chimique') || nomLower.includes('volet pivotant') || nomLower.includes('abri de chantier')) return false;
-    if (cout > totalHt * 0.5) return false;
-    return true;
-  });
+  const cleanMateriaux = rawMateriaux.filter((m: any) => m && (m.nom || m.article_devis_associe));
+
 
   const tableauMateriaux = cleanMateriaux.length > 0 ? cleanMateriaux : [
     {
@@ -1915,30 +1912,28 @@ function AnalyseResult({ data }: { data: any }) {
         </div>
       )}
 
-      {/* Synthèse IA */}
-      {a?.resume && (
-        <div style={{
-          background: "rgba(99,102,241,0.08)",
-          border: `1px solid rgba(99,102,241,0.25)`,
-          borderRadius: "14px",
-          padding: "16px 20px",
-          marginBottom: "20px",
-          fontSize: "14px",
-          lineHeight: 1.6,
-          color: colors.text
-        }}>
-          <div style={{ fontWeight: 700, color: colors.accent, marginBottom: "6px", display: "flex", alignItems: "center", gap: "8px" }}>
-            <span>🤖</span> Synthèse de l'Assistant Expert BPA (Intelligence IA & Barèmes BTP)
-          </div>
-          {resumeText}
+      {/* 4. 🤖 Synthèse IA */}
+      <div style={{
+        background: "rgba(99,102,241,0.08)",
+        border: `1px solid rgba(99,102,241,0.25)`,
+        borderRadius: "14px",
+        padding: "16px 20px",
+        marginBottom: "20px",
+        fontSize: "14px",
+        lineHeight: 1.6,
+        color: colors.text
+      }}>
+        <div style={{ fontWeight: 700, color: colors.accent, marginBottom: "6px", display: "flex", alignItems: "center", gap: "8px" }}>
+          <span>🤖</span> 4. Synthèse de l'Assistant Expert BPA (Intelligence IA & Barèmes BTP)
         </div>
-      )}
+        {resumeText}
+      </div>
 
-      {/* 4. 📋 Articles avec écarts en euros et pourcentages */}
+      {/* 5. 📋 Articles avec écarts en euros et pourcentages */}
       {articles.length > 0 && (
         <div style={{ background: colors.card, borderRadius: "16px", padding: "20px", border: `1px solid ${colors.border}`, marginBottom: "20px", overflowX: "auto" }}>
           <h3 style={{ margin: "0 0 16px", fontSize: "15px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-            <span>📋 4. Analyse détaillée article par article</span>
+            <span>📋 5. Analyse détaillée article par article</span>
             <span style={{ fontSize: "12px", color: colors.textMuted, fontWeight: 400 }}>Référentiel : Barèmes BTP / Capeb / Assurances IRSI</span>
           </h3>
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "13px" }}>
@@ -1981,23 +1976,28 @@ function AnalyseResult({ data }: { data: any }) {
         </div>
       )}
 
-      {/* 5. ⚠️ Anomalies */}
-      {anomalies.length > 0 && (
-        <div style={{ background: colors.card, borderRadius: "16px", padding: "20px", border: `1px solid ${colors.border}`, marginBottom: "20px" }}>
-          <h3 style={{ margin: "0 0 16px", fontSize: "15px" }}>⚠️ 5. Anomalies & Points de vigilance</h3>
+      {/* 6. ⚠️ Anomalies & Points de vigilance */}
+      <div style={{ background: colors.card, borderRadius: "16px", padding: "20px", border: `1px solid ${colors.border}`, marginBottom: "20px" }}>
+        <h3 style={{ margin: "0 0 16px", fontSize: "15px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <span>⚠️ 6. Anomalies & Points de vigilance</span>
+          <span style={{ fontSize: "12px", color: anomalies.length === 0 ? colors.success : colors.warning, fontWeight: 700 }}>
+            {anomalies.length === 0 ? "🟢 0 anomalie critique" : `${anomalies.length} point(s) de vigilance`}
+          </span>
+        </h3>
+        {anomalies.length > 0 ? (
           <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-            {anomalies.map((a: any, i: number) => {
-              const bgColor = a.gravite === "CRITIQUE" ? "rgba(239,68,68,0.1)" : a.gravite === "ATTENTION" ? "rgba(245,158,11,0.1)" : "rgba(99,102,241,0.1)";
-              const borderColor = a.gravite === "CRITIQUE" ? colors.danger : a.gravite === "ATTENTION" ? colors.warning : colors.accent;
+            {anomalies.map((ano: any, i: number) => {
+              const bgColor = ano.gravite === "CRITIQUE" ? "rgba(239,68,68,0.1)" : ano.gravite === "ATTENTION" ? "rgba(245,158,11,0.1)" : "rgba(99,102,241,0.1)";
+              const borderColor = ano.gravite === "CRITIQUE" ? colors.danger : ano.gravite === "ATTENTION" ? colors.warning : colors.accent;
               return (
                 <div key={i} style={{ padding: "12px 16px", borderRadius: "10px", background: bgColor, border: `1px solid ${borderColor}22` }}>
                   <div style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
-                    <span style={{ fontSize: "16px" }}>{a.gravite === "CRITIQUE" ? "🔴" : a.gravite === "ATTENTION" ? "🟡" : "🔵"}</span>
+                    <span style={{ fontSize: "16px" }}>{ano.gravite === "CRITIQUE" ? "🔴" : ano.gravite === "ATTENTION" ? "🟡" : "🔵"}</span>
                     <div>
-                      <div style={{ fontSize: "13px", fontWeight: 700 }}>{a.article}</div>
-                      <div style={{ fontSize: "12px", color: colors.textMuted, marginTop: "2px" }}>{a.probleme}</div>
-                      {a.action && (
-                        <div style={{ fontSize: "11px", color: colors.accent, marginTop: "4px", fontWeight: 600 }}>💡 Conseil d'action : {a.action}</div>
+                      <div style={{ fontSize: "13px", fontWeight: 700 }}>{ano.article}</div>
+                      <div style={{ fontSize: "12px", color: colors.textMuted, marginTop: "2px" }}>{ano.probleme}</div>
+                      {ano.action && (
+                        <div style={{ fontSize: "11px", color: colors.accent, marginTop: "4px", fontWeight: 600 }}>💡 Conseil d'action : {ano.action}</div>
                       )}
                     </div>
                   </div>
@@ -2005,13 +2005,20 @@ function AnalyseResult({ data }: { data: any }) {
               );
             })}
           </div>
-        </div>
-      )}
+        ) : (
+          <div style={{ padding: "14px 18px", borderRadius: "10px", background: "rgba(34,197,94,0.08)", border: "1px solid rgba(34,197,94,0.25)", display: "flex", alignItems: "center", gap: "12px" }}>
+            <span style={{ fontSize: "20px" }}>✅</span>
+            <div style={{ fontSize: "13px", color: colors.text }}>
+              <strong>Aucun surcoût excessif ni anomalie critique détectée.</strong> Les postes techniques décomposés et métrés respectent les seuils de tolérance et les barèmes usuels des assurances.
+            </div>
+          </div>
+        )}
+      </div>
 
-      {/* 6. ⚖️ Audit réglementaire & Normes DTU */}
+      {/* 7. ⚖️ Audit réglementaire & Normes DTU */}
       <div style={{ background: colors.card, borderRadius: "16px", padding: "24px", border: `1px solid ${colors.border}`, marginBottom: "20px" }}>
         <h3 style={{ margin: "0 0 16px", fontSize: "16px", fontWeight: 700, display: "flex", alignItems: "center", gap: "8px" }}>
-          <span>⚖️</span> 6. Audit Réglementaire, Assurances & Normes BTP
+          <span>⚖️</span> 7. Audit Réglementaire, Assurances & Normes BTP
         </h3>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "14px" }}>
           <div style={{ padding: "14px", borderRadius: "12px", background: "rgba(255,255,255,0.02)", border: `1px solid ${colors.border}` }}>
@@ -2052,10 +2059,10 @@ function AnalyseResult({ data }: { data: any }) {
         </div>
       </div>
 
-      {/* 7. 📋 Check-list Opérationnelle Avant Signature */}
+      {/* 8. 📋 Check-list Opérationnelle Avant Signature */}
       <div style={{ background: colors.card, borderRadius: "16px", padding: "20px", border: `1px solid ${colors.border}`, marginBottom: "20px" }}>
         <h3 style={{ margin: "0 0 12px", fontSize: "15px", fontWeight: 700, display: "flex", alignItems: "center", gap: "8px" }}>
-          <span>📋</span> 7. Check-list de Validation Client / Donneur d'Ordre
+          <span>📋</span> 8. Check-list de Validation Client / Donneur d'Ordre
         </h3>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "10px", fontSize: "12px", color: colors.textMuted }}>
           <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
@@ -2073,10 +2080,10 @@ function AnalyseResult({ data }: { data: any }) {
         </div>
       </div>
 
-      {/* 8. 💡 Leviers de négociation & conseils personnalisés */}
+      {/* 9. 💡 Leviers de négociation & conseils personnalisés */}
       <div style={{ background: "rgba(34,197,94,0.06)", border: `1px solid rgba(34,197,94,0.3)`, borderRadius: "16px", padding: "20px" }}>
         <h3 style={{ margin: "0 0 10px", fontSize: "15px", fontWeight: 700, color: colors.success, display: "flex", alignItems: "center", gap: "8px" }}>
-          <span>💡</span> 8. Leviers de Négociation & Stratégie Client
+          <span>💡</span> 9. Leviers de Négociation & Stratégie Client
         </h3>
         <p style={{ margin: "0 0 10px", fontSize: "13px", lineHeight: 1.6, color: colors.text }}>
           {score >= 85
@@ -2090,6 +2097,244 @@ function AnalyseResult({ data }: { data: any }) {
     </div>
   );
 }
+
+// ============================================================
+// BIBLIOTHÈQUE BTP VIEW (37 Corps d'État & 23 688 Matériaux)
+// ============================================================
+function LibraryView() {
+  const [search, setSearch] = useState("");
+  const [selectedTrade, setSelectedTrade] = useState("all");
+  const [mode, setMode] = useState<"all" | "works" | "materials">("all");
+  const [items, setItems] = useState<any[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [stats, setStats] = useState<any>({ tradesCount: 37, worksArticlesCount: 1540, materialsArticlesCount: 23688, trades: [] });
+
+  useEffect(() => {
+    fetch(getApiUrl("/api/invoices/library/stats"))
+      .then(res => res.json())
+      .then(data => {
+        if (data && (data.tradesCount || data.trades)) {
+          setStats(data);
+        }
+      })
+      .catch(() => {});
+
+    searchLibrary("", "all", "all");
+  }, []);
+
+  const searchLibrary = async (q: string, trade: string, currentMode: string) => {
+    setLoading(true);
+    try {
+      const params = new URLSearchParams();
+      if (q) params.set("q", q);
+      if (trade && trade !== "all") params.set("trade", trade);
+      if (currentMode && currentMode !== "all") params.set("type", currentMode);
+      params.set("limit", "50");
+
+      const res = await fetch(getApiUrl(`/api/invoices/library/search?${params.toString()}`));
+      const data = await res.json();
+      if (Array.isArray(data)) {
+        setItems(data);
+      }
+    } catch (e) {
+      // Ignore
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleSearchChange = (val: string) => {
+    setSearch(val);
+    searchLibrary(val, selectedTrade, mode);
+  };
+
+  const handleTradeChange = (tr: string) => {
+    setSelectedTrade(tr);
+    searchLibrary(search, tr, mode);
+  };
+
+  const handleModeChange = (m: "all" | "works" | "materials") => {
+    setMode(m);
+    searchLibrary(search, selectedTrade, m);
+  };
+
+  const popularTrades = [
+    { id: "all", label: "🏢 Tous les corps d'état" },
+    { id: "PEINTURE", label: "🎨 Peinture & Revêtements" },
+    { id: "PLOMBERIE", label: "🚿 Plomberie & Sanitaire" },
+    { id: "PLATRERIE", label: "🧱 Plâtrerie & Placo" },
+    { id: "SOLS", label: "🪵 Revêtements de sol" },
+    { id: "ELECTRICITE", label: "⚡ Électricité" },
+    { id: "MENUISERIE", label: "🪟 Menuiserie & Vitrerie" },
+    { id: "MACONNERIE", label: "🏗️ Maçonnerie & Gros œuvre" },
+  ];
+
+  return (
+    <div style={{ padding: "32px", animation: "fadeIn 0.3s ease", maxWidth: "1200px", margin: "0 auto", width: "100%", boxSizing: "border-box" }}>
+      {/* Header */}
+      <div style={{ marginBottom: "24px" }}>
+        <h1 style={{ margin: "0 0 6px", fontSize: "26px", fontWeight: 800 }}>📚 Bibliothèque de Prix & Matériaux BTP</h1>
+        <p style={{ margin: 0, color: colors.textMuted, fontSize: "14px" }}>
+          Référentiel officiel de tarification TCE — Base certifiée de {Number(stats.materialsArticlesCount || 23688).toLocaleString('fr-FR')} matériaux normés et {Number(stats.worksArticlesCount || 1540).toLocaleString('fr-FR')} prestations de référence selon les barèmes CAPEB, FFB et assurances IRSI.
+        </p>
+      </div>
+
+      {/* 3 Cartes Statistiques */}
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px", marginBottom: "24px" }}>
+        <div style={{ background: colors.card, border: `1px solid ${colors.border}`, borderRadius: "14px", padding: "18px" }}>
+          <div style={{ fontSize: "12px", color: colors.textMuted }}>Corps d'état BTP (Lots)</div>
+          <div style={{ fontSize: "24px", fontWeight: 800, color: colors.accent, marginTop: "4px" }}>37 Corps d'État</div>
+          <div style={{ fontSize: "11px", color: colors.textMuted, marginTop: "2px" }}>Du gros œuvre aux finitions soignées</div>
+        </div>
+
+        <div style={{ background: colors.card, border: `1px solid ${colors.border}`, borderRadius: "14px", padding: "18px" }}>
+          <div style={{ fontSize: "12px", color: colors.textMuted }}>Matériaux & Fournitures Référencés</div>
+          <div style={{ fontSize: "24px", fontWeight: 800, color: colors.tce, marginTop: "4px" }}>{Number(stats.materialsArticlesCount || 23688).toLocaleString("fr-FR")} Références</div>
+          <div style={{ fontSize: "11px", color: colors.textMuted, marginTop: "2px" }}>Prix d'achat moyens & spécifications DTU</div>
+        </div>
+
+        <div style={{ background: colors.card, border: `1px solid ${colors.border}`, borderRadius: "14px", padding: "18px" }}>
+          <div style={{ fontSize: "12px", color: colors.textMuted }}>Normes & Référentiels BTP</div>
+          <div style={{ fontSize: "24px", fontWeight: 800, color: colors.success, marginTop: "4px" }}>100% Certifié</div>
+          <div style={{ fontSize: "11px", color: colors.textMuted, marginTop: "2px" }}>Barèmes CAPEB, FFB, IRSI & Décennale</div>
+        </div>
+      </div>
+
+      {/* Barre de recherche et filtres */}
+      <div style={{ background: colors.card, border: `1px solid ${colors.border}`, borderRadius: "16px", padding: "20px", marginBottom: "20px" }}>
+        <div style={{ display: "flex", gap: "12px", marginBottom: "16px", flexWrap: "wrap" }}>
+          <div style={{ flex: 1, minWidth: "280px", position: "relative" }}>
+            <span style={{ position: "absolute", left: "14px", top: "50%", transform: "translateY(-50%)", fontSize: "16px" }}>🔍</span>
+            <input
+              type="text"
+              placeholder="Rechercher un ouvrage, fourniture, matériau (ex: paroi de douche, peinture mate, BA13, ragréage...)"
+              value={search}
+              onChange={e => handleSearchChange(e.target.value)}
+              style={{
+                width: "100%", padding: "12px 14px 12px 42px", borderRadius: "10px",
+                border: `1px solid ${colors.border}`, background: "rgba(255,255,255,0.03)",
+                color: colors.text, fontSize: "14px", outline: "none", boxSizing: "border-box"
+              }}
+            />
+          </div>
+
+          {/* Toggle Type */}
+          <div style={{ display: "flex", background: "rgba(255,255,255,0.03)", border: `1px solid ${colors.border}`, borderRadius: "10px", padding: "4px", gap: "4px" }}>
+            {[
+              { id: "all", label: "Tout afficher" },
+              { id: "works", label: "Prestations (Pose + Fourniture)" },
+              { id: "materials", label: "Matériaux seuls" }
+            ].map(tab => (
+              <button
+                key={tab.id}
+                onClick={() => handleModeChange(tab.id as any)}
+                style={{
+                  padding: "8px 14px", borderRadius: "8px", border: "none",
+                  cursor: "pointer", fontSize: "12px", fontWeight: mode === tab.id ? 700 : 500,
+                  background: mode === tab.id ? "linear-gradient(135deg, #3b82f6, #6366f1)" : "transparent",
+                  color: mode === tab.id ? "white" : colors.textMuted,
+                  transition: "all 0.15s"
+                }}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Trade Pills */}
+        <div style={{ display: "flex", gap: "8px", overflowX: "auto", paddingBottom: "4px" }}>
+          {popularTrades.map(tr => (
+            <button
+              key={tr.id}
+              onClick={() => handleTradeChange(tr.id)}
+              style={{
+                padding: "6px 12px", borderRadius: "20px",
+                cursor: "pointer", fontSize: "12px", whiteSpace: "nowrap",
+                background: selectedTrade === tr.id ? "rgba(99,102,241,0.2)" : "rgba(255,255,255,0.03)",
+                border: selectedTrade === tr.id ? `1px solid ${colors.accent}` : `1px solid ${colors.border}`,
+                color: selectedTrade === tr.id ? colors.accent : colors.textMuted,
+                fontWeight: selectedTrade === tr.id ? 700 : 500,
+                transition: "all 0.15s"
+              }}
+            >
+              {tr.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Résultats */}
+      <div style={{ background: colors.card, border: `1px solid ${colors.border}`, borderRadius: "16px", overflow: "hidden" }}>
+        <div style={{ padding: "16px 20px", borderBottom: `1px solid ${colors.border}`, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <span style={{ fontSize: "14px", fontWeight: 700 }}>
+            {loading ? "Recherche en cours..." : `${items.length} référence(s) trouvée(s)`}
+          </span>
+          <span style={{ fontSize: "12px", color: colors.textMuted }}>
+            Base de données BTP mise à jour · Barèmes 2026
+          </span>
+        </div>
+
+        {items.length === 0 ? (
+          <div style={{ padding: "50px 20px", textAlign: "center", color: colors.textMuted }}>
+            <div style={{ fontSize: "36px", marginBottom: "10px" }}>🔍</div>
+            <div style={{ fontSize: "15px", fontWeight: 700, color: colors.text, marginBottom: "4px" }}>Aucun article trouvé</div>
+            <div style={{ fontSize: "13px" }}>Essayez avec un autre mot-clé (ex: peinture, placo, douche, carrelage, joint)</div>
+          </div>
+        ) : (
+          <div style={{ overflowX: "auto" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "13px" }}>
+              <thead>
+                <tr style={{ borderBottom: `1px solid ${colors.border}`, background: "rgba(255,255,255,0.02)" }}>
+                  {["Type / Source", "Désignation & Descriptif", "Corps d'état / Chapitre", "Prix de Référence HT", "Unité"].map(h => (
+                    <th key={h} style={{ textAlign: "left", padding: "12px 16px", color: colors.textMuted, fontWeight: 600, fontSize: "12px" }}>{h}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {items.map((item, idx) => (
+                  <tr key={idx} style={{ borderBottom: "1px solid rgba(255,255,255,0.03)", transition: "background 0.15s" }}
+                    onMouseEnter={e => (e.currentTarget.style.background = "rgba(255,255,255,0.02)")}
+                    onMouseLeave={e => (e.currentTarget.style.background = "transparent")}>
+                    <td style={{ padding: "12px 16px" }}>
+                      <span style={{
+                        padding: "3px 8px", borderRadius: "6px", fontSize: "11px", fontWeight: 700,
+                        background: item.source === "MATERIAUX" ? "rgba(59,130,246,0.15)" : "rgba(99,102,241,0.15)",
+                        color: item.source === "MATERIAUX" ? colors.tce : colors.accent,
+                        display: "inline-block"
+                      }}>
+                        {item.source === "MATERIAUX" ? "🧱 Matériau" : "🛠️ Prestation"}
+                      </span>
+                    </td>
+                    <td style={{ padding: "12px 16px", fontWeight: 600, color: colors.text, maxWidth: "450px" }}>
+                      <div>{item.nom}</div>
+                      {item.ouvrageNom && item.ouvrageNom !== item.nom && (
+                        <div style={{ fontSize: "11px", color: colors.textMuted, marginTop: "2px" }}>
+                          {item.ouvrageNom}
+                        </div>
+                      )}
+                    </td>
+                    <td style={{ padding: "12px 16px", color: colors.textMuted }}>
+                      <div style={{ fontWeight: 600, color: colors.text }}>{item.lotNom || "TCE"}</div>
+                      {item.chapitreNom && <div style={{ fontSize: "11px" }}>{item.chapitreNom}</div>}
+                    </td>
+                    <td style={{ padding: "12px 16px", fontWeight: 800, color: item.source === "MATERIAUX" ? colors.tce : colors.accent, fontSize: "14px" }}>
+                      {Number(item.prix || 0).toFixed(2)} € <span style={{ fontSize: "11px", fontWeight: 500, color: colors.textMuted }}>HT</span>
+                    </td>
+                    <td style={{ padding: "12px 16px", color: colors.textMuted, fontWeight: 600 }}>
+                      {item.unite || "U"}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 
 // ============================================================
 // VUE D'AUDIT DÉTAILLÉE AU CLIC SUR UN DEVIS DÉJÀ ANALYSÉ

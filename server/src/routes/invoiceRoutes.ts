@@ -28,6 +28,44 @@ const upload = multer({
 });
 
 // ============================================================
+// BIBLIOTHÈQUE BTP — RECHERCHE & STATISTIQUES (37 corps d'état & 23k+ matériaux)
+// ============================================================
+router.get('/library/stats', (req: express.Request, res: express.Response) => {
+    try {
+        const stats = priceService.getStats();
+        res.json(stats);
+    } catch (e: any) {
+        res.status(500).json({ error: e.message });
+    }
+});
+
+router.get('/library/search', (req: express.Request, res: express.Response) => {
+    try {
+        const q = String(req.query.q || '').trim();
+        const trade = String(req.query.trade || '').trim();
+        const type = String(req.query.type || 'all').trim();
+        const limit = Math.min(100, Math.max(1, parseInt(String(req.query.limit || '40'), 10)));
+
+        const keywords = q ? q.split(/\s+/).filter(Boolean) : [];
+        let results: any[] = [];
+
+        if (type === 'materials') {
+            results = priceService.searchMaterials(keywords, limit);
+        } else if (trade && trade !== 'all') {
+            results = priceService.searchInTrade(trade, keywords, limit);
+        } else if (type === 'works') {
+            results = priceService.searchAllTrades(keywords, limit);
+        } else {
+            results = priceService.searchAll(keywords, limit);
+        }
+
+        res.json(results);
+    } catch (e: any) {
+        res.status(500).json({ error: e.message });
+    }
+});
+
+// ============================================================
 // UPLOAD ET ANALYSE DE FACTURE (100% Neon + Stockage Local)
 // ============================================================
 router.post('/upload', optionalAuth, upload.single('file'), async (req: AuthRequest, res: express.Response) => {
