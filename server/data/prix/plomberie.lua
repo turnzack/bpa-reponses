@@ -656,7 +656,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimension 250 à 300 mm\tcm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 5.58,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "plus_value_pour_raccord_soigne_m",

@@ -679,14 +679,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "jonc de mer classic, pose collée\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 6.92,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "jonc_de_mer_fin_pose_collee_u",
                                                                                                                     nom = "jonc de mer fin, pose collée\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 38.47,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "jonc_de_mer_classic_pose_collee_sur_marche_et_contre_marche_m",
@@ -1407,14 +1407,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "à joints vifs, par simple encollage\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 14.79,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "a_joints_vifs_par_double_encollage_m",
                                                                                                                     nom = "à joints vifs, par double encollage\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 18.24,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "tendue_et_soudure_les_m",
@@ -1428,14 +1428,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "sur feutre, à joints vifs, double encollage\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 16.29,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m2",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "sur_feutre_a_joints_vifs_simple_encollage_m",
                                                                                                                     nom = "sur feutre, à joints vifs, simple encollage\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 12.82,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m2",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -2618,14 +2618,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "1 vantail\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 14.47,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "2_vantaux_u",
                                                                                                                     nom = "2 vantaux\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 6.2,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -2695,7 +2695,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Couvre-joint de dilatation laiton poli\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 53.37,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m2",
                                                                                                                 }
                                                                             }
                                                                         },

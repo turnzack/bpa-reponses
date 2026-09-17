@@ -350,7 +350,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "plus value par km supplémentaire\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 2.95,
-                                                                                                                    unite = "m3",
+                                                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -728,42 +728,42 @@ M.STRUCTURE = {
                                                                                                                     nom = "en roches massives, à la tonne\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 109.33,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "t",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "galet_de_riviere_diametre_80_150_mm_la_tonne_u",
                                                                                                                     nom = "galet de rivière, diamètre 80/150 mm, la tonne\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 156.33,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "t",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "granit_diametre_500_900_mm_la_tonne_u",
                                                                                                                     nom = "granit, diamètre 500/900 mm, la tonne\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 216.33,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "t",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "gres_quartzite_diametre_500_900_mm_la_tonne_u",
                                                                                                                     nom = "grès quartzite, diamètre 500/900 mm, la tonne\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 156.33,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "t",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "pierre_calcaire_diametre_500_900_mm_la_tonne_u",
                                                                                                                     nom = "pierre calcaire, diamètre 500/900 mm, la tonne\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 126.33,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "t",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "porphyre_diametre_500_900_mm_la_tonne_u",
                                                                                                                     nom = "porphyre, diamètre 500/900 mm, la tonne\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 141.33,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "t",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -1022,70 +1022,70 @@ M.STRUCTURE = {
                                                                                                                     nom = "de porphyre, dimensions 2000x1000x1000 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 75.76,
-                                                                                                                    unite = "m3",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_roches_calcaires_dimensions_500x500x500_mm_u",
                                                                                                                     nom = "de roches calcaires, dimensions 500x500x500 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 67.39,
-                                                                                                                    unite = "m3",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_roches_calcaires_dimensions_1000x300x750_mm_u",
                                                                                                                     nom = "de roches calcaires, dimensions 1000x300x750 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 95.86,
-                                                                                                                    unite = "m3",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_roches_calcaires_dimensions_1000x500x500_mm_u",
                                                                                                                     nom = "de roches calcaires, dimensions 1000x500x500 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 100.08,
-                                                                                                                    unite = "m3",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_roches_calcaires_dimensions_1000x500x1000_mm_u",
                                                                                                                     nom = "de roches calcaires, dimensions 1000x500x1000 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 142.26,
-                                                                                                                    unite = "m3",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_roches_calcaires_dimensions_2000x300x750_mm_u",
                                                                                                                     nom = "de roches calcaires, dimensions 2000x300x750 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 145.39,
-                                                                                                                    unite = "m3",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_roches_calcaires_dimensions_2000x500x500_mm_u",
                                                                                                                     nom = "de roches calcaires, dimensions 2000x500x500 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 153.82,
-                                                                                                                    unite = "m3",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_roches_calcaires_dimensions_2000x500x1000_mm_u",
                                                                                                                     nom = "de roches calcaires, dimensions 2000x500x1000 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 238.18,
-                                                                                                                    unite = "m3",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_roches_calcaires_dimensions_2000x750x750_mm_u",
                                                                                                                     nom = "de roches calcaires, dimensions 2000x750x750 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 259.27,
-                                                                                                                    unite = "m3",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_roches_calcaires_dimensions_2000x1000x1000_mm_u",
                                                                                                                     nom = "de roches calcaires, dimensions 2000x1000x1000 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 406.9,
-                                                                                                                    unite = "m3",
+                                                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         }
@@ -1811,7 +1811,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "de bordures\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 23.13,
-                                                                                                                    unite = "m3",
+                                                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -1907,7 +1907,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "pour bordures inférieures à 1,00 m de largeur\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 24.39,
-                                                                                                                    unite = "m3",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "terreautage_des_semis_m",
@@ -1970,14 +1970,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "pour bordures inférieures à 50 cm\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 27.69,
-                                                                                                                    unite = "m3",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "pour_bordures_largeur_de_50_a_100_cm_m",
                                                                                                                     nom = "pour bordures largeur de 50 à 100 cm\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 26.6,
-                                                                                                                    unite = "m3",
+                                                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -2019,7 +2019,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "bordures inférieures à 1,00 m\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 22.2,
-                                                                                                                    unite = "m3",
+                                                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -3790,7 +3790,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "tuyau de tirage spécial, dn 1''\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 57.72,
-                                                                                                                    unite = "m3",
+                                                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         }
@@ -4532,7 +4532,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "tuyau flexible en polyéthylène, dn intérieur 12,5 mm\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 0.94,
-                                                                                                                    unite = "m3",
+                                                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },

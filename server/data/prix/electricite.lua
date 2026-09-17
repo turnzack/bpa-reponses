@@ -19944,7 +19944,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "section 50 mm2, déroulé en fond de fouille\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 16.41,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },

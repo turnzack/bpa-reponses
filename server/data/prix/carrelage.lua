@@ -511,7 +511,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Plus value pour exécution joint ébonite\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 3.31,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m2",
                                                                                                                 }
                                                                             }
                                                                         }
@@ -18718,7 +18718,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "taloché, avec façon de joints au fer à boudin\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 68.32,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m2",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -22526,7 +22526,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "en acier\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 5.59,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         }
@@ -22652,21 +22652,21 @@ M.STRUCTURE = {
                                                                                                                     nom = "capuchon de fermeture\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 6.18,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "angle_sortant_90_u",
                                                                                                                     nom = "angle sortant 90°\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 7.08,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "angle_rentrant_90_u",
                                                                                                                     nom = "angle rentrant 90°\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 7.08,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -22743,42 +22743,42 @@ M.STRUCTURE = {
                                                                                                                     nom = "angle rentrant 90°\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 4.63,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "angle_rentrant_135_u",
                                                                                                                     nom = "angle rentrant 135°\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 4.63,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "angle_sortant_90_u",
                                                                                                                     nom = "angle sortant 90°\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 4.63,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "angle_sortant_135_u",
                                                                                                                     nom = "angle sortant 135°\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 4.63,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "raccord_u",
                                                                                                                     nom = "raccord\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 7.05,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "capuchon_de_fermeture_u",
                                                                                                                     nom = "capuchon de fermeture\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 16.75,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -22869,14 +22869,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "Set capuchons de fermeture\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 6,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "angle_rentrant_a_90_u",
                                                                                                                     nom = "angle rentrant à 90°\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 5.01,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -22897,28 +22897,28 @@ M.STRUCTURE = {
                                                                                                                     nom = "angle rentrant 90°\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 7.11,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "angle_sortant_90_u",
                                                                                                                     nom = "angle sortant 90°\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 7.11,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "capuchon_de_fermeture_u",
                                                                                                                     nom = "capuchon de fermeture\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 6.18,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "raccord_u",
                                                                                                                     nom = "raccord\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 5.43,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -23002,70 +23002,70 @@ M.STRUCTURE = {
                                                                                                                     nom = "angle rentrant 90°\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 10.21,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "angle_rentrant_90_brosse_u",
                                                                                                                     nom = "angle rentrant 90°, brossé\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 12.16,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "angle_rentrant_135_u",
                                                                                                                     nom = "angle rentrant 135°\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 10.21,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "angle_rentrant_135_brosse_u",
                                                                                                                     nom = "angle rentrant 135°, brossé\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 12.16,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "angle_sortant_90_u",
                                                                                                                     nom = "angle sortant 90°\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 10.21,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "angle_sortant_90_brosse_u",
                                                                                                                     nom = "angle sortant 90°, brossé\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 12.16,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "angle_sortant_135_u",
                                                                                                                     nom = "angle sortant 135°\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 12.16,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "angle_sortant_135_brosse_u",
                                                                                                                     nom = "angle sortant 135°, brossé\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 12.16,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "raccord_u",
                                                                                                                     nom = "raccord\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 10,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "raccord_brosse_u",
                                                                                                                     nom = "raccord, brossé\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 11.95,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },

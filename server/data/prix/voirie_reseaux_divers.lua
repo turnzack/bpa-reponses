@@ -6644,7 +6644,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "capacité 500 litres\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 577.22,
-                                                                                                                    unite = "m3",
+                                                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -6658,7 +6658,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "réalisé manuellement avec du sable y compris pilonnage\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 3112.89,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },

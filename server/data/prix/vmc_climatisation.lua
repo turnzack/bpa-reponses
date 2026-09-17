@@ -14721,7 +14721,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "diamètre 400 mm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 70.23,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "h",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -14735,7 +14735,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "dimensions 475x700 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 330.55,
-                                                                                                                    unite = "h",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dimensions_475x600_mm_u",

@@ -70,14 +70,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "Chaînage béton armé de consolidation\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 54.84,
-                                                                                                                    unite = "m3",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "chargement_des_ruines_sur_camion_par_engin_mecanique_m",
                                                                                                                     nom = "Chargement des ruines sur camion par engin mécanique\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 312.96,
-                                                                                                                    unite = "m3",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "chargement_des_ruines_sur_camion_par_jet_de_pelle_m",
@@ -1043,7 +1043,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "10 m3\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 405.67,
-                                                                                                                    unite = "m3",
+                                                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },

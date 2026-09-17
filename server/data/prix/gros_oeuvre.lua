@@ -16614,7 +16614,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "<dans le neuf>\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 81.91,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dans_l_ancien_u",
@@ -16656,7 +16656,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "<dans le neuf>\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 141.73,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "dans_l_ancien_u",

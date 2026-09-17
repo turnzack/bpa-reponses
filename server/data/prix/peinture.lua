@@ -642,7 +642,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "de tâche ordinaire de gouttières, en plafonds\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 6.73,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_tache_bitumee_en_plafonds_m",
@@ -1608,21 +1608,21 @@ M.STRUCTURE = {
                                                                                                                     nom = "de volet à 2 ferrures\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 3.13,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_volet_a_3_ferrures_u",
                                                                                                                     nom = "de volet à 3 ferrures\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 4.3,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_store_venitien_u",
                                                                                                                     nom = "de store vénitien\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 9.19,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -1839,28 +1839,28 @@ M.STRUCTURE = {
                                                                                                                     nom = "de volet à 2 ferrures\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 3.91,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_volet_a_3_ferrures_u",
                                                                                                                     nom = "de volet à 3 ferrures\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 5.08,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_store_venitien_u",
                                                                                                                     nom = "de store vénitien\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 9.58,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "trace_pour_panneau_sur_facades_m",
                                                                                                                     nom = "Trace pour panneau sur façades\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1.36,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -9246,7 +9246,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "numérotation\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 3.15,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "au_m2_m",
@@ -9260,14 +9260,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "flèche de signalisation\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 11.86,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "bande_de_100_mm_de_largeur_m",
                                                                                                                     nom = "bande de 100 mm de largeur\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 4.44,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "ml",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -9295,7 +9295,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Peinture antirouille sur panneaux\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 10.29,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "peinture_antirouille_pour_serrurerie_ou_charpente_legere_kg",
@@ -9316,7 +9316,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Peinture antirouille sur éléments isolés (pentures)\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1.57,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "peinture_antirouille_sur_fers_de_chassis_ou_corniere_m",
@@ -9358,7 +9358,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "en acier, panneau radiant à ailettes, la couche\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 3.07,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_acier_tous_modeles_courants_la_couche_m",
@@ -9372,7 +9372,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "en fonte, mural (panneau), la couche\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 14.62,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_fonte_uni_type_sanitaire_la_couche_m",
@@ -9386,21 +9386,21 @@ M.STRUCTURE = {
                                                                                                                     nom = "en fonte, tubulaire à 6 tubes par élément, la couche\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 17.56,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_fonte_tubulaire_a_4_tubes_par_element_la_couche_m",
                                                                                                                     nom = "en fonte, tubulaire à 4 tubes par élément, la couche\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 15.72,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_fonte_tubulaire_a_2_tubes_par_element_la_couche_m",
                                                                                                                     nom = "en fonte, tubulaire à 2 tubes par élément, la couche\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 13.53,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_fonte_modele_ancien_a_triple_elements_la_couche_m",
@@ -9442,7 +9442,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "en acier, panneau radiant à ailettes, la couche\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1.97,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_acier_tous_modeles_courants_la_couche_m",
@@ -9477,21 +9477,21 @@ M.STRUCTURE = {
                                                                                                                     nom = "en fonte, tubulaire à 2 tubes par élément, la couche\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 12.43,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_fonte_tubulaire_a_4_tubes_par_element_la_couche_m",
                                                                                                                     nom = "en fonte, tubulaire à 4 tubes par élément, la couche\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 14.62,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_fonte_tubulaire_a_6_tubes_par_element_la_couche_m",
                                                                                                                     nom = "en fonte, tubulaire à 6 tubes par élément, la couche\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 16.47,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_fonte_uni_type_sanitaire_la_couche_m",
@@ -9505,7 +9505,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "en fonte, mural (panneau), la couche\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 13.53,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "peinture_speciale_pour_protection_d_ouvrage_en_zinc_m",
@@ -9834,7 +9834,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Couche intumescente pour protection des bois et panneaux fibres\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 16.62,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "couche_intumescente_pour_protection_charpente_metallique_m",
@@ -9869,21 +9869,21 @@ M.STRUCTURE = {
                                                                                                                     nom = "Peinture de rideau de cheminée, dimension 400x600 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 7,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "peinture_de_tuyau_isole_m",
                                                                                                                     nom = "Peinture de tuyau isolé\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 2.5,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "peinture_laquee_sur_elements_isoles_pentures_u",
                                                                                                                     nom = "Peinture laquée sur éléments isolés (pentures)\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 1.9,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "U",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -10282,7 +10282,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Vernissage au tampon mat ou satiné sur moulures seules\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 4.05,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "vernissage_au_tampon_brillant_sur_surface_unie_m",
@@ -10303,7 +10303,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Vernissage au tampon brillant sur moulures seules\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 5.05,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "encausticage_a_la_cire_et_a_l_essence_execute_a_la_brosse_sur_surface_unie_m",
@@ -10324,7 +10324,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Encausticage à la cire et à l'essence exécuté à la brosse sur moulures seules\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 0.55,
-                                                                                                                    unite = "m2",
+                                                                                                                    unite = "ml",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "lustrage_de_parties_cirees_m",
