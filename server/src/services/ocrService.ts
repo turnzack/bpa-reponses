@@ -1,18 +1,29 @@
 import axios from 'axios';
-import { TextractClient, DetectDocumentTextCommand } from '@aws-sdk/client-textract';
+
 
 const MINDEE_API_KEY = process.env.MINDEE_API_KEY;
 const MINDEE_ENDPOINT = 'https://api.mindee.net/v1/products/mindee/invoices/v4/predict';
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const GEMINI_ENDPOINT = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
 
-const textractClient = new TextractClient({
-    region: process.env.AWS_REGION || 'eu-west-1',
-    credentials: {
-        accessKeyId: process.env.AWS_ACCESS_KEY_ID!,
-        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY!
+let textractClient = null;
+function getTextractClient() {
+    if (!textractClient && process.env.AWS_ACCESS_KEY_ID) {
+        try {
+            const { TextractClient } = require('@aws-sdk/client-textract');
+            textractClient = new TextractClient({
+                region: process.env.AWS_REGION || 'eu-west-1',
+                credentials: {
+                    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+                    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+                }
+            });
+        } catch (e) {
+            console.warn('[OCR] Textract non installe');
+        }
     }
-});
+    return textractClient;
+}
 
 export async function processInvoiceOCR(fileBuffer: Buffer, mimeType: string) {
     const startTime = Date.now();
@@ -288,11 +299,13 @@ IMPORTANT : Retourne UNIQUEMENT le JSON, sans texte avant ou après.`
 }
 
 async function callTextractOCR(fileBuffer: Buffer) {
+    const client = getTextractClient();
+    if (!client) throw new Error('Textract non disponible');
+    const { DetectDocumentTextCommand } = require('@aws-sdk/client-textract');
     const command = new DetectDocumentTextCommand({
         Document: { Bytes: fileBuffer }
     });
-
-    const response = await textractClient.send(command);
+    const response = await client.send(command);
 
     const fullText = response.Blocks
         ?.filter(b => b.BlockType === 'LINE')

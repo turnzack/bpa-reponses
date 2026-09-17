@@ -191,24 +191,23 @@ router.post('/analyze', upload.single('file'), async (req: express.Request, res:
             }
         }
 
-        // Comparaison avec la bibliothèque de prix (34 métiers)
+        // Comparaison avec les bibliothèques de prix et matériaux (37 métiers BTP)
         const articles = extractedItems.map((item: any, index: number) => {
             const designation = item.designation || `Article ${index + 1}`;
             const quantity = parseFloat(item.quantity || item.quantite || 1) || 1;
             const unit = item.unite || item.unit || 'U';
             const prixDevis = parseFloat(item.prix_unitaire_ht || item.priceUnit || item.prix || 0) || 0;
 
-            const keywords = designation.toLowerCase().split(/\s+/).filter((w: string) => w.length > 3);
-            const detectedTrade = priceService.detectTradeFromKeywords(keywords);
-            const results = detectedTrade 
-                ? priceService.searchInTrade(detectedTrade, keywords)
-                : priceService.searchAllTrades(keywords, 5);
-
-            const benchmark = results[0];
-            const prixRef = benchmark?.prix || (prixDevis > 0 ? Math.round(prixDevis * 0.92 * 100) / 100 : 0);
+            const match = priceService.matchArticleWithDetails(designation, prixDevis);
+            const prixRef = match.prixRef || (prixDevis > 0 ? Math.round(prixDevis * 0.92 * 100) / 100 : 0);
             const ecart = (prixRef > 0 && prixDevis > 0) ? Math.round(((prixDevis - prixRef) / prixRef) * 1000) / 10 : 0;
             const statut = ecart <= 10 ? 'vert' : ecart <= 20 ? 'jaune' : ecart <= 30 ? 'orange' : 'rouge';
             const emoji = statut === 'vert' ? '🟢' : statut === 'jaune' ? '🟡' : statut === 'orange' ? '🟠' : '🔴';
+
+            let detailMat = '';
+            if (match.prixMateriauRef) {
+                detailMat = ` (dont matér. réf. : ${match.prixMateriauRef} €/${match.uniteMateriauRef || unit})`;
+            }
 
             return {
                 numero: index + 1,
@@ -217,12 +216,20 @@ router.post('/analyze', upload.single('file'), async (req: express.Request, res:
                 unite: unit,
                 prix_devis: prixDevis,
                 prix_ref: prixRef,
+                prix_materiau_ref: match.prixMateriauRef || null,
+                unite_materiau_ref: match.uniteMateriauRef || null,
+                lot_nom: match.lotNom,
+                chapitre_nom: match.chapitreNom,
+                ouvrage_nom: match.ouvrageNom,
+                ref_article_nom: match.refArticleNom,
                 ecart_pourcent: ecart,
                 statut,
                 emoji,
                 commentaire: ecart > 20 
-                    ? `Prix supérieur de ${ecart}% au prix de référence marché`
-                    : 'Conforme aux prix moyens du marché'
+                    ? `Tarif supérieur de +${ecart}% au barème marché (${prixRef} €/${unit})${detailMat}`
+                    : ecart < -10
+                    ? `Tarif très compétitif (-${Math.abs(ecart)}% sous le barème marché)${detailMat}`
+                    : `Conforme aux barèmes moyens BTP (${prixRef} €/${unit})${detailMat}`
             };
         });
 
@@ -242,14 +249,25 @@ router.post('/analyze', upload.single('file'), async (req: express.Request, res:
                         articles.filter((a: any) => a.statut === 'orange').length * 15;
         const scoreConformite = articles.length > 0 ? Math.max(20, Math.min(100, Math.round(100 - penalty))) : 75;
 
+        const materialsBreakdown = priceService.estimateMaterialsBreakdown(articles);
+
         const completeAnalyse = {
             score_conformite: scoreConformite,
             score: scoreConformite,
             total_ht: Math.round(totalHt * 100) / 100,
             total_ref: Math.round(totalRef * 100) / 100,
+            total_materiaux_estime: materialsBreakdown.total_materiaux_estime_ht,
+            total_pose_estime: materialsBreakdown.total_pose_estime_ht,
+            pourcentage_materiaux: materialsBreakdown.pourcentage_materiaux,
+            pourcentage_pose: materialsBreakdown.pourcentage_pose,
+            recapitulatif_couts: materialsBreakdown.recapitulatif_couts,
+            duree_estimee: materialsBreakdown.duree_estimee,
+            tableau_materiaux: materialsBreakdown.materiaux_detailles,
+            materiaux_detailles: materialsBreakdown.materiaux_detailles,
             articles,
             anomalies,
-            resume: `Analyse de ${articles.length} prestation(s) : ${articles.filter((a: any) => a.statut === 'vert').length} conforme(s), ${anomalies.length} surcoût(s) détecté(s).`
+            synthese_fournitures: materialsBreakdown.synthese_fournitures,
+            resume: `Analyse de ${articles.length} prestation(s) : ${articles.filter((a: any) => a.statut === 'vert').length} conforme(s), ${anomalies.length} point(s) d'attention. ${materialsBreakdown.synthese_fournitures}`
         };
 
         res.json({

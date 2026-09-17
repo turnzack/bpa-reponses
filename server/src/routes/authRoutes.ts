@@ -1,139 +1,74 @@
-import { Router, Request, Response } from 'express';
+﻿import { Router, Request, Response } from 'express';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { sql } from '../config/db';
-import { authenticateUser, AuthRequest } from '../middleware/auth.middleware';
 
 const router = Router();
 const JWT_SECRET = process.env.JWT_SECRET || 'kirov5-fallback-secret-key-32chars!';
 
-// ============================================================
-// INSCRIPTION (Neon Native)
-// ============================================================
+// POST /api/auth/register
 router.post('/register', async (req: Request, res: Response) => {
   try {
     const { email, password } = req.body;
-
-    if (!email || !password) {
-      return res.status(400).json({ error: 'Email et mot de passe requis' });
-    }
-
-    // Check if user exists
-    const existingUsers = await sql`SELECT * FROM users WHERE email = ${email.toLowerCase().trim()}`;
-    if (existingUsers.length > 0) {
-      return res.status(409).json({ error: 'Cet agent existe déjà dans le Nexus.' });
-    }
-
-    // Hash password
-    const saltRounds = 10;
-    const passwordHash = await bcrypt.hash(password, saltRounds);
-
-    // Insert user
+    if (!email || !password) return res.status(400).json({ error: 'Email et mot de passe requis' });
+    const existing = await sql`SELECT id FROM users WHERE email = ${email.toLowerCase().trim()}`;
+    if (existing.length > 0) return res.status(409).json({ error: 'Cet email est déjà enregistré.' });
+    const passwordHash = await bcrypt.hash(password, 10);
     const result = await sql`
-      INSERT INTO users (email, password_hash)
-      VALUES (${email.toLowerCase().trim()}, ${passwordHash})
+      INSERT INTO users (email, password_hash) VALUES (${email.toLowerCase().trim()}, ${passwordHash})
       RETURNING id, email, role
     `;
-
     const user = result[0];
-
-    // Generate token
-    const token = jwt.sign({ userId: user.id, email: user.email, role: user.role }, JWT_SECRET, {
-      expiresIn: '7d'
-    });
-
-    res.json({
-      success: true,
-      message: 'Habilitation créée avec succès',
-      token,
-      userId: user.id,
-      email: user.email
-    });
-
+    const token = jwt.sign({ userId: user.id, email: user.email, role: user.role }, JWT_SECRET, { expiresIn: '7d' });
+    res.json({ success: true, token, userId: user.id, email: user.email });
   } catch (error: any) {
-    console.error('[register] Exception:', error);
+    console.error('[register] Error:', error);
     res.status(500).json({ error: "Erreur serveur lors de l'inscription" });
   }
 });
 
-// ============================================================
-// CONNEXION (Neon Native)
-// ============================================================
+// POST /api/auth/login
 router.post('/login', async (req: Request, res: Response) => {
   try {
     const { email, password } = req.body;
-
-    if (!email || !password) {
-      return res.status(400).json({ error: 'Email et mot de passe requis' });
-    }
-
-    // Find user
+    if (!email || !password) return res.status(400).json({ error: 'Email et mot de passe requis' });
     const userResult = await sql`SELECT id, email, password_hash, role FROM users WHERE email = ${email.toLowerCase().trim()}`;
-    if (userResult.length === 0) {
-      return res.status(401).json({ error: 'Identifiants invalides' });
-    }
-
+    if (userResult.length === 0) return res.status(401).json({ error: 'Identifiants invalides' });
     const user = userResult[0];
-
-    // Check password
     const passwordMatch = await bcrypt.compare(password, user.password_hash);
-    if (!passwordMatch) {
-      return res.status(401).json({ error: 'Identifiants invalides' });
-    }
-
-    // Generate token
-    const token = jwt.sign({ userId: user.id, email: user.email, role: user.role }, JWT_SECRET, {
-      expiresIn: '7d'
-    });
-
-    res.json({
-      success: true,
-      message: 'Connexion réussie',
-      token,
-      userId: user.id,
-      email: user.email
-    });
-
+    if (!passwordMatch) return res.status(401).json({ error: 'Identifiants invalides' });
+    const token = jwt.sign({ userId: user.id, email: user.email, role: user.role }, JWT_SECRET, { expiresIn: '7d' });
+    res.json({ success: true, token, userId: user.id, email: user.email, role: user.role });
   } catch (error: any) {
-    console.error('[login] Exception:', error);
+    console.error('[login] Error:', error);
     res.status(500).json({ error: 'Erreur serveur lors de la connexion' });
   }
 });
 
-// ============================================================
-// DÉCONNEXION
-// ============================================================
-router.post('/logout', authenticateUser, async (req: AuthRequest, res: Response) => {
-  // With stateless JWT, logout is handled on the client by destroying the token
-  res.json({ message: 'Déconnexion réussie' });
-});
-
-// ============================================================
-// UTILISATEUR ACTUEL
-// ============================================================
-router.get('/me', authenticateUser, async (req: AuthRequest, res: Response) => {
+// GET /api/auth/me
+router.get('/me', async (req: Request, res: Response) => {
   try {
-    res.json({
-      user: req.user
-    });
+    const authHeader = req.headers.authorization || '';
+    if (!authHeader.startsWith('Bearer ')) return res.status(401).json({ error: 'Non authentifié' });
+    const token = authHeader.replace('Bearer ', '').trim();
+    const decoded = jwt.verify(token, JWT_SECRET) as any;
+    res.json({ id: decoded.userId, email: decoded.email, role: decoded.role });
   } catch (error: any) {
-    res.status(500).json({ error: 'Erreur serveur' });
+    res.status(401).json({ error: 'Token invalide' });
   }
 });
 
-// ============================================================
-// VÉRIFIER L'ÉTAT DE LA SESSION
-// ============================================================
-router.get('/session', authenticateUser, async (req: AuthRequest, res: Response) => {
+
+// GET /api/auth/session (requis par getSession() du frontend Expo)
+router.get('/session', async (req: Request, res: Response) => {
   try {
-    res.json({
-      authenticated: true,
-      userId: req.user!.id,
-      email: req.user!.email,
-      role: req.user!.role
-    });
+    const authHeader = req.headers.authorization || '';
+    if (!authHeader.startsWith('Bearer ')) return res.status(401).json({ error: 'Non authentifié' });
+    const token = authHeader.replace('Bearer ', '').trim();
+    const decoded = jwt.verify(token, JWT_SECRET) as any;
+    res.json({ userId: decoded.userId || decoded.id, email: decoded.email, role: decoded.role || 'user' });
   } catch (error: any) {
-    res.status(401).json({ authenticated: false, error: 'Session invalide' });
+    res.status(401).json({ error: 'Token invalide' });
   }
 });
 

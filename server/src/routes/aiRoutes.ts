@@ -128,33 +128,21 @@ router.post('/chat', authenticateUser, upload.single('file'), async (req: any, r
                     { keywords: ['nettoyage', 'évacuation', 'gravats', 'déchet', 'chantier'], prix: 35.00, nom: 'Nettoyage soigné et évacuation des déchets', unite: 'forfait' }
                 ];
 
-                // 3. Benchmarks pour chaque article - Recherche multi-métiers avec la bibliothèque native
+                // 3. Benchmarks pour chaque article - Recherche multi-métiers avec la bibliothèque native (travaux + matériaux)
                 const benchmarks = extractedItems.map((item: any) => {
                     const designation = item.designation || item.item || 'Article';
                     const quantity = parseFloat(item.quantity || item.quantite || 1) || 1;
                     const unit = item.unit || item.unite || 'U';
                     const priceUnit = parseFloat(item.priceUnit || item.prix_unitaire_ht || item.prix || item.prix_devis || 0) || 0;
 
+                    const match = priceService.matchArticleWithDetails(designation, priceUnit);
+
+                    let refPrice = match.prixRef;
+                    let refName = match.refArticleNom;
+                    let refUnit = match.uniteRef || unit;
+
+                    // Fallback normatif si très grand écart
                     const lower = designation.toLowerCase();
-                    const keywords = lower.split(/[\s,()'-]+/).filter((w: string) => w.length > 2);
-                    const stopWords = ['pour', 'dans', 'avec', 'sans', 'sur', 'type', 'de', 'du', 'des', 'le', 'la', 'les', 'un', 'une', 'par', 'les'];
-                    const significantKeywords = keywords.filter((w: string) => !stopWords.includes(w));
-
-                    // Recherche dans la base native BTP
-                    const detectedTrade = priceService.detectTradeFromKeywords(significantKeywords);
-                    let results: any[] = [];
-                    if (detectedTrade) {
-                        results = priceService.searchInTrade(detectedTrade, significantKeywords);
-                    }
-                    if (results.length === 0) {
-                        results = priceService.searchAllTrades(significantKeywords, 5);
-                    }
-
-                    // Vérification avec les barèmes normatifs si le résultat bibliothèque est trop éloigné ou inexistant
-                    let refPrice = results[0]?.prix || null;
-                    let refName = results[0]?.nom || null;
-                    let refUnit = results[0]?.unite || null;
-
                     const defaultMatch = defaultBtpBenchmarks.find(b => b.keywords.some(k => lower.includes(k)));
                     if (defaultMatch && (!refPrice || refPrice > priceUnit * 3 || refPrice < priceUnit * 0.2)) {
                         refPrice = defaultMatch.prix;
@@ -167,10 +155,16 @@ router.post('/chat', authenticateUser, upload.single('file'), async (req: any, r
                         quantity,
                         unit,
                         priceUnit,
-                        detectedTrade: detectedTrade || 'TCE',
+                        detectedTrade: match.detectedTrade || 'TCE',
+                        lotNom: match.lotNom,
+                        chapitreNom: match.chapitreNom,
+                        ouvrageNom: match.ouvrageNom,
                         benchmark: refPrice,
                         benchmarkName: refName,
-                        benchmarkUnit: refUnit
+                        benchmarkUnit: refUnit,
+                        prixMateriauRef: match.prixMateriauRef || null,
+                        uniteMateriauRef: match.uniteMateriauRef || null,
+                        refMateriauNom: match.refMateriauNom || null
                     };
                 });
 
@@ -182,6 +176,11 @@ router.post('/chat', authenticateUser, upload.single('file'), async (req: any, r
                     const statut = ecart <= 10 ? 'vert' : ecart <= 20 ? 'jaune' : ecart <= 30 ? 'orange' : 'rouge';
                     const emoji = statut === 'vert' ? '🟢' : statut === 'jaune' ? '🟡' : statut === 'orange' ? '🟠' : '🔴';
 
+                    let detailMat = '';
+                    if (b.prixMateriauRef) {
+                        detailMat = ` (dont matér. réf. : ${b.prixMateriauRef} €/${b.uniteMateriauRef || b.unit})`;
+                    }
+
                     return {
                         numero: index + 1,
                         designation: b.item,
@@ -189,14 +188,20 @@ router.post('/chat', authenticateUser, upload.single('file'), async (req: any, r
                         unite: b.unit,
                         prix_devis: prixDevis,
                         prix_ref: prixRef,
+                        prix_materiau_ref: b.prixMateriauRef,
+                        unite_materiau_ref: b.uniteMateriauRef,
+                        lot_nom: b.lotNom,
+                        chapitre_nom: b.chapitreNom,
+                        ouvrage_nom: b.ouvrageNom,
+                        ref_article_nom: b.benchmarkName,
                         ecart_pourcent: ecart,
                         statut,
                         emoji,
                         commentaire: ecart > 20
-                            ? `Prix supérieur de ${ecart}% au tarif de référence marché (${b.benchmarkName || 'référence BTP'})`
+                            ? `Prix supérieur de +${ecart}% au tarif de référence marché (${b.benchmarkName || 'référence BTP'})${detailMat}`
                             : ecart < -10
-                            ? `Prix compétitif (-${Math.abs(ecart)}% sous la moyenne)`
-                            : 'Conforme aux barèmes moyens du marché TCE'
+                            ? `Prix compétitif (-${Math.abs(ecart)}% sous la moyenne marché)${detailMat}`
+                            : `Conforme aux barèmes moyens du marché TCE (${prixRef} €/${b.unit})${detailMat}`
                     };
                 });
 
@@ -246,13 +251,24 @@ Rédige un avis expert BTP clair et synthétique (3 phrases maximum) pour le cli
                     // Conserve la synthèse expert TCE détaillée calculée localement
                 }
 
+                const materialsBreakdown = priceService.estimateMaterialsBreakdown(articles);
+
                 const completeAnalyse = {
                     score_conformite: scoreConformite,
                     score: scoreConformite,
                     total_ht: Math.round(totalHt * 100) / 100,
                     total_ref: Math.round(totalRef * 100) / 100,
+                    total_materiaux_estime: materialsBreakdown.total_materiaux_estime_ht,
+                    total_pose_estime: materialsBreakdown.total_pose_estime_ht,
+                    pourcentage_materiaux: materialsBreakdown.pourcentage_materiaux,
+                    pourcentage_pose: materialsBreakdown.pourcentage_pose,
+                    recapitulatif_couts: materialsBreakdown.recapitulatif_couts,
+                    duree_estimee: materialsBreakdown.duree_estimee,
+                    tableau_materiaux: materialsBreakdown.materiaux_detailles,
+                    materiaux_detailles: materialsBreakdown.materiaux_detailles,
                     articles,
                     anomalies,
+                    synthese_fournitures: materialsBreakdown.synthese_fournitures,
                     resume: resumeFinal
                 };
 

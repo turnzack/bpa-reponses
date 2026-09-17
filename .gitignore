@@ -1,19 +1,42 @@
+# Dependencies
 node_modules/
+.pnpm-store/
+
+# Expo & Web builds
 .expo/
-.next/
 dist/
-build/
-*.exe
-*.mp4
-*.zip
-*.tar.gz
-*.log
+mobile/dist/
+frontend/dist/
+web-build/
+dist_native/
+expo-env.d.ts
+
+# Large AI models
+models/
 *.gguf
 *.bin
 *.pt
 *.safetensors
-erreur.txt
+
+# Environment & local files
 .env
 .env.*
 !.env.example
+*.log
+npm-debug.*
+yarn-debug.*
+pnpm-debug.log*
+erreur.txt
+
+# Temporary data & Archives
+*.exe
+*.rar
+*.zip
+*.tar.gz
+*.mp4
+*.bak
+server/data/jobs/
+
+# OS specific
 .DS_Store
+Thumbs.db
