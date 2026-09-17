@@ -302,12 +302,34 @@ export class PriceService {
             refName = "Reprise des fonds, enduisage et ratissage fin 2 passes (DTU 59.1)";
             refMatPrice = 2.80;
             refMatUnit = "m2";
-        } else if (lower.includes('aeration') || lower.includes('aération') || lower.includes('ventilation') || lower.includes('grille') || lower.includes('vmc')) {
-            refUnit = isForfait ? 'forfait' : 'u';
-            refPrice = (priceUnit && priceUnit >= 15 && priceUnit <= 50) ? Math.round(priceUnit * 0.95 * 100) / 100 : 24.00;
-            refName = "Contrôle, dépoussiérage et entretien des grilles d'aération fenêtres";
-            refMatPrice = 4.50;
-            refMatUnit = "u";
+        } else if (lower.includes('trappe') || lower.includes('trappes')) {
+            // Fourniture et pose trappe de visite placo / alu : 65 à 85 €/U
+            refUnit = 'U';
+            refPrice = (priceUnit && priceUnit >= 50 && priceUnit <= 110) ? Math.round(priceUnit * 0.95 * 100) / 100 : 72.50;
+            refName = "Fourniture et pose trappe de visite étanche / plaque de plâtre hydrofuge ou métallique (DTU 25.41)";
+            refMatPrice = 28.50;
+            refMatUnit = "U";
+        } else if (lower.includes('decoupe') || lower.includes('découpe')) {
+            // Découpe murs placo pour accès technique
+            refUnit = isForfait ? 'forfait' : 'm2';
+            refPrice = (priceUnit && priceUnit >= 14 && priceUnit <= 30) ? Math.round(priceUnit * 0.95 * 100) / 100 : 18.00;
+            refName = "Découpe soignée et dépose de doublage ou cloison placo pour passage réseaux / accès technique";
+            refMatPrice = 2.50;
+            refMatUnit = "m2";
+        } else if (lower.includes('ragreage') || lower.includes('ragréage') || lower.includes('vinyle') || lower.includes('pvc')) {
+            // Préparation ragréage autonivelant et pose dalles vinyle / PVC
+            refUnit = isForfait ? 'forfait' : 'm2';
+            refPrice = (priceUnit && priceUnit >= 35 && priceUnit <= 65) ? Math.round(priceUnit * 0.95 * 100) / 100 : 46.50;
+            refName = "Préparation de sol par ragréage autonivelant P3 et pose de dalles / lames vinyle (DTU 53.2)";
+            refMatPrice = 18.50;
+            refMatUnit = "m2";
+        } else if (lower.includes('decheterie') || lower.includes('déchèterie') || lower.includes('dechetterie') || lower.includes('gravat') || lower.includes('benne')) {
+            // Déchèterie et traitement des déchets
+            refUnit = 'forfait';
+            refPrice = (priceUnit && priceUnit >= 80 && priceUnit <= 200) ? Math.round(priceUnit * 0.95 * 100) / 100 : 125.00;
+            refName = "Forfait acheminement en centre de tri agréé, traitement et redevance de déchèterie BTP";
+            refMatPrice = 45.00;
+            refMatUnit = "forfait";
         } else if (isForfait) {
             refUnit = 'forfait';
             refPrice = (priceUnit && priceUnit > 0) ? Math.round(priceUnit * 0.94 * 100) / 100 : 50.00;
@@ -500,6 +522,86 @@ export class PriceService {
                         article_devis_associe: art.designation
                     }
                 );
+            } else if (desigLower.includes('trappe') || desigLower.includes('trappes')) {
+                const coutTrappe = Math.round(qte * 28.50 * 100) / 100;
+                totalMateriaux += coutTrappe;
+
+                materiauxDetailles.push({
+                    nom: "Trappe de visite étanche plâtre/alu à ouverture push-pull (NF)",
+                    corps_etat: "Plâtrerie & Doublage",
+                    famille: "Trappes de visite",
+                    quantite_estimee: qte,
+                    unite: "U",
+                    prix_unitaire_ref: 28.50,
+                    cout_total_estime: coutTrappe,
+                    descriptif_technique: "Trappe de visite affleurante étanche à l'air avec cadre aluminium et plaque hydrofuge à loqueteaux.",
+                    norme_ou_dtu: "DTU 25.41 / NF EN 13963",
+                    article_devis_associe: art.designation
+                });
+            } else if (desigLower.includes('decoupe') || desigLower.includes('découpe')) {
+                const coutLames = Math.round(Math.min(12, qte * 2.50) * 100) / 100;
+                totalMateriaux += coutLames;
+
+                materiauxDetailles.push({
+                    nom: "Lames carbure et consommables de découpe soignée plâtre",
+                    corps_etat: "Plâtrerie & Doublage",
+                    famille: "Consommables d'outillage",
+                    quantite_estimee: 1,
+                    unite: "Forfait",
+                    prix_unitaire_ref: coutLames,
+                    cout_total_estime: coutLames,
+                    descriptif_technique: "Lames spéciales plâtre sans poussière pour découpes précises sans arrachement de parement.",
+                    norme_ou_dtu: "Norme BTP / Sécurité",
+                    article_devis_associe: art.designation
+                });
+            } else if (desigLower.includes('ragreage') || desigLower.includes('ragréage') || desigLower.includes('vinyle') || desigLower.includes('pvc')) {
+                const surface = unitLower.includes('m2') || unitLower.includes('m²') ? qte : qte;
+                const coutRagreage = Math.round(surface * 1.5 * 5.20 * 100) / 100;
+                const coutColle = Math.round(surface * 0.3 * 8.50 * 100) / 100;
+                totalMateriaux += coutRagreage + coutColle;
+
+                materiauxDetailles.push(
+                    {
+                        nom: "Enduit de ragréage autonivelant autolissant fibré P3",
+                        corps_etat: "Revêtements de sol",
+                        famille: "Ragréages & Primaires",
+                        quantite_estimee: Math.round(surface * 1.5 * 10) / 10,
+                        unite: "Sac 25kg",
+                        prix_unitaire_ref: 5.20,
+                        cout_total_estime: coutRagreage,
+                        descriptif_technique: "Ragréage autonivelant P3 haute résistance pour rattrapage des planéités avant pose vinyle.",
+                        norme_ou_dtu: "DTU 53.2 / CSTB",
+                        article_devis_associe: art.designation
+                    },
+                    {
+                        nom: "Colle émulsion acrylique sans solvant pour sols PVC/vinyle",
+                        corps_etat: "Revêtements de sol",
+                        famille: "Colles & Fixateurs",
+                        quantite_estimee: Math.round(surface * 0.3 * 10) / 10,
+                        unite: "Kg",
+                        prix_unitaire_ref: 8.50,
+                        cout_total_estime: coutColle,
+                        descriptif_technique: "Colle haute adhérence à prise rapide sans solvant certifiée EMICODE EC1 Plus.",
+                        norme_ou_dtu: "DTU 53.2 / EN 14259",
+                        article_devis_associe: art.designation
+                    }
+                );
+            } else if (desigLower.includes('decheterie') || desigLower.includes('déchèterie') || desigLower.includes('dechetterie')) {
+                const coutDecheterie = Math.round(Math.min(50, montantLigneDevis * 0.35) * 100) / 100;
+                totalMateriaux += coutDecheterie;
+
+                materiauxDetailles.push({
+                    nom: "Redevance de traitement & valorisation des déchets en centre agréé BTP",
+                    corps_etat: "Installation & Repli",
+                    famille: "Évacuation & Environnement",
+                    quantite_estimee: 1,
+                    unite: "Forfait",
+                    prix_unitaire_ref: coutDecheterie,
+                    cout_total_estime: coutDecheterie,
+                    descriptif_technique: "Pesée, tri et redevance de recyclage écologique agréée Valobat / Eco-mobilier.",
+                    norme_ou_dtu: "Filière REP PMCB / Déchets BTP",
+                    article_devis_associe: art.designation
+                });
             } else if (desigLower.includes('nettoy') || desigLower.includes('evac') || desigLower.includes('évac') || desigLower.includes('dechet') || desigLower.includes('déchet') || desigLower.includes('repli')) {
                 const coutNettoyage = Math.round(Math.min(15, montantLigneDevis * 0.20) * 100) / 100;
                 totalMateriaux += coutNettoyage;

@@ -475,8 +475,7 @@ export function extractArticlesFromText(text: string): any[] {
 
     const cleanArticleName = (raw: string): string => {
         return raw
-            .replace(/^(?:[IVXLCDM]+\b|[0-9]+[.)\s-])\s*/i, '')
-            .replace(/^[0-9.-]+\s*/, '')
+            .replace(/^(?:[0-9]{1,2}[.)\s-]|[A-Z][.)\s-])\s+/, '')
             .trim();
     };
 
@@ -499,12 +498,12 @@ export function extractArticlesFromText(text: string): any[] {
         }
     }
 
-    // 2. Extraction ligne par ligne
+    // 2. Extraction ligne par ligne avec gestion avancée des tableaux BTP et descriptions multilignes
     let pendingDescription = '';
 
     for (let i = 0; i < lines.length; i++) {
         let line = lines[i].trim();
-        if (line.length < 3) continue;
+        if (line.length < 2) continue;
 
         if (excludePatterns.some(pat => pat.test(line))) {
             pendingDescription = '';
@@ -516,8 +515,59 @@ export function extractArticlesFromText(text: string): any[] {
             continue;
         }
 
-        // Nettoyer les séparateurs de tableau (pipes, tabulations)
+        // Nettoyer les séparateurs de tableau (pipes, tabulations multiples)
         const cleanLine = line.replace(/\|/g, ' ').replace(/\t+/g, ' ').replace(/\s{2,}/g, ' ');
+
+        // Pattern A (Tableaux BTP avec TVA en colonne, ex: '20% 2 76,24 € 152,48 €' ou 'Désignation 20% 3.5M2 42,44 € 148,54 €')
+        const pTable = cleanLine.match(/^(.*?)(?:(?:\s+|^)(?:20%|10%|5[.,]5%|5\.5%|20|10|5\.5)\s+)?(\d+(?:[.,]\d+)?)\s*(m²|m2|ml|m3|m|u|unite|unités|forfait|fft|ens|ensemble|kg|l|h|heures?|jours?|pce)?\s+(\d{1,4}(?:[\s\u00A0.]\d{3})*(?:[.,]\d{2})?)\s*€?\s+(\d{1,5}(?:[\s\u00A0.]\d{3})*(?:[.,]\d{2})?)\s*€?$/i);
+        if (pTable) {
+            let desigPart = pTable[1].trim();
+            let fullDesig = cleanArticleName([pendingDescription, desigPart].filter(Boolean).join(' ').trim());
+            let quantity = parsePrice(pTable[2]) || 1;
+            let unit = (pTable[3] || '').toLowerCase();
+            let priceUnit = parsePrice(pTable[4]);
+            let priceTotal = parsePrice(pTable[5]);
+
+            if (!unit) {
+                if (fullDesig.toLowerCase().includes('- m2') || fullDesig.toLowerCase().includes('- m²') || fullDesig.toLowerCase().includes('m2') || fullDesig.toLowerCase().includes('m²')) unit = 'm2';
+                else if (fullDesig.toLowerCase().includes('- ml') || fullDesig.toLowerCase().includes('ml')) unit = 'ml';
+                else if (fullDesig.toLowerCase().includes('forfait') || fullDesig.toLowerCase().includes('decheterie') || fullDesig.toLowerCase().includes('déchèterie') || fullDesig.toLowerCase().includes('nettoyage')) unit = 'forfait';
+                else unit = 'U';
+            }
+
+            // Correction code unité / taxe collé à la quantité (ex: '1120' -> quantité 1)
+            if (priceTotal > 0 && priceUnit > 0 && Math.abs(priceTotal - (quantity * priceUnit)) > 1) {
+                if (Math.abs(priceTotal - priceUnit) < 0.1) {
+                    quantity = 1;
+                    unit = 'forfait';
+                } else {
+                    const calcQte = Math.round((priceTotal / priceUnit) * 10) / 10;
+                    if (calcQte > 0 && Math.abs(priceTotal - (calcQte * priceUnit)) < 0.1) {
+                        quantity = calcQte;
+                    }
+                }
+            }
+
+            // Réconciliation intelligente si dimensions présentes dans la désignation
+            const embedded = extractEmbeddedDimensions(fullDesig);
+            if (embedded.surface && embedded.surface > 0 && (!quantity || quantity === 1)) {
+                quantity = embedded.surface;
+                unit = embedded.unit || 'm2';
+                if (priceTotal > 0) priceUnit = Math.round((priceTotal / quantity) * 100) / 100;
+            }
+
+            if (fullDesig.length >= 3 && priceUnit > 0 && !isLocationHeader(fullDesig)) {
+                articles.push({
+                    designation: fullDesig.replace(/\s+/g, ' ').replace(/\s+(?:20%|10%|5[.,]5%)$/, '').trim(),
+                    quantity,
+                    unite: unit,
+                    prix_unitaire_ht: priceUnit,
+                    prix_total_ht: priceTotal || Math.round(priceUnit * quantity * 100) / 100
+                });
+                pendingDescription = '';
+                continue;
+            }
+        }
 
         // Pattern 1 : Désignation ... Qté ... Unité ... PU HT ... Total HT
         const p1 = cleanLine.match(/^(.+?)\s+(\d+(?:[.,]\d+)?)\s*(m²|m2|ml|m3|m|u|unite|unités|forfait|fft|ens|ensemble|kg|l|h|heures?|j|jours?|pce|lots?)\s+(\d{1,4}(?:[\s\u00A0.]\d{3})*(?:[.,]\d{2})?)\s*€?(?:\s+(\d{1,5}(?:[\s\u00A0.]\d{3})*(?:[.,]\d{2})?)\s*€?)?$/i);
@@ -528,19 +578,12 @@ export function extractArticlesFromText(text: string): any[] {
             let priceUnit = parsePrice(p1[4]);
             let priceTotal = p1[5] ? parsePrice(p1[5]) : Math.round(priceUnit * quantity * 100) / 100;
 
-            // Réconciliation intelligente surface et quantité si dimensions présentes dans la désignation
             const embedded = extractEmbeddedDimensions(designation);
             if (embedded.surface && embedded.surface > 0) {
                 quantity = embedded.surface;
                 unit = embedded.unit || 'm2';
                 if (priceTotal > 0 && quantity > 0) {
                     priceUnit = Math.round((priceTotal / quantity) * 100) / 100;
-                }
-            } else if (priceTotal > 0 && priceUnit > 0 && Math.abs(priceTotal - (quantity * priceUnit)) > 5) {
-                // Si la quantité était erronée (ex: 3.4m hauteur au lieu de 100m² pour total 2923.20€)
-                const realQty = Math.round((priceTotal / priceUnit) * 10) / 10;
-                if (realQty > 0 && Math.abs(priceTotal - (realQty * priceUnit)) <= 2) {
-                    quantity = realQty;
                 }
             }
 
@@ -552,40 +595,11 @@ export function extractArticlesFromText(text: string): any[] {
 
             if (designation.length >= 3 && priceUnit > 0 && !isLocationHeader(designation)) {
                 articles.push({
-                    designation,
+                    designation: designation.replace(/\s+/g, ' ').trim(),
                     quantity,
                     unite: unit,
                     prix_unitaire_ht: priceUnit,
                     prix_total_ht: priceTotal || Math.round(priceUnit * quantity * 100) / 100
-                });
-                pendingDescription = '';
-                continue;
-            }
-        }
-
-        // Pattern 2 : Désignation ... Unité ... Qté ... PU HT
-        const p2 = cleanLine.match(/^(.+?)\s+(m²|m2|ml|m3|m|u|forfait|fft|ens|kg|l|h)\s+(\d+(?:[.,]\d+)?)\s+(\d{1,4}(?:[\s\u00A0.]\d{3})*(?:[.,]\d{2})?)/i);
-        if (p2) {
-            const designation = cleanArticleName((pendingDescription ? `${pendingDescription} - ` : '') + p2[1]);
-            let unit = p2[2].toLowerCase();
-            let quantity = parsePrice(p2[3]) || 1;
-            let priceUnit = parsePrice(p2[4]);
-            let priceTotal = Math.round(priceUnit * quantity * 100) / 100;
-
-            const embedded = extractEmbeddedDimensions(designation);
-            if (embedded.surface && embedded.surface > 0) {
-                quantity = embedded.surface;
-                unit = embedded.unit || 'm2';
-                priceUnit = Math.round((priceTotal / quantity) * 100) / 100;
-            }
-
-            if (designation.length >= 3 && priceUnit > 0 && !isLocationHeader(designation)) {
-                articles.push({
-                    designation,
-                    quantity,
-                    unite: unit,
-                    prix_unitaire_ht: priceUnit,
-                    prix_total_ht: priceTotal
                 });
                 pendingDescription = '';
                 continue;
@@ -621,7 +635,7 @@ export function extractArticlesFromText(text: string): any[] {
                 }
 
                 articles.push({
-                    designation,
+                    designation: designation.replace(/\s+/g, ' ').trim(),
                     quantity,
                     unite: unit,
                     prix_unitaire_ht: priceUnit,
@@ -632,9 +646,9 @@ export function extractArticlesFromText(text: string): any[] {
             }
         }
 
-        // Si la ligne ressemble à une description de travaux (sans chiffres de prix), on la met en réserve
-        if (line.length >= 8 && line.length <= 100 && !/\d{2,}/.test(line) && !excludePatterns.some(p => p.test(line))) {
-            pendingDescription = line;
+        // Si la ligne ressemble à un texte de désignation ou suite de description, on la conserve
+        if (line.length >= 3 && !excludePatterns.some(p => p.test(line))) {
+            pendingDescription = pendingDescription ? `${pendingDescription} ${line}` : line;
         } else {
             pendingDescription = '';
         }
