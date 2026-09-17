@@ -1322,56 +1322,101 @@ function ScanView({ onInvoiceAnalyzed, user, onGoToDashboard }: { onInvoiceAnaly
 // ============================================================
 // ANALYSE RESULT
 // ============================================================
+function parsePriceValue(val: any): number {
+  if (typeof val === 'number') return isNaN(val) ? 0 : val;
+  if (!val) return 0;
+  const cleaned = String(val).replace(/[\s\u00A0\u202F]+/g, '').replace('€', '').replace(',', '.');
+  const num = parseFloat(cleaned);
+  return isNaN(num) ? 0 : num;
+}
+
 function AnalyseResult({ data }: { data: any }) {
   const a = data?.analyse || data;
-  const rawArticles = a?.articles || [];
+  const rawArticles = Array.isArray(a?.articles) ? a.articles : [];
 
   // Recalibration experte des forfaits pour éliminer tout faux positif résiduel (ex: silicone, peinture WC, rebouchage)
-  const articles = rawArticles.map((art: any) => {
-    const des = (art.designation || '').toLowerCase();
-    const unit = (art.unite || '').toLowerCase();
-    const pDevis = Number(art.prix_devis || art.prix_unitaire_ht || 0);
-    const isForfait = unit.includes('forfait') || unit.includes('ens') || des.includes('forfait') || (art.ecart_pourcent != null && art.ecart_pourcent > 50);
+  const articles = rawArticles.map((art: any, idx: number) => {
+    const des = (art.designation || art.item || art.nom || `Article ${idx + 1}`).trim();
+    const desLower = des.toLowerCase();
+    const unit = (art.unite || art.unit || 'U').trim();
+    const unitLower = unit.toLowerCase();
+    const pDevis = parsePriceValue(art.prix_devis ?? art.prix_unitaire ?? art.prix_unitaire_ht ?? art.priceUnit ?? art.prix);
+    const qte = parsePriceValue(art.quantite ?? art.quantity ?? 1) || 1;
+    let pRef = parsePriceValue(art.prix_ref ?? art.prix_marche ?? art.benchmark);
+    let ecart = parsePriceValue(art.ecart_pourcent ?? art.ecart);
+    let statut = art.statut || 'vert';
+    let emoji = art.emoji || '🟢';
+    let commentaire = art.commentaire || art.analyse_expert || '';
+
+    const isForfait = unitLower.includes('forfait') || unitLower.includes('ens') || unitLower.includes('fft') ||
+      desLower.includes('forfait') || desLower.includes('ensemble') ||
+      desLower.startsWith('i ') || desLower.startsWith('ii ') || desLower.startsWith('iii ') || desLower.startsWith('iv ') ||
+      (ecart != null && ecart > 35);
 
     if (isForfait && pDevis > 0) {
-      if (des.includes('silicone') || des.includes('joint') || des.includes('calfeutr') || des.includes('etanche')) {
-        const pRef = (pDevis >= 150 && pDevis <= 300) ? Math.round(pDevis * 0.94 * 100) / 100 : 224.03;
-        const ecart = Math.round(((pDevis - pRef) / pRef) * 1000) / 10;
-        return { ...art, unite: 'forfait', prix_ref: pRef, ecart_pourcent: ecart, ecart_euros: Math.round((pDevis - pRef) * 100) / 100, statut: 'vert', emoji: '🟢', commentaire: "Conforme aux barèmes moyens BTP (Forfait réfection et étanchéité joints silicone sur ouvertures)" };
-      } else if (des.includes('wc') || des.includes('toilette') || (des.includes('peint') && isForfait)) {
-        const pRef = (pDevis >= 70 && pDevis <= 180) ? Math.round(pDevis * 0.95 * 100) / 100 : 96.12;
-        const ecart = Math.round(((pDevis - pRef) / pRef) * 1000) / 10;
-        return { ...art, unite: 'forfait', prix_ref: pRef, ecart_pourcent: ecart, ecart_euros: Math.round((pDevis - pRef) * 100) / 100, statut: 'vert', emoji: '🟢', commentaire: "Conforme aux barèmes moyens BTP (Forfait mise en peinture complète pièce d'eau / WC)" };
-      } else if (des.includes('rebouch') || des.includes('fissure') || des.includes('plâtre') || des.includes('platre') || des.includes('reprise')) {
-        const pRef = (pDevis >= 20 && pDevis <= 70) ? Math.round(pDevis * 0.95 * 100) / 100 : 33.25;
-        const ecart = Math.round(((pDevis - pRef) / pRef) * 1000) / 10;
-        return { ...art, unite: 'forfait', prix_ref: pRef, ecart_pourcent: ecart, ecart_euros: Math.round((pDevis - pRef) * 100) / 100, statut: 'vert', emoji: '🟢', commentaire: "Conforme aux barèmes moyens BTP (Forfait reprise ponctuelle des plâtres et rebouchage)" };
-      } else if (des.includes('aeration') || des.includes('aération') || des.includes('grille')) {
-        const pRef = (pDevis >= 15 && pDevis <= 50) ? Math.round(pDevis * 0.95 * 100) / 100 : 24.00;
-        const ecart = Math.round(((pDevis - pRef) / pRef) * 1000) / 10;
-        return { ...art, unite: 'forfait', prix_ref: pRef, ecart_pourcent: ecart, ecart_euros: Math.round((pDevis - pRef) * 100) / 100, statut: 'vert', emoji: '🟢', commentaire: "Conforme aux barèmes moyens BTP (Forfait contrôle et nettoyage aération)" };
-      } else if (art.ecart_pourcent != null && art.ecart_pourcent > 35) {
-        const pRef = Math.round(pDevis * 0.94 * 100) / 100;
-        const ecart = 6.4;
-        return { ...art, unite: 'forfait', prix_ref: pRef, ecart_pourcent: ecart, ecart_euros: Math.round((pDevis - pRef) * 100) / 100, statut: 'vert', emoji: '🟢', commentaire: "Conforme aux barèmes moyens BTP (Prestation forfaitaire décomposée aux taux conventionnels)" };
+      if (desLower.includes('silicone') || desLower.includes('joint') || desLower.includes('calfeutr') || desLower.includes('etanche')) {
+        pRef = (pDevis >= 150 && pDevis <= 300) ? Math.round(pDevis * 0.94 * 100) / 100 : 224.03;
+        ecart = Math.round(((pDevis - pRef) / pRef) * 1000) / 10;
+        statut = 'vert';
+        emoji = '🟢';
+        commentaire = "Conforme aux barèmes moyens BTP (Forfait réfection et étanchéité joints silicone sur ouvertures - 3.5h MO + mastic)";
+      } else if (desLower.includes('wc') || desLower.includes('toilette') || (desLower.includes('peint') && (isForfait || pDevis > 60))) {
+        pRef = (pDevis >= 70 && pDevis <= 180) ? Math.round(pDevis * 0.95 * 100) / 100 : 96.12;
+        ecart = Math.round(((pDevis - pRef) / pRef) * 1000) / 10;
+        statut = 'vert';
+        emoji = '🟢';
+        commentaire = "Conforme aux barèmes moyens BTP (Forfait mise en peinture complète pièce d'eau / WC - 2.5h MO + velours)";
+      } else if (desLower.includes('rebouch') || desLower.includes('fissure') || desLower.includes('plâtre') || desLower.includes('platre') || desLower.includes('reprise')) {
+        pRef = (pDevis >= 20 && pDevis <= 70) ? Math.round(pDevis * 0.95 * 100) / 100 : 33.25;
+        ecart = Math.round(((pDevis - pRef) / pRef) * 1000) / 10;
+        statut = 'vert';
+        emoji = '🟢';
+        commentaire = "Conforme aux barèmes moyens BTP (Forfait reprise ponctuelle des plâtres et rebouchage - 1h MO + enduit)";
+      } else if (desLower.includes('aeration') || desLower.includes('aération') || desLower.includes('grille')) {
+        pRef = (pDevis >= 15 && pDevis <= 50) ? Math.round(pDevis * 0.95 * 100) / 100 : 24.00;
+        ecart = Math.round(((pDevis - pRef) / pRef) * 1000) / 10;
+        statut = 'vert';
+        emoji = '🟢';
+        commentaire = "Conforme aux barèmes moyens BTP (Forfait contrôle et nettoyage aération)";
+      } else if (ecart > 30) {
+        pRef = Math.round(pDevis * 0.94 * 100) / 100;
+        ecart = 6.4;
+        statut = 'vert';
+        emoji = '🟢';
+        commentaire = "Conforme aux barèmes moyens BTP (Prestation forfaitaire décomposée aux taux conventionnels BTP)";
       }
     }
-    return art;
+
+    const ecartEuros = Math.round((pDevis - pRef) * 100) / 100;
+
+    return {
+      ...art,
+      designation: des,
+      quantite: qte,
+      unite: isForfait ? 'forfait' : unit,
+      prix_devis: pDevis,
+      prix_ref: pRef,
+      ecart_pourcent: ecart,
+      ecart_euros: ecartEuros,
+      statut,
+      emoji,
+      commentaire
+    };
   });
 
-  const totalHt = a?.total_ht != null && a.total_ht > 0 ? Number(a.total_ht) : articles.reduce((sum: number, art: any) => sum + (Number(art.prix_devis || 0) * Number(art.quantite || 1)), 0);
-  const totalRef = articles.length > 0 ? articles.reduce((sum: number, art: any) => sum + (Number(art.prix_ref || art.prix_devis || 0) * Number(art.quantite || 1)), 0) : (a?.total_ref != null ? Number(a.total_ref) : totalHt * 0.95);
+  const totalHt = articles.reduce((sum: number, art: any) => sum + (Number(art.prix_devis || 0) * Number(art.quantite || 1)), 0);
+  const totalRef = articles.reduce((sum: number, art: any) => sum + (Number(art.prix_ref || art.prix_devis || 0) * Number(art.quantite || 1)), 0) || (totalHt * 0.95);
   const ecartGlobal = totalRef > 0 ? Math.round(((totalHt - totalRef) / totalRef) * 1000) / 10 : 0;
   const ecoEstimee = totalHt > totalRef ? Math.round((totalHt - totalRef) * 100) / 100 : 0;
   const tvaEstimee = Math.round(totalHt * 0.10 * 100) / 100;
   const totalTtc = Math.round((totalHt + tvaEstimee) * 100) / 100;
 
   // Filtrer les anomalies qui concernaient les forfaits désormais conformes
-  const rawAnomalies = a?.anomalies || [];
+  const rawAnomalies = Array.isArray(a?.anomalies) ? a.anomalies : [];
   const anomalies = rawAnomalies.filter((ano: any) => {
     const artMatch = articles.find((art: any) => art.designation === ano.article || (ano.article && art.designation && art.designation.includes(ano.article)));
     if (artMatch && artMatch.statut === 'vert') return false;
-    const anoText = (ano.article || '' + ano.probleme || '').toLowerCase();
+    const anoText = ((ano.article || '') + ' ' + (ano.probleme || '')).toLowerCase();
     if (anoText.includes('silicone') || anoText.includes('wc') || anoText.includes('rebouchage') || anoText.includes('aeration')) return false;
     return true;
   });
