@@ -356,6 +356,26 @@ function generateAnalyseHtml(analyseData: any) {
         </div>
     </div>`;
 
+    // Décomposition Main d'œuvre (Taux horaires issus de bibliotheque_materiaux.json)
+    const decompMo = Array.isArray(de.decomposition_main_oeuvre) && de.decomposition_main_oeuvre.length > 0 ? de.decomposition_main_oeuvre : [
+        { qualification: "Manoeuvre niveau I/OE1", volume_heures: Math.round(Number(de.volume_horaire_total_heures || baseHours) * 0.20 * 10) / 10, unite: "h", taux_horaire_ref: 18.32, cout_total: Math.round(Number(de.volume_horaire_total_heures || baseHours) * 0.20 * 18.32 * 100) / 100, role: "Bâchage étanche polyane, manutention et nettoyage/repli" },
+        { qualification: "Ouvrier niveau III/CP2", volume_heures: Math.round(Number(de.volume_horaire_total_heures || baseHours) * 0.80 * 10) / 10, unite: "h", taux_horaire_ref: 26.07, cout_total: Math.round(Number(de.volume_horaire_total_heures || baseHours) * 0.80 * 26.07 * 100) / 100, role: "Exécution technique soignée, préparation des supports et finitions" }
+    ];
+
+    html += '<div style="margin-bottom:14px;"><div style="font-size:12.5px; font-weight:700; color:#d2a8ff; margin-bottom:6px;">🔨 Sous-détail Main d\'œuvre & Taux horaires conventionnels (BPA / Capeb)</div>';
+    html += '<div class="table-responsive"><table><thead><tr><th>Qualification Professionnelle</th><th>Volume</th><th>Unité</th><th>Taux Réf. HT</th><th>Sous-Total HT</th><th>Rôle sur le chantier</th></tr></thead><tbody>';
+    decompMo.forEach((mo: any) => {
+        html += `<tr>
+            <td style="font-weight:600; color:#f0f6fc;">${mo.qualification}</td>
+            <td class="text-center font-bold" style="color:#e3b341;">${mo.volume_heures}</td>
+            <td class="text-center">${mo.unite || 'h'}</td>
+            <td class="text-right num-font" style="color:#58a6ff;">${Number(mo.taux_horaire_ref || 0).toFixed(2)} €/h</td>
+            <td class="text-right num-font" style="font-weight:bold; color:#d2a8ff;">${Number(mo.cout_total || 0).toFixed(2)} €</td>
+            <td style="font-size:11.5px; color:#c9d1d9;">${mo.role}</td>
+        </tr>`;
+    });
+    html += '</tbody></table></div></div>';
+
     if (Array.isArray(de.planning_phases) && de.planning_phases.length > 0) {
         html += '<div class="table-responsive"><table class="table-phases"><thead><tr><th>Phase</th><th>Durée Estimée</th><th>Détail des Opérations & Contraintes Techniques</th></tr></thead><tbody>';
         de.planning_phases.forEach((p: any) => {
@@ -370,7 +390,8 @@ function generateAnalyseHtml(analyseData: any) {
 
     // SECTION 3 : 🧱 TABLEAU DÉTAILLÉ DES MATÉRIAUX & QUANTITÉS
     if (tm.length > 0) {
-        html += '<h2>🧱 3. Tableau Détaillé des Matériaux & Quantités</h2>';
+        html += '<h2>🧱 3. Tableau Détaillé des Matériaux, Quantités & Normes DTU</h2>';
+        html += '<div style="font-size:11.5px; color:#8b949e; margin-bottom:8px;">Base de référence : <em>bibliotheque_materiaux.json</em> (23 688 références professionnelles BTP)</div>';
         html += '<div class="table-responsive"><table class="table-materiaux"><thead><tr><th>Corps d\'état</th><th>Désignation Produit / Fourniture</th><th>Qté</th><th>Unité</th><th>P.U Réf HT</th><th>Coût Total</th><th>Part</th><th>Descriptif Technique & Normes DTU</th></tr></thead><tbody>';
         tm.forEach((mat: any) => {
             const nom = mat.nom || mat.designation || 'Fourniture';

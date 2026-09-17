@@ -254,6 +254,8 @@ export class PriceService {
         total_pose_estime_ht: number;
         pourcentage_materiaux: number;
         pourcentage_pose: number;
+        recapitulatif_couts: any;
+        duree_estimee: any;
         materiaux_detailles: Array<{
             nom: string;
             corps_etat: string;
@@ -262,6 +264,7 @@ export class PriceService {
             unite: string;
             prix_unitaire_ref: number;
             cout_total_estime: number;
+            part_budget_materiaux_pct?: number;
             descriptif_technique: string;
             norme_ou_dtu: string;
             article_devis_associe: string;
@@ -272,6 +275,10 @@ export class PriceService {
         let totalRef = 0;
         let totalMateriaux = 0;
         const materiauxDetailles: any[] = [];
+
+        // Taux horaires officiels issus de bibliotheque_materiaux.json (Lot main_d_oeuvre)
+        const TAUX_MANOEUVRE_OE1 = 18.32; // Manoeuvre niveau I/OE1
+        const TAUX_OUVRIER_CP2 = 26.07;   // Ouvrier qualifié niveau III/CP2
 
         for (const art of articles) {
             const qte = parseFloat(art.quantite as any) || 1;
@@ -289,25 +296,28 @@ export class PriceService {
 
             const trade = this.detectTradeFromKeywords(keywords) || 'general';
 
-            // Recherche des fournitures spécifiques associées dans la bibliothèque
-            const foundMaterials = this.searchMaterials(keywords, 2);
+            // Recherche des fournitures spécifiques associées dans la bibliothèque de 23 688 matériaux
+            const foundMaterials = this.searchMaterials(keywords, 4);
 
             if (trade === 'peinture') {
                 const surface = art.unite?.toLowerCase().includes('m2') || art.unite?.toLowerCase().includes('m²') ? qte : qte * 10;
                 
                 // 1. Impression / Sous-couche
                 const qteImpression = Math.round((surface / 9) * 10) / 10; // ~9 m²/L
-                const prixImpression = foundMaterials.find(m => m.nom.toLowerCase().includes('impression') || m.nom.toLowerCase().includes('primaire'))?.prix || 4.20;
+                const matImp = foundMaterials.find(m => m.nom.toLowerCase().includes('impression') || m.nom.toLowerCase().includes('primaire'));
+                const prixImpression = matImp?.prix || 4.20;
                 const coutImpression = Math.round(qteImpression * prixImpression * 100) / 100;
                 
                 // 2. Peinture de finition (2 couches)
                 const qteFinition = Math.round((surface / 4.5) * 10) / 10; // ~4.5 m²/L pour 2 couches
-                const prixFinition = foundMaterials.find(m => m.nom.toLowerCase().includes('finition') || m.nom.toLowerCase().includes('acrylique') || m.nom.toLowerCase().includes('mat'))?.prix || 6.80;
+                const matFin = foundMaterials.find(m => m.nom.toLowerCase().includes('finition') || m.nom.toLowerCase().includes('acrylique') || m.nom.toLowerCase().includes('mat') || m.nom.toLowerCase().includes('velours'));
+                const prixFinition = matFin?.prix || 6.80;
                 const coutFinition = Math.round(qteFinition * prixFinition * 100) / 100;
 
                 // 3. Enduit et préparation
                 const qteEnduit = Math.round(surface * 0.6 * 10) / 10; // ~0.6 kg/m²
-                const prixEnduit = 1.85;
+                const matEnd = foundMaterials.find(m => m.nom.toLowerCase().includes('enduit') || m.nom.toLowerCase().includes('platre') || m.nom.toLowerCase().includes('lissage'));
+                const prixEnduit = matEnd?.prix || 1.85;
                 const coutEnduit = Math.round(qteEnduit * prixEnduit * 100) / 100;
 
                 // 4. Consommables de protection
@@ -317,9 +327,9 @@ export class PriceService {
 
                 materiauxDetailles.push(
                     {
-                        nom: "Impression hydrofuge régulatrice de fond",
+                        nom: matImp?.nom || "Impression hydrofuge régulatrice de fond anti-auréoles",
                         corps_etat: "Peinture",
-                        famille: "Primaire d'accroche",
+                        famille: matImp?.chapitreNom || "Primaire d'accroche",
                         quantite_estimee: qteImpression,
                         unite: "Litre",
                         prix_unitaire_ref: prixImpression,
@@ -329,9 +339,9 @@ export class PriceService {
                         article_devis_associe: art.designation
                     },
                     {
-                        nom: "Peinture finition velours / mate dépolluante (2 couches)",
+                        nom: matFin?.nom || "Peinture finition velours / mate dépolluante (2 couches)",
                         corps_etat: "Peinture",
-                        famille: "Finition",
+                        famille: matFin?.chapitreNom || "Finition intérieure",
                         quantite_estimee: qteFinition,
                         unite: "Litre",
                         prix_unitaire_ref: prixFinition,
@@ -341,39 +351,67 @@ export class PriceService {
                         article_devis_associe: art.designation
                     },
                     {
-                        nom: "Enduit de lissage et ratissage en pâte",
-                        corps_etat: "Peinture",
-                        famille: "Préparation des fonds",
+                        nom: matEnd?.nom || "Enduit de lissage et ratissage en pâte",
+                        corps_etat: "Peinture & Plâtrerie",
+                        famille: matEnd?.chapitreNom || "Préparation des fonds",
                         quantite_estimee: qteEnduit,
                         unite: "Kg",
                         prix_unitaire_ref: prixEnduit,
                         cout_total_estime: coutEnduit,
                         descriptif_technique: "Enduit prêt à l'emploi extra-fin pour surfaçage soigné avant mise en peinture.",
-                        norme_ou_dtu: "DTU 59.1",
+                        norme_ou_dtu: "DTU 59.1 / DTU 25.41",
                         article_devis_associe: art.designation
                     },
                     {
-                        nom: "Kit consommables (polyane 40µm, adhésif masquage, abrasifs)",
-                        corps_etat: "Peinture",
-                        famille: "Protection & Consommables",
+                        nom: "Kit consommables & protections étanches (polyane 40µm, adhésif masquage, abrasifs)",
+                        corps_etat: "Consommables & Protections",
+                        famille: "Protections de chantier",
                         quantite_estimee: 1,
                         unite: "Forfait",
                         prix_unitaire_ref: coutProtection,
                         cout_total_estime: coutProtection,
                         descriptif_technique: "Film polyane étanche de protection des sols et mobilier + rubans adhésifs sans résidu.",
-                        norme_ou_dtu: "Conformité Chantier Propre",
+                        norme_ou_dtu: "Conformité Chantier Propre / DTU 59.1",
                         article_devis_associe: art.designation
                     }
                 );
+            } else if (foundMaterials.length > 0) {
+                // Utilisation directe des matériaux trouvés dans bibliotheque_materiaux.json
+                foundMaterials.slice(0, 3).forEach((mat, mIdx) => {
+                    const matPrice = mat.prix || (prixRefArt * 0.35);
+                    const matQte = mIdx === 0 ? qte : (mat.unite === 'm' ? qte * 1.05 : 1);
+                    const coutTot = Math.round(matPrice * matQte * 100) / 100;
+                    totalMateriaux += coutTot;
+
+                    let dtuNorme = "Normes BTP / Avis Technique CSTB";
+                    if (trade === 'plomberie') dtuNorme = "DTU 60.1 / ACS";
+                    else if (trade === 'electricite') dtuNorme = "Norme NF C 15-100";
+                    else if (trade === 'carrelage') dtuNorme = "DTU 52.2 / CSTB";
+                    else if (trade === 'couverture') dtuNorme = "DTU 40 / Qualibat";
+                    else if (trade === 'maconnerie') dtuNorme = "DTU 20.1 / DTU 13.1";
+
+                    materiauxDetailles.push({
+                        nom: mat.nom,
+                        corps_etat: mat.lotNom || (trade !== 'general' ? trade.toUpperCase() : "Fournitures BTP"),
+                        famille: mat.chapitreNom || mat.ouvrageNom || "Composants techniques",
+                        quantite_estimee: Math.round(matQte * 10) / 10,
+                        unite: mat.unite || "U",
+                        prix_unitaire_ref: Math.round(matPrice * 100) / 100,
+                        cout_total_estime: coutTot,
+                        descriptif_technique: `Composant certifié de la base matériaux (${mat.chapitreNom ? mat.chapitreNom + ' - ' : ''}${mat.ouvrageNom || 'fourniture BTP standard'}).`,
+                        norme_ou_dtu: dtuNorme,
+                        article_devis_associe: art.designation
+                    });
+                });
             } else if (trade === 'plomberie') {
-                const matRef = foundMaterials[0]?.prix || (prixRefArt * 0.42);
+                const matRef = (prixRefArt * 0.42);
                 const coutTotMat = Math.round(matRef * qte * 100) / 100;
                 totalMateriaux += coutTotMat;
 
                 materiauxDetailles.push({
-                    nom: foundMaterials[0]?.nom || "Fournitures et composants de plomberie sanitaire",
+                    nom: "Raccords laiton, tube multicouche/cuivre et vannes d'isolement NF",
                     corps_etat: "Plomberie & Sanitaire",
-                    famille: "Équipement & Réseau",
+                    famille: "Tuyauteries & Raccordement",
                     quantite_estimee: qte,
                     unite: art.unite || "U",
                     prix_unitaire_ref: Math.round(matRef * 100) / 100,
@@ -383,12 +421,12 @@ export class PriceService {
                     article_devis_associe: art.designation
                 });
             } else if (trade === 'electricite') {
-                const matRef = foundMaterials[0]?.prix || (prixRefArt * 0.40);
+                const matRef = (prixRefArt * 0.40);
                 const coutTotMat = Math.round(matRef * qte * 100) / 100;
                 totalMateriaux += coutTotMat;
 
                 materiauxDetailles.push({
-                    nom: foundMaterials[0]?.nom || "Appareillage et câblage normalisé NF",
+                    nom: "Appareillage modulaire et conducteurs normalisés NF",
                     corps_etat: "Électricité",
                     famille: "Distribution & Appareillage",
                     quantite_estimee: qte,
@@ -401,7 +439,7 @@ export class PriceService {
                 });
             } else if (trade === 'carrelage') {
                 const surface = art.unite?.toLowerCase().includes('m2') || art.unite?.toLowerCase().includes('m²') ? qte : qte;
-                const coutColle = Math.round(surface * 4.80 * 100) / 100; // ~4.80 €/m² de mortier colle C2S1 + joint
+                const coutColle = Math.round(surface * 4.80 * 100) / 100;
                 totalMateriaux += coutColle;
 
                 materiauxDetailles.push(
@@ -433,12 +471,12 @@ export class PriceService {
             } else {
                 // Autres corps d'état
                 const matRatio = 0.35;
-                const matRef = foundMaterials[0]?.prix || (prixRefArt * matRatio);
+                const matRef = (prixRefArt * matRatio);
                 const coutTotMat = Math.round(matRef * qte * 100) / 100;
                 totalMateriaux += coutTotMat;
 
                 materiauxDetailles.push({
-                    nom: foundMaterials[0]?.nom || `Fournitures de mise en œuvre (${art.designation})`,
+                    nom: `Fournitures et consommables de mise en œuvre (${art.designation})`,
                     corps_etat: trade !== 'general' ? trade.toUpperCase() : "Tous Corps d'État",
                     famille: "Matériaux & Quincaillerie",
                     quantite_estimee: qte,
@@ -464,10 +502,9 @@ export class PriceService {
         }));
 
         // -------------------------------------------------------------
-        // CALCUL DE LA DURÉE ESTIMÉE DES TRAVAUX (Cadences BTP)
+        // CALCUL DE LA DURÉE ESTIMÉE & DÉCOMPOSITION MAIN D'ŒUVRE (Cadences BTP & bibliotheque_materiaux.json)
         // -------------------------------------------------------------
         let totalHeuresOuvrage = 0;
-        let nbPhases = 0;
         const planningPhases: Array<{ phase: string; titre: string; description: string; duree_estimee: string }> = [];
 
         for (const art of articles) {
@@ -498,6 +535,32 @@ export class PriceService {
         const joursOuvrierSeul = Math.max(1, Math.ceil(totalHeuresOuvrage / 7));
         const equipeCompagnons = joursOuvrierSeul > 5 ? 2 : 1;
         const joursEstimesChantier = Math.max(1, Math.ceil(totalHeuresOuvrage / (7 * equipeCompagnons)));
+
+        // Décomposition Main d'œuvre BTP selon bibliotheque_materiaux.json
+        const heuresManoeuvre = Math.round(totalHeuresOuvrage * 0.20 * 10) / 10; // 20% manutention, protection, évacuation
+        const heuresOuvrier = Math.round((totalHeuresOuvrage - heuresManoeuvre) * 10) / 10; // 80% pose et exécution technique
+        const coutManoeuvre = Math.round(heuresManoeuvre * TAUX_MANOEUVRE_OE1 * 100) / 100;
+        const coutOuvrier = Math.round(heuresOuvrier * TAUX_OUVRIER_CP2 * 100) / 100;
+        const totalMoCalcule = Math.round((coutManoeuvre + coutOuvrier) * 100) / 100;
+
+        const decompositionMainOeuvre = [
+            {
+                qualification: "Manoeuvre niveau I/OE1",
+                volume_heures: heuresManoeuvre,
+                unite: "h",
+                taux_horaire_ref: TAUX_MANOEUVRE_OE1,
+                cout_total: coutManoeuvre,
+                role: "Installation, protection polyane étanche, approvisionnement et nettoyage/repli"
+            },
+            {
+                qualification: "Ouvrier niveau III/CP2",
+                volume_heures: heuresOuvrier,
+                unite: "h",
+                taux_horaire_ref: TAUX_OUVRIER_CP2,
+                cout_total: coutOuvrier,
+                role: "Exécution technique qualifiée, façonnage, raccordement et finitions soignées"
+            }
+        ];
 
         // Construction du planning prévisionnel
         planningPhases.push({
@@ -561,10 +624,12 @@ export class PriceService {
             jours_ouvres_estimes: joursEstimesChantier,
             equipe_recommandee: `${equipeCompagnons} technicien(s) / compagnon(s) qualifié(s)`,
             delais_incompressibles: delaisIncompressibles,
-            planning_phases: planningPhases
+            planning_phases: planningPhases,
+            decomposition_main_oeuvre: decompositionMainOeuvre,
+            total_mo_calcule: totalMoCalcule
         };
 
-        const syntheseFournitures = `Coût des matériaux estimé à ${totalMateriaux.toFixed(2)} € HT (${pctMat}% du montant global), main d'œuvre / pose à ${totalPose.toFixed(2)} € HT (${pctPose}%). Durée estimée : ~${joursEstimesChantier} jour(s) ouvré(s) (${totalHeuresOuvrage}h de travail).`;
+        const syntheseFournitures = `Coût des matériaux estimé à ${totalMateriaux.toFixed(2)} € HT (${pctMat}% du montant global), main d'œuvre / pose à ${totalPose.toFixed(2)} € HT (${pctPose}% - ${totalHeuresOuvrage}h de travail décomposées en Manoeuvre I/OE1 à 18,32 €/h et Ouvrier III/CP2 à 26,07 €/h). Durée estimée : ~${joursEstimesChantier} jour(s) ouvré(s).`;
 
         return {
             total_devis_ht: Math.round(totalDevis * 100) / 100,
@@ -658,6 +723,10 @@ export class PriceService {
         const joursOuvres = de.jours_ouvres_estimes || Math.max(2, Math.ceil(volHeures / 7));
         const equipe = de.equipe_recommandee || '1 à 2 compagnons qualifiés';
         const delais = de.delais_incompressibles || '24h à 48h de temps de séchage incompressible entre les couches d\'enduit et de finition.';
+        const decompMo = Array.isArray(de.decomposition_main_oeuvre) && de.decomposition_main_oeuvre.length > 0 ? de.decomposition_main_oeuvre : [
+            { qualification: "Manoeuvre niveau I/OE1", volume_heures: Math.round(volHeures * 0.20 * 10) / 10, unite: "h", taux_horaire_ref: 18.32, cout_total: Math.round((volHeures * 0.20 * 18.32) * 100) / 100, role: "Bâchage étanche polyane, manutention et nettoyage/repli" },
+            { qualification: "Ouvrier niveau III/CP2", volume_heures: Math.round(volHeures * 0.80 * 10) / 10, unite: "h", taux_horaire_ref: 26.07, cout_total: Math.round((volHeures * 0.80 * 26.07) * 100) / 100, role: "Exécution technique soignée, préparation des supports et finitions" }
+        ];
 
         html += '<h2>⏱️ 2. Durée Estimée & Planning Prévisionnel</h2>';
         html += `<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-bottom: 12px;">
@@ -677,6 +746,21 @@ export class PriceService {
             </div>
         </div>`;
 
+        // Décomposition Main d'œuvre (Taux horaires bibliotheque_materiaux.json)
+        html += '<div style="margin-bottom:12px;"><div style="font-size:12px; font-weight:700; color:#d2a8ff; margin-bottom:6px;">🔨 Sous-détail Main d\'œuvre & Taux horaires conventionnels (BPA / Capeb)</div>';
+        html += '<div class="table-responsive"><table><thead><tr><th>Qualification Professionnelle</th><th>Volume</th><th>Unité</th><th>Taux Réf. HT</th><th>Sous-Total HT</th><th>Rôle sur le chantier</th></tr></thead><tbody>';
+        decompMo.forEach((mo: any) => {
+            html += `<tr>
+                <td style="font-weight:600; color:#f0f6fc;">${mo.qualification}</td>
+                <td class="text-center font-bold" style="color:#e3b341;">${mo.volume_heures}</td>
+                <td class="text-center">${mo.unite || 'h'}</td>
+                <td class="text-right num-font" style="color:#58a6ff;">${Number(mo.taux_horaire_ref || 0).toFixed(2)} €/h</td>
+                <td class="text-right num-font" style="font-weight:bold; color:#d2a8ff;">${Number(mo.cout_total || 0).toFixed(2)} €</td>
+                <td style="font-size:11.5px; color:#c9d1d9;">${mo.role}</td>
+            </tr>`;
+        });
+        html += '</tbody></table></div></div>';
+
         if (Array.isArray(de.planning_phases) && de.planning_phases.length > 0) {
             html += '<div class="table-responsive"><table><thead><tr><th>Phase</th><th>Durée</th><th>Opérations & Contraintes Techniques</th></tr></thead><tbody>';
             de.planning_phases.forEach((p: any) => {
@@ -692,6 +776,7 @@ export class PriceService {
         // 3. 🧱 TABLEAU DÉTAILLÉ DES MATÉRIAUX & QUANTITÉS
         if (tm.length > 0) {
             html += '<h2>🧱 3. Tableau Détaillé des Matériaux, Quantités & Normes DTU</h2>';
+            html += '<div style="font-size:11.5px; color:#8b949e; margin-bottom:8px;">Base de référence : <em>bibliotheque_materiaux.json</em> (23 688 références professionnelles BTP)</div>';
             html += '<div class="table-responsive"><table><thead><tr><th>Corps d\'état</th><th>Produit / Fourniture</th><th>Qté</th><th>Unité</th><th>P.U Réf</th><th>Coût Total</th><th>Part</th><th>Normes DTU & Spécifications</th></tr></thead><tbody>';
             tm.forEach((mat: any) => {
                 const nom = mat.nom || mat.designation || 'Fourniture';
@@ -715,6 +800,13 @@ export class PriceService {
                     <td style="font-size:11.5px; color:#8b949e;">
                         <div style="color:#c9d1d9; margin-bottom:2px;">${desc}</div>
                         <div style="color:#58a6ff; font-weight:600; font-size:10.5px;">📜 ${norme}</div>
+                    </td>
+                </tr>`;
+            });
+            html += '</tbody></table></div>';
+        }
+
+        // 4. 📋 ANALYSE DÉTAILLÉE ARTICLE PAR ARTICLE                      <div style="color:#58a6ff; font-weight:600; font-size:10.5px;">📜 ${norme}</div>
                     </td>
                 </tr>`;
             });

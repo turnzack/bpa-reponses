@@ -18,6 +18,7 @@ import aiRoutes from "./routes/aiRoutes";
 import stripeRoutes from "./routes/stripeRoutes";
 import paymentRoutes from "./routes/paymentRoutes";
 import authRoutes from "./routes/authRoutes";
+import scansRoutes from "./routes/scansRoutes";
 
 const app = express();
 const port = process.env.PORT || 4001;
@@ -68,6 +69,8 @@ app.use("/api/auth", authRoutes);
 app.use("/api/ai", aiRoutes);
 app.use("/api/stripe", stripeRoutes);
 app.use("/api/payments", paymentRoutes);
+app.use("/api/scans", scansRoutes);
+app.use("/api/clients", scansRoutes);
 
 
 type JobStatus = "pending" | "running" | "paused" | "done" | "failed";

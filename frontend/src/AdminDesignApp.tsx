@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Editor from '@monaco-editor/react';
 import BuilderView from './components/studio/builder-view';
 import DataView from './components/studio/data-view';
 import WorkflowsView from './components/studio/workflows-view';
@@ -121,16 +120,15 @@ const AdminDesignApp = () => {
                      <span className="text-xs text-gray-400">Lecture Seule (Fallback Mode)</span>
                    </div>
                  </div>
-                 <div className="flex-1 rounded-xl overflow-hidden border border-white/10">
-                   <Editor
-                      height="100%"
-                      language="typescript"
-                      theme="vs-dark"
+                  <div className="flex-1 rounded-xl overflow-hidden border border-white/10 p-2 bg-[#121212]">
+                    <textarea
                       value={pageContent}
-                      onChange={(val) => setPageContent(val || '')}
-                      options={{ minimap: { enabled: false }, fontSize: 14, formatOnPaste: true, tabSize: 2, wordWrap: 'on' }}
+                      onChange={(e) => setPageContent(e.target.value)}
+                      className="w-full h-full bg-transparent text-gray-200 font-mono text-sm p-4 focus:outline-none resize-none"
+                      placeholder="// Code source..."
+                      spellCheck={false}
                     />
-                 </div>
+                  </div>
               </div>
            ) : activeStudioTab === 'builder' ? (
               <BuilderView projectId={targetProject || null} onOpenPreview={() => {}} />

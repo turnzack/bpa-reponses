@@ -1499,6 +1499,40 @@ function AnalyseResult({ data }: { data: any }) {
           </div>
         )}
 
+        {/* Sous-détail Main d'œuvre (Taux conventionnels BTP OE1 / CP2) */}
+        <div style={{ marginBottom: "16px", background: "rgba(255,255,255,0.015)", border: `1px solid ${colors.border}`, borderRadius: "10px", padding: "14px" }}>
+          <div style={{ fontSize: "12.5px", fontWeight: 700, color: "#d2a8ff", marginBottom: "8px", display: "flex", alignItems: "center", gap: "6px" }}>
+            <span>🔨</span> Sous-détail Main d'œuvre & Taux horaires conventionnels (Base BPA / Capeb)
+          </div>
+          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "12px" }}>
+            <thead>
+              <tr style={{ borderBottom: `1px solid ${colors.border}`, color: colors.textMuted }}>
+                <th style={{ textAlign: "left", padding: "6px 8px" }}>Qualification BTP</th>
+                <th style={{ textAlign: "center", padding: "6px 8px" }}>Volume</th>
+                <th style={{ textAlign: "center", padding: "6px 8px" }}>Unité</th>
+                <th style={{ textAlign: "right", padding: "6px 8px" }}>Taux Réf. HT</th>
+                <th style={{ textAlign: "right", padding: "6px 8px" }}>Sous-Total HT</th>
+                <th style={{ textAlign: "left", padding: "6px 8px" }}>Missions & Tâches</th>
+              </tr>
+            </thead>
+            <tbody>
+              {(duree.decomposition_main_oeuvre || [
+                { qualification: "Manoeuvre niveau I/OE1", volume_heures: Math.round(Number(duree.heures_ouvrages_total || 21) * 0.20 * 10) / 10, unite: "h", taux_horaire_ref: 18.32, cout_total: Math.round(Number(duree.heures_ouvrages_total || 21) * 0.20 * 18.32 * 100) / 100, role: "Bâchage étanche polyane, manutention et nettoyage/repli" },
+                { qualification: "Ouvrier niveau III/CP2", volume_heures: Math.round(Number(duree.heures_ouvrages_total || 21) * 0.80 * 10) / 10, unite: "h", taux_horaire_ref: 26.07, cout_total: Math.round(Number(duree.heures_ouvrages_total || 21) * 0.80 * 26.07 * 100) / 100, role: "Exécution technique soignée, préparation des supports et finitions" }
+              ]).map((mo: any, mIdx: number) => (
+                <tr key={mIdx} style={{ borderBottom: "1px solid rgba(255,255,255,0.04)" }}>
+                  <td style={{ padding: "8px 8px", fontWeight: 700, color: colors.text }}>{mo.qualification}</td>
+                  <td style={{ padding: "8px 8px", textAlign: "center", fontWeight: 700, color: colors.warning }}>{mo.volume_heures}</td>
+                  <td style={{ padding: "8px 8px", textAlign: "center", color: colors.textMuted }}>{mo.unite || "h"}</td>
+                  <td style={{ padding: "8px 8px", textAlign: "right", color: colors.tce }}>{Number(mo.taux_horaire_ref).toFixed(2)} €/h</td>
+                  <td style={{ padding: "8px 8px", textAlign: "right", fontWeight: 800, color: "#d2a8ff" }}>{Number(mo.cout_total).toFixed(2)} €</td>
+                  <td style={{ padding: "8px 8px", fontSize: "11px", color: colors.textMuted }}>{mo.role}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
         {/* Timeline des 3 Phases */}
         <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
           {duree.planning_phases?.map((p: any, idx: number) => (
@@ -1537,8 +1571,8 @@ function AnalyseResult({ data }: { data: any }) {
             <span style={{ display: "flex", alignItems: "center", gap: "8px" }}>
               <span>🧱</span> 3. Tableau Détaillé des Matériaux, Quantités & Spécifications Techniques
             </span>
-            <span style={{ fontSize: "12px", color: colors.textMuted, fontWeight: 400 }}>
-              Source : Base Matériaux BTP & Mercuriales Professionnelles
+            <span style={{ fontSize: "12px", color: colors.tce, fontWeight: 600 }}>
+              Base Matériaux BTP : bibliotheque_materiaux.json (23 688 réf)
             </span>
           </h3>
 
