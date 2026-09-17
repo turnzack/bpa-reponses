@@ -70,14 +70,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "Chaînage béton armé de consolidation\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 54.84,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "chargement_des_ruines_sur_camion_par_engin_mecanique_m",
                                                                                                                     nom = "Chargement des ruines sur camion par engin mécanique\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 312.96,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "chargement_des_ruines_sur_camion_par_jet_de_pelle_m",
@@ -448,21 +448,21 @@ M.STRUCTURE = {
                                                                                                                     nom = "à la masse à percussion\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 345.96,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "a_la_masse_a_percussion_martelage_continu_m",
                                                                                                                     nom = "à la masse à percussion, martelage continu\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 352.2,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "au_compresseur_m",
                                                                                                                     nom = "au compresseur\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 358.44,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -476,35 +476,35 @@ M.STRUCTURE = {
                                                                                                                     nom = "en terre argileuse\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 313.8,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_terre_vegetale_m",
                                                                                                                     nom = "en terre végétale\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 313.08,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_terre_dur_m",
                                                                                                                     nom = "en terre dur\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 323.4,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_terre_sableuse_m",
                                                                                                                     nom = "en terre sableuse\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 312.36,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_terre_sols_organiques_m",
                                                                                                                     nom = "en terre, sols organiques\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 315.96,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -518,35 +518,35 @@ M.STRUCTURE = {
                                                                                                                     nom = "en terre argileuse\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 325.08,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_terre_vegetale_m",
                                                                                                                     nom = "en terre végétale\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 324.36,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_terre_dur_m",
                                                                                                                     nom = "en terre dur\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 333.72,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_terre_sableuse_m",
                                                                                                                     nom = "en terre sableuse\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 323.64,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_terre_sols_organiques_m",
                                                                                                                     nom = "en terre, sols organiques\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 326.28,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -560,7 +560,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 355.56,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -574,7 +574,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 323.4,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -588,35 +588,35 @@ M.STRUCTURE = {
                                                                                                                     nom = "par terre argileuse\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 332.28,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "par_terre_vegetale_m",
                                                                                                                     nom = "par terre végétale\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 331.56,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "par_terre_dur_m",
                                                                                                                     nom = "par terre dur\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 340.92,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "par_terre_sableuse_m",
                                                                                                                     nom = "par terre sableuse\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 330.84,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "par_terre_sols_organiques_m",
                                                                                                                     nom = "par terre, sols organiques\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 333.48,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -630,35 +630,35 @@ M.STRUCTURE = {
                                                                                                                     nom = "en terre argileuse\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 316.68,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_terre_vegetale_m",
                                                                                                                     nom = "en terre végétale\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 315.96,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_terre_dur_m",
                                                                                                                     nom = "en terre dur\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 325.32,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_terre_sableuse_m",
                                                                                                                     nom = "en terre sableuse\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 315.24,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_terre_sols_organiques_m",
                                                                                                                     nom = "en terre, sols organiques\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 318.12,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -672,7 +672,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 347.4,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -686,35 +686,35 @@ M.STRUCTURE = {
                                                                                                                     nom = "en terre argileuse\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 331.56,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_terre_vegetale_m",
                                                                                                                     nom = "en terre végétale\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 330.12,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_terre_dur_m",
                                                                                                                     nom = "en terre dur\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 340.2,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_terre_sableuse_m",
                                                                                                                     nom = "en terre sableuse\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 329.4,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_terre_sols_organiques_m",
                                                                                                                     nom = "en terre, sols organiques\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 332.28,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -728,7 +728,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 354.12,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -742,35 +742,35 @@ M.STRUCTURE = {
                                                                                                                     nom = "en terre argileuse\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 324.36,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_terre_vegetale_m",
                                                                                                                     nom = "en terre végétale\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 323.64,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_terre_dur_m",
                                                                                                                     nom = "en terre dur\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 333,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_terre_sableuse_m",
                                                                                                                     nom = "en terre sableuse\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 322.92,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_terre_sols_organiques_m",
                                                                                                                     nom = "en terre, sols organiques\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 325.8,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -784,7 +784,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 353.4,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -1043,7 +1043,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "10 m3\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 405.67,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -1057,14 +1057,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "en tranchée sous mur\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 3141.52,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_puits_sous_mur_m",
                                                                                                                     nom = "en puits sous mur\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 3160.75,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },

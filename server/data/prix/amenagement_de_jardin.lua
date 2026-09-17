@@ -42,21 +42,21 @@ M.STRUCTURE = {
                                                                                                                     nom = "en glaise\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 41.22,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_terrain_dur_avec_compresseur_m",
                                                                                                                     nom = "en terrain dur, avec compresseur\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 95.28,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_roche_avec_compresseur_m",
                                                                                                                     nom = "en roche, avec compresseur\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 181.84,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -83,7 +83,7 @@ M.STRUCTURE = {
                                                                                                                     id = "en_terre_glaise_m",
                                                                                                                     nom = "en terre glaise\tm",
                                                                                                                     type = "ARTICLE",
-                                                                                                                    prix = 256.34,
+                                                                                                                    prix = 56.34,
                                                                                                                     unite = "m3",
                                                                                                                 },
                                                                                 {
@@ -91,14 +91,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "en terrain dur, avec compresseur\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 131.92,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_de_la_roche_avec_compresseur_m",
                                                                                                                     nom = "en de la roche, avec compresseur\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 236.82,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -336,21 +336,21 @@ M.STRUCTURE = {
                                                                                                                     nom = "à 5 km\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 20.74,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_5_a_10_km_m",
                                                                                                                     nom = "de 5 à 10 km\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 29.65,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "plus_value_par_km_supplementaire_u",
                                                                                                                     nom = "plus value par km supplémentaire\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 2.95,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -497,7 +497,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "Triage à l'anneau\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 65.95,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -511,7 +511,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "de cailloux 0,02, sable, gravier ou détritus\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 27.48,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_sable_argileux_m",
@@ -525,7 +525,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "d'argile pure\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 74.19,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_terre_vegetale_ou_terreau_m",
@@ -637,7 +637,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "par couches 100 mm, compris roulage soigné\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 274.8,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -651,14 +651,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "pour une épaisseur de 10 cm\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 224.73,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "par_centimetre_supplementaire_jusqu_a_25_cm_m",
                                                                                                                     nom = "par centimètre supplémentaire, jusqu'à 25 cm\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 22.47,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "fouille_en_bitume_et_rangement_deblai_m",
@@ -679,14 +679,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "pour une épaisseur de 10 cm\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 243.96,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "par_centimetre_supplementaire_m",
                                                                                                                     nom = "par centimètre supplémentaire\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 24.39,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -700,14 +700,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "section 600x500 mm\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 8.47,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "par_tranche_de_10_cm_supplementaires_m",
                                                                                                                     nom = "par tranche de 10 cm supplémentaires\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 7.42,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },
@@ -721,7 +721,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "en roches massives, au m3\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 110.2,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "en_roches_massives_a_la_tonne_u",
@@ -1022,70 +1022,70 @@ M.STRUCTURE = {
                                                                                                                     nom = "de porphyre, dimensions 2000x1000x1000 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 75.76,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_roches_calcaires_dimensions_500x500x500_mm_u",
                                                                                                                     nom = "de roches calcaires, dimensions 500x500x500 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 67.39,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_roches_calcaires_dimensions_1000x300x750_mm_u",
                                                                                                                     nom = "de roches calcaires, dimensions 1000x300x750 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 95.86,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_roches_calcaires_dimensions_1000x500x500_mm_u",
                                                                                                                     nom = "de roches calcaires, dimensions 1000x500x500 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 100.08,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_roches_calcaires_dimensions_1000x500x1000_mm_u",
                                                                                                                     nom = "de roches calcaires, dimensions 1000x500x1000 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 142.26,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_roches_calcaires_dimensions_2000x300x750_mm_u",
                                                                                                                     nom = "de roches calcaires, dimensions 2000x300x750 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 145.39,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_roches_calcaires_dimensions_2000x500x500_mm_u",
                                                                                                                     nom = "de roches calcaires, dimensions 2000x500x500 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 153.82,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_roches_calcaires_dimensions_2000x500x1000_mm_u",
                                                                                                                     nom = "de roches calcaires, dimensions 2000x500x1000 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 238.18,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_roches_calcaires_dimensions_2000x750x750_mm_u",
                                                                                                                     nom = "de roches calcaires, dimensions 2000x750x750 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 259.27,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_roches_calcaires_dimensions_2000x1000x1000_mm_u",
                                                                                                                     nom = "de roches calcaires, dimensions 2000x1000x1000 mm\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 406.9,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         }
@@ -1776,7 +1776,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "de sable ou cailloux, épaisseur 50 à 200 mm\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 22.74,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "de_terre_dure_m",

@@ -6644,7 +6644,7 @@ M.STRUCTURE = {
                                                                                                                     nom = "capacité 500 litres\tU",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 577.22,
-                                                                                                                    unite = "U",
+                                                                                                                    unite = "m3",
                                                                                                                 }
                                                                             }
                                                                         },

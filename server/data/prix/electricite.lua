@@ -19930,14 +19930,14 @@ M.STRUCTURE = {
                                                                                                                     nom = "section 25 mm2, déroulé en fond de fouille\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 10.21,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "section_35_mm2_deroule_en_fond_de_fouille_m",
                                                                                                                     nom = "section 35 mm2, déroulé en fond de fouille\tm",
                                                                                                                     type = "ARTICLE",
                                                                                                                     prix = 12.93,
-                                                                                                                    unite = "ml",
+                                                                                                                    unite = "m3",
                                                                                                                 },
                                                                                 {
                                                                                                                     id = "section_50_mm2_deroule_en_fond_de_fouille_m",
