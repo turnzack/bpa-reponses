@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node dist/server.js",
     "build": "tsc",
-    "dev": "ts-node --transpile-only src/server.ts",
-    "db:migrate:neon": "ts-node scripts/migrate-neon.ts"
+    "dev": "tsx src/server.ts",
+    "db:migrate:neon": "tsx scripts/migrate-neon.ts"
   },
   "dependencies": {
     "@aws-sdk/client-textract": "^3.965.0",
@@ -41,6 +41,7 @@
     "@types/pg": "^8.11.2",
     "@types/ws": "^8.18.1",
     "ts-node": "^10.9.2",
+    "tsx": "^4.7.0",
     "typescript": "^5.3.3"
   },
   "pnpm": {
