@@ -1272,7 +1272,7 @@ function ScanView({ onInvoiceAnalyzed, user, onGoToDashboard }: { onInvoiceAnaly
                   Certificat d'Audit Tarifaire Opposable · Barèmes CAPEB / FFB / IRSI
                 </div>
                 <div style={{ fontSize: "9pt", color: "#64748b", marginTop: "4px" }}>
-                  Dossier : <strong style={{ color: "#0f172a" }}>{file?.name || "Devis analysé"}</strong> · Utilisateur : <strong style={{ color: "#0f172a" }}>{user?.email || "Compte client BPA"}</strong>
+                  Dossier : <strong style={{ color: "#0f172a" }}>{file?.name || "Devis analysé"}</strong> · Certificat officiel d'audit tarifaire opposable BTP TCE
                 </div>
               </div>
               <div style={{ textAlign: "right" }}>

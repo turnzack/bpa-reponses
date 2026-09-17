@@ -429,12 +429,17 @@ export function extractArticlesFromText(text: string): any[] {
     let articles: any[] = [];
     const lines = text.split('\n');
 
-    // Mots-clés d'en-tête et métadonnées à exclure
+    // Mots-clés d'en-tête, coordonnées et métadonnées personnelles / entreprise à exclure STRICTEMENT
     const excludePatterns = [
         /^(total|sous-total|net à payer|acompte|solde|reste à payer|tva|remise|escompte)/i,
-        /^(devis\s*n°?|facture\s*n°?|date|échéance|validité|page\s+\d|bon pour accord|signature)/i,
-        /^(siret|siren|rcs|ape|naf|iban|bic|tva intracommunautaire|conditions de paiement|assurance)/i,
-        /^(client|adresse|téléphone|tel|email|contact|société|sas|sarl|eurl|auto-entrepreneur)/i,
+        /\b(devis\s*n°?|facture\s*n°?|date\s*:|échéance|validité|page\s+\d|bon pour accord|signature)\b/i,
+        /\b(siret|siren|rcs|ape|naf|iban|bic|tva intracommunautaire|conditions de paiement|assurance)\b/i,
+        /\b(client|adresse|téléphone|tel|email|contact|société|sas|sarl|eurl|auto-entrepreneur)\b/i,
+        /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/i,
+        /\b(M\.|Mme|Monsieur|Madame|Destinataire|Facturé\s*à)\b/i,
+        /\b(rue|avenue|boulevard|bd|chemin|impasse|allée|route|cours|quai|place|lieu-dit)\b/i,
+        /\b\d{5}\s+[A-ZÀ-ÿ\s-]{2,}\b/i,
+        /\b(désignation|puht|pht|pu\s*ht|total\s*ht)\b/i,
         /^(résumé exécutif|articles analysés|prix cohérents|prix élevés|surcoûts|écart global|score de conformité|avis de l'expert|potentiel d'économie|rapport d'audit|synthèse|règlementaire)/i
     ];
 
@@ -475,7 +480,14 @@ export function extractArticlesFromText(text: string): any[] {
 
     const cleanArticleName = (raw: string): string => {
         return raw
-            .replace(/^(?:[0-9]{1,2}[.)\s-]|[A-Z][.)\s-])\s+/, '')
+            .replace(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/gi, '')
+            .replace(/\b(?:devis\s*n°?\s*[:=]?\s*\d+|date\s*:\s*\d{1,2}[/-]\d{1,2}[/-]\d{2,4}|page\s+\d+\s*\/\s*\d+)\b/gi, '')
+            .replace(/\b(?:n°\s*)?désignation\s+(?:tva\s+)?(?:qté|quantité|u|puht|pht|pu\s*ht|total\s*ht)\b/gi, '')
+            .replace(/\b(?:M\.|Mme|Monsieur|Madame)\s+[A-ZÀ-ÿ-]+(?:\s+[A-ZÀ-ÿ-]+)?\b/gi, '')
+            .replace(/\b\d+\s*(?:c|bis|ter)?\s+(?:rue|avenue|boulevard|bd|chemin|impasse|allée|route|cours|quai|place)\s+[A-ZÀ-ÿ-]+(?:\s+[A-ZÀ-ÿ-]+)?\b/gi, '')
+            .replace(/\b\d{5}\s+[A-ZÀ-ÿ-]+\b/gi, '')
+            .replace(/^(?:[0-9]{1,2}[.)\s-]|[A-Z][.)])\s+/, '')
+            .replace(/\s{2,}/g, ' ')
             .trim();
     };
 
