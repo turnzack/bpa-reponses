@@ -282,7 +282,56 @@ export class PriceService {
             }
             refMatPrice = 12.00;
             refMatUnit = "forfait";
-        } else if (lower.includes('silicone') || lower.includes('calfeutrement') || (lower.includes('joint') && !lower.includes('placo') && !lower.includes('carrel'))) {
+        } else if ((lower.includes('depose') || lower.includes('dépose') || lower.includes('demontage') || lower.includes('démontage')) && (lower.includes('douche') || lower.includes('paroi') || lower.includes('sanitaire') || lower.includes('baignoire') || lower.includes('lavabo') || lower.includes('vasque') || lower.includes('receveur') || lower.includes('wc'))) {
+            // Dépose d'équipement sanitaire / paroi de douche : barème 70 à 110 € HT
+            refUnit = 'U';
+            refPrice = (priceUnit && priceUnit >= 50 && priceUnit <= 150) ? Math.round(priceUnit * 0.95 * 100) / 100 : 82.50;
+            refName = "Dépose soignée d'équipement sanitaire / paroi de douche, démontage des fixations et enlèvement";
+            refMatPrice = 12.00;
+            refMatUnit = "U";
+        } else if ((lower.includes('paroi') && lower.includes('douche')) || (lower.includes('paroi') && (lower.includes('verre') || lower.includes('vitrage') || lower.includes('securit') || lower.includes('sécurit') || lower.includes('coulissante')))) {
+            // Fourniture et pose de paroi de douche vitrée sécurit 6/8mm : barème 520 à 750 € HT
+            refUnit = 'U';
+            refPrice = (priceUnit && priceUnit >= 400 && priceUnit <= 950) ? Math.round(priceUnit * 0.95 * 100) / 100 : 605.00;
+            refName = "Fourniture et pose de paroi de douche avec vitrage de sécurité trempé sur cadre/profilés aluminium (DTU 60.1 / NF EN 14428)";
+            refMatPrice = 385.00;
+            refMatUnit = "U";
+        } else if (lower.includes('receveur') || lower.includes('bac a douche') || lower.includes('bac à douche') || lower.includes('douche italienne')) {
+            // Fourniture et pose receveur de douche : barème 380 à 650 € HT
+            refUnit = 'U';
+            refPrice = (priceUnit && priceUnit >= 300 && priceUnit <= 800) ? Math.round(priceUnit * 0.95 * 100) / 100 : 460.00;
+            refName = "Fourniture et pose receveur de douche antidérapant minéral/résine avec bonde grand débit (DTU 60.1)";
+            refMatPrice = 280.00;
+            refMatUnit = "U";
+        } else if (lower.includes('colonne de douche') || lower.includes('mitigeur') || lower.includes('robinetterie') || lower.includes('melangeur') || lower.includes('mélangeur')) {
+            // Robinetterie / colonne de douche
+            refUnit = 'U';
+            refPrice = (priceUnit && priceUnit >= 150 && priceUnit <= 500) ? Math.round(priceUnit * 0.95 * 100) / 100 : 285.00;
+            refName = "Fourniture et pose colonne de douche thermostatique ou mitigeur corps froid NF";
+            refMatPrice = 175.00;
+            refMatUnit = "U";
+        } else if (lower.includes('wc') || lower.includes('cuvette') || lower.includes('bati support') || lower.includes('bâti-support') || lower.includes('toilette')) {
+            // WC suspendu / classique
+            refUnit = 'U';
+            refPrice = (priceUnit && priceUnit >= 350 && priceUnit <= 800) ? Math.round(priceUnit * 0.95 * 100) / 100 : 520.00;
+            refName = "Fourniture et pose ensemble WC suspendu sur bâti-support autoportant avec plaque double commande";
+            refMatPrice = 320.00;
+            refMatUnit = "U";
+        } else if (lower.includes('vasque') || lower.includes('lavabo') || lower.includes('meuble sdb') || lower.includes('meuble sous vasque')) {
+            // Meuble vasque SDB
+            refUnit = 'U';
+            refPrice = (priceUnit && priceUnit >= 350 && priceUnit <= 900) ? Math.round(priceUnit * 0.95 * 100) / 100 : 540.00;
+            refName = "Fourniture et pose ensemble meuble vasque de salle de bain, miroir et raccordements";
+            refMatPrice = 340.00;
+            refMatUnit = "U";
+        } else if (lower.includes('chauffe-eau') || lower.includes('cumulus') || lower.includes('ballon d\'eau') || lower.includes('thermosiphon')) {
+            // Chauffe-eau électrique
+            refUnit = 'U';
+            refPrice = (priceUnit && priceUnit >= 600 && priceUnit <= 1400) ? Math.round(priceUnit * 0.95 * 100) / 100 : 850.00;
+            refName = "Fourniture et pose chauffe-eau électrique stéatite avec groupe de sécurité et raccordements (DTU 60.1)";
+            refMatPrice = 520.00;
+            refMatUnit = "U";
+        } else if (lower.includes('silicone') || lower.includes('calfeutrement') || (lower.includes('joint') && !lower.includes('placo') && !lower.includes('carrel') && !lower.includes('demontage') && !lower.includes('démontage'))) {
             // Joints silicone fenêtres / sanitaires
             if (isForfait) {
                 refUnit = 'forfait';
@@ -701,7 +750,149 @@ export class PriceService {
                         article_devis_associe: art.designation
                     }
                 );
-            } else if (desigLower.includes('plomb') || desigLower.includes('robinet') || desigLower.includes('wc') || desigLower.includes('toilette') || desigLower.includes('douche') || desigLower.includes('tuyau') || desigLower.includes('chauffe-eau') || desigLower.includes('cumulus')) {
+            } else if ((desigLower.includes('depose') || desigLower.includes('dépose') || desigLower.includes('demontage') || desigLower.includes('démontage')) && (desigLower.includes('douche') || desigLower.includes('paroi') || desigLower.includes('sanitaire') || desigLower.includes('baignoire') || desigLower.includes('lavabo') || desigLower.includes('vasque') || desigLower.includes('receveur') || desigLower.includes('wc'))) {
+                const coutDeposeMat = Math.round(Math.min(20, Math.max(8, montantLigneDevis * 0.15)) * 100) / 100;
+                totalMateriaux += coutDeposeMat;
+
+                materiauxDetailles.push({
+                    nom: "Consommables de dépose soignée, obturateurs étanches & sacs à gravats renforcés",
+                    corps_etat: "Plomberie & Sanitaire",
+                    famille: "Dépose & Protection",
+                    quantite_estimee: Math.max(1, qte),
+                    unite: "Forfait",
+                    prix_unitaire_ref: coutDeposeMat,
+                    cout_total_estime: coutDeposeMat,
+                    descriptif_technique: "Bouchons obturateurs d'attente étanches, consommables d'outillage sans dégât et sacs de dépose étanches.",
+                    norme_ou_dtu: "DTU 60.1 / Règles de l'art",
+                    article_devis_associe: art.designation
+                });
+            } else if ((desigLower.includes('paroi') && desigLower.includes('douche')) || (desigLower.includes('paroi') && (desigLower.includes('verre') || desigLower.includes('vitrage') || desigLower.includes('securit') || desigLower.includes('sécurit') || desigLower.includes('coulissante')))) {
+                const coutParoiVerre = Math.round((montantLigneDevis > 300 ? montantLigneDevis * 0.58 : 340.00) * 100) / 100;
+                const coutProfilsEtFix = Math.round(45.00 * 100) / 100;
+                totalMateriaux += coutParoiVerre + coutProfilsEtFix;
+
+                materiauxDetailles.push(
+                    {
+                        nom: "Paroi de douche vitrage de sécurité trempé sécurit 6/8mm traité anticalcaire",
+                        corps_etat: "Plomberie & Sanitaire",
+                        famille: "Parois & Vitrages",
+                        quantite_estimee: qte || 1,
+                        unite: "U",
+                        prix_unitaire_ref: coutParoiVerre,
+                        cout_total_estime: coutParoiVerre,
+                        descriptif_technique: "Vitrage trempé de sécurité conforme NF EN 14428, traitement haute déperlance anticalcaire longue durée.",
+                        norme_ou_dtu: "NF EN 14428 / DTU 60.1",
+                        article_devis_associe: art.designation
+                    },
+                    {
+                        nom: "Profilés muraux aluminium anodisé compensateurs + joints magnétiques d'étanchéité",
+                        corps_etat: "Plomberie & Sanitaire",
+                        famille: "Quincaillerie & Profilés",
+                        quantite_estimee: 1,
+                        unite: "Ens",
+                        prix_unitaire_ref: coutProfilsEtFix,
+                        cout_total_estime: coutProfilsEtFix,
+                        descriptif_technique: "Profilés muraux d'ajustement aluminium anticorrosion, roulettes à roulement à billes inox et bavette d'étanchéité.",
+                        norme_ou_dtu: "Norme Qualicoat / CSTB",
+                        article_devis_associe: art.designation
+                    }
+                );
+            } else if (desigLower.includes('receveur') || desigLower.includes('bac a douche') || desigLower.includes('bac à douche') || desigLower.includes('douche italienne')) {
+                const coutReceveur = Math.round((montantLigneDevis > 200 ? montantLigneDevis * 0.55 : 240.00) * 100) / 100;
+                const coutBonde = Math.round(38.00 * 100) / 100;
+                totalMateriaux += coutReceveur + coutBonde;
+
+                materiauxDetailles.push(
+                    {
+                        nom: "Receveur de douche extra-plat minéral/résine antidérapant classe PN24",
+                        corps_etat: "Plomberie & Sanitaire",
+                        famille: "Receveurs & Bacs",
+                        quantite_estimee: qte || 1,
+                        unite: "U",
+                        prix_unitaire_ref: coutReceveur,
+                        cout_total_estime: coutReceveur,
+                        descriptif_technique: "Receveur en résine synthétique et charge minérale extra-plat, surface traitée antibactérienne et antidérapante.",
+                        norme_ou_dtu: "NF EN 14527 / DTU 60.1",
+                        article_devis_associe: art.designation
+                    },
+                    {
+                        nom: "Bonde d'évacuation douche grand débit 90mm avec grille inox",
+                        corps_etat: "Plomberie & Sanitaire",
+                        famille: "Évacuation & Siphons",
+                        quantite_estimee: 1,
+                        unite: "U",
+                        prix_unitaire_ref: coutBonde,
+                        cout_total_estime: coutBonde,
+                        descriptif_technique: "Bonde à sortie orientable horizontale/verticale grand débit autonettoyante avec panier filtre inox.",
+                        norme_ou_dtu: "NF EN 274 / DTU 60.1",
+                        article_devis_associe: art.designation
+                    }
+                );
+            } else if (desigLower.includes('colonne de douche') || desigLower.includes('mitigeur') || desigLower.includes('robinetterie') || desigLower.includes('melangeur') || desigLower.includes('mélangeur')) {
+                const coutRobinetterie = Math.round((montantLigneDevis > 150 ? montantLigneDevis * 0.60 : 160.00) * 100) / 100;
+                totalMateriaux += coutRobinetterie;
+
+                materiauxDetailles.push({
+                    nom: "Colonne de douche / mitigeur thermostatique corps froid NF avec flexible anti-torsion",
+                    corps_etat: "Plomberie & Sanitaire",
+                    famille: "Robinetterie & Douchette",
+                    quantite_estimee: qte || 1,
+                    unite: "U",
+                    prix_unitaire_ref: coutRobinetterie,
+                    cout_total_estime: coutRobinetterie,
+                    descriptif_technique: "Mitigeur thermostatique sécurité anti-brûlure 38°C, corps froid, douche de tête orientable et flexible lisse.",
+                    norme_ou_dtu: "NF EN 1111 / ACS",
+                    article_devis_associe: art.designation
+                });
+            } else if (desigLower.includes('wc') || desigLower.includes('cuvette') || desigLower.includes('bati support') || desigLower.includes('bâti-support')) {
+                const coutWc = Math.round((montantLigneDevis > 250 ? montantLigneDevis * 0.58 : 280.00) * 100) / 100;
+                totalMateriaux += coutWc;
+
+                materiauxDetailles.push({
+                    nom: "Bâti-support autoportant certifié NF + cuvette suspendue céramique sans bride",
+                    corps_etat: "Plomberie & Sanitaire",
+                    famille: "Appareils Sanitaires & WC",
+                    quantite_estimee: qte || 1,
+                    unite: "U",
+                    prix_unitaire_ref: coutWc,
+                    cout_total_estime: coutWc,
+                    descriptif_technique: "Bâti-support résistant 400kg avec mécanisme silencieux double flux 3/6L et cuvette rimless antibactérienne.",
+                    norme_ou_dtu: "NF D12-208 / DTU 60.1",
+                    article_devis_associe: art.designation
+                });
+            } else if (desigLower.includes('vasque') || desigLower.includes('lavabo') || desigLower.includes('meuble sdb') || desigLower.includes('meuble sous vasque')) {
+                const coutMeuble = Math.round((montantLigneDevis > 250 ? montantLigneDevis * 0.60 : 310.00) * 100) / 100;
+                totalMateriaux += coutMeuble;
+
+                materiauxDetailles.push({
+                    nom: "Ensemble meuble sous-vasque hydrofuge 2 tiroirs coulissants + plan vasque céramique",
+                    corps_etat: "Plomberie & Sanitaire",
+                    famille: "Meubles & Vasques",
+                    quantite_estimee: qte || 1,
+                    unite: "U",
+                    prix_unitaire_ref: coutMeuble,
+                    cout_total_estime: coutMeuble,
+                    descriptif_technique: "Caisson en panneau mélaminé hydrofuge classe E1, coulisses avec amortisseurs de fermeture et vasque moulée.",
+                    norme_ou_dtu: "NF Mobilier / DTU 60.1",
+                    article_devis_associe: art.designation
+                });
+            } else if (desigLower.includes('chauffe-eau') || desigLower.includes('cumulus') || desigLower.includes('ballon d\'eau')) {
+                const coutCumulus = Math.round((montantLigneDevis > 400 ? montantLigneDevis * 0.60 : 490.00) * 100) / 100;
+                totalMateriaux += coutCumulus;
+
+                materiauxDetailles.push({
+                    nom: "Chauffe-eau électrique stéatite ACI hybride + groupe de sécurité NF et raccords isolants",
+                    corps_etat: "Plomberie & Chauffage",
+                    famille: "Production d'eau chaude",
+                    quantite_estimee: qte || 1,
+                    unite: "U",
+                    prix_unitaire_ref: coutCumulus,
+                    cout_total_estime: coutCumulus,
+                    descriptif_technique: "Cuve émaillée avec résistance stéatite protégée du calcaire et anode titane inusable anticorrosion.",
+                    norme_ou_dtu: "NF Électricité Performance / DTU 60.1",
+                    article_devis_associe: art.designation
+                });
+            } else if (desigLower.includes('plomb') || desigLower.includes('robinet') || desigLower.includes('toilette') || desigLower.includes('douche') || desigLower.includes('tuyau')) {
                 const matRef = Math.round(montantLigneDevis * 0.38 * 100) / 100;
                 totalMateriaux += matRef;
 
