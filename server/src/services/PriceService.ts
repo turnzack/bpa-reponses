@@ -806,13 +806,6 @@ export class PriceService {
             html += '</tbody></table></div>';
         }
 
-        // 4. 📋 ANALYSE DÉTAILLÉE ARTICLE PAR ARTICLE                      <div style="color:#58a6ff; font-weight:600; font-size:10.5px;">📜 ${norme}</div>
-                    </td>
-                </tr>`;
-            });
-            html += '</tbody></table></div>';
-        }
-
         // 4. 📋 ANALYSE DÉTAILLÉE ARTICLE PAR ARTICLE
         if (articles.length > 0) {
             html += '<h2>📋 4. Analyse détaillée article par article</h2>';
