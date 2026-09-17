@@ -832,13 +832,36 @@ export class PriceService {
         html += `<div style="color:#c9d1d9; font-size:13px; line-height:1.5;">${resumeText}</div>`;
         html += '</div>';
 
-        // 1. 💰 RÉCAPITULATIF FINANCIER COMPLET DES COÛTS DES TRAVAUX
+        // Calculs financiers globaux
         const pMat = rc.pourcentage_materiaux || rc.part_materiaux_pourcent || 38;
         const pMo = rc.pourcentage_pose || rc.part_main_oeuvre_pourcent || (100 - pMat);
         const matHt = rc.total_materiaux_estime_ht || rc.part_materiaux_ht || Math.round(totalHt * (pMat / 100) * 100) / 100;
         const poseHt = rc.total_pose_estime_ht || rc.part_main_oeuvre_ht || Math.round((totalHt - matHt) * 100) / 100;
         const totalTtc = rc.total_devis_ttc || Math.round(totalHt * 1.10 * 100) / 100;
 
+        // 0. 📑 DEVIS INITIAL DE L'ARTISAN (PRESTATIONS EXTRAITES)
+        if (articles.length > 0) {
+            html += '<h2>📑 Devis Initial de l\'Artisan (Prestations Soumises à l\'Audit)</h2>';
+            html += '<div class="table-responsive" style="margin-bottom:16px;"><table><thead><tr><th>N°</th><th>Désignation de la prestation (Artisan)</th><th>Qté</th><th>Unité</th><th>P.U Devis HT</th><th>Total Ligne HT</th><th>Part</th></tr></thead><tbody>';
+            articles.forEach((art: any, idx: number) => {
+                const qte = Number(art.quantite || 1);
+                const pu = Number(art.prix_devis || 0);
+                const totalLigne = Math.round(pu * qte * 100) / 100;
+                const partPct = totalHt > 0 ? Math.round((totalLigne / totalHt) * 1000) / 10 : 0;
+                html += `<tr>
+                    <td class="text-center" style="font-weight:bold; color:#8b949e;">${idx + 1}</td>
+                    <td style="font-weight:600; color:#f0f6fc;">${art.designation}</td>
+                    <td class="text-center font-bold">${qte}</td>
+                    <td class="text-center">${art.unite || 'U'}</td>
+                    <td class="text-right num-font" style="color:#79c0ff;">${pu.toFixed(2)} €</td>
+                    <td class="text-right num-font" style="font-weight:bold; color:#f0f6fc;">${totalLigne.toFixed(2)} € HT</td>
+                    <td class="text-center" style="color:#a371f7; font-weight:bold;">${partPct}%</td>
+                </tr>`;
+            });
+            html += `</tbody><tfoot><tr style="background:#21262d; font-weight:bold;"><td colspan="5" style="text-align:right;">Total Chiffré par l'Artisan :</td><td class="text-right num-font" style="color:#58a6ff; font-size:14px;">${Number(totalHt).toFixed(2)} € HT</td><td class="text-center" style="font-size:11px; color:#8b949e;">(${Number(totalTtc).toFixed(2)} € TTC)</td></tr></tfoot></table></div>`;
+        }
+
+        // 1. 💰 RÉCAPITULATIF FINANCIER COMPLET DES COÛTS DES TRAVAUX
         html += '<h2>💰 1. Récapitulatif Financier Complet des Coûts des Travaux</h2>';
         html += '<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-bottom: 12px;">';
         html += `<div style="background:#161b22; border:1px solid #30363d; border-radius:8px; padding:10px;">

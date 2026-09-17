@@ -1594,6 +1594,65 @@ function AnalyseResult({ data }: { data: any }) {
       </div>
 
       {/* ============================================================ */}
+      {/* 0. 📑 DEVIS INITIAL DE L'ARTISAN (DONNÉES EXTRAITES)          */}
+      {/* ============================================================ */}
+      <div style={{ background: colors.card, borderRadius: "16px", padding: "24px", border: `1px solid ${colors.border}`, marginBottom: "20px", overflowX: "auto" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px", flexWrap: "wrap", gap: "10px" }}>
+          <h3 style={{ margin: 0, fontSize: "16px", fontWeight: 800, display: "flex", alignItems: "center", gap: "8px" }}>
+            <span>📑</span> Devis Initial de l'Artisan (Prestations Soumises à l'Audit)
+          </h3>
+          <span style={{ fontSize: "12px", color: colors.accent, background: "rgba(99,102,241,0.12)", border: "1px solid rgba(99,102,241,0.25)", padding: "4px 12px", borderRadius: "8px", fontWeight: 700 }}>
+            {articles.length} poste(s) chiffré(s) par l'artisan
+          </span>
+        </div>
+
+        {/* Tableau récapitulatif des lignes du devis artisan */}
+        <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "13px", marginBottom: "14px" }}>
+          <thead>
+            <tr style={{ borderBottom: `1px solid ${colors.border}`, background: "rgba(255,255,255,0.02)" }}>
+              {["N°", "Désignation de la prestation (Artisan)", "Quantité", "Unité", "Prix Unitaire HT", "Total Ligne HT", "Part Devis"].map(h => (
+                <th key={h} style={{ textAlign: "left", padding: "10px 12px", color: colors.textMuted, fontWeight: 600, fontSize: "12px" }}>{h}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {articles.map((art: any, idx: number) => {
+              const qte = Number(art.quantite || 1);
+              const pu = Number(art.prix_devis || 0);
+              const totalLigne = Math.round(pu * qte * 100) / 100;
+              const partPct = totalHt > 0 ? Math.round((totalLigne / totalHt) * 1000) / 10 : 0;
+              return (
+                <tr key={idx} style={{ borderBottom: `1px solid rgba(255,255,255,0.04)` }}>
+                  <td style={{ padding: "12px 12px", color: colors.textMuted, fontWeight: 700, width: "35px" }}>{idx + 1}</td>
+                  <td style={{ padding: "12px 12px" }}>
+                    <div style={{ fontWeight: 700, color: colors.text }}>{art.designation}</div>
+                  </td>
+                  <td style={{ padding: "12px 12px", fontWeight: 600 }}>{qte}</td>
+                  <td style={{ padding: "12px 12px", color: colors.textMuted }}>{art.unite || "U"}</td>
+                  <td style={{ padding: "12px 12px", fontWeight: 700, color: "#93c5fd" }}>{pu.toFixed(2)} €</td>
+                  <td style={{ padding: "12px 12px", fontWeight: 800, color: colors.text }}>{totalLigne.toFixed(2)} € HT</td>
+                  <td style={{ padding: "12px 12px", fontWeight: 700, color: colors.accent }}>{partPct}%</td>
+                </tr>
+              );
+            })}
+          </tbody>
+          <tfoot>
+            <tr style={{ borderTop: `2px solid ${colors.border}`, background: "rgba(255,255,255,0.03)" }}>
+              <td colSpan={5} style={{ padding: "12px 12px", fontWeight: 800, textAlign: "right" }}>
+                Total Chiffré par l'Artisan :
+              </td>
+              <td style={{ padding: "12px 12px", fontWeight: 900, fontSize: "15px", color: colors.accent }}>
+                {totalHt.toLocaleString("fr-FR")} € HT
+              </td>
+              <td style={{ padding: "12px 12px", fontSize: "12px", color: colors.textMuted, fontWeight: 600 }}>
+                ({totalTtc.toLocaleString("fr-FR")} € TTC)
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      {/* ============================================================ */}
       {/* 1. 💰 RÉCAPITULATIF FINANCIER COMPLET DES COÛTS DES TRAVAUX */}
       {/* ============================================================ */}
       <div style={{ background: colors.card, borderRadius: "16px", padding: "24px", border: `1px solid ${colors.border}`, marginBottom: "20px" }}>
