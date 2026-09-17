@@ -198,7 +198,7 @@ router.post('/analyze', upload.single('file'), async (req: express.Request, res:
             const unit = item.unite || item.unit || 'U';
             const prixDevis = parseFloat(item.prix_unitaire_ht || item.priceUnit || item.prix || 0) || 0;
 
-            const match = priceService.matchArticleWithDetails(designation, prixDevis);
+            const match = priceService.matchArticleWithDetails(designation, prixDevis, undefined, unit);
             const prixRef = match.prixRef || (prixDevis > 0 ? Math.round(prixDevis * 0.92 * 100) / 100 : 0);
             const ecart = (prixRef > 0 && prixDevis > 0) ? Math.round(((prixDevis - prixRef) / prixRef) * 1000) / 10 : 0;
             const statut = ecart <= 10 ? 'vert' : ecart <= 20 ? 'jaune' : ecart <= 30 ? 'orange' : 'rouge';

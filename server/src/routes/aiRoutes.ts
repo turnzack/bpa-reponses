@@ -135,19 +135,22 @@ router.post('/chat', authenticateUser, upload.single('file'), async (req: any, r
                     const unit = item.unit || item.unite || 'U';
                     const priceUnit = parseFloat(item.priceUnit || item.prix_unitaire_ht || item.prix || item.prix_devis || 0) || 0;
 
-                    const match = priceService.matchArticleWithDetails(designation, priceUnit);
+                    const match = priceService.matchArticleWithDetails(designation, priceUnit, undefined, unit);
 
                     let refPrice = match.prixRef;
                     let refName = match.refArticleNom;
                     let refUnit = match.uniteRef || unit;
 
-                    // Fallback normatif si très grand écart
-                    const lower = designation.toLowerCase();
-                    const defaultMatch = defaultBtpBenchmarks.find(b => b.keywords.some(k => lower.includes(k)));
-                    if (defaultMatch && (!refPrice || refPrice > priceUnit * 3 || refPrice < priceUnit * 0.2)) {
-                        refPrice = defaultMatch.prix;
-                        refName = defaultMatch.nom;
-                        refUnit = defaultMatch.unite;
+                    // Fallback normatif SEULEMENT si ce n'est PAS un forfait (pour éviter d'écraser un forfait avec un prix au m²)
+                    const isForfaitItem = unit.toLowerCase().includes('forfait') || unit.toLowerCase().includes('ens') || designation.toLowerCase().includes('forfait');
+                    if (!isForfaitItem) {
+                        const lower = designation.toLowerCase();
+                        const defaultMatch = defaultBtpBenchmarks.find(b => b.keywords.some(k => lower.includes(k)));
+                        if (defaultMatch && (!refPrice || refPrice > priceUnit * 3 || refPrice < priceUnit * 0.2)) {
+                            refPrice = defaultMatch.prix;
+                            refName = defaultMatch.nom;
+                            refUnit = defaultMatch.unite;
+                        }
                     }
 
                     return {
