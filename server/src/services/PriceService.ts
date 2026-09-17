@@ -1057,24 +1057,36 @@ export class PriceService {
         const scored: { article: PriceArticle; score: number }[] = [];
 
         for (const art of articles) {
-            const nomLower = (art.nom || '').toLowerCase();
+            const rawNom = (art.nom || '').replace(/\t[a-zA-Z0-9²_]+/g, '').trim();
+            const nomLower = rawNom.toLowerCase();
             const ouvLower = (art.ouvrageNom || '').toLowerCase();
             const chapLower = (art.chapitreNom || '').toLowerCase();
+            const lotLower = (art.lotNom || '').toLowerCase();
 
             let matchScore = 0;
             for (const kw of cleanKws) {
-                if (nomLower.includes(kw)) {
-                    matchScore += 3;
-                } else if (ouvLower.includes(kw)) {
+                const regexWord = new RegExp(`(^|[^a-zA-Z0-9à-ÿÀ-Ý])${kw}([^a-zA-Z0-9à-ÿÀ-Ý]|$)`, 'i');
+                
+                if (regexWord.test(nomLower)) {
+                    matchScore += 10;
+                } else if (regexWord.test(ouvLower)) {
+                    matchScore += 7;
+                } else if (regexWord.test(chapLower)) {
+                    matchScore += 4;
+                } else if (regexWord.test(lotLower)) {
                     matchScore += 2;
-                } else if (chapLower.includes(kw)) {
-                    matchScore += 1;
+                } else if (kw.length >= 4) {
+                    if (nomLower.includes(kw)) matchScore += 3;
+                    else if (ouvLower.includes(kw)) matchScore += 2;
                 }
             }
 
             if (matchScore > 0) {
-                const articleWithScore = { ...art, _score: matchScore } as any;
-                scored.push({ article: articleWithScore, score: matchScore });
+                const cleanArt: PriceArticle = {
+                    ...art,
+                    nom: rawNom
+                };
+                scored.push({ article: cleanArt, score: matchScore });
             }
         }
 
