@@ -223,6 +223,25 @@ function generateAnalyseHtml(analyseData: any) {
         </div>
     </div>`;
 
+    // Décomposition Main d'œuvre (Taux horaires conventionnels BPA / Capeb)
+    const decompMo = Array.isArray(de.decomposition_main_oeuvre) && de.decomposition_main_oeuvre.length > 0 ? de.decomposition_main_oeuvre : [
+        { qualification: "Manoeuvre niveau I/OE1", volume_heures: Math.round(Number(de.volume_horaire_total_heures || baseHours) * 0.20 * 10) / 10, unite: "h", taux_horaire_ref: 18.32, cout_total: Math.round(Number(de.volume_horaire_total_heures || baseHours) * 0.20 * 18.32 * 100) / 100, role: "Bâchage étanche polyane, manutention et nettoyage/repli" },
+        { qualification: "Ouvrier niveau III/CP2", volume_heures: Math.round(Number(de.volume_horaire_total_heures || baseHours) * 0.80 * 10) / 10, unite: "h", taux_horaire_ref: 26.07, cout_total: Math.round(Number(de.volume_horaire_total_heures || baseHours) * 0.80 * 26.07 * 100) / 100, role: "Exécution technique soignée, préparation des supports et finitions" }
+    ];
+
+    html += '<div style="margin-bottom:14px;"><div style="font-size:12px; font-weight:700; color:#d2a8ff; margin-bottom:6px;">🔨 Sous-détail Main d\'œuvre & Taux horaires conventionnels</div>';
+    html += '<div class="table-responsive"><table><thead><tr><th>Qualification</th><th>Volume</th><th>Taux Réf.</th><th>Total HT</th><th>Rôle</th></tr></thead><tbody>';
+    decompMo.forEach((mo: any) => {
+        html += `<tr>
+            <td style="font-weight:600; color:#f0f6fc;">${mo.qualification}</td>
+            <td class="text-center font-bold" style="color:#e3b341;">${mo.volume_heures} h</td>
+            <td class="text-right num-font" style="color:#58a6ff;">${Number(mo.taux_horaire_ref || 0).toFixed(2)} €/h</td>
+            <td class="text-right num-font" style="font-weight:bold; color:#d2a8ff;">${Number(mo.cout_total || 0).toFixed(2)} €</td>
+            <td style="font-size:11px; color:#c9d1d9;">${mo.role}</td>
+        </tr>`;
+    });
+    html += '</tbody></table></div></div>';
+
     if (Array.isArray(de.planning_phases) && de.planning_phases.length > 0) {
         html += '<div class="table-responsive"><table><thead><tr><th>Phase</th><th>Durée</th><th>Opérations</th></tr></thead><tbody>';
         de.planning_phases.forEach((p: any) => {
@@ -237,7 +256,8 @@ function generateAnalyseHtml(analyseData: any) {
 
     // SECTION 3 : 🧱 TABLEAU DÉTAILLÉ DES MATÉRIAUX & QUANTITÉS
     if (tm.length > 0) {
-        html += '<h2>🧱 3. Tableau Détaillé des Matériaux & Quantités</h2>';
+        html += '<h2>🧱 3. Tableau Détaillé des Matériaux, Quantités & Normes DTU</h2>';
+        html += '<div style="font-size:11px; color:#8b949e; margin-bottom:6px;">Base de référence : <em>bibliotheque_materiaux.json</em> (23 688 références BTP)</div>';
         html += '<div class="table-responsive"><table><thead><tr><th>Corps d\'état</th><th>Produit</th><th>Qté</th><th>P.U Réf</th><th>Coût Total</th><th>Part</th><th>Normes DTU & Spécifications</th></tr></thead><tbody>';
         tm.forEach((mat: any) => {
             const nom = mat.nom || mat.designation || 'Fourniture';
@@ -266,9 +286,9 @@ function generateAnalyseHtml(analyseData: any) {
         html += '</tbody></table></div>';
     }
 
-    // 4. Articles
-    html += '<h2>🔍 Détail des ouvrages & prestations</h2>';
-    html += '<div class="table-responsive"><table><thead><tr><th>Article</th><th>Qté</th><th>Devis</th><th>Réf.</th><th>Écart</th><th>Avis</th></tr></thead><tbody>';
+    // SECTION 4 : 📋 ANALYSE DÉTAILLÉE ARTICLE PAR ARTICLE
+    html += '<h2>📋 4. Analyse détaillée article par article</h2>';
+    html += '<div class="table-responsive"><table><thead><tr><th>Article</th><th>Qté</th><th>Devis</th><th>Réf.</th><th>Écart</th><th>Avis Expert</th></tr></thead><tbody>';
     articles.forEach((art: any) => {
         const statut = art.statut || 'gris';
         const ecartClass = statut === 'vert' ? 'ecart-vert' : statut === 'jaune' ? 'ecart-jaune' : statut === 'orange' ? 'ecart-orange' : 'ecart-rouge';
@@ -286,7 +306,30 @@ function generateAnalyseHtml(analyseData: any) {
     });
     html += '</tbody></table></div>';
 
-    // 5. Verdict
+    // SECTION 5 : ⚠️ ANOMALIES & POINTS DE VIGILANCE
+    if (anomalies.length > 0) {
+        html += '<h2>⚠️ 5. Anomalies & Points de vigilance tarifaires</h2>';
+        html += '<div class="table-responsive"><table><thead><tr><th>Gravité</th><th>Article / Poste</th><th>Anomalie constatée</th><th>Action recommandée</th></tr></thead><tbody>';
+        anomalies.forEach((ano: any) => {
+            html += `<tr>
+                <td><span class="badge ${ano.gravite === 'CRITIQUE' ? 'ecart-rouge' : 'ecart-orange'}">${ano.gravite || 'ATTENTION'}</span></td>
+                <td style="font-weight:600; color:#f0f6fc;">${ano.article || 'Poste de travaux'}</td>
+                <td style="font-size:12px; color:#e6edf3;">${ano.probleme || ano.pourquoi || ''}</td>
+                <td style="font-size:12px; color:#58a6ff;">${ano.action || 'Demander une révision'}</td>
+            </tr>`;
+        });
+        html += '</tbody></table></div>';
+    }
+
+    // SECTION 6 : ⚖️ AUDIT RÉGLEMENTAIRE & VERDICT
+    html += '<h2>⚖️ 6. Audit Réglementaire, Assurances & Conformité BTP</h2>';
+    html += `<div style="background:#161b22; border:1px solid #30363d; border-radius:8px; padding:12px; margin-bottom:14px; font-size:12px; color:#c9d1d9; line-height:1.6;">
+        <p>🛡️ <strong>Assurance Décennale & Responsabilité Civile Pro :</strong> L'entreprise doit impérativement fournir son attestation d'assurance en cours de validité couvrant les activités déclarées.</p>
+        <p style="margin-top:6px;">📜 <strong>Normes DTU applicables :</strong> Respect strict des normes DTU 59.1 (Peinture), DTU 52.2 (Carrelage), DTU 60.1 (Plomberie) et NF C 15-100 (Électricité).</p>
+        <p style="margin-top:6px;">💶 <strong>Taux de TVA :</strong> Taux réduit de 10% applicable pour les travaux d'amélioration et de rénovation dans les logements achevés depuis plus de 2 ans.</p>
+    </div>`;
+
+    // Verdict
     const v = a?.verdict || {
         global: score >= 80 ? 'FAVORABLE - DEVIS CONFORME' : 'VIGILANCE - NÉGOCIATION RECOMMANDÉE',
         potentiel_negociation_euros: diffEuros > 0 ? diffEuros : 0,

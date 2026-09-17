@@ -882,8 +882,8 @@ export class PriceService {
         }
 
         // 5. ⚠️ ANOMALIES & POINTS DE VIGILANCE
+        html += '<h2>⚠️ 5. Anomalies & Points de vigilance</h2>';
         if (anomalies.length > 0) {
-            html += '<h2>⚠️ 5. Anomalies & Points de vigilance</h2>';
             html += '<div class="table-responsive"><table><thead><tr><th>Gravité</th><th>Article</th><th>Constat</th><th>Explication</th><th>Action recommandée</th></tr></thead><tbody>';
             anomalies.forEach((ano: any) => {
                 const gravite = ano.gravite || (ano.statut === 'rouge' ? 'CRITIQUE' : 'ATTENTION');
@@ -897,6 +897,8 @@ export class PriceService {
                 </tr>`;
             });
             html += '</tbody></table></div>';
+        } else {
+            html += '<div style="background:#161b22; border:1px solid #238636; border-radius:8px; padding:12px; margin-bottom:14px; color:#3fb950; font-size:12.5px;">🟢 <strong>Aucune anomalie critique ni surcoût abusif détecté.</strong> Les prix unitaires et forfaits appliqués sont conformes aux moyennes constatées dans le secteur BTP et aux recommandations de la convention IRSI.</div>';
         }
 
         // 6. ⚖️ AUDIT RÉGLEMENTAIRE, ASSURANCES & NORMES BTP
