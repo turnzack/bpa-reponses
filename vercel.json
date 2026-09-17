@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd frontend && pnpm install && npx --yes vite build",
+  "buildCommand": "cd frontend && npm install --legacy-peer-deps && npm run build",
   "outputDirectory": "frontend/dist",
   "rewrites": [
     { "source": "/api/:path*", "destination": "https://109-205-182-17.nip.io/api/:path*" },

@@ -87,6 +87,10 @@ function getOrGenerateInvoiceReport(inv: Invoice): any {
         jours_ouvres_estimes: 4,
         equipe_recommandee: "1 Compagnon Peintre + 1 Agent polyvalent",
         delais_incompressibles: "Prévoir 24h de séchage entre les reprises d'enduit et la mise en peinture.",
+        decomposition_main_oeuvre: [
+          { qualification: "Manoeuvre niveau I/OE1", volume_heures: 5.6, unite: "h", taux_horaire_ref: 18.32, cout_total: 102.59, role: "Bâchage étanche polyane, manutention, approvisionnement et repli/nettoyage" },
+          { qualification: "Ouvrier niveau III/CP2", volume_heures: 22.4, unite: "h", taux_horaire_ref: 26.07, cout_total: 583.97, role: "Reprise des plâtres, lissage soigné et mise en peinture 2 couches" }
+        ],
         planning_phases: [
           { phase: "Phase 1", titre: "Protection & Lessivage intensif", description: "Bâchage des zones non impactées, calfeutrement et dépoussiérage soigné.", duree_estimee: "1 jour" },
           { phase: "Phase 2", titre: "Reprise des plâtres & Finitions enduit", description: "Rebouchage des fissures, surfaçage et ponçage fin.", duree_estimee: "1.5 jour" },
@@ -153,6 +157,10 @@ function getOrGenerateInvoiceReport(inv: Invoice): any {
         jours_ouvres_estimes: 3,
         equipe_recommandee: "1 Peintre Décorateur qualifié",
         delais_incompressibles: "Temps de séchage incompressible de 24h entre la couche d'impression isolante et la peinture de finition.",
+        decomposition_main_oeuvre: [
+          { qualification: "Manoeuvre niveau I/OE1", volume_heures: 4.2, unite: "h", taux_horaire_ref: 18.32, cout_total: 76.94, role: "Bâchage polyane étanche, protection des sols, préparation et nettoyage" },
+          { qualification: "Ouvrier niveau III/CP2", volume_heures: 16.8, unite: "h", taux_horaire_ref: 26.07, cout_total: 437.98, role: "Application impression isolante hydrofuge et peinture velours 2 couches" }
+        ],
         planning_phases: [
           { phase: "Phase 1", titre: "Protection polyane & Assainissement", description: "Bâchage étanche complet, lessivage fongicide et grattage des cloques d'eau.", duree_estimee: "0.5 jour" },
           { phase: "Phase 2", titre: "Reprise des plâtres & Impression isolante", description: "Ratissage 2 passes plâtre, ponçage fin et application primaire anti-auréoles.", duree_estimee: "1.5 jour" },
@@ -220,6 +228,10 @@ function getOrGenerateInvoiceReport(inv: Invoice): any {
       jours_ouvres_estimes: joursEstimes,
       equipe_recommandee: "1 Technicien / Artisan qualifié",
       delais_incompressibles: "Respecter les temps de prise et de séchage préconisés par les fiches fabricants.",
+      decomposition_main_oeuvre: [
+        { qualification: "Manoeuvre niveau I/OE1", volume_heures: Math.round(heuresEstimees * 0.20 * 10) / 10, unite: "h", taux_horaire_ref: 18.32, cout_total: Math.round(heuresEstimees * 0.20 * 18.32 * 100) / 100, role: "Installation de chantier, bâchage polyane étanche et repli" },
+        { qualification: "Ouvrier niveau III/CP2", volume_heures: Math.round(heuresEstimees * 0.80 * 10) / 10, unite: "h", taux_horaire_ref: 26.07, cout_total: Math.round(heuresEstimees * 0.80 * 26.07 * 100) / 100, role: "Mise en œuvre technique, façonnage et finitions soignées" }
+      ],
       planning_phases: [
         { phase: "Phase 1", titre: "Préparation & Protections", description: "Installation, bâchage de protection et approvisionnement des matériaux.", duree_estimee: `${Math.max(0.5, Math.round(joursEstimes * 0.2 * 10) / 10)} jour(s)` },
         { phase: "Phase 2", titre: "Exécution des travaux & Réseaux", description: "Mise en œuvre technique principale selon règles de l'art.", duree_estimee: `${Math.max(1, Math.round(joursEstimes * 0.5 * 10) / 10)} jour(s)` },
