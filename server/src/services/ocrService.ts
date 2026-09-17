@@ -228,10 +228,10 @@ Format JSON attendu (OBLIGATOIRE) :
   "articles": [
     {
       "designation": "description complète de l'article ou prestation",
-      "quantite": 123 (nombre),
-      "unite": "m2", "m", "U", "ml", "kg", etc.",
-      "prix_unitaire_ht": 12.34 (nombre),
-      "prix_total_ht": 1234.56 (nombre)
+      "quantite": 123,
+      "unite": "forfait", "m2", "m", "U", "ml", "h", "ens", "j" (si la ligne est un forfait ou ensemble, indiquer 'forfait'),
+      "prix_unitaire_ht": 12.34,
+      "prix_total_ht": 1234.56
     }
   ],
   "totaux": {
@@ -434,7 +434,8 @@ export function extractArticlesFromText(text: string): any[] {
         /^(total|sous-total|net à payer|acompte|solde|reste à payer|tva|remise|escompte)/i,
         /^(devis\s*n°?|facture\s*n°?|date|échéance|validité|page\s+\d|bon pour accord|signature)/i,
         /^(siret|siren|rcs|ape|naf|iban|bic|tva intracommunautaire|conditions de paiement|assurance)/i,
-        /^(client|adresse|téléphone|tel|email|contact|société|sas|sarl|eurl|auto-entrepreneur)/i
+        /^(client|adresse|téléphone|tel|email|contact|société|sas|sarl|eurl|auto-entrepreneur)/i,
+        /^(résumé exécutif|articles analysés|prix cohérents|prix élevés|surcoûts|écart global|score de conformité|avis de l'expert|potentiel d'économie|rapport d'audit|synthèse|règlementaire)/i
     ];
 
     const parsePrice = (str: string): number => {
@@ -443,6 +444,13 @@ export function extractArticlesFromText(text: string): any[] {
         const cleaned = str.replace(/[\s\u00A0\u202F]+/g, '').replace('€', '').replace(',', '.');
         const val = parseFloat(cleaned);
         return isNaN(val) ? 0 : val;
+    };
+
+    const cleanArticleName = (raw: string): string => {
+        return raw
+            .replace(/^(?:[IVXLCDM]+\b|[0-9]+[.)\s-])\s*/i, '')
+            .replace(/^[0-9.-]+\s*/, '')
+            .trim();
     };
 
     // 1. Détection du montant global HT dans l'intégralité du texte
@@ -487,7 +495,7 @@ export function extractArticlesFromText(text: string): any[] {
         // Pattern 1 : Désignation ... Qté ... Unité ... PU HT ... Total HT
         const p1 = cleanLine.match(/^(.+?)\s+(\d+(?:[.,]\d+)?)\s*(m²|m2|ml|m3|m|u|unite|unités|forfait|fft|ens|ensemble|kg|l|h|heures?|j|jours?|pce|lots?)\s+(\d{1,4}(?:[\s\u00A0.]\d{3})*(?:[.,]\d{2})?)\s*€?(?:\s+(\d{1,5}(?:[\s\u00A0.]\d{3})*(?:[.,]\d{2})?)\s*€?)?$/i);
         if (p1) {
-            const designation = (pendingDescription ? `${pendingDescription} - ` : '') + p1[1].replace(/^[0-9.-]+\s*/, '').trim();
+            const designation = cleanArticleName((pendingDescription ? `${pendingDescription} - ` : '') + p1[1]);
             const quantity = parsePrice(p1[2]) || 1;
             const unit = p1[3].toLowerCase();
             const priceUnit = parsePrice(p1[4]);
@@ -509,7 +517,7 @@ export function extractArticlesFromText(text: string): any[] {
         // Pattern 2 : Désignation ... Unité ... Qté ... PU HT
         const p2 = cleanLine.match(/^(.+?)\s+(m²|m2|ml|m3|m|u|forfait|fft|ens|kg|l|h)\s+(\d+(?:[.,]\d+)?)\s+(\d{1,4}(?:[\s\u00A0.]\d{3})*(?:[.,]\d{2})?)/i);
         if (p2) {
-            const designation = (pendingDescription ? `${pendingDescription} - ` : '') + p2[1].replace(/^[0-9.-]+\s*/, '').trim();
+            const designation = cleanArticleName((pendingDescription ? `${pendingDescription} - ` : '') + p2[1]);
             const unit = p2[2].toLowerCase();
             const quantity = parsePrice(p2[3]) || 1;
             const priceUnit = parsePrice(p2[4]);
@@ -530,7 +538,7 @@ export function extractArticlesFromText(text: string): any[] {
         // Pattern 3 : Ligne terminée par deux prix ou prix total (ex: Peinture salon ... 450,00 €)
         const p3 = cleanLine.match(/^([a-zA-ZÀ-ÿ0-9\s'()_/,+.-]{4,120}?)\s+(\d{1,4}(?:[\s\u00A0.]\d{3})*(?:[.,]\d{2}))\s*€?\s*$/i);
         if (p3) {
-            const designation = (pendingDescription ? `${pendingDescription} - ` : '') + p3[1].replace(/^[0-9.-]+\s*/, '').trim();
+            const designation = cleanArticleName((pendingDescription ? `${pendingDescription} - ` : '') + p3[1]);
             const price = parsePrice(p3[2]);
             const lower = designation.toLowerCase();
 
