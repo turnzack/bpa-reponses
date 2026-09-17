@@ -118,12 +118,34 @@ class AuditPriceEngine {
         const unitLower = (unitHint || '').toLowerCase();
         const isForfait = unitLower.includes('forfait') || unitLower.includes('ens') || unitLower.includes('ft') || lower.includes('forfait') || lower.includes('ensemble');
 
-        // 1. Détection intelligente des forfaits BTP (calcul MO + Fournitures + Déplacement)
-        if (isForfait) {
-            if (lower.includes('silicone') || lower.includes('joint') || lower.includes('calfeutrement') || lower.includes('etancheite') || lower.includes('étanchéité')) {
-                const pRef = (priceUnit && priceUnit >= 150 && priceUnit <= 300) ? Math.round(priceUnit * 0.94 * 100) / 100 : 225.00;
+        // 1. Détection experte placo, peinture, nettoyage, étanchéité
+        if (lower.includes('placo') || lower.includes('ba13') || (lower.includes('bande') && (lower.includes('joint') || lower.includes('enduit') || lower.includes('placo'))) || lower.includes('doublage') || lower.includes('cloison')) {
+            const pRef = (priceUnit && priceUnit >= 30 && priceUnit <= 65) ? Math.round(priceUnit * 0.95 * 100) / 100 : 42.00;
+            return { prix: pRef, unite: isForfait ? 'forfait' : 'm2', matchName: "Fourniture et pose plaque de plâtre BA13, bande à joint et enduit 2 passes (DTU 25.41)" };
+        } else if (lower.includes('peint') || lower.includes('couche') || lower.includes('acrylique') || lower.includes('velours') || lower.includes('satin') || lower.includes('mat')) {
+            if (unitLower.includes('m2') || unitLower.includes('m²') || lower.includes('m2') || lower.includes('m²') || !isForfait) {
+                const pRef = (priceUnit && priceUnit >= 9 && priceUnit <= 18) ? Math.round(priceUnit * 0.95 * 100) / 100 : 12.50;
+                return { prix: pRef, unite: 'm2', matchName: "Peinture de finition acrylique 2 couches croisées (DTU 59.1)" };
+            } else {
+                const pRef = (priceUnit && priceUnit >= 70 && priceUnit <= 180) ? Math.round(priceUnit * 0.95 * 100) / 100 : 105.00;
+                return { prix: pRef, unite: 'forfait', matchName: "Forfait mise en peinture complète pièce d'eau / WC (lessivage, impression et 2 couches velours)" };
+            }
+        } else if (lower.includes('nettoy') || lower.includes('evac') || lower.includes('évac') || lower.includes('dechet') || lower.includes('déchet') || lower.includes('repli')) {
+            const pRef = (priceUnit && priceUnit >= 30 && priceUnit <= 120) ? Math.round(priceUnit * 0.95 * 100) / 100 : 60.00;
+            return { prix: pRef, unite: 'forfait', matchName: "Nettoyage soigné de fin de chantier et repli des protections" };
+        } else if (lower.includes('silicone') || lower.includes('calfeutrement') || (lower.includes('joint') && !lower.includes('placo') && !lower.includes('carrel'))) {
+            if (isForfait) {
+                const pRef = (priceUnit && priceUnit >= 140 && priceUnit <= 300) ? Math.round(priceUnit * 0.95 * 100) / 100 : 225.00;
                 return { prix: pRef, unite: 'forfait', matchName: "Forfait réfection et étanchéité joints silicone sur ouvertures (dépose, primaire, calfeutrement)" };
-            } else if ((lower.includes('wc') || lower.includes('toilette') || lower.includes('salle d eau') || lower.includes('salle de bain') || lower.includes('cuisine')) && lower.includes('peint')) {
+            } else {
+                const pRef = (priceUnit && priceUnit >= 8 && priceUnit <= 22) ? Math.round(priceUnit * 0.95 * 100) / 100 : 14.50;
+                return { prix: pRef, unite: 'ml', matchName: "Fourniture et pose joint élastomère silicone sanitaire/menuiserie label SNJF (DTU 44.1)" };
+            }
+        } else if (lower.includes('ratissage') || (lower.includes('enduit') && !lower.includes('placo'))) {
+            const pRef = (priceUnit && priceUnit >= 8 && priceUnit <= 18) ? Math.round(priceUnit * 0.95 * 100) / 100 : 11.50;
+            return { prix: pRef, unite: 'm2', matchName: "Reprise des fonds, enduisage et ratissage fin 2 passes (DTU 59.1)" };
+        } else if (isForfait) {
+            if (lower.includes('wc') || lower.includes('toilette') || lower.includes('salle d eau')) {
                 const pRef = (priceUnit && priceUnit >= 70 && priceUnit <= 180) ? Math.round(priceUnit * 0.95 * 100) / 100 : 105.00;
                 return { prix: pRef, unite: 'forfait', matchName: "Forfait mise en peinture complète pièce d'eau / WC (lessivage, impression et 2 couches velours)" };
             } else if (lower.includes('rebouch') || lower.includes('fissure') || lower.includes('trou') || lower.includes('reprise')) {
@@ -135,12 +157,8 @@ class AuditPriceEngine {
             } else if (lower.includes('protect') || lower.includes('polyane') || lower.includes('bach')) {
                 const pRef = (priceUnit && priceUnit >= 25 && priceUnit <= 120) ? Math.round(priceUnit * 0.95 * 100) / 100 : 48.00;
                 return { prix: pRef, unite: 'forfait', matchName: "Forfait protection intégrale chantier (polyane étanche 40µm + adhésifs sans résidu)" };
-            } else if (lower.includes('nettoy') || lower.includes('evac') || lower.includes('évac') || lower.includes('dechet') || lower.includes('déchet')) {
-                const pRef = (priceUnit && priceUnit >= 25 && priceUnit <= 150) ? Math.round(priceUnit * 0.95 * 100) / 100 : 38.00;
-                return { prix: pRef, unite: 'forfait', matchName: "Forfait nettoyage de fin de chantier et évacuation des déchets en filière agréée" };
             } else if (priceUnit && priceUnit > 0) {
-                // Forfait général BTP : estimé à ~92% du montant pour absorber la main d'œuvre forfaitaire
-                return { prix: Math.round(priceUnit * 0.92 * 100) / 100, unite: 'forfait', matchName: "Forfait d'intervention technique spécialisée BTP" };
+                return { prix: Math.round(priceUnit * 0.94 * 100) / 100, unite: 'forfait', matchName: "Forfait d'intervention technique spécialisée BTP" };
             }
         }
         
@@ -166,7 +184,7 @@ class AuditPriceEngine {
         }
 
         // 4. Valeur de secours cohérente pour devis général
-        return { prix: 45.00, unite: 'u', matchName: 'Ouvrage standard BTP' };
+        return { prix: priceUnit ? Math.round(priceUnit * 0.94 * 100) / 100 : 45.00, unite: unitHint || 'u', matchName: designation || 'Ouvrage standard BTP' };
     }
 
     private recursiveSearchArticle(node: any, query: string, depth = 0): any {
