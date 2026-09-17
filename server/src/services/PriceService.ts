@@ -368,6 +368,9 @@ export class PriceService {
             const desigLower = (art.designation || '').toLowerCase();
             const unitLower = (art.unite || '').toLowerCase();
 
+            // -------------------------------------------------------------
+            // GÉNÉRATION DYNAMIQUE DES MATÉRIAUX SELON LES MOTS-CLÉS DU DEVIS
+            // -------------------------------------------------------------
             if (desigLower.includes('placo') || desigLower.includes('ba13') || (desigLower.includes('bande') && (desigLower.includes('joint') || desigLower.includes('enduit'))) || desigLower.includes('doublage') || desigLower.includes('cloison')) {
                 // 1. Plaque de plâtre BA13
                 const qtePlaque = Math.round(qte * 1.05 * 10) / 10;
@@ -470,15 +473,15 @@ export class PriceService {
                     nom: "Sacs à gravats renforcés 50L & consommables de nettoyage BTP",
                     corps_etat: "Installation & Repli",
                     famille: "Consommables de chantier",
-                    quantite_estimee: 1,
-                    unite: "Forfait",
-                    prix_unitaire_ref: coutNettoyage,
+                    quantite_estimee: Math.max(5, Math.round(qte * 5)),
+                    unite: "U",
+                    prix_unitaire_ref: 1.20,
                     cout_total_estime: coutNettoyage,
                     descriptif_technique: "Sacs polyéthylène haute résistance 80µm et consommables d'essuyage conformes démarche Chantier Propre.",
                     norme_ou_dtu: "Charte Chantier Propre / Déchets BTP",
                     article_devis_associe: art.designation
                 });
-            } else if (desigLower.includes('silicone') || desigLower.includes('calfeutrement') || (desigLower.includes('joint') && !desigLower.includes('placo'))) {
+            } else if (desigLower.includes('silicone') || desigLower.includes('calfeutrement') || (desigLower.includes('joint') && !desigLower.includes('placo') && !desigLower.includes('carrel'))) {
                 const qteCartouches = Math.max(1, Math.round(qte));
                 const coutSilicone = Math.round(qteCartouches * 7.80 * 100) / 100;
                 totalMateriaux += coutSilicone;
@@ -493,6 +496,23 @@ export class PriceService {
                     cout_total_estime: coutSilicone,
                     descriptif_technique: "Mastic élastomère 25E label SNJF résistant aux UV, aux moisissures et aux variations thermiques.",
                     norme_ou_dtu: "DTU 44.1 / Label SNJF",
+                    article_devis_associe: art.designation
+                });
+            } else if (desigLower.includes('aeration') || desigLower.includes('aération') || desigLower.includes('ventilation') || desigLower.includes('grille') || desigLower.includes('vmc')) {
+                const qteGrilles = Math.max(1, Math.round(qte));
+                const coutAeration = Math.round(qteGrilles * 6.20 * 100) / 100;
+                totalMateriaux += coutAeration;
+
+                materiauxDetailles.push({
+                    nom: "Grilles d'aération autoréglables acoustiques filtrantes",
+                    corps_etat: "Ventilation & Aéraulique",
+                    famille: "Grilles & Entrées d'air",
+                    quantite_estimee: qteGrilles,
+                    unite: "U",
+                    prix_unitaire_ref: 6.20,
+                    cout_total_estime: coutAeration,
+                    descriptif_technique: "Entrée d'air autoréglable avec auvent extérieur pare-pluie et grille anti-insectes.",
+                    norme_ou_dtu: "DTU 68.3 / Règlementation Aération",
                     article_devis_associe: art.designation
                 });
             } else if (desigLower.includes('ratissage') || desigLower.includes('enduit')) {
@@ -512,8 +532,72 @@ export class PriceService {
                     norme_ou_dtu: "DTU 59.1 / DTU 25.41",
                     article_devis_associe: art.designation
                 });
+            } else if (desigLower.includes('carrel') || desigLower.includes('faïence') || desigLower.includes('faience') || desigLower.includes('gres') || desigLower.includes('grès')) {
+                const surface = unitLower.includes('m2') || unitLower.includes('m²') ? qte : qte;
+                const coutColle = Math.round(surface * 5 * 0.75 * 100) / 100;
+                const coutJoint = Math.round(surface * 0.5 * 2.20 * 100) / 100;
+                totalMateriaux += coutColle + coutJoint;
+
+                materiauxDetailles.push(
+                    {
+                        nom: "Mortier colle déformable haute adhérence (C2S1)",
+                        corps_etat: "Carrelage & Revêtement",
+                        famille: "Colles & Mortiers",
+                        quantite_estimee: Math.round(surface * 5),
+                        unite: "Kg",
+                        prix_unitaire_ref: 0.75,
+                        cout_total_estime: coutColle,
+                        descriptif_technique: "Mortier-colle amélioré résistant au glissement, adapté pour grès cérame tous formats.",
+                        norme_ou_dtu: "DTU 52.2 / Certifié CSTB",
+                        article_devis_associe: art.designation
+                    },
+                    {
+                        nom: "Mortier de jointoiement hydrofuge fin anti-moisissure (CG2 WA)",
+                        corps_etat: "Carrelage & Revêtement",
+                        famille: "Joints de finition",
+                        quantite_estimee: Math.round(surface * 0.5 * 10) / 10,
+                        unite: "Kg",
+                        prix_unitaire_ref: 2.20,
+                        cout_total_estime: coutJoint,
+                        descriptif_technique: "Joint étanche souple grain fin anti-encrassement.",
+                        norme_ou_dtu: "NF EN 13888",
+                        article_devis_associe: art.designation
+                    }
+                );
+            } else if (desigLower.includes('plomb') || desigLower.includes('robinet') || desigLower.includes('wc') || desigLower.includes('toilette') || desigLower.includes('douche') || desigLower.includes('tuyau') || desigLower.includes('chauffe-eau') || desigLower.includes('cumulus')) {
+                const matRef = Math.round(montantLigneDevis * 0.38 * 100) / 100;
+                totalMateriaux += matRef;
+
+                materiauxDetailles.push({
+                    nom: `Composants de plomberie sanitaire certifiés NF (${art.designation})`,
+                    corps_etat: "Plomberie & Sanitaire",
+                    famille: "Appareillage & Réseaux",
+                    quantite_estimee: qte,
+                    unite: art.unite || "U",
+                    prix_unitaire_ref: Math.round(matRef / (qte || 1) * 100) / 100,
+                    cout_total_estime: matRef,
+                    descriptif_technique: "Raccords NF, tuyauterie multicouche/cuivre et joints élastomère conformes ACS.",
+                    norme_ou_dtu: "DTU 60.1 / ACS",
+                    article_devis_associe: art.designation
+                });
+            } else if (desigLower.includes('elec') || desigLower.includes('élec') || desigLower.includes('prise') || desigLower.includes('interrupteur') || desigLower.includes('tableau') || desigLower.includes('cable') || desigLower.includes('câble')) {
+                const matRef = Math.round(montantLigneDevis * 0.35 * 100) / 100;
+                totalMateriaux += matRef;
+
+                materiauxDetailles.push({
+                    nom: `Appareillage et conducteurs électriques certifiés NF (${art.designation})`,
+                    corps_etat: "Électricité & Courants Faibles",
+                    famille: "Distribution & Appareillage",
+                    quantite_estimee: qte,
+                    unite: art.unite || "U",
+                    prix_unitaire_ref: Math.round(matRef / (qte || 1) * 100) / 100,
+                    cout_total_estime: matRef,
+                    descriptif_technique: "Conducteurs H07V-U sous gaine ICTA, bornes Wago et mécanismes normalisés.",
+                    norme_ou_dtu: "Norme NF C 15-100",
+                    article_devis_associe: art.designation
+                });
             } else {
-                // Fournitures techniques standards strictement proportionnelles (25% du montant de l'article)
+                // Fournitures techniques standards strictement proportionnelles
                 const coutMatGen = Math.round(montantLigneDevis * 0.28 * 100) / 100;
                 totalMateriaux += coutMatGen;
 
@@ -521,12 +605,12 @@ export class PriceService {
                     nom: `Fournitures techniques et consommables certifiés - ${art.designation}`,
                     corps_etat: "Fournitures BTP",
                     famille: "Matériaux certifiés",
-                    quantite_estimee: 1,
-                    unite: "Forfait",
-                    prix_unitaire_ref: coutMatGen,
+                    quantite_estimee: qte,
+                    unite: art.unite || "Forfait",
+                    prix_unitaire_ref: Math.round(coutMatGen / (qte || 1) * 100) / 100,
                     cout_total_estime: coutMatGen,
                     descriptif_technique: `Ensemble des fournitures, quincaillerie et composants conformes aux règles de l'art pour : ${art.designation}.`,
-                    norme_ou_dtu: "Normes BTP / CSTB",
+                    norme_ou_dtu: "Normes BTP / Avis Technique CSTB",
                     article_devis_associe: art.designation
                 });
             }
