@@ -95,18 +95,19 @@ router.post('/chat', authenticateUser, upload.single('file'), async (req: any, r
                 // 2. Récupérer les articles extraits par l'OCR
                 let extractedItems = ocrResult.articles || [];
 
-                // Fallback: extraction depuis parsed.fields si articles n'existe pas
                 if (extractedItems.length === 0 && ocrResult.fields?.articles) {
                     extractedItems = ocrResult.fields.articles;
                 }
 
                 const { isLocationHeader, decomposeTceQuote, extractArticlesFromText } = require('../services/ocrService');
 
-                // Fallback 2: extraction via le parseur BTP robuste sur le texte brut
-                if (extractedItems.length === 0 && ocrResult.fullText) {
-                    console.log('[AI Chat] Tentative d extraction avec parseur BTP robuste...');
-                    extractedItems = extractArticlesFromText(ocrResult.fullText);
-                    console.log('[AI Chat] Articles extraits par parseur BTP:', extractedItems.length);
+                // Si le texte brut contient des lignes complètes ou plus d'articles que l'OCR brut :
+                if (ocrResult.fullText && ocrResult.fullText.trim().length > 30) {
+                    const btpItems = extractArticlesFromText(ocrResult.fullText);
+                    if (btpItems.length >= extractedItems.length && btpItems.length > 0) {
+                        console.log(`[AI Chat] Utilisation prioritaire des ${btpItems.length} articles extraits du texte brut`);
+                        extractedItems = btpItems;
+                    }
                 }
 
                 // Si AUCUN article n'a pu être extrait du texte, décomposition experte basée sur le montant réel détecté

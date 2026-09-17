@@ -163,9 +163,12 @@ router.post('/analyze', upload.single('file'), async (req: express.Request, res:
         const ocrResult = await processInvoiceOCR(file.buffer, file.mimetype);
         let extractedItems = ocrResult.articles || [];
 
-        if (extractedItems.length === 0 && ocrResult.fullText) {
+        if (ocrResult.fullText && ocrResult.fullText.trim().length > 30) {
             const { extractArticlesFromText } = require('../services/ocrService');
-            extractedItems = extractArticlesFromText(ocrResult.fullText);
+            const btpItems = extractArticlesFromText(ocrResult.fullText);
+            if (btpItems.length >= extractedItems.length && btpItems.length > 0) {
+                extractedItems = btpItems;
+            }
         }
 
         // Appel de Cloudflare Workers AI si besoin
