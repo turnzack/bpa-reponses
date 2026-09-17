@@ -9,9 +9,9 @@ interface AuthScreenProps {
 
 export default function AuthScreen({ onAuthenticated }: AuthScreenProps) {
   const [mode, setMode] = useState<'login' | 'register'>('login');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [email, setEmail] = useState('admin@facturescan.fr');
+  const [password, setPassword] = useState('bpa2026!');
+  const [confirmPassword, setConfirmPassword] = useState('bpa2026!');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 

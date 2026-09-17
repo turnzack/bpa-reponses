@@ -89,8 +89,8 @@ function Root() {
 
   // Accès direct sans page d'authentification
   const defaultUser: AuthUser = user || {
-    userId: 'user_bpa_tce',
-    email: 'tce.reponse@gmail.com',
+    userId: '00000000-0000-0000-0000-000000000001',
+    email: 'admin@facturescan.fr',
     isSuperAdmin: true
   };
 
