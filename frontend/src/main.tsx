@@ -87,13 +87,14 @@ function Root() {
     );
   }
 
-  // Si non connecté -> affichage de l'écran d'authentification
-  if (!user) {
-    return <AuthScreen onAuthenticated={(u) => setUser(u)} />;
-  }
+  // Accès direct sans page d'authentification
+  const defaultUser: AuthUser = user || {
+    userId: 'user_bpa_tce',
+    email: 'tce.reponse@gmail.com',
+    isSuperAdmin: true
+  };
 
-  // Authentifié -> application principale
-  return <App user={user} onLogout={handleLogout} />;
+  return <App user={defaultUser} onLogout={handleLogout} />;
 }
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
